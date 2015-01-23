@@ -1,6 +1,6 @@
 $(function(){
 	var commands = [], pointer, trigger;
-
+	$( "body" ).height( $( window ).height() )
 	$( "#prompt" ).on( "change", function(){
 		var returnValue,
 			command = $( this ).val();
@@ -61,13 +61,13 @@ $(function(){
       }
 
       // run the effect
-      $( "#output" ).effect( selectedEffect, options, 500, callback );
+      $( ".body-wrap" ).effect( selectedEffect, options, 500, callback );
     };
 
     // callback function to bring a hidden box back
     function callback() {
       setTimeout(function() {
-        $( "#output" ).removeAttr( "style" ).hide().fadeIn();
+        $( ".body-wrap" ).removeAttr( "style" ).hide().fadeIn();
       }, 1000 );
     };
 
