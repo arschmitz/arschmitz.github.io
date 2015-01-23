@@ -39,11 +39,52 @@ window.arschmitz = {
 			irc: "#pep"
 		}
 	},
+	sideProjects: {
+		"jqueryui-bootstrap-adapter": {
+			name: "jQuery UI Bootstrap Adapter",
+			role: "Creator",
+			github: "https://github.com/arschmitz/jqueryui-bootstrap-adapter",
+			website: "https://github.com/arschmitz/jqueryui-bootstrap-adapter",
+			api: "https://github.com/arschmitz/jqueryui-bootstrap-adapter",
+			description: "A set of default options to make jQuery UI use the twitter bootstrap theme"
+		},
+		"local-menu": {
+			name: "Local Menu",
+			role: "Creator",
+			github: "https://github.com/arschmitz/local-menu",
+			website: "https://github.com/arschmitz/local-menu",
+			api: "https://github.com/arschmitz/local-menu",
+			description: "Creates a menu of all the folders / files in the director compatible with xip.io"
+		},
+		"grunt-spider": {
+			name: "Grunt Spider",
+			role: "Creator",
+			github: "https://github.com/arschmitz/grunt-spider",
+			description: "A grunt plugin to spider a website and check for any broken links resources load errors or script errors"
+		},
+		"jquery-pr": {
+			name: "jQuery PR",
+			role: "Creator",
+			github: "https://github.com/arschmitz/jquery-pr",
+			description: "an extension for chrome to check jquery foundation PR's for cla/caa signitures commit message format and line lengths"
+		}
+	},
 	contact: {
-		email: "arschmitz",
+		email: "arschmitz@gmail.com",
 		twitter: "alexrschmitz",
 		github: "arschmitz",
 		irc: "arschmitz"
 	},
+	pastExperience :{
+		"Bill Dodge Auto Group": {
+			title: "Internet Development Administrator",
+			time: "2009 - 2013"
+		},
+		"Starr Graphics": {
+			title: "Graphic Artist",
+			time: "2005-2009"
+		}
+	},
+	avatar: "<img alt='' height='230' src='https://avatars0.githubusercontent.com/u/462993?v=3&amp;s=460' width='230'>",
 	website: "Seriously?????"
 };
