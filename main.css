@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-body {
+body, html {
   font-size: 1em;
   padding: 0;
   margin: 0;
@@ -11,7 +11,9 @@ body {
 body  * {
   background: white;
 }
-.body-wrap{
+.console-wrap{
+  position:absolute;
+  top: 0;
   width:100%;
   height:100%;
   background: white;
@@ -56,4 +58,63 @@ input {
 }
 .prompt-div {
   margin-left: 30px;
+}
+.ui-accordion-header {
+  margin: 0;
+  background: none;
+  border-radius: 0;
+}
+
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
+.error { background:red; color: white; font-weight: bold; }
+
+/* GUI Stuff */
+
+.site-title{
+  margin-top: 1em;
+  font-size: 3em;
+  padding-left: 1em;
+}
+
+.gui-wrap {
+  height: 0;
+  position: absolute;
+  top: 0;
+  width:100%;
+  overflow: hidden;
+}
+
+.gui-console {
+  height: 40%;
+  overflow: scroll;
+  position:absolute;
+  top: 60%;
+  border-top: 1px solid #ccc;
+}
+
+.gui-open {
+  height: 60%;
+}
+
+.gui-open .gui-background {
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  opacity: .1;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+.gui-background-code {
+  width: 100%;
+  white-space: pre-line;
 }

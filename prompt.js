@@ -1,5 +1,5 @@
 $(function(){
-	var  commands = [], pointer, trigger;
+	var  commands = [], pointer, trigger, guiOpen;
 
 	commands = $.parseJSON( localStorage.commands || "[]" );
 	pointer = commands.length;
@@ -22,15 +22,28 @@ $(function(){
 		} else {
 			try {
 			returnValue = window.eval( command );
-			} catch (e){}
+			} catch (e){
+				console.log( e );
+				returnValue = logError( e );
+			}
 			if ( typeof returnValue === "object" ) {
-				returnValue = JSON.stringify( returnValue, null, 2 ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" );
+				try {
+					returnValue = syntaxHighlight( returnValue ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" );
+				} catch ( e ) {
+					console.log( e );
+					returnValue = logError( e );
+				}
 			}
 		}
 
 		$( "#output" ).append( "<div class='output-line'><span class='prompt-start'><</span>" + returnValue + "</div>" );
 		$( "#prompt" ).val( "" );
-		window.scrollTo( 0, $( "body" ).height() );
+		if ( !guiOpen ) {
+			window.scrollTo( 0, $( "body" ).height() );
+		} else {
+			$( ".console-wrap" )[ 0 ].scrollTop = $( ".console-wrap" )[ 0 ].scrollHeight;
+		}
+		
 	});
 	$( "#prompt" ).on( "keyup", function( e ) {
 		console.log( pointer )
@@ -53,6 +66,32 @@ $(function(){
 		console.log( "blur" );
 		$( this ).focus();
 	});
+
+	function logError( e ) {
+		return "<span class='error'>" + e.__proto__.name + ": " + e.message + "</span>";
+	}
+
+	function syntaxHighlight(json) {
+		if (typeof json != 'string') {
+			json = JSON.stringify(json, undefined, 4);
+		}
+		json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+			var cls = 'number';
+			if (/^"/.test(match)) {
+				if (/:$/.test(match)) {
+					cls = 'key';
+				} else {
+					cls = 'string';
+				}
+			} else if (/true|false/.test(match)) {
+				cls = 'boolean';
+			} else if (/null/.test(match)) {
+				cls = 'null';
+			}
+			return '<span class="' + cls + '">' + match + '</span>';
+		});
+	}
 
 	function getRandomColor() {
 		var letters = '0123456789ABCDEF'.split(''),
@@ -140,7 +179,7 @@ $(function(){
 		"explosion": "http://flashvhtml.com/html/img/action/explosion/Explosion_Sequence_A%208.png"
 	}
 	window.searchHash = {};
- 	window.lookup = [];
+	window.lookup = [];
 	window.searchObject = function ( search, key, depth ){
 		window.searchObject.count += 1;
 		function searcher( search, key, current ){
@@ -194,13 +233,13 @@ $(function(){
 				runEffect( effect, elements.eq(Math.floor(Math.random() * elements.length - 1 ) ) );
 			}, 100 );
 		window.boomBaby.intervals.push( interval );
-	}
+	};
 	function generateRule( ruleObject, selector ) {
 		var rule = selector + " { ";
 		$.each( ruleObject, function( prop, value ) {
 			rule += prop + " : " + value + ";";
 		});
-		rule += " }"
+		rule += " }";
 		stylesheet.append( rule );
 	}
 	window.boomBaby.intervals = [];
@@ -216,8 +255,6 @@ $(function(){
 		$( "*" ).each(function(){
 			var that = this,
 				interval = setInterval( function(){
-
-					console.log( " foo" )
 					var width = Math.floor(Math.random() * $( window ).width() );
 					$( that ).animate({
 						width: width,
@@ -234,27 +271,54 @@ $(function(){
 			window.visualize.intervals.push( interval );
 		});
 	}
-	window.visualize.intervals = [];
-	// run the currently selected effect
-    function runEffect( selectedEffect, element ) {
 
-      // most effect types need no options passed by default
-      var options = {};
-      // some effects have required parameters
-      if ( selectedEffect === "scale" ) {
-        options = { percent: 0 };
-      } else if ( selectedEffect === "transfer" ) {
-        options = { to: "#prompt", className: "ui-effects-transfer" };
-      } else if ( selectedEffect === "size" ) {
-        options = { to: { width: 200, height: 60 } };
-      }
-      // callback function to bring a hidden box back
-		function callback() {
-			setTimeout(function() {
-				$( element ).removeAttr( "style" );
-			}, 1000 );
-		};
-      // run the effect
-      $( element ).effect( selectedEffect, options, 500, callback );
-    };
+	window.visualize.intervals = [];
+
+	// Run the currently selected effect
+	function runEffect( selectedEffect, element ) {
+
+		// most effect types need no options passed by default
+		var options = {};
+		// some effects have required parameters
+		if ( selectedEffect === "scale" ) {
+			options = { percent: 0 };
+		} else if ( selectedEffect === "transfer" ) {
+			options = { to: "#prompt", className: "ui-effects-transfer" };
+		} else if ( selectedEffect === "size" ) {
+			options = { to: { width: 200, height: 60 } };
+		}
+		// callback function to bring a hidden box back
+			function callback() {
+				setTimeout(function() {
+					$( element ).removeAttr( "style" );
+				}, 1000 );
+			}
+
+		// Run the effect
+		$( element ).effect( selectedEffect, options, 500, callback );
+	}
+
+	window.gui = function( code ) {
+		guiOpen = true;
+		$( ".console-wrap" )
+			.addClass( "gui-console", { duration: 1000, queue: false } )
+			.resizable( {
+				handles: "n",
+				resize: function( e, ui ) {
+					console.log( ui.size.height )
+					$( ".gui-wrap" ).height( $( window ).height() - ui.size.height );
+				}
+			} );
+		$( ".gui-wrap" ).addClass( "gui-open", { duration: 1000, queue: false } );
+		$.ajax( {
+			dataType: "text",
+			url: "http://code.jquery.com/jquery-git.js",
+			success: function( data ) {
+				$( ".gui-background-code" ).text( data );
+				setTimeout(function(){
+					$( "marquee" )[ 0 ].start();
+				},1000);
+			}
+		} );
+	};
 });

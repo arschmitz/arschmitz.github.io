@@ -56,17 +56,41 @@ window.arschmitz = {
 			api: "https://github.com/arschmitz/local-menu",
 			description: "Creates a menu of all the folders / files in the director compatible with xip.io"
 		},
+		"static-spider": {
+			name: "Static Spider",
+			role: "Creator",
+			github: "https://github.com/arschmitz/static-spider",
+			description: "A Casper JS sestsuit for crawling static sites. Detects broken links ( 4xx ), permenant and or fatal redirects, script errors, and missing resources"
+		},
 		"grunt-spider": {
 			name: "Grunt Spider",
 			role: "Creator",
 			github: "https://github.com/arschmitz/grunt-spider",
-			description: "A grunt plugin to spider a website and check for any broken links resources load errors or script errors"
+			description: "A grunt plugin to spider a website and check for any broken links resources load errors or script errors using casper-spider"
 		},
 		"jquery-pr": {
 			name: "jQuery PR",
 			role: "Creator",
 			github: "https://github.com/arschmitz/jquery-pr",
 			description: "an extension for chrome to check jquery foundation PR's for cla/caa signitures commit message format and line lengths"
+		},
+		"mobile-presenter": {
+			name: "Mobile Presenter",
+			role: "Creator",
+			github: "https://github.com/arschmitz/mobile-presenter",
+			description: "A slide deck based on codeignighter and jQuery Mobile, includes multi presentation support and follow along function with socket.io"
+		},
+		"ios-iframe-touchevents-fix": {
+			name: "iOS Iframe Touchevents Fix",
+			role: "Co-Creator",
+			github: "https://github.com/gseguin/ios-iframe-touchevents-fix",
+			description: "Workaround for iOS' iframes touch events issue"
+		},
+		"jQuery-mobile-onpage": {
+			name: "jQuery Mobile onPage",
+			role: "creator",
+			github: "https://github.com/gseguin/ios-iframe-touchevents-fix",
+			description: "Provides easy binding for jQuery Mobile page events an reduces the number of bindings needed in a modular project"
 		}
 	},
 	contact: {
