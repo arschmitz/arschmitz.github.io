@@ -298,6 +298,11 @@ $(function(){
 		$( element ).effect( selectedEffect, options, 500, callback );
 	}
 
+	window.render = function( template ) {
+		var content = Handlebars.compile( $( "#" + template ).html() );
+		$( ".gui-wrap" ).html( content( arschmitz ) );
+	}
+
 	window.gui = function( code ) {
 		guiOpen = true;
 		$( ".console-wrap" )
@@ -309,6 +314,7 @@ $(function(){
 					$( ".gui-wrap" ).height( $( window ).height() - ui.size.height );
 				}
 			} );
+		render( "main" );
 		$( ".gui-wrap" ).addClass( "gui-open", { duration: 1000, queue: false } );
 		$.ajax( {
 			dataType: "text",
@@ -321,4 +327,9 @@ $(function(){
 			}
 		} );
 	};
+
+	$( document ).on( "click", function( e ){
+		console.log( e.target )
+		$( "#prompt" ).val( $( e.target ).attr( "data-call" ) ).trigger( "change" );
+	});
 });

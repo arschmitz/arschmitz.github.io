@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Arschmitz.me - javascript is beautiful</title>
 	<script src="http://code.jquery.com/jquery-git.js"></script>
 	<script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
 	<link href="https://rawgit.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.min.css" rel="stylesheet">
-	<link href="https://code.jquery.com/ui/jquery-ui-git.css" rel="stylesheet">
+	<link href="jquery-ui.css" rel="stylesheet">
 	<link href="main.css" rel="stylesheet">
 	<script src="prompt.js"></script>
-
 	<script src="me.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
 </head>
 <body>
 <div class="gui-wrap">
-<h1 class="site-title">> arschmitz.me -  JavaScript is Beautiful</h1>
-<marquee class="gui-background" behavior="scroll" direction="up" scrollamount="2" scrolldelay="100">
-<pre><code class="gui-background-code"></code></pre>
-</marquee>
+
 </div>
 <div class="console-wrap">
 	<div id="output">
@@ -42,4 +38,31 @@
 	</div>
 </div>
 </body>
+<script id="main" type="text/x-handlebars-template">
+	<marquee class="gui-background" behavior="scroll" direction="up" scrollamount="2" scrolldelay="100">
+		<pre><code class="gui-background-code"></code></pre>
+	</marquee>
+	<h1 class="site-title">> arschmitz.me -  JavaScript is Beautiful</h1>
+	<div class="menu row">
+		<div class="col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
+		{{#each menu}}
+			<div class="menu-button-wrap col-lg-2 col-md-4 col-sm-6 col-xs-12">
+				<button data-call="render( '{{this}}' );">{{this}}</button>
+			</div>
+		{{/each}}
+	</div>
+</script>
+<script id="projects" type="text/x-handlebars-template">
+	<div class="row project-row">
+	{{#each projects}}
+		<div class="col-lg-3 col-md-6 col-sm-0 col-xs-0 project-box-wrap">
+			<div class="project-box">
+				<img src="{{this.logo}}" class="projects-logo"/>
+				<h2 class="project-title">{{this.name}}</h2>
+			</div>
+		</div>
+	{{/each}}
+	</div>
+	}
+</script>
 </html>
