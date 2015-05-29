@@ -1,13 +1,13 @@
 <div class="content" data-background="https://code.jquery.com/ui/jquery-ui-git.js">
-	<h1 class="site-title"> <a href data-call="gui.render( 'main' );">arschmitz</a>.projects</h1>
+	<h1 class="site-title">> <a href data-call="gui.render( 'main' );">arschmitz</a>.projects</h1>
 	<div class="row project-row">
 	{{#each projects}}
-		<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 project-box-wrap">
-			<button class="project-box" data-call="gui.render( 'projects.project', '{{@key}}' );">
-				<img src="{{this.logo}}" class="project-logo"/>
-				<h2 class="project-title">{{this.name}}</h2>
-			</button>
-		</div>
+		<a href class="projects-link col-lg-4 col-md-6 col-sm-6 col-xs-12 float-box" data-call="gui.render( 'projects.project', '{{@key}}' );">
+			<img src="{{this.logo}}" class="projects-logo"/>
+			<h1 class="projects-title">{{this.name}}</h1>
+		</a>
 	{{/each}}
+		<a class="projects-link col-lg-4"></a>
+		<a class="projects-link col-lg-4"></a>
 	</div>
 </div>

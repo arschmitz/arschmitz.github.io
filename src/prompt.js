@@ -26,13 +26,14 @@ gui = {
 	},
 	render: function( templateName, item, setHistory ) {
 		var parts = templateName.split( "." );
+		var url = "templates/" + ( parts[ 1 ] || parts[ 0 ] ) + ".html"
 		$.ajax({
-			url: "templates/" + ( parts[ 1 ] || parts[ 0 ] ) + ".html",
+			url: url,
 			success: function( data ) {
 				var content = Handlebars.compile( data );
 
 				if ( !item) {
-					$( ".gui-wrap" ).html( content( arschmitz ) );
+					gui.transition( content( arschmitz ) );
 					gui.startBackground();
 					if ( setHistory === false ) {
 						return;
@@ -40,7 +41,7 @@ gui = {
 					history.pushState( {}, "arschmitz.me - GUI - " +
 						templateName, window.location.pathname + "?gui&template=" + templateName );
 				} else {
-					$( ".gui-wrap" ).html( content( arschmitz[ parts[ 0 ] ][ item ] ) );
+					gui.transition( content( arschmitz[ parts[ 0 ] ][ item ] ) );
 
 					gui.startBackground();
 					if ( setHistory === false ) {
@@ -49,8 +50,18 @@ gui = {
 					history.pushState( {}, "arschmitz.me - GUI - " +item, window.location.pathname +
 						"?gui&template=" + templateName + "&item=" + item );
 				}
+			},
+			error: function( jqxhr, status, error ) {
+				console.log( jqxhr );
+				$( "#output" ).append( "<div class='output-line'><span class='prompt-start'><</span> <span class='error'>GET " + url + " " + jqxhr.status + " (" + error + ")</span></div>" );
 			}
 		});
+	},
+	defaultTransition: "fade",
+	transition: function( content ) {
+		$( ".gui-wrap" ).hide( gui.defaultTransition, 200, function(){
+			$( ".gui-wrap" ).show( gui.defaultTransition, 200 ).html( content );
+		} );
 	},
 	isOpen: false,
 	startBackground: function() {
@@ -63,6 +74,9 @@ gui = {
 				url: content,
 				success: function( data ) {
 					$( ".gui-background-code" ).text( data );
+				},
+				error: function() {
+					alert();
 				}
 			} );
 		}
@@ -88,24 +102,24 @@ gui = {
 	}
 }
 
-Object.defineProperty( window, "openGUI", {
+Object.defineProperty( window, "GUI", {
 	get: function() {
 		gui.open();
-	}
-} );
-Object.defineProperty( window, "closeGUI", {
-	get: function() {
-		gui.close();
 	}
 } );
 
 // Event Handlers
 
 $( window ).on( "popstate", gui.popState );
+
+
+
 $( document ).on( "click", "[data-call]", function( e ){
 	console.log( "click" );
 	$( "#prompt" ).val( $( this ).attr( "data-call" ) ).trigger( "change" );
-});
+}).on( "error", "img", function( e ) {
+
+} );
 
 (function(){
 	// Prompt
@@ -115,7 +129,7 @@ $( document ).on( "click", "[data-call]", function( e ){
 	commands = $.parseJSON( localStorage.commands || "[]" );
 	pointer = commands.length;
 
-	var prompt = {
+	window.prompt = {
 		logError: function( e ) {
 			return "<span class='error'>" + e.__proto__.name + ": " + e.message + "</span>";
 		},
@@ -142,7 +156,6 @@ $( document ).on( "click", "[data-call]", function( e ){
 			});
 		},
 		runCommand: function() {
-			console.log( "run")
 			var returnValue,
 				command = $( this ).val();
 

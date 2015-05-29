@@ -36,80 +36,90 @@ window.arschmitz = {
 	},
 	talks: {
 		"asia": {
+			key: "asia",
 			eventName: "jQuery Asia",
-			video: "https://www.youtube.com/watch?v=TXOFOqsrVuU",
+			video: "TXOFOqsrVuU",
 			website: "https://www.facebook.com/JQueryConferenceAsia",
 			description: "jQuery Mobile makes developing mobile apps and sites easy, semantic and familiar. However those familiar with typical desktop patterns may find themselves banging their heads against the wall when something \"simple\" doesn't work as expected. This session will go through some of the most common problems and pitfalls facing those jumping into jQuery Mobile. Areas covered will include injecting and enhancing dynamic content, working with enhanced form elements, refactoring for pageinit vs $(document).ready(), and the navigation model / page events.",
 			title: "jQuery Mobile: Common Pitfalls and Gotchas",
 			slides: false
 		},
 		"austin": {
+			key: "austin",
 			eventName: "jQuery Austin",
-			video: false,
+			video: "bZTOV-55ivM",
 			website: "http://events.jquery.org/2013/austin/",
 			description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
 			title: "jQuery Mobile: Optimizing Performance",
 			slides: "http://www.slideshare.net/AlexanderSchmitz/austin-26252266"
 		},
 		"sandiego": {
+			key: "sandiego",
 			eventName: "jQuery San Diego",
-			video: "https://www.youtube.com/watch?v=BNS4u086Lg8",
+			video: "BNS4u086Lg8",
 			website: "http://events.jquery.org/2014/san-diego/",
 			description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
 			title: "jQuery Mobile: Optimizing Performance",
 			slides: "http://www.slideshare.net/AlexanderSchmitz/austin-26252266"
 		},
 		"europe": {
+			key: "europe",
 			eventName: "jQuery Europe",
-			video: false,
+			video: "bZTOV-55ivM",
 			website: "http://www.gentics.com/jquery-eu-2014/page/2014/eu.html",
 			description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
 			title: "jQuery Mobile: Optimizing Performance",
 			slides: false
 		},
 		"amsterdam": {
+			key: "amsterdam",
 			eventName: "Booking.com - Amsterdam",
-			video: false,
+			video: "bZTOV-55ivM",
 			website: false,
 			description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
 			title: "jQuery Mobile: Optimizing Performance",
 			slides: "http://www.slideshare.net/AlexanderSchmitz/austin-26252266"
 		},
 		"chicago": {
+			key: "chicago",
 			eventName: "jQuery Chicago",
-			video: "https://www.youtube.com/watch?v=2qF7kW9SdJQ&index=2&list=PL-0yjdC10QYpmXI3l-PGK1od4kTWOjm_A",
+			video: "2qF7kW9SdJQ",
 			website: "http://events.jquery.org/2014/chicago/",
 			description: "jQuery Mobile 1.5 brings lots of new features and a revamped navigation system, more performance optimization possibilities for advanced users and adoption of more widgets from jQuery UI. Lately though, the question I am asked isn't about what's going to be in 1.6, 1.7, and so on, but about the future of jQuery Mobile after the merger with jQuery UI, and what the future is for the jQuery Mobile project. I’ll go into our current road map and details (as many as are available right now) about the future of jQuery Mobile and what it will look like after 2.0",
 			title: "What’s New in 1.5 and the Road to 2.0",
 			slides: false
 		},
 		"pwmWebDevJquery": {
+			key: "pwmWebDevJquery",
 			eventName: "Portland Web Developer Meetup",
-			video: false,
+			video: "bZTOV-55ivM",
 			website: "http://www.portlandwebworks.com/blog/fun-times-webdev-meeting",
 			description: "In depth talk on the jQuery Foundation, jQuery Mobile, and mobile performance in general",
 			title: "jQuery Foundation overview / Mobile performance",
 			slides: false
 		},
 		"pwmWebDevNodeCLI": {
+			key: "pwmWebDevJquery",
 			eventName: "Portland Web Developer Meetup",
-			video: false,
+			video: "bZTOV-55ivM",
 			website: "http://www.meetup.com/me-webdev/events/219614954/",
 			description: "Using node as a CLI on shared hosting / Nodeception",
 			title: "Node for the masses",
 			slides: false
 		},
 		"jssummit2014": {
+			key: "jssummit2014",
 			eventName: "JavaScript Summit 2014",
-			video: false,
+			video: "bZTOV-55ivM",
 			website: "http://environmentsforhumans.com/2014/javascript-summit/",
 			description: "It's an exciting time for jQuery UI and Mobile. Big changes are coming to jQuery Mobile and jQuery UI this year as the projects start to merge. But what exactly does this mean? What is the future of the two libraries? Which one is going away? Are either going away? These and many others are the type of questions I have been receiving from many people in the community since we started talking about merging the projects in the spring of 2013. I will address these questions and many more, will give you some history behind the changes we are making as well as give some insight into the direction the projects are taking, and how we’re going to make integration with both projects easier for developers.",
 			title: "The State of jQuery UI & Mobile",
 			slides: false
 		},
 		"jssummit2015": {
+			key: "jssummit2015",
 			eventName: "JavaScript Summit 2015",
-			video: false,
+			video: "bZTOV-55ivM",
 			website: "http://environmentsforhumans.com/2015/javascript-summit/",
 			description: "Chassis seeks to establish a standard of markup and structure for common components that can be used by both CSS frameworks and JS component libraries to allow for complete interoperability, modularity, and justice, for all. Throughout this process we've been collaborating with a variety of projects and community members including: Topcoat, Zurb Foundation, Cardinal, Famo.us, Yandex, Wordpress, Automattic, 10up, 960grid, Unsemantic, jQuery Mobile, jQuery UI, Intel App Framework, and Cascade CSS, as well as some collaborators from Adobe, Hulu, and Bootstrap.",
 			title: "Chassis: Yet Another CSS Framework",
@@ -117,20 +127,6 @@ window.arschmitz = {
 		}
 	},
 	projects: {
-		"jquery-ui": {
-			name: "jQuery UI",
-			repoName: "jquery-ui",
-			role: "Team Member",
-			github: "https://github.com/jquery/jquery-ui",
-			website: "http://jqueryui.com",
-			api: "http://api.jqueryui.com",
-			description: "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
-			irc: "#jqueryui-dev",
-			dist: "https://code.jquery.com/ui/jquery-ui-git.js",
-			currentWork: "",
-			logoLarge: "http://upload.wikimedia.org/wikipedia/en/thumb/7/72/JQuery_UI_Logo.svg/1280px-JQuery_UI_Logo.svg.png",
-			logo: "http://www.geneangelo.com/assets/jquery-ui-logo-f343e29bb1d9e9a54ba04ab87df68847.png"
-		},
 		"jquery-mobile": {
 			name: "jQuery Mobile",
 			role: "Project Lead",
@@ -142,8 +138,20 @@ window.arschmitz = {
 			dist: "https://code.jquery.com/mobile/git/jquery.mobile-git.js",
 			description: "A unified, HTML5-based user interface system for all popular mobile device platforms, built on the rock-solid jQuery and jQuery UI foundation. Its lightweight code is built with progressive enhancement, and has a flexible, easily themeable design.",
 			irc: "#jqueryui-dev",
-			logoLarge: "http://thinkbiglearnsmart.com/wp-content/uploads/2013/08/jquery-mobile-logo_positive.png",
-			logo: "http://www.bssmain.com/images/jquerymobile.png"
+			logo: "images/mobile.svg"
+		},
+		"jquery-ui": {
+			name: "jQuery UI",
+			repoName: "jquery-ui",
+			role: "Team Member",
+			github: "https://github.com/jquery/jquery-ui",
+			website: "http://jqueryui.com",
+			api: "http://api.jqueryui.com",
+			description: "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
+			irc: "#jqueryui-dev",
+			dist: "https://code.jquery.com/ui/jquery-ui-git.js",
+			currentWork: "",
+			logo: "images/ui.svg"
 		},
 		"css-chassis": {
 			name: "Chassis",
@@ -153,7 +161,7 @@ window.arschmitz = {
 			website: "http://css-chassis.com",
 			description: "Chassis is an attempt at creating open standards designed for CSS libraries, JavaScript UI libraries, and web developers in general. This project will define standards for markup and class names for common widgets and patterns, as well as an implementation of those standards.",
 			irc: "#css-chassis",
-			logo: "https://cloud.githubusercontent.com/assets/1379244/7033639/5f774126-dd30-11e4-8981-b09b2cd749aa.png"
+			logo: "images/chassis.svg"
 		},
 		"pep": {
 			name: "PEP: PointerEvents Polyfill",
@@ -163,7 +171,25 @@ window.arschmitz = {
 			description: "PointerEvents Polyfill: a unified event system for the web platform http://www.w3.org/TR/pointerevents/",
 			irc: "#pep",
 			dist: "http://code.jquery.com/pep/0.3.0/pep.js",
-			logo: "Coming soon..."
+			logo: "images/pep.png"
+		},
+		"jquery-infrastructure": {
+			name: "jQuery Infrastructure",
+			role: "Team Member",
+			github: "Private",
+			website: "http://jquery.org",
+			description: "Team responsible for all infrastructure of for the jQuery Foundations projects",
+			irc: "#jquery-infrastructure",
+			logo: "images/infrastructure.svg"
+		},
+		"jquery-content": {
+			name: "jQuery Content",
+			role: "Team Member",
+			github: "https://github.com/jquery/jquery-content",
+			website: "http://jquery.org",
+			description: "Team responsible for all content of for the jQuery Foundations websites",
+			irc: "#jquery-content",
+			logo: "images/content.png"
 		},
 		"spider.js": {
 			name: "Spider.js",
@@ -173,8 +199,7 @@ window.arschmitz = {
 			description: "A node module / CLI based on casper.js for crawling and checking websites for dead links, unnessasarry redirects, resource load errors and script erros",
 			dist: "https://raw.githubusercontent.com/arschmitz/spider.js/master/lib/tests.js",
 			irc: "Ping me on freenode!",
-			logo: "images/spider-js.svg",
-			logoLarge: "images/spider-js.svg"
+			logo: "images/spider-js.svg"
 		}
 	},
 	sideProjects: {
@@ -242,8 +267,8 @@ window.arschmitz = {
 		methods: {
 			gui: {
 				methods: {
-					guiOpen: "<code>guiOpen</code> Open the GUI ( Graphic User Interface ) for the website.",
-					guiClose: "<code>guiOpen</code> Open the GUI ( Graphic User Interface ) for the website.",
+					GUI: "<code>GUI</code> Open the GUI ( Graphic User Interface ) for the website.",
+					guiClose: "<code>gui.close();</code> Open the GUI ( Graphic User Interface ) for the website.",
 					render: "<code>render( template [,item] );</code> Render a page in the GUI"
 				},
 				description: "These methods control the display of the GUI content of the website"

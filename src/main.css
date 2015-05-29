@@ -187,25 +187,119 @@ button:active {
   left: 50%;
 }
 
-.project-logo {
-  width:50%;
-  left: 50%;
-  margin-left: -25%;
-  position: absolute;
-  top: .5em;
-}
-
-.project-logo-large {
+.projects-logo {
+  height: 100px;
   max-width: 100%;
-  width: 100%;
+  margin-top: 2em;
 }
 
-.project-title {
+.project-row {
+  padding-bottom: 1em;
+}
+
+.projects-title,
+.sideProjects-title,
+.talks-name {
   position: absolute;
-  bottom: 0em;
+  bottom: 0;
   text-align: center;
   width: 100%;
   left: 0;
+  height: 86px;
+  text-shadow: 2px 2px #ccc;
+}
+
+.talks-name {
+  position: static;
+}
+
+a:hover *,
+a:hover {
+  text-shadow: 0 0 7px rgba( 0, 127, 255, .5 );
+}
+
+.video-frame {
+  width: 90%;
+  height: 320px;
+}
+
+.talks-name,
+.sideProjects-title {
+  font-size: 2em;
+}
+
+.projects-link hr {
+  position:absolute;
+  bottom: 0;
+  width: 90%;
+  left: 5%;
+}
+
+a:visited hr {
+  color: #ccc;
+}
+
+.float-box {
+  position: relative;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  margin-left: -1px;
+  margin-bottom: .3em;
+}
+
+.project-logo-label {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.project-logo {
+  height: 100px;
+}
+
+.project-top {
+  height: 150px;
+}
+
+.project-second {
+  height: 300px;
+}
+
+.project h1,
+.project h2,
+.project h3,
+.project h4,
+.project h5,
+.project iframe {
+ margin-left: 5%;
+}
+
+.projects-link {
+  height: 275px;
+  text-align: center;
+}
+
+.float-box:after {
+  content: "";
+  width: 90%;
+  display: block;
+  margin-left: 5%;
+  border: 1px inset #ccc;
+  height: 0px;
+  position: absolute;
+  bottom:0;
+  left: 0;
+}
+
+.ui-effects-transfer { border: 2px dotted gray; }
+
+.talks-link,
+.sideProjects-link {
+  height: 200px;
+  text-align: center;
+}
+
+.talk-description {
+  width: 90%;
 }
 
 .bold {
@@ -221,6 +315,9 @@ button:active {
 @media only screen and (min-width: 75em) {
   .site-title {
     font-size: 3em;
+  }
+  .col-lg-2 {
+    max-width: 16.666%;
   }
 }
 
