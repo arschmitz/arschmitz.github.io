@@ -1,0 +1,10 @@
+<div class="content" data-background="http://code.jquery.com/jquery-git.js">
+	<h1 class="site-title">> arschmitz.me -  JavaScript is Beautiful</h1>
+	<div class="menu row">
+		{{#each menu}}
+			<div class="menu-button-wrap col-lg-2 col-md-4 col-sm-6 col-xs-12">
+				<button data-call="gui.render( '{{this}}' );">{{this}}</button>
+			</div>
+		{{/each}}
+	</div>
+</div>

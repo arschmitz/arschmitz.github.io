@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  *background: black;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+body  * {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+a, a:hover, a:active, a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.console-wrap{
+  position:absolute;
+  top: 0;
+  width:100%;
+  height:100%;
+  background: white;
+}
+input {
+  font-size: 1em;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+#prompt {
+  border: none;
+  background: none;
+  width:100%;
+  outline: 0;
+}
+.tab {
+  width: 2em;
+  display: inline-block;
+}
+.prompt-start {
+  padding-left: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  float: left;
+  width: 30px
+}
+.output-line .prompt-start{
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+#output {
+}
+.prompt-wrap { 
+  border-top: 1px solid #ccc;
+}
+.output-line {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  padding-left: 30px;
+  width: 100%;
+  position: relative;
+}
+.prompt-div {
+  margin-left: 30px;
+}
+.ui-accordion-header {
+  margin: 0;
+  background: none;
+  border-radius: 0;
+}
+
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
+.error { background:red; color: white; font-weight: bold; }
+
+/* GUI Stuff */
+
+.scrollable-content {
+  position: relative;
+}
+
+.site-title{
+  margin-top: 1em;
+  font-size: 1.5em;
+  padding-left: .2em;
+}
+
+.gui-wrap {
+  height: 0;
+  position: absolute;
+  top: 0;
+  width:100%;
+  padding: 1em;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gui-console {
+  height: 20%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  position:absolute;
+  top: 80%;
+  border-top: 1px solid #ccc;
+}
+
+.gui-open {
+  height: 80%;
+}
+
+.gui-background {
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  opacity: .1;
+  z-index: 0;
+}
+
+.gui-background-code {
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+button {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba( 0, 0, 0, 0.2 );
+  border: 1px solid rgba( 0, 62, 255, .5 );
+  background: rgba( 0, 127, 255, .5 );
+  font-size: 1.2em;
+}
+
+.menu-button-wrap{
+  padding: .5em;
+  z-index: 1;
+}
+
+.menu-button-wrap button {
+  width: 100%;
+}
+
+.row {
+  z-index: 1;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+button:hover {
+  box-shadow: 2px 2px 2px #ccc;
+}
+
+button:active {
+  opacity: initial;
+}
+button:active {
+  box-shadow: 1px 1px 1px #333;
+}
+
+.project-box-wrap {
+  padding: 1em;
+}
+
+.project-box {
+  width: 50%;
+  height: 200px;
+  border-radius: 5px;
+  padding: 1em;
+  position: relative;
+  margin-left: -25%;
+  left: 50%;
+}
+
+.project-logo {
+  width:50%;
+  left: 50%;
+  margin-left: -25%;
+  position: absolute;
+  top: .5em;
+}
+
+.project-logo-large {
+  max-width: 100%;
+  width: 100%;
+}
+
+.project-title {
+  position: absolute;
+  bottom: 0em;
+  text-align: center;
+  width: 100%;
+  left: 0;
+}
+
+.bold {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (min-width: 62em) {
+  .site-title {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .site-title {
+    font-size: 3em;
+  }
+}
+
