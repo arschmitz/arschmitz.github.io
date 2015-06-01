@@ -1,0 +1,25 @@
+<div class="content" data-background="{{dist}}">
+	<h1 class="site-title">> <a href data-call="gui.render( 'main' );">arschmitz</a>.<a href data-call="gui.render( 'rants' );">rants</a>.{{title}};</h1>
+	<div class="rant row">
+		<div class="col-xs-12 float-box project">
+			<h1><span class="bold">Title: </span>{{title}}</h1>
+			<h2><span class="bold">Word: </span>{{word}}</h2>
+			<h3><span class="bold">Pronunciation: </span>{{pronunciation}}</h3>
+			<h3><span class="bold">Part of Speach: </span>{{partOfSpeech}}</h3>
+			<h3><span class="bold">Definition: </span></h3>
+			<h3>
+				<ol>
+				{{#each definition}}
+					<li>{{this}}</li>
+				{{/each}}
+				</ol>
+			</h3>
+		</div>
+		<br/>
+		<div class="col-xs-12 float-box project">
+		{{#each rant}}
+			<p>{{this}}</p>
+		{{/each}}
+		</div>
+	</div>
+</div>

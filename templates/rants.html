@@ -1,0 +1,13 @@
+<div class="content" data-background="https://code.jquery.com/mobile/git/jquery.mobile-git.js">
+	<h1 class="site-title">> <a href data-call="gui.render( 'main' );">arschmitz</a>.rants</h1>
+	<div class="row project-row">
+	{{#each rants}}
+		<a href class="col-xs-12 float-box project" data-call="gui.render( 'rants.rant', '{{@key}}' );">
+			<h1 class="rant-title">{{@key}}</h1>
+			<h2>{{this.word}}</h2>
+			<h3>{{this.shortDefinition}}</h3>
+		</a>
+	{{/each}}
+	</div>
+	<a class="projects-link col-xs-12"></a>
+</div>

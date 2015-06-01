@@ -1,0 +1,53 @@
+<div class="content" data-background="/src/effects.js">
+	<h1 class="site-title">> <a href data-call="gui.render( 'main' );">arschmitz</a>.effects</h1>
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
+			<h1>Effects:</h1>
+			<h3>This section is a playground for different effects and effects related function built into the website</h3>
+			<h3>Any effect can be aborted and the normal look restored by pressing the escape key at any time</h3>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
+			<h1>Transitions:</h1>
+			<h3>These settings control the default page transition for the website</h3>
+			<label for="defaultTransition"><h4>defaultTransition:</h4></label>
+			<select id="defaultTransition">
+				<option>blind</option>
+				<option>bounce</option>
+				<option>clip</option>
+				<option>drop</option>
+				<option>explode</option>
+				<option selected>fade</option>
+				<option>fold</option>
+				<option>highlight</option>
+				<option>puff</option>
+				<option>pulsate</option>
+				<option>scale</option>
+				<option>shake</option>
+				<option>size</option>
+				<option>slide</option>
+				<option>transfer</option>
+			</select>
+			<label for="defaultDuration"><h4>defaultDuration:</h4></label>
+			<input type="number" min="0" max="10000" id="defaultDuration" value="200">
+			<br/><br/>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
+			<h1>Canned Effects:</h1>
+			<div class="row">
+				<button class="col-xs-10 col-xs-offset-1 effect-button" data-call="effects.iAmTheSpoon();">effects.iAmTheSpoon();</button>
+				<button class="col-xs-10 col-xs-offset-1 effect-button" data-call="effects.iHaveTheSpins();">effects.iHaveTheSpins();</button>
+				<button class="col-xs-10 col-xs-offset-1 effect-button" data-call="effects.partyMode();">effects.partyMode();</button>
+				<button class="col-xs-10 col-xs-offset-1 effect-button" data-call="effects.visualize();">effects.visualize();</button>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
+			<h1>Flashmob Effects:</h1>
+			<div class="row">
+				<button class="col-xs-10 col-xs-offset-1 effect-button" data-call='effects.flashMob( "bounce", [ "rebelcruiser", "xwing" ] );'>Rebel Attack: effects.flashMob( "drop", [ "rebelcruiser", "xwing" ] );</button>
+				<button class="col-xs-10 col-xs-offset-1 effect-button" data-call='effects.flashMob( "puff", [ "stardestroyer", "tiefighter" ] );'>Imperial Attack: effects.flashMob( "puff", [ "rebelcruiser", "xwing" ] );</button>
+				<button class="col-xs-10 col-xs-offset-1 effect-button" data-call='effects.flashMob( "size", [ "battledroid" ] );'>Droid Blackhole: effects.flashMob( "size", [ "battledroid" ] );</button>
+				<button class="col-xs-10 col-xs-offset-1 effect-button" data-call='effects.flashMob( "explode", "explosion" );'>Michael Bay: effects.flashMob( "explode", "explosion" );</button>
+			</div>
+		</div>
+	</div>
+</div>

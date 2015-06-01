@@ -1,0 +1,28 @@
+<div class="content" data-background="https://code.jquery.com/ui/jquery-ui-git.js">
+	<h1 class="site-title">> <a href data-call="gui.render( 'main' );">arschmitz</a>.community</h1>
+	<div class="row project-row">
+	{{#each community}}
+		<div href class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
+			<div class="row project-row">
+				<div class="col-lg-2">
+					<img class="community-logo" src="{{this.logo}}">
+				</div>
+				<div href class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+					<h2 class="talks-name"><span class="bold">Organization: </span>{{this.organization}}</h2>
+				</div>
+				<div href class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+					<h2 class="community-role"><span class="bold">Website: {{this.website}}</span></h2>
+					<h2 class="community-role"><span class="bold">Role: {{this.role}}</span></h2>
+					<h3 class="talks-title"><span class="bold">Work: </span>
+						<ul>
+						{{#each this.work}}
+							<li>{{this}}</li>
+						{{/each}}
+						</ul>
+					</h3>
+				</div>
+			</div>
+		</div>
+	{{/each}}
+	</div>
+</div>
