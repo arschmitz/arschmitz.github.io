@@ -72,9 +72,9 @@ window.effects = {
 			effects.intervals.iAmTheSpoon.push( interval );
 		});
 	},
-	boom: function( effect, image ){
+	flashMob: function( effect, image ){
 		effects.saveStyle();
-		effects.boomElements = $( "*" );
+		effects.flashMobElements = $( "body>*" );
 		var elements = $( "body *" ).not( ":hidden" );
 		var that = this,
 			interval = setInterval( function(){
@@ -90,13 +90,13 @@ window.effects = {
 							"width": ( Math.floor(Math.random() * 240 ) + 50 )  + "px",
 							"background": "none"
 						},
-						boom = $( "<img src='" + effects.images[ v ] + "'>" ).uniqueId(),
-						id = boom.attr( "id" );
+						flashMob = $( "<img src='" + effects.images[ v ] + "'>" ).uniqueId(),
+						id = flashMob.attr( "id" );
 
 						effects.generateRule( ruleObject, "#" + id );
 
-						$( "body" ).append( boom );
-						effects.runEffect( effect, boom );
+						$( "body" ).append( flashMob );
+						effects.runEffect( effect, flashMob );
 					} );
 				}
 				var element = elements.eq( Math.floor( Math.random() * elements.length - 1 ) );
@@ -104,9 +104,9 @@ window.effects = {
 					effects.runEffect( effect, element );
 				}
 			}, 100 );
-		effects.intervals.boomBaby.push( interval );
+		effects.intervals.flashMobBaby.push( interval );
 	},
-	boomElements: false,
+	flashMobElements: false,
 	visualize: function(){
 		effects.saveStyle();
 		effects.iHaveTheSpins( false );
@@ -163,8 +163,8 @@ window.effects = {
 				});
 				effects.intervals[ i ] = [];
 			});
-			if ( effects.boomElements ) {
-				$( "*" ).not( effects.boomElements ).remove();
+			if ( effects.flashMobElements ) {
+				$( "body>*" ).not( effects.flashMobElements ).remove();
 			}
 			setTimeout( function(){
 				effects.restoreStyle();
@@ -192,13 +192,14 @@ window.effects = {
 		"stormtrooper": "http://www.digitaltoolsforarchitects.com/wp-content/uploads/2012/12/Storm-Trooper_bw.png",
 		"stardestroyer": "http://i86.photobucket.com/albums/k81/trekkie313/2212copy.png",
 		"xwing": "http://thxalot.org/skits/gifdisko/Area51/img_transparent/gdxwing.gif",
-		"tiefighter": "http://www.csit.parkland.edu/~ddallas/csc233/lectures/Images/tiefighter.png"
+		"tiefighter": "http://www.csit.parkland.edu/~ddallas/csc233/lectures/Images/tiefighter.png",
+		"rebelcruiser": "http://img3.wikia.nocookie.net/__cb20150215073634/starwars/images/4/47/Rebels-TantiveIVConceptArt-CroppedBackground.png"
 	},
 	intervals: {
 		partyMode: [],
 		iHaveTheSpins: [],
 		iAmTheSpoon: [],
-		boomBaby: [],
+		flashMobBaby: [],
 		visualize: []
 	},
 	stylesheet: $( "<style>" ).appendTo( "head")
@@ -208,5 +209,13 @@ $( window ).on( "resize", function(){
 	effects.height = $( window ).height;
 	effects.width = $( window ).width;
 });
+
+$( document ).on( "change", "#defaultTransition", function() {
+	gui.defaultTransition = $( this ).val();
+} );
+
+$( document ).on( "change", "#defaultDuration", function() {
+	gui.defaultDuration = parseInt( $( this ).val(), 10 );
+} );
 
 $( document ).on( "keydown", effects.kill );

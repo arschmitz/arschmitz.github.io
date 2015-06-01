@@ -6,33 +6,66 @@ window.arschmitz = {
 		profession: "Developer",
 		title: "Project Lead jQuery Mobile, Co Creator Chassis CSS Framework, Team Member jQuery UI, PEP, jQuery Testing Team, jQuery Infrastructure Team, jQuery Content Team",
 		avatar: "https://avatars0.githubusercontent.com/u/462993?v=3&amp;s=460",
-		pastExperience :{
+		currentPosition: {
+			company: "jQuery Foundation",
+			title: "Development Lead / Full Time Consultant",
+			time: "2012 - 2015",
+			responsibilities: [
+				"Lead development direction of the foundation with other leads",
+				"Lead the jQuery Mobile project",
+				"Lead a distributed team of developers around the world",
+				"Work on different distributed teams of developers",
+				"Creat tools for use across different teams",
+				"Work with leads on other projects to create and improve cross project standards"
+			]
+		},
+		pastExperience: {
 			"Filament Group": {
 				title: "Consultant",
 				time: "2013",
-				responsibilities: ""
+				responsibilities: [
+					"Create a set of light weight reusable widgets built on shoestring",
+					"Continue development and add tests to shoestring library",
+					"Create eyelet a super tiny ( 80 lines ) widget factory api compatible with the jQuery UI widget factory"
+				]
 			},
 			"Bill Dodge Auto Group": {
 				title: "Internet Development Administrator",
 				time: "2009 - 2013",
-				responsibilities: ""
+				responsibilities: [
+					"Create and manage all websites",
+					"Develop internet strategy for company",
+					"Handle all digital marketing",
+					"Create sales tools",
+					"Create accounting tools",
+					"Manage small team",
+					"Create text messaging marketing, inventory, and sales integration tools",
+					"Create text message auto response system"
+				]
 			},
 			"Starr Graphics": {
 				title: " Lead Web Developer / Graphic Artist",
 				time: "2005-2009",
-				responsibilities: ""
+				responsibilities: [
+					"Handle all web development for clients",
+					"Create designes for comercial packageing",
+					"Pre-press art prep"
+				]
 			},
 			"Freelance": {
 				title: "Web Developer / Graphic Artist / Programmer",
 				time: "1996-2013",
-				responsibilities: ""
+				responsibilities: [
+					"A variety of work for different clients"
+				]
 			}
 		},
 		contact: {
 			email: "arschmitz@gmail.com",
 			twitter: "alexrschmitz",
 			github: "arschmitz",
-			irc: "arschmitz"
+			irc: "arschmitz",
+			linkedIn: "https://www.linkedin.com/pub/alexander-schmitz/4a/3b6/868"
 		},
 		tagLine: "I love OSS",
 		description: "I'm a developer from Portland Maine specializing in front end development." +
@@ -135,12 +168,61 @@ window.arschmitz = {
 		},
 		"devAndDesign": {
 			key: "devAndDesign",
-			eventName: "Dev and Design 03-04 SEPT, 2015",
+			eventName: "Dev and Design Sept 03 - 04, 2015",
 			video: "0TjxnrWT8Es",
 			website: "http://www.devandesign.me/",
 			description: "To be Announced",
 			title: "To be Announced",
 			slides: "Coming Soon"
+		}
+	},
+	effects: {
+
+	},
+	community: {
+		portlandWebDev: {
+			role: "Frequent speaker, helper",
+			organization: "Portland Main Web Developer Group",
+			website: "http://www.meetup.com/me-webdev/",
+			logo: "http://photos1.meetupstatic.com/photos/event/7/5/3/c/global_257430012.jpeg",
+			work: [
+				"Give occasional talks",
+				"Help find speakers",
+				"Mentor and give advice to fellow members",
+				"Setup irc support channel"
+			]
+		},
+		nodeSchoolPortland: {
+			role: "Mentor",
+			organization: "Node School Portland",
+			website: "http://www.meetup.com/nodeschool-portland-me/",
+			logo: "http://photos1.meetupstatic.com/photos/event/1/c/c/1/global_433507361.jpeg",
+			work: [
+				"Help mentor and teach node to anyone who is interested"
+			]
+		},
+		jqueryBoston: {
+			role: "Member",
+			website: "http://www.meetup.com/jQuery-Boston/",
+			logo: "http://photos2.meetupstatic.com/photos/event/4/7/9/d/global_20598333.jpeg",
+			organization: "jQuery Boston"
+		},
+		bostonjs: {
+			role: "Member",
+			website: "http://www.meetup.com/boston_JS/",
+			organization: "Boston JS",
+			logo: "http://photos2.meetupstatic.com/photos/event/7/5/d/6/global_431910166.jpeg"
+		},
+		gsoc: {
+			role: "Organization Admin / Mentor",
+			organization: "Google Summer of Code",
+			website: "https://www.google-melange.com/gsoc/homepage/google/gsoc2015",
+			logo: "https://developers.google.com/open-source/soc/images/gsoc2015-300x270.jpg",
+			work: [
+				"Mentor students",
+				"Administor organization",
+				"Review work and create weekly goals"
+			]
 		}
 	},
 	projects: {
@@ -626,40 +708,50 @@ window.arschmitz = {
 		}
 	},
 	rants: {
-		early: "I started using the internet and programming at a very young age due to having parents in the graphics design and tech inductries" +
-			" early on i start using technologies as they emmegred ( may sound bad now but when flash came out it to me it was the best thing EVER!!! ) " +
-			" My early programming experience in programming was making games in basic for my friends and i. And later embedding backdoors in them to play pranks" +
-			" ( lets not tell to many people about that one ), and programming robotics in middle school.",
-		learning: "My first real programming experience came in highschool when i learned C++ taking computer science 1 and teaching my self 2." +
-			"I tested out of both classes for college credit as a sophmore and was the youngest stundent to complete computer sciense 1 and only to complete 2 when i did so" +
-			" as a sophmore. In college i dove into c++ for the next 4 years while attending for physics / math / and chemistry" +
-			" as part of my physics major i concentrated on computer modeling",
-		afterCollege: " After college i ended up working as a chef / baker for a few years and opening a restaurant, while also working as a " + 
-			" graphic designer, and web developer. After things went bad with the restaurant i began working for a chain of car dealerships, " +
-			" I ran their web department, tasked with bringing their websites into the modern age and driving the overall internet strategy",
-		OSS: "Durring my time working with car dealerships was when i really became passionate about open source and accessability. We used all " +
-			"free and opensource projects on our sites, and as our needs expanded into the mobile sector. I began using and contributing to jQuery Mobile" +
-			"after a short while i joined the team for a summit in Washington DC and was asked to join.",
-		rollerCoaster: "After joining the team things were a rollacoaster ride! 2 Weeks later i was on a plan to South Korea to speak at the next jQuery" +
-			"conference. 3 Months after that i started contracting with the jQuery Foundation parth time and 3 months after that i became the Development " +
-			"Lead for the jQuery, 2 months later i started working full time with the jQuery Foundation and dedicating all of my developments to OSS",
-		accessability: "I became passionate about accessability early on, believeing that everyone deserves equal access to the internet and the wonderful" +
-			"things, and wealth of information which it has to offer. However for me there was a turning point where it went from something i was concious of" +
-			" to something i preached about. I was in washington D.C. for a summit on mobile accessability representing the jQuery Foundation. After the conference was over " +
-			" i was back at my hotel enjoying the hottub after swimming some laps, when a couple asked if i minded if they joined me. I said no and they began some small talk about" +
-			" how the husband was there for a banking seminar of some sort, and how she  She was an accountant and was just along for the trip. I told them about how i was a " +
-			" developer that worked mostly on mobile and i was there for an accessability conference. This immeditly peaker her interest. She began to tell me how she started losing" +
-			" her sight in her 20's. She told me how she still had some vision, so she could walk around and get by fine. She then described though her diffacutlies seeing computer" +
-			" screens and how she has had need to learn to use a screen screen reader and rely on the keyboard. She also told me how she was stuck using an old cell phone with" +
-			" physical buttons and no features, because of her sight she needed to be able to memorize the buttons. She then asked me about if i knew any good options for her. " +
-			" I started to tell her about the iPhone and how it had a built in screen reader Voice Over and how part of my job and why i was there, was to work with experts. " +
-			" on ways to make websites espically mobile ones more accessible. She said she was familiar with voice over for mac but had no idea they " +
-			" had any thing like that for phones. Infact her husband already had an iPhone with them, she got out of the pool dried off and ran upstrairs to get their phone asking " +
-			" if i could meet them back in the lobby to show her how to use voice over on the iPhone. I spent about 30 minutes with her showing her the basics of voice over on the" +
-			" iPhone. I will forever remember the look on her face when she used her husbands iPhone for the first time and realized she could have use a smart phone too." +
-			" After this she told me how she could not wait to get home and buy a new phone, and asked if she could have my email address if she had an questions in the future. " +
-			" That was 4 years ago, i only ever recieved one email from her a week later thanking me again for showing her how to use the iphone and telling me she had already bought" +
-			" her own and could never thank me enough. "
+		professional: {
+			word: "pro·fes·sion·al",
+			title: "professional",
+			pronunciation: "prəˈfeSH(ə)n(ə)l/",
+			partOfSpeech: "adjective",
+			shortDefinition: "(of a person) engaged in a specified activity as one's main paid occupation rather than as a pastime.",
+			definition: [
+				"(of a person) engaged in a specified activity as one's main paid occupation rather than as a pastime."
+			],
+			rant: [
+				"I started making websites very very early on. My mother was a graphic artist and my step father was a network administrator. I learned very young to do graphics arts from my mom. She worked in the packaging industry and worked from home. Because of this i had access to the full suites of professional graphics tools like freehand, illustrator, and photoshop. My earliest ventures into graphics were designing stickers and t-shirts for friends.",
+				"We got the internet as soon as there was service available in the rural area in which we lived. I remember the first time i used the internet it was purely text based in a DOS like prompt on the 386 my step father had just built. It was not long before i was buying books and teaching myself how to write HTML. Meanwhile I had also started to teach myself QBasic with a friend of mine.",
+				"Websites at this time lacked a lot though in the way of interactivity and the wow factor a ~10 year old wanted. I remember all this changing when the first version of flash came out. IT meant I could do all the cool interactive things I had previously only dreamed about. I immediately dove headfirst into making web pages and animations with the awesome new software. It was not long after this i made my first webpage for money. It was a website for a my art teacher. I remember spending night after night trying to get everything just right.",
+				"I continued making webpages for school assignments random people who happened to ask, and for myself just for fun for many years. In highschool I learned C++ and wrote it for the remainder of my time in highschool. I decided to go to college for physics, with minors in chemistry and math. At this point  Web Development, and or programming as a career never even really crossed my mind. To me these were things i did for fun or to get something done but not a career something i could see myself doing everyday long term.",
+				"It was still a pastime…",
+				"To pay my way through college i became a chef and a baker. After college with no real job prospects I continued on this path while working part time with a small graphics house doing commercial graphics ( a LOT of bread bags ). I did all the web development here but it was just small boring static sites and didn’t really interest me. It was still really just something to do and earn some extra money though. After my restaurant closed i tried to go full time with the graphics and web dev but it didn’t last long before the economy turned and the company could no longer afford my services.",
+				"At this point i took a job as a shuttle and parts dispatcher with a local chain of car dealerships just to get by. When i started here it was a pen and paper job. The only thing that was ever done to keep track was a photocopied piece of graph paper. With a whole lot of time on my hands i decided to improve processes and made a spreadsheet with lots of macros and built in features to track and keep records of all deliveries and drivers. I also sat near the body shop which did vinyl car graphics and signs. To help pass the time i started to work helping designing the graphics. It was not long before all of this work got the attention of the GM of the company. After only 3 months on the job i received a message from the GM that he wanted to talk to me. He was not happy with the company's websites and wanted someone to lead the company's internet strategy and based on my work so far and previous experience he wanted to know if i would be interested in the position. ",
+				"When i started this new position it was just to maintain existing sites through a series of builders. However as i talked to the GM and other managers it became clear their needs were much more substantial. For the first time i needed to build real products and real customer facing websites that actually required more than just basic HTML and CSS they needed CMS, inventory management, sales integration and much more. As i began to work on and deploy these new products i was always looking for the next thing to improve and work on. As i worked i learned to love the technologies i was using unlike C++ which constituted the bulk of my real programming experience, PHP was an absolutely joy to program in. I loved how i could quickly and easily make actual useful websites.  As interactivity became more important i even learned to embrace JavaScript which i had disdained and avoided when possible for so many years. It was at this point which i realized i had finally found my true calling and what i loved and wanted to do as my paid occupation. It just happened i had been doing it all along.",
+				"This is when I became a professional."
+			]
+		},
+		accessabile: {
+			word: "ac·ces·si·ble",
+			pronunciation: "ăk-sĕs′ə-bəl",
+			partOfSpeech: "adjective",
+			title: "accessabile",
+			shortDefinition: "Capable of being used or seen",
+			definition: [
+				"Providing access",
+				"Capable of being reached",
+				"Capable of being used or seen",
+				"Capable of being understood or appreciated"
+			],
+			rant: [
+				"\“The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.\”",
+				"Tim Berners-Lee, W3C Director and inventor of the World Wide Web",
+				"I became passionate about accessibility early on, believing that everyone deserves equal access to the internet and the wonderful things, and wealth of information which it has to offer. However for me there was a turning point where it went from something i was conscious of to something i preached about.",
+				"I was in washington D.C. for a summit on mobile accessibility representing the jQuery Foundation. After the conference was over I was back at my hotel enjoying the hot tub after swimming some laps, when a couple asked if i minded if they joined me. I said no and they began some small talk about how the husband was there for a banking seminar of some sort, and how she was an accountant and was just along for the trip. I told them about how i was a developer that worked mostly on mobile and i was there for an accessibility conference. This immediately peaked her interest.",
+				"She began to tell me how she started losing  her sight in her 20's. She told me how she still had some vision, so she could walk around and get by fine. She then described her difficulties seeing computer screens, and how she has had needed to learn to use a screen screen reader and rely on the keyboard. She also told me how she was stuck using an old cell phone with physical buttons and no features, because of her sight she needed to be able to memorize the buttons. She then asked me about if i knew any good options for her.",
+				"I started to tell her about the iPhone and how it had a built in screen reader, Voiceover, and how part of my job and why i was there, was to work with experts, on ways to make websites especially mobile ones more accessible. She said she was familiar with voiceover for mac but had no idea they had anything like that for phones. In Fact her husband already had an iPhone with them.She got out of the pool dried off and ran upstairs to get their phone asking if i could meet them back in the lobby to show her how to use voiceover on the iPhone. I spent about 30 minutes with her showing her the basics of voice over on the iPhone.",
+				"I will forever remember the look on her face when she used her husband's iPhone for the first time and realized she could have and use a smartphone too. After this she told me how she could not wait to get home and buy a new phone, and asked if she could have my email address if she had an questions in the future.",
+				"That was 4 years ago, I only ever received one email from her a week later thanking me again for showing her how to use the iPhone and telling me she had already bought her own and could never thank me enough."
+			]
+		}
 
 	}
 };

@@ -203,10 +203,15 @@ button:active {
   position: absolute;
   bottom: 0;
   text-align: center;
-  width: 100%;
+  width: 90%;
   left: 0;
   height: 86px;
   text-shadow: 2px 2px #ccc;
+}
+
+.community-logo {
+  width: 90%;
+  margin-left: 33%;
 }
 
 .talks-name {
@@ -262,13 +267,25 @@ a:visited hr {
 .project h3,
 .project h4,
 .project h5,
-.project iframe {
- margin-left: 5%;
+.project iframe,
+.project input,
+.project select,
+.project p {
+  margin-left: 5%;
+}
+
+.effect-button {
+  margin-bottom: 1em;
 }
 
 .projects-link {
   height: 275px;
   text-align: center;
+}
+
+.rant {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .float-box:after {

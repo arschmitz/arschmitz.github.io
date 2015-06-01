@@ -60,9 +60,11 @@ gui = {
 		});
 	},
 	defaultTransition: "fade",
+	defaultDurration: 200,
 	transition: function( content ) {
-		$( ".gui-wrap" ).hide( gui.defaultTransition, 200, function(){
-			$( ".gui-wrap" ).show( gui.defaultTransition, 200, function() {
+		console.log( gui.defaultDuration );
+		$( ".gui-wrap" ).hide( gui.defaultTransition, gui.defaultDuration, function(){
+			$( ".gui-wrap" ).show( gui.defaultTransition, gui.defaultDuration, function() {
 				gui.startBackground();
 			} ).html( content );
 		} );
@@ -121,6 +123,7 @@ $( window ).on( "popstate", gui.popState );
 
 
 $( document ).on( "click", "[data-call]", function( e ){
+	e.preventDefault();
 	$( "#prompt" ).val( $( this ).attr( "data-call" ) ).trigger( "change" );
 });
 
@@ -217,12 +220,9 @@ $( document ).on( "click", "[data-call]", function( e ){
 	$(function(){
 		$( "body" ).height( $( window ).height() );
 		gui.popState();
-		$( document ).on( "click", "a", function( e ) {
-			e.preventDefault();
-		});
 		$( "#prompt" ).on( "change", prompt.runCommand );
 		$( "#prompt" ).on( "keyup", prompt.keyup ).on( "blur", function(){
-			if ( ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch ) {
+			if ( ( ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch ) || gui.isOpen ) {
 				return;
 			}
 			$( this ).focus();

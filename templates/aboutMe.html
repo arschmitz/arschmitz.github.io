@@ -12,21 +12,38 @@
 			<h4 class="project-issues"><span class="bold">Title: </span>{{aboutMe.title}}</h4>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 float-box project">
-			<h1 class="project-name"><span class="bold">Email: </span>{{aboutMe.contact.email}}</h1>
-			<h4 class="project-website"><span class="bold">Twitter: </span>{{aboutMe.contact.twitter}}</h4>
-			<h4 class="project-github"><span class="bold">Github: </span>{{aboutMe.contact.github}}</h4>
+			<h1 class="project-name"><span class="bold">Email: </span><a href="mailto:{{aboutMe.contact.email}}">{{aboutMe.contact.email}}</a></h1>
+			<h4 class="project-website"><span class="bold">Twitter: </span><a href="http://twitter.com/{{aboutMe.contact.twitter}}">{{aboutMe.contact.twitter}}</a></h4>
+			<h4 class="project-github"><span class="bold">Github: </span><a href="https://github.com/{{aboutMe.contact.github}}">{{aboutMe.contact.github}}</a></h4>
 			<h4 class="project-api"><span class="bold">IRC: </span>{{aboutMe.contact.irc}}</h4>
-			<h4 class="project-issues"><span class="bold">LinkedIn: </span>{{aboutMe.contact.linkedIn}}</h4>
+			<h4 class="project-issues"><span class="bold">LinkedIn: </span><a href="{{aboutMe.contact.linkedIn}}">{{aboutMe.contact.linkedIn}}</a></h4>
 		</div>
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 float-box project">
-			<h3 class="talk-description">Description: {{aboutMe.description}}</h3>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
+			<h2 class="talk-description"><span class="bold">Description: </span></h2>
+			<h3>{{aboutMe.description}}</h3>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
+			<h1 class="project-name"><span class="bold">Organization: </span>{{aboutMe.currentPosition.company}}</h1>
+			<h4 class="project-website"><span class="bold">Title: </span>{{aboutMe.currentPosition.title}}</h4>
+			<h4 class="project-github"><span class="bold">Time: </span>{{aboutMe.currentPosition.time}}</h4>
+			<h4 class="project-api"><span class="bold">Responsibilities: </span></h4>
+			<h4><ul>
+			{{#each aboutMe.currentPosition.responsibilities}}
+				<li>{{this}}</li>
+			{{/each}}
+			</ul></h4>
 		</div>
 		{{#each aboutMe.pastExperience}}
 			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 float-box project">
 				<h1 class="project-name"><span class="bold">Company: </span>{{@key}}</h1>
 				<h4 class="project-website"><span class="bold">Title: </span>{{this.title}}</h4>
 				<h4 class="project-github"><span class="bold">Time: </span>{{this.time}}</h4>
-				<h4 class="project-api"><span class="bold">Responsibilities: </span>{{aboutMe.responsibilities}}</h4>
+				<h4 class="project-api"><span class="bold">Responsibilities: </span></h4>
+				<ul>
+				{{#each this.responsibilities}}
+					<li>{{this}}</li>
+				{{/each}}
+				</ul>
 			</div>
 		{{/each}}
 	</div>
