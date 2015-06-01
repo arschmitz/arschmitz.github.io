@@ -256,13 +256,6 @@ a:visited hr {
   height: 100px;
 }
 
-.project-top {
-  height: 150px;
-}
-
-.project-second {
-  height: 300px;
-}
 
 .project h1,
 .project h2,
@@ -288,6 +281,13 @@ a:visited hr {
   position: absolute;
   bottom:0;
   left: 0;
+}
+
+.about-avatar {
+  position: relative;
+  height: 300px;
+  left: 50%;
+  margin-left: -150px;
 }
 
 .ui-effects-transfer { border: 2px dotted gray; }

@@ -1,23 +1,33 @@
 <div class="content" data-background="{{dist}}">
 	<h1 class="site-title">> <a href data-call="gui.render( 'main' );">arschmitz</a>.aboutMe</h1>
 	<div class="row">
-		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-			<img src="{{aboutMe.avatar}}"/>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 float-box project">
+			<img class="about-avatar" src="{{aboutMe.avatar}}"/>
 		</div>
-		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 float-box project">
 			<h1 class="project-name"><span class="bold">Name: </span>{{aboutMe.name}}</h1>
 			<h4 class="project-website"><span class="bold">Age: </span>{{aboutMe.age}}</h4>
 			<h4 class="project-github"><span class="bold">Gender: </span>{{aboutMe.gender}}</h4>
 			<h4 class="project-api"><span class="bold">Profession: </span>{{aboutMe.profession}}</h4>
 			<h4 class="project-issues"><span class="bold">Title: </span>{{aboutMe.title}}</h4>
 		</div>
-		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 float-box project">
 			<h1 class="project-name"><span class="bold">Email: </span>{{aboutMe.contact.email}}</h1>
 			<h4 class="project-website"><span class="bold">Twitter: </span>{{aboutMe.contact.twitter}}</h4>
 			<h4 class="project-github"><span class="bold">Github: </span>{{aboutMe.contact.github}}</h4>
 			<h4 class="project-api"><span class="bold">IRC: </span>{{aboutMe.contact.irc}}</h4>
 			<h4 class="project-issues"><span class="bold">LinkedIn: </span>{{aboutMe.contact.linkedIn}}</h4>
 		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 float-box project">
+			<h3 class="talk-description">Description: {{aboutMe.description}}</h3>
+		</div>
+		{{#each aboutMe.pastExperience}}
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 float-box project">
+				<h1 class="project-name"><span class="bold">Company: </span>{{@key}}</h1>
+				<h4 class="project-website"><span class="bold">Title: </span>{{this.title}}</h4>
+				<h4 class="project-github"><span class="bold">Time: </span>{{this.time}}</h4>
+				<h4 class="project-api"><span class="bold">Responsibilities: </span>{{aboutMe.responsibilities}}</h4>
+			</div>
+		{{/each}}
 	</div>
-	<h3 class="project-description">Description: {{aboutMe.description}}</h3>
 </div>

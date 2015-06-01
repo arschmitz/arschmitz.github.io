@@ -1,7 +1,9 @@
 // GUI Functions
 gui = {
 	open: function( setHistory, renderMain ) {
-		$( ".console-wrap" ).addClass( "gui-console", { duration: 1000 } );
+		if ( !gui.isOpen ) {
+			$( ".console-wrap" ).addClass( "gui-console", { duration: 1000 } );
+		}
 		$( ".console-wrap" ).resizable( {
 			handles: "n",
 			resize: function( e, ui ) {
@@ -15,7 +17,9 @@ gui = {
 		if ( renderMain !== false ) {
 			gui.render( "main", undefined, false );
 		}
-		$( ".gui-wrap" ).addClass( "gui-open", { duration: 1000 } );
+		if ( !gui.isOpen ) {
+			$( ".gui-wrap" ).addClass( "gui-open", { duration: 1000 } );
+		}
 		gui.isOpen = true;
 	},
 	close: function() {
@@ -34,7 +38,7 @@ gui = {
 
 				if ( !item) {
 					gui.transition( content( arschmitz ) );
-					gui.startBackground();
+
 					if ( setHistory === false ) {
 						return;
 					}
@@ -43,7 +47,6 @@ gui = {
 				} else {
 					gui.transition( content( arschmitz[ parts[ 0 ] ][ item ] ) );
 
-					gui.startBackground();
 					if ( setHistory === false ) {
 						return;
 					}
@@ -52,7 +55,6 @@ gui = {
 				}
 			},
 			error: function( jqxhr, status, error ) {
-				console.log( jqxhr );
 				$( "#output" ).append( "<div class='output-line'><span class='prompt-start'><</span> <span class='error'>GET " + url + " " + jqxhr.status + " (" + error + ")</span></div>" );
 			}
 		});
@@ -60,7 +62,9 @@ gui = {
 	defaultTransition: "fade",
 	transition: function( content ) {
 		$( ".gui-wrap" ).hide( gui.defaultTransition, 200, function(){
-			$( ".gui-wrap" ).show( gui.defaultTransition, 200 ).html( content );
+			$( ".gui-wrap" ).show( gui.defaultTransition, 200, function() {
+				gui.startBackground();
+			} ).html( content );
 		} );
 	},
 	isOpen: false,
@@ -76,7 +80,7 @@ gui = {
 					$( ".gui-background-code" ).text( data );
 				},
 				error: function() {
-					alert();
+					//alert();
 				}
 			} );
 		}
@@ -90,9 +94,11 @@ gui = {
 		console.log( "pop" );
 		if ( queryParams.gui ) {
 			if ( queryParams.item ) {
+				console.log( "item" );
 				gui.open( false, false );
 				gui.render( queryParams.template, queryParams.item, false );
 			} else if ( queryParams.template ) {
+				console.log( "template" );
 				gui.open( false, false );
 				gui.render( queryParams.template, undefined, false );
 			} else {
@@ -115,11 +121,8 @@ $( window ).on( "popstate", gui.popState );
 
 
 $( document ).on( "click", "[data-call]", function( e ){
-	console.log( "click" );
 	$( "#prompt" ).val( $( this ).attr( "data-call" ) ).trigger( "change" );
-}).on( "error", "img", function( e ) {
-
-} );
+});
 
 (function(){
 	// Prompt
