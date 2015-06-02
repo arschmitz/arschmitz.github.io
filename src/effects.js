@@ -1,5 +1,5 @@
 // Effects
-$.fn.animate = $.fn.velocity;
+//$.fn.animate = $.fn.velocity;
 
 window.effects = {
 	height: $( window ).height(),
@@ -98,7 +98,7 @@ window.effects = {
 				if( !image ) {
 					effects.runEffect( effect, element );
 				}
-			}, 100 );
+			}, 500 );
 		effects.intervals.flashMob.push( interval );
 		if ( duration ) {
 			setTimeout( function() {
@@ -218,8 +218,8 @@ window.effects = {
 };
 
 $( window ).on( "resize", function(){
-	effects.height = $( window ).height;
-	effects.width = $( window ).width;
+	effects.height = $( window ).height();
+	effects.width = $( window ).width();
 });
 
 $( document ).on( "update", function( e ) {
@@ -227,13 +227,5 @@ $( document ).on( "update", function( e ) {
 	$( "#transition" ).val( gui.transition );
 	$( "#duration" ).val( gui.duration );
 });
-
-$( document ).on( "change", "#transition", function() {
-	gui.transition = $( this ).val();
-} );
-
-$( document ).on( "change", "#duration", function() {
-	gui.duration = parseInt( $( this ).val(), 10 );
-} );
 
 $( document ).on( "keydown", effects.kill );

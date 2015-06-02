@@ -1,22 +1,21 @@
 window.arschmitz = {
 	aboutMe: {
 		name: "Alexander Schmitz",
-		gender: "Male",
-		age: "30",
+		age: "31",
 		profession: "Developer",
 		title: "Project Lead jQuery Mobile, Co Creator Chassis CSS Framework, Team Member jQuery UI, PEP, jQuery Testing Team, jQuery Infrastructure Team, jQuery Content Team",
 		avatar: "https://avatars0.githubusercontent.com/u/462993?v=3&amp;s=460",
 		currentPosition: {
 			company: "jQuery Foundation",
-			title: "Development Lead / Full Time Consultant",
+			title: "Development Lead / Full-time Consultant",
 			time: "2012 - 2015",
 			responsibilities: [
-				"Lead development direction of the foundation with other leads",
+				"Lead development, direction of jQuery Foundation Projects",
 				"Lead the jQuery Mobile project",
 				"Lead a distributed team of developers around the world",
 				"Work on different distributed teams of developers",
-				"Creat tools for use across different teams",
-				"Work with leads on other projects to create and improve cross project standards"
+				"Create tools for use across different teams",
+				"Work with leads on other projects to create and improve cross-project standards"
 			]
 		},
 		pastExperience: {
