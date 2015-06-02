@@ -12,10 +12,8 @@ window.effects = {
 		}
 		return color;
 	},
-	partyMode: function( save ){
-		if ( save !== false ) {
-			effects.saveStyle();
-		}
+	partyMode: function(){
+		effects.saveStyle();
 		$( "body *, body" ).each(function(){
 			var that = this,
 				interval = setInterval(function(){
@@ -33,10 +31,8 @@ window.effects = {
 			effects.intervals.partyMode.push( interval );
 		});
 	},
-	iHaveTheSpins: function( save ){
-		if ( save !== false ) {
-			effects.saveStyle();
-		}
+	iHaveTheSpins: function(){
+		effects.saveStyle();
 		$( "body *" ).each(function(){
 			var that = this,
 				interval = setInterval( function(){
@@ -72,9 +68,8 @@ window.effects = {
 			effects.intervals.iAmTheSpoon.push( interval );
 		});
 	},
-	flashMob: function( effect, image ){
+	flashMob: function( effect, image, duration ){
 		effects.saveStyle();
-		effects.flashMobElements = $( "body>*" );
 		var elements = $( "body *" ).not( ":hidden" );
 		var that = this,
 			interval = setInterval( function(){
@@ -104,7 +99,17 @@ window.effects = {
 					effects.runEffect( effect, element );
 				}
 			}, 100 );
-		effects.intervals.flashMobBaby.push( interval );
+		effects.intervals.flashMob.push( interval );
+		if ( duration ) {
+			setTimeout( function() {
+				effects.stopTheMob();
+			}, duration );
+		}
+	},
+	stopTheMob: function() {
+		$.each( effects.intervals.flashMob, function( index, interval ) {
+			clearInterval( interval );
+		} );
 	},
 	flashMobElements: false,
 	visualize: function(){
@@ -171,10 +176,15 @@ window.effects = {
 			}, 1000 );
 		}
 	},
+	styleSaved: false,
 	saveStyle: function() {
-		$( "[style]" ).each(function(){
-			$.data( this, "savedStyle", $( this ).attr( "style" ) );
-		} );
+		if ( !effects.styleSaved ) {
+			$( "[style]" ).each(function(){
+				$.data( this, "savedStyle", $( this ).attr( "style" ) );
+			} );
+			effects.flashMobElements = $( "body>*" );
+			effects.styleSaved = true;
+		}
 	},
 	restoreStyle: function() {
 		$( "[style]" ).each( function(){
@@ -183,6 +193,8 @@ window.effects = {
 		$( ":data(savedStyle)" ).each( function(){
 			$( this ).attr( "style", $.data( this, "savedStyle" ) );
 		} );
+		effects.styleSaved = false;
+		effects.flashMobElements = undefined;
 	},
 	images: {
 		"bullethole": "http://pngimg.com/upload/bullet_hole_PNG6062.png",
@@ -199,7 +211,7 @@ window.effects = {
 		partyMode: [],
 		iHaveTheSpins: [],
 		iAmTheSpoon: [],
-		flashMobBaby: [],
+		flashMob: [],
 		visualize: []
 	},
 	stylesheet: $( "<style>" ).appendTo( "head")
@@ -210,12 +222,18 @@ $( window ).on( "resize", function(){
 	effects.width = $( window ).width;
 });
 
-$( document ).on( "change", "#defaultTransition", function() {
-	gui.defaultTransition = $( this ).val();
+$( document ).on( "update", function( e ) {
+	console.log( gui.transition );
+	$( "#transition" ).val( gui.transition );
+	$( "#duration" ).val( gui.duration );
+});
+
+$( document ).on( "change", "#transition", function() {
+	gui.transition = $( this ).val();
 } );
 
-$( document ).on( "change", "#defaultDuration", function() {
-	gui.defaultDuration = parseInt( $( this ).val(), 10 );
+$( document ).on( "change", "#duration", function() {
+	gui.duration = parseInt( $( this ).val(), 10 );
 } );
 
 $( document ).on( "keydown", effects.kill );

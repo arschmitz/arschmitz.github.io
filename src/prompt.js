@@ -37,7 +37,7 @@ gui = {
 				var content = Handlebars.compile( data );
 
 				if ( !item) {
-					gui.transition( content( arschmitz ) );
+					gui.runTransition( content( arschmitz ) );
 
 					if ( setHistory === false ) {
 						return;
@@ -45,7 +45,7 @@ gui = {
 					history.pushState( {}, "arschmitz.me - GUI - " +
 						templateName, window.location.pathname + "?gui&template=" + templateName );
 				} else {
-					gui.transition( content( arschmitz[ parts[ 0 ] ][ item ] ) );
+					gui.runTransition( content( arschmitz[ parts[ 0 ] ][ item ] ) );
 
 					if ( setHistory === false ) {
 						return;
@@ -59,12 +59,12 @@ gui = {
 			}
 		});
 	},
-	defaultTransition: "fade",
-	defaultDurration: 200,
-	transition: function( content ) {
-		console.log( gui.defaultDuration );
-		$( ".gui-wrap" ).hide( gui.defaultTransition, gui.defaultDuration, function(){
-			$( ".gui-wrap" ).show( gui.defaultTransition, gui.defaultDuration, function() {
+	transition: "fade",
+	duration: 200,
+	runTransition: function( content ) {
+		$( ".gui-wrap" ).hide( gui.transition, gui.duration, function(){
+			$( ".gui-wrap" ).show( gui.transition, gui.duration, function() {
+				$( ".gui-wrap" ).trigger( "update" );
 				gui.startBackground();
 			} ).html( content );
 		} );
@@ -93,7 +93,7 @@ gui = {
 			var pair = value.split( "=" );
 			queryParams[ pair[ 0 ] ] = pair[ 1 ] || true;
 		});
-		console.log( "pop" );
+
 		if ( queryParams.gui ) {
 			if ( queryParams.item ) {
 				console.log( "item" );

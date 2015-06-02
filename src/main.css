@@ -261,6 +261,21 @@ a:visited hr {
   height: 100px;
 }
 
+.api-section,
+.api-section-heading {
+  background: rgba( 0, 127, 255, .5 );
+  margin-left: 5%;
+  width: 90%;
+  padding: 1%;
+  color: white;
+}
+
+.api-section-heading {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
 
 .project h1,
 .project h2,
@@ -272,6 +287,7 @@ a:visited hr {
 .project select,
 .project p {
   margin-left: 5%;
+  width: 90%;
 }
 
 .effect-button {
