@@ -80,7 +80,7 @@ window.arschmitz = {
 			website: "https://www.facebook.com/JQueryConferenceAsia",
 			description: "jQuery Mobile makes developing mobile apps and sites easy, semantic and familiar. However those familiar with typical desktop patterns may find themselves banging their heads against the wall when something \"simple\" doesn't work as expected. This session will go through some of the most common problems and pitfalls facing those jumping into jQuery Mobile. Areas covered will include injecting and enhancing dynamic content, working with enhanced form elements, refactoring for pageinit vs $(document).ready(), and the navigation model / page events.",
 			title: "jQuery Mobile: Common Pitfalls and Gotchas",
-			slides: "unavailable"
+			slides: "http://presentations.arschmitz.me/pitfalls/#/"
 		},
 		"austin": {
 			key: "austin",
@@ -106,8 +106,8 @@ window.arschmitz = {
 			video: "bZTOV-55ivM",
 			website: "http://www.gentics.com/jquery-eu-2014/page/2014/eu.html",
 			description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
-			title: "jQuery Mobile: Optimizing Performance",
-			slides: "unavailable"
+			title: "jQuery Mobile: Optimizing Performance V2",
+			slides: "http://presentations.arschmitz.me/mobile-performance/"
 		},
 		"amsterdam": {
 			key: "amsterdam",
@@ -124,8 +124,8 @@ window.arschmitz = {
 			video: "2qF7kW9SdJQ",
 			website: "http://events.jquery.org/2014/chicago/",
 			description: "jQuery Mobile 1.5 brings lots of new features and a revamped navigation system, more performance optimization possibilities for advanced users and adoption of more widgets from jQuery UI. Lately though, the question I am asked isn't about what's going to be in 1.6, 1.7, and so on, but about the future of jQuery Mobile after the merger with jQuery UI, and what the future is for the jQuery Mobile project. I’ll go into our current road map and details (as many as are available right now) about the future of jQuery Mobile and what it will look like after 2.0",
-			title: "What’s New in 1.5 and the Road to 2.0",
-			slides: "unavailable"
+			title: "The Path to 2.0",
+			slides: "http://presentations.arschmitz.me/path-to-2.0/"
 		},
 		"pwmWebDevJquery": {
 			key: "pwmWebDevJquery",
@@ -134,7 +134,7 @@ window.arschmitz = {
 			website: "http://www.portlandwebworks.com/blog/fun-times-webdev-meeting",
 			description: "In depth talk on the jQuery Foundation, jQuery Mobile, and mobile performance in general",
 			title: "jQuery Foundation overview / Mobile performance",
-			slides: "unavailable"
+			slides: "http://presentations.arschmitz.me/jquery-foundation/"
 		},
 		"pwmWebDevNodeCLI": {
 			key: "pwmWebDevJquery",
@@ -152,7 +152,7 @@ window.arschmitz = {
 			website: "http://environmentsforhumans.com/2014/javascript-summit/",
 			description: "It's an exciting time for jQuery UI and Mobile. Big changes are coming to jQuery Mobile and jQuery UI this year as the projects start to merge. But what exactly does this mean? What is the future of the two libraries? Which one is going away? Are either going away? These and many others are the type of questions I have been receiving from many people in the community since we started talking about merging the projects in the spring of 2013. I will address these questions and many more, will give you some history behind the changes we are making as well as give some insight into the direction the projects are taking, and how we’re going to make integration with both projects easier for developers.",
 			title: "The State of jQuery UI & Mobile",
-			slides: "unavailable"
+			slides: "http://presentations.arschmitz.me/path-to-2.0-ee/"
 		},
 		"jssummit2015": {
 			key: "jssummit2015",
@@ -879,6 +879,7 @@ window.arschmitz = {
 			rant: [
 				"\“The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.\”",
 				"Tim Berners-Lee, W3C Director and inventor of the World Wide Web",
+				".",
 				"I became passionate about accessibility early on, believing that everyone deserves equal access to the internet and the wonderful things, and wealth of information which it has to offer. However for me there was a turning point where it went from something i was conscious of to something i preached about.",
 				"I was in washington D.C. for a summit on mobile accessibility representing the jQuery Foundation. After the conference was over I was back at my hotel enjoying the hot tub after swimming some laps, when a couple asked if i minded if they joined me. I said no and they began some small talk about how the husband was there for a banking seminar of some sort, and how she was an accountant and was just along for the trip. I told them about how i was a developer that worked mostly on mobile and i was there for an accessibility conference. This immediately peaked her interest.",
 				"She began to tell me how she started losing  her sight in her 20's. She told me how she still had some vision, so she could walk around and get by fine. She then described her difficulties seeing computer screens, and how she has had needed to learn to use a screen screen reader and rely on the keyboard. She also told me how she was stuck using an old cell phone with physical buttons and no features, because of her sight she needed to be able to memorize the buttons. She then asked me about if i knew any good options for her.",
