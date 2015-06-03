@@ -64,7 +64,7 @@ window.arschmitz = {
 			twitter: "alexrschmitz",
 			github: "arschmitz",
 			irc: "arschmitz",
-			linkedIn: "https://www.linkedin.com/pub/alexander-schmitz/4a/3b6/868"
+			linkedIn: "https://www.linkedin.com/in/arschmitz"
 		},
 		description: "I'm a developer from Portland Maine specializing in front end development." +
 			" My passion is writing elegant and functional javscript code to be used and enjoyed by any one who wants it." +
@@ -845,7 +845,7 @@ window.arschmitz = {
 	rants: {
 		professional: {
 			word: "pro·fes·sion·al",
-			title: "professional",
+			name: "professional",
 			pronunciation: "prəˈfeSH(ə)n(ə)l/",
 			partOfSpeech: "adjective",
 			shortDefinition: "(of a person) engaged in a specified activity as one's main paid occupation rather than as a pastime.",
@@ -868,7 +868,7 @@ window.arschmitz = {
 			word: "ac·ces·si·ble",
 			pronunciation: "ăk-sĕs′ə-bəl",
 			partOfSpeech: "adjective",
-			title: "accessabile",
+			name: "accessabile",
 			shortDefinition: "Capable of being used or seen",
 			definition: [
 				"Providing access",

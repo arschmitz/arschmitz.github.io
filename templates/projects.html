@@ -1,8 +1,8 @@
 <div class="content" data-background="https://code.jquery.com/ui/jquery-ui-git.js">
-	<h1 class="site-title">> <a href data-call="gui.render( 'main' );">arschmitz</a>.projects</h1>
+	{{title "projects"}}
 	<div class="row project-row">
 	{{#each projects}}
-		<a href class="projects-link col-lg-4 col-md-6 col-sm-6 col-xs-12 float-box" data-call="gui.render( 'projects.project', '{{@key}}' );">
+		{{call "projects.project" @key "projects-link col-lg-4 col-md-6 col-sm-6 col-xs-12 float-box"}}
 			<img src="{{this.logo}}" class="projects-logo"/>
 			<h1 class="projects-title">{{this.name}}</h1>
 		</a>

@@ -252,9 +252,10 @@ a:visited hr {
   margin-bottom: .3em;
 }
 
-.project-logo-label {
+.project .project-logo-label {
   display: inline-block;
   vertical-align: top;
+  width: auto;
 }
 
 .project-logo {

@@ -1,14 +1,14 @@
 <div class="content" data-background="{{dist}}">
-	<h1 class="site-title">> <a href data-call="gui.render( 'main' );">arschmitz</a>.<a href data-call="gui.render( 'sideProjects' );">sideProjects</a>{{repoName}};</h1>
+	{{title "sideProjects" repoName}}
 	<div class="row project">
 		<div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 float-box">
 			<h1 class="project-name"><span class="bold">Name: </span>{{name}}</h1>
-			<h4 class="project-website"><span class="bold">Website: </span><a href="{{website}}">{{website}}</a></h4>
-			<h4 class="project-github"><span class="bold">Github: </span><a href="{{github}}">{{github}}</a></h4>
-			<h4 class="project-api"><span class="bold">API: </span><a href="{{api}}">{{api}}</a></h4>
-			<h4 class="project-issues"><span class="bold">Issues: </span><a href="{{issues}}">{{issues}}</a></h4>
+			{{hlink website "Website" "4"}}
+			{{hlink github "Github" "4"}}
+			{{hlink api "API" "4"}}
+			{{hlink issues "Issues" "4"}}
+			{{hlink demos "Demos" "4"}}
 			<h4 class="project-irc"><span class="bold">IRC: </span>{{irc}} on freenode</h4>
-			<h4 class="project-demos"><span class="bold">Demos: </span><a href="{{demos}}">{{demos}}</a></h4>
 		</div>
 		<div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 float-box">
 			<h3 class="project-description"><span class="bold">Description: </span>{{description}}</h3>
