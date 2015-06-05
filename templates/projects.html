@@ -1,9 +1,9 @@
-<div class="content" data-background="https://code.jquery.com/ui/jquery-ui-git.js" data-json="arschmitz.projects">
+<div class="content projects" data-background="https://code.jquery.com/ui/jquery-ui-git.js" data-json="arschmitz.projects">
 	{{title "projects"}}
 	<div class="row project-row">
 	{{#each projects}}
 		{{call "projects.project" @key "projects-link col-lg-4 col-md-6 col-sm-6 col-xs-12 float-box"}}
-			<img src="{{this.logo}}" class="projects-logo"/>
+			<img src="{{this.logo}}" class="project-logo"/>
 			<h1 class="projects-title">{{this.name}}</h1>
 		</a>
 	{{/each}}

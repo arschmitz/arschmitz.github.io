@@ -31,14 +31,16 @@
 		},
 		runCommand: function() {
 			var returnValue,
-				command = $( this ).val();
+				command = $( "#prompt" ).val();
 
 			if ( command === "" ) {
 				return;
 			}
 
 			commands.push( command );
-			localStorage.commands = JSON.stringify( commands );
+			try {
+				localStorage.commands = JSON.stringify( commands );
+			} catch( e ) {}
 			pointer = commands.length;
 			if( />>effect:/.test( command ) ) {
 				runEffect( command.split( ":" )[ 1 ], ".body-wrap" );
@@ -88,6 +90,7 @@
 	$(function(){
 		$( "body" ).height( $( window ).height() );
 		$( "#prompt" ).on( "change", prompt.runCommand );
+		$( "#runPrompt" ).on( "click", prompt.runCommand );
 		$( "#prompt" ).on( "keyup", prompt.keyup ).on( "blur", function(){
 			if ( ( ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch ) || gui.isOpen ) {
 				return;

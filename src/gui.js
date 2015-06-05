@@ -172,7 +172,8 @@ $( document ).on( "change", "#duration", function() {
 
 $( document ).on( "click", "[data-call]", function( e ){
 	e.preventDefault();
-	$( "#prompt" ).val( $( this ).attr( "data-call" ) ).trigger( "change" );
+	$( "#prompt" ).val( $( this ).attr( "data-call" ) );
+	prompt.runCommand();
 });
 
 $( function(){

@@ -1,13 +1,21 @@
-<div class="content" data-background="{{dist}}" data-json="arschmitz.projects{{repoName}}">
+<div class="content project" data-background="{{dist}}" {{json "projects" repoName}}>
 	{{title "projects" repoName}}
-	<div class="row project">
-		<div class="col-lg-6 col-sm-6 col-xs-12 float-box project-top">
-			<h1 class="project-name"><span class="bold">Name: </span>{{name}}</h1>
+	<div class="row">
+		<div class="col-lg-6 col-sm-6 col-xs-12 float-box project-top" {{json "projects" repoName ".name"}}>
+			<div class="row">
+				<h1 class="col-xs-5">
+					<span class="bold">Name: </span>
+				</h1>
+				<h1 class="col-xs-7">{{name}}</h1>
+			</div>
 		</div>
 		<div class="col-lg-6 col-sm-6 col-xs-12 float-box project-top">
-			<h1 class="project-logo-label"><span class="bold">Logo: </span> </h1> <img class="project-logo" src="{{logo}}"/>
+			<div class="row">
+				<h1 class="col-xs-3"><span class="bold project-logo-label">Logo: </span> </h1>
+				<img class="project-logo col-xs-9" src="{{logo}}"/>
+			</div>
 		</div>
-		<div class="col-lg-4 float-box project-second" data-json="arschmitz.projects{{repoName}}.links">
+		<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 float-box project-second" {{json "projects" repoName ".links"}}>
 			{{hlink links.website "Website" "4"}}
 			{{hlink links.github "Github" "4"}}
 			{{hlink links.api "API" "4"}}
@@ -15,11 +23,11 @@
 			{{hlink links.demos "Demos" "4"}}
 			<h4 class="project-irc"><span class="bold">IRC: </span>{{irc}} on freenode</h4>
 		</div>
-		<div class="col-lg-4 float-box project-second">
+		<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 float-box project-second">
 			<h3 class="project-description"><span class="bold">Description: </span>{{description}}</h3>
 			<h3 class="project-role"><span class="bold">My Role: </span>{{role}}</h3>
 		</div>
-		<div class="col-lg-4 float-box project-second" data-json="arschmitz.projects{{repoName}}.currentWork">
+		<div class="col-lg-4 col-xs-12 float-box project-second" {{json "projects" repoName ".currentWork"}}>
 		<h2><span class="bold">Current Work: </span></h2>
 		<ul class="project-current-work">
 			{{#each currentWork}}
