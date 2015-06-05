@@ -1,24 +1,55 @@
+/* Basic resets and typography and base styles */
 * {
   box-sizing: border-box;
 }
-
 body, html {
   font-size: 1em;
   padding: 0;
   margin: 0;
+  overflow-wrap: break-word;
   *background: black;
   font-family: "Lucida Console", Monaco, monospace;
 }
-
-body  * {
+body * {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-
-a, a:hover, a:active, a:visited {
+a,
+a:hover,
+a:active,
+a:visited {
   color: black;
   text-decoration: none;
 }
+a:hover *,
+a:hover {
+  text-shadow: 0 0 7px rgba( 0, 127, 255, .5 );
+}
+input {
+  font-size: 1em;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+button {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba( 0, 0, 0, 0.2 );
+  border: 1px solid rgba( 0, 62, 255, .5 );
+  background: rgba( 0, 127, 255, .5 );
+  font-size: 1.2em;
+}
+button:hover {
+  opacity: .8;
+}
+button:hover {
+  box-shadow: 2px 2px 2px #ccc;
+}
+button:active {
+  opacity: initial;
+}
+button:active {
+  box-shadow: 1px 1px 1px #333;
+}
 
+/* Console and Prompt */
 .console-wrap{
   position:absolute;
   top: 0;
@@ -26,19 +57,11 @@ a, a:hover, a:active, a:visited {
   height:100%;
   background: white;
 }
-input {
-  font-size: 1em;
-  font-family: "Lucida Console", Monaco, monospace;
-}
 #prompt {
   border: none;
   background: none;
   width:100%;
   outline: 0;
-}
-.tab {
-  width: 2em;
-  display: inline-block;
 }
 .prompt-start {
   padding-left: 5px;
@@ -47,15 +70,16 @@ input {
   float: left;
   width: 30px
 }
+.prompt-wrap {
+  border-top: 1px solid #ccc;
+}
 .output-line .prompt-start{
   position: absolute;
   top: 10px;
   left: 0;
 }
-#output {
-}
-.prompt-wrap { 
-  border-top: 1px solid #ccc;
+.prompt-div {
+  margin-left: 30px;
 }
 .output-line {
   border-top: 1px solid #ccc;
@@ -64,15 +88,12 @@ input {
   width: 100%;
   position: relative;
 }
-.prompt-div {
-  margin-left: 30px;
-}
-.ui-accordion-header {
-  margin: 0;
-  background: none;
-  border-radius: 0;
+.tab {
+  width: 2em;
+  display: inline-block;
 }
 
+/* Syntax Highlight*/
 .string { color: green; }
 .number { color: darkorange; }
 .boolean { color: blue; }
@@ -80,18 +101,7 @@ input {
 .key { color: red; }
 .error { background:red; color: white; font-weight: bold; }
 
-/* GUI Stuff */
-
-.scrollable-content {
-  position: relative;
-}
-
-.site-title{
-  margin-top: 1em;
-  font-size: 1.5em;
-  padding-left: .2em;
-}
-
+/* General GUI Stuff */
 .gui-wrap {
   height: 0;
   position: absolute;
@@ -101,7 +111,6 @@ input {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-
 .gui-console {
   height: 20%;
   overflow: scroll;
@@ -110,11 +119,9 @@ input {
   top: 80%;
   border-top: 1px solid #ccc;
 }
-
 .gui-open {
   height: 80%;
 }
-
 .gui-background {
   width: 100%;
   height: 100%;
@@ -130,138 +137,92 @@ input {
   opacity: .1;
   z-index: 0;
 }
-
 .gui-background-code {
   width: 100%;
   white-space: pre-wrap;
 }
-
-button {
-  color: white;
-  border-radius: 4px;
-  text-shadow: 0 1px 1px rgba( 0, 0, 0, 0.2 );
-  border: 1px solid rgba( 0, 62, 255, .5 );
-  background: rgba( 0, 127, 255, .5 );
-  font-size: 1.2em;
-}
-
-.menu-button-wrap{
-  padding: .5em;
-  z-index: 1;
-}
-
-.menu-button-wrap button {
-  width: 100%;
-}
-
-.row {
-  z-index: 1;
-}
-
-button:hover {
-  opacity: .8;
-}
-
-button:hover {
-  box-shadow: 2px 2px 2px #ccc;
-}
-
-button:active {
-  opacity: initial;
-}
-button:active {
-  box-shadow: 1px 1px 1px #333;
-}
-
-.project-box-wrap {
-  padding: 1em;
-}
-
-.project-box {
-  width: 50%;
-  height: 200px;
-  border-radius: 5px;
-  padding: 1em;
+.scrollable-content {
   position: relative;
-  margin-left: -25%;
-  left: 50%;
 }
-
-.projects-logo {
-  height: 100px;
-  max-width: 100%;
-  margin-top: 2em;
+.site-title{
+  margin-top: 1em;
+  font-size: 1.5em;
+  padding-left: .2em;
 }
-
-.project-row {
-  padding-bottom: 1em;
-}
-
-.projects-title,
-.sideProjects-title,
-.talks-name {
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 90%;
-  left: 0;
-  height: 86px;
-  text-shadow: 2px 2px #ccc;
-}
-
-.community-logo {
-  width: 90%;
-  margin-left: 33%;
-}
-
-.talks-name {
-  position: static;
-}
-
-a:hover *,
-a:hover {
-  text-shadow: 0 0 7px rgba( 0, 127, 255, .5 );
-}
-
-.video-frame {
-  width: 90%;
-  height: 320px;
-}
-
-.talks-name,
-.sideProjects-title {
-  font-size: 2em;
-}
-
-.projects-link hr {
-  position:absolute;
-  bottom: 0;
-  width: 90%;
-  left: 5%;
-}
-
-a:visited hr {
-  color: #ccc;
-}
-
 .float-box {
   position: relative;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   margin-left: -1px;
   margin-bottom: .3em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.float-box:after {
+  content: "";
+  width: calc( 100% - 2em );
+  margin-left: 1em;
+  margin-bottom: 0;
+  display: block;
+  border: 1px inset #ccc;
+  height: 0px;
+  position: absolute;
+  bottom:0;
+  left: 0;
+}
+.json-box {
+  background: rgba( 200, 200, 200, .3 );
+  padding: .5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.json-link {
+  position: absolute;
+  top: .5em;
+  right: 1em;
+  color: black;
+  font-size: 8px;
+}
+.bold {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
 }
 
+/* Menu */
+.menu-button-wrap{
+  padding: .5em;
+  z-index: 1;
+}
+.menu-button-wrap button {
+  width: 100%;
+}
+
+/* Projects */
+.projects-logo {
+  height: 100px;
+  max-width: 100%;
+  margin-top: 2em;
+}
+.projects-link {
+  text-align: center;
+}
 .project .project-logo-label {
   display: inline-block;
   vertical-align: top;
   width: auto;
 }
-
 .project-logo {
   height: 100px;
 }
 
+/* Community */
+.community-logo {
+  width: 90%;
+  margin-left: 33%;
+}
+
+/* Help and API */
 .api-section,
 .api-section-heading {
   background: rgba( 0, 127, 255, .5 );
@@ -270,7 +231,6 @@ a:visited hr {
   padding: 1%;
   color: white;
 }
-
 .api-section-heading {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
@@ -278,45 +238,21 @@ a:visited hr {
   max-width: 100%;
 }
 
-.project h1,
-.project h2,
-.project h3,
-.project h4,
-.project h5,
-.project iframe,
-.project input,
-.project select,
-.project p {
-  margin-left: 5%;
-  width: 90%;
-}
-
+/* Effects */
 .effect-button {
   margin-bottom: 1em;
 }
-
-.projects-link {
-  height: 275px;
-  text-align: center;
+.ui-effects-transfer {
+  border: 2px dotted gray;
 }
 
+/* Rants */
 .rant {
   padding-left: 5%;
   padding-right: 5%;
 }
 
-.float-box:after {
-  content: "";
-  width: 90%;
-  display: block;
-  margin-left: 5%;
-  border: 1px inset #ccc;
-  height: 0px;
-  position: absolute;
-  bottom:0;
-  left: 0;
-}
-
+/* About Me */
 .about-avatar {
   position: relative;
   height: 300px;
@@ -324,25 +260,118 @@ a:visited hr {
   margin-left: -150px;
 }
 
-.ui-effects-transfer { border: 2px dotted gray; }
-
+/* Talks and Side Projects */
 .talks-link,
 .sideProjects-link {
-  height: 200px;
+  height: 100px;
+  line-height: 100px;
   text-align: center;
 }
-
+.talks-name,
+.sideProjects-title {
+  font-size: 1.8em;
+  margin-top: .2em;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
 .talk-description {
   width: 90%;
 }
-
-.bold {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+/* Talks */
+.talks-name {
+  position: static;
+}
+.video-frame {
+  width: 90%;
+  height: 320px;
 }
 
+/* Resume */
+.resume-contact h4 {
+  margin-top: .1em;
+  margin-bottom: .1em;
+  font-size: .9em;
+}
+.initials {
+  font-size: 5em;
+  margin-left: -.2em;
+  text-align: center;
+  font-weight: bold;
+  overflow-wrap: normal;
+  text-shadow: 8px 8px 4px #ccc;
+}
+.first-name {
+  font-size: 2em;
+  margin-bottom: 0;
+  margin-top: .3em;
+  padding-bottom: 0;
+  text-shadow: 3px 3px 2px #888;
+}
+.last-name {
+  font-size:  2em;
+  margin-top:  0;
+  margin-bottom: 0;
+  padding:  0;
+  color: #888;
+  text-shadow: 3px 3px 2px #333;
+}
+.inactive {
+  color: #ccc;
+}
+.meter h4 {
+  margin-top: .2em;
+  margin-bottom: .2em;
+}
+.meter .meter-level {
+  font-size: 1.7em;
+  line-height: .9em;
+}
+.meter div:last-child h4 {
+  text-align: right;
+}
+.resume .year {
+  font-weight: bold;,
+  text-shadow: 3px 3px 1px #333;
+  padding: .5em;
+  background: rgba( 175, 175, 175, .5 );
+}
+.resume .section-heading {
+  background: rgba( 200, 200, 200, .3 );
+  padding: 1em;
+}
+.resume .talks {
+  margin-left: -2px;
+}
+.resume-job-box h5,
+.resume-job-box h4,
+.resume-job-box h3 {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+/* Media Queries */
 @media only screen and (min-width: 62em) {
   .site-title {
     font-size: 2em;
+  }
+  .initials {
+    font-size: 7em;
+    margin-left: -.1em;
+  }
+  .first-name {
+    font-size: 4em
+  }
+  .last-name {
+    font-size: 3em
+  }
+  .resume-contact h4 {
+    margin-top: .7em;
+    margin-bottom: .7em;
+  }
+  .resume .work-history {
+    flex-basis: calc( 58.333% - 1px );
+    max-width: calc( 58.333% - 1px );
   }
 }
 
@@ -352,6 +381,19 @@ a:visited hr {
   }
   .col-lg-2 {
     max-width: 16.666%;
+  }
+  .initials {
+    font-size: 9em;
+  }
+  .first-name {
+    font-size: 4em
+  }
+  .last-name {
+    font-size: 3em
+  }
+  .resume .work-history {
+    flex-basis: calc( 58.333% - 1px );
+    max-width: calc( 58.333% - 1px );
   }
 }
 
