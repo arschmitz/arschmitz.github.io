@@ -1,10 +1,13 @@
-<div class="content" data-background="https://code.jquery.com/ui/jquery-ui-git.js">
+<div class="content" data-background="https://code.jquery.com/ui/jquery-ui-git.js" {{json "talks"}}>
 	{{title "talks"}}
 	<div class="row project-row">
 	{{#each talks}}
 		{{call "talks.talk" @key "talks-link col-lg-4 col-md-6 col-sm-6 col-xs-12 float-box"}}
-			<h2 class="talks-name">{{this.eventName}}</h2>
-			<h3 class="talks-title">{{this.title}}</h3>
+			<span {{json "talks" "." @key ".basic"}}>
+				<h2 class="talks-name">{{this.basic.eventName}}</h2>
+				<h3 class="talks-title">{{this.basic.talkTitle}}</h3>
+				<h5 class="talks-date">{{this.basic.date}}</h5>
+			</span>
 		</a>
 	{{/each}}
 	</div>

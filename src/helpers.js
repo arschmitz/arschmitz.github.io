@@ -62,7 +62,7 @@ Handlebars.registerHelper( "json", function() {
 	var prop = Array.prototype.join.call( arguments, "" );
 	console.log( prop );
 	return new Handlebars.SafeString(
-		"data-json='arschmitz." + prop + "'"
+		"data-json=\"arschmitz." + prop + "\""
 	);
 });
 

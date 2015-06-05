@@ -120,7 +120,7 @@ window.gui = {
 			var parent = target.parent();
 			if( target.text() === "JSON" ) {
 				$( e.target ).text( parent.is( ".content" ) ? "Template" : "Pretty" );
-				parent.contents().not( target ).not( ".json-link" ).wrapAll( "<span class='pretty-content'></span>" );
+				parent.children().not( target ).not( ".json-link" ).wrapAll( "<span class='pretty-content'></span>" );
 				parent.find( ".pretty-content" ).hide();
 				var attr = parent.attr( "data-json" )
 				parent.append( "<div class='json-box'><span class='json-content'>" + attr + ": " + prompt.syntaxHighlight( eval( attr ) ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" ) + "</span></div>" );
@@ -128,7 +128,7 @@ window.gui = {
 				template = gui.queryParams().template.split( "." );
 				var url = "templates/" + ( template[ 1 ] || template[ 0 ] ) + ".html";
 				$( e.target ).text( "Pretty" );
-				parent.find( ".json-box" ).remove();
+				parent.children( ".json-box" ).remove();
 				$.ajax( {
 					url: url,
 					success: function( data ) {
@@ -136,9 +136,9 @@ window.gui = {
 					}
 				} );
 			} else {
-				parent.find( ".json-box" ).remove();
+				parent.children( ".json-box" ).remove();
 				target.text( "JSON" );
-				parent.find( ".pretty-content" ).children().unwrap();
+				parent.children( ".pretty-content" ).children().unwrap();
 			}
 		} );
 	}

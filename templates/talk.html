@@ -1,20 +1,23 @@
-<div class="content" data-background="{{dist}}">
+<div class="content" data-background="{{dist}}" {{json "talks" "." key}}>
 	{{title "talks" key }}
 	<div class="row project">
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box" {{json "talks" "." key ".video"}}>
 			<iframe class="video-frame" src="https://www.youtube.com/embed/{{video}}" frameborder="0" allowfullscreen></iframe>
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box" {{json "talks" "." key ".basic"}}>
 
-			<h1 class="project-name"><span class="bold">Event Name: </span>{{eventName}}</h1>
-			<h1 class="project-name"><span class="bold">Title: </span>{{title}}</h1>
-			{{hlink website "Website" "4"}}
-			{{hlink slides "Slides" "4"}}
+			{{h 2 "Event" basic.eventName}}
+			{{h 2 "Date" basic.date}}
+			{{h 2 "Title" basic.talkTitle}}
+			{{hlink basic.website "Website" "4"}}
+			{{hlink basic.slides "Slides" "4"}}
 		</div>
 	</div>
 	<div class="row project">
-		<div class="col-xs-12 col-sm-12 col-lg-12 float-box">
-			<h3 class="talk-description">Description: {{description}}</h3>
+		<div class="col-xs-12 col-sm-12 col-lg-12 float-box" {{json "talks" "." key ".description"}}>
+			<h3 class="talk-description">Description: </h3>
+			<span>{{description}}</span>
+			<br/><br/>
 		</div>
 	</div>
 </div>
