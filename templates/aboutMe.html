@@ -1,27 +1,29 @@
-<div class="content" data-background="{{dist}}">
+<div class="content" data-background="{{dist}}" data-json="arschmitz.aboutMe">
 	{{title "aboutMe"}}
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 float-box project">
 			<img class="about-avatar" src="{{aboutMe.avatar}}"/>
 		</div>
-		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 float-box project">
-			<h1 class="project-name"><span class="bold">Name: </span>{{aboutMe.name}}</h1>
-			<h4 class="project-website"><span class="bold">Age: </span>{{aboutMe.age}}</h4>
-			<h4 class="project-api"><span class="bold">Profession: </span>{{aboutMe.profession}}</h4>
-			<h4 class="project-issues"><span class="bold">Title: </span>{{aboutMe.title}}</h4>
-		</div>
-		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 float-box project">
-			<h1 class="project-name"><span class="bold">Email: </span><a href="mailto:{{aboutMe.contact.email}}">{{aboutMe.contact.email}}</a></h1>
+		<div  data-json="arschmitz.aboutMe.contact" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 last-lg last-md float-box project">
+			<h2 class="project-name"><span class="bold">Email: </span><a href="mailto:{{aboutMe.contact.email}}">{{aboutMe.contact.email}}</a></h2>
 			<h4 class="project-website"><span class="bold">Twitter: </span><a href="http://twitter.com/{{aboutMe.contact.twitter}}">{{aboutMe.contact.twitter}}</a></h4>
 			<h4 class="project-github"><span class="bold">Github: </span><a href="https://github.com/{{aboutMe.contact.github}}">{{aboutMe.contact.github}}</a></h4>
 			<h4 class="project-api"><span class="bold">IRC: </span>{{aboutMe.contact.irc}}</h4>
 			<h4 class="project-issues"><span class="bold">LinkedIn: </span><a href="{{aboutMe.contact.linkedIn}}">{{aboutMe.contact.linkedIn}}</a></h4>
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 float-box project">
+			<h2 class="project-name"><span class="bold">Name: </span>{{aboutMe.name.first}} {{aboutMe.name.last}}</h2>
+			<h4 class="project-website"><span class="bold">Age: </span>{{aboutMe.age}}</h4>
+			<h4 class="project-api"><span class="bold">Profession: </span>{{aboutMe.profession}}</h4>
+			<h4 class="project-issues"><span class="bold">Title: </span>{{aboutMe.title}}</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div data-json="arschmitz.aboutMe.description" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
 			<h2 class="talk-description"><span class="bold">Description: </span></h2>
 			<h3>{{aboutMe.description}}</h3>
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
+		<div data-json="arschmitz.aboutMe.currentPosition" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box project">
 			<h1 class="project-name"><span class="bold">Organization: </span>{{aboutMe.currentPosition.company}}</h1>
 			<h4 class="project-website"><span class="bold">Title: </span>{{aboutMe.currentPosition.title}}</h4>
 			<h4 class="project-github"><span class="bold">Time: </span>{{aboutMe.currentPosition.time}}</h4>
@@ -32,8 +34,10 @@
 			{{/each}}
 			</ul></h4>
 		</div>
+	</div>
+	<div class="row">
 		{{#each aboutMe.pastExperience}}
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 float-box project">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-box project" data-json="arschmitz.aboutMe.pastExperience[ '{{@key}}' ]">
 				<h1 class="project-name"><span class="bold">Company: </span>{{@key}}</h1>
 				<h4 class="project-website"><span class="bold">Title: </span>{{this.title}}</h4>
 				<h4 class="project-github"><span class="bold">Time: </span>{{this.time}}</h4>

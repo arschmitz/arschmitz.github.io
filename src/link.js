@@ -16,7 +16,7 @@ Handlebars.registerHelper( "title", function( template, item ) {
 	var link = "<h1 class=\"site-title\">> <a href=\"/?gui&template=main\" data-call=\"gui.render( 'main' );\">arschmitz</a>.";
 
 	if ( item ) {
-		link += "<a href=\"/?gui&template=" + template + "\" data-call=\"gui.render( '" + template + "' )\">" + template.split( "." )[ 0 ] + "</a>." + item;
+		link += "<a href=\"/?gui&template=" + template + "\" data-call=\"gui.render( '" + template + "' )\">" + template.split( "." )[ 0 ] + "</a>" + item;
 	} else {
 		link += template.split( "." )[ 0 ];
 	}
@@ -44,3 +44,25 @@ Handlebars.registerHelper( "hlink", function( link, text, level ) {
 		"<h" + level + "><span class=\"bold\">" + text + ": </span><a href=\"" + link + "\">" + link + "</a></h" + level + ">"
 	);
 });
+
+Handlebars.registerHelper( "h", function( level, text, content ) {
+	content = Handlebars.escapeExpression( content );
+	level = Handlebars.escapeExpression( level );
+	text = Handlebars.escapeExpression( text );
+
+	return new Handlebars.SafeString(
+		"<h" + level + "><span class=\"bold\">" + text + ": </span>" + content + "</h" + level + ">"
+	);
+});
+
+Handlebars.registerHelper( "meter", function( level ) {
+	var ret = "<span class='meter-level'>";
+	for ( var i=0; i < 5; i++ ) {
+		ret += i >= level ? "<span class='inactive'>" : "";
+		ret += "▱";
+		ret += i >= level ? "</span>" : "";
+	}
+
+	return new Handlebars.SafeString( ret + "</span>" );
+} );
+

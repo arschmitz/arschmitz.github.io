@@ -61,12 +61,13 @@ window.gui = {
 		});
 	},
 	transition: "fade",
-	duration: 200,
+	duration: 500,
 	runTransition: function( content ) {
 		gui.element.hide( gui.transition, gui.duration, function(){
 			gui.element.show( gui.transition, gui.duration, function() {
 				gui.element.trigger( "update" );
 				gui.startBackground();
+				gui.addJSON();
 			} ).html( content );
 		} );
 	},
@@ -88,11 +89,7 @@ window.gui = {
 		}
 	},
 	popState: function() {
-		var queryParams = {}
-		window.location.search.replace( "?", "" ).split( "&" ).forEach(function( value, index ) {
-			var pair = value.split( "=" );
-			queryParams[ pair[ 0 ] ] = pair[ 1 ] || true;
-		});
+		var queryParams = gui.queryParams();
 
 		if ( queryParams.gui ) {
 			if ( queryParams.item ) {
@@ -105,6 +102,45 @@ window.gui = {
 				gui.open( false );
 			}
 		}
+	},
+	queryParams: function() {
+		var queryParams = {};
+		window.location.search.replace( "?", "" ).split( "&" ).forEach(function( value, index ) {
+			var pair = value.split( "=" );
+			queryParams[ pair[ 0 ] ] = pair[ 1 ] || true;
+		});
+		return queryParams;
+	},
+	addJSON: function() {
+		$( "[data-json]" ).append( "<a href class='json-link'>JSON</a>" );
+		$( ".json-link" ).click( function( e ){
+			e.preventDefault();
+			e.stopPropagation();
+			var target = $( this );
+			var parent = target.parent();
+			if( target.text() === "JSON" ) {
+				$( e.target ).text( parent.is( ".content" ) ? "Template" : "Pretty" );
+				parent.contents().not( target ).not( ".json-link" ).wrapAll( "<span class='pretty-content'></span>" );
+				parent.find( ".pretty-content" ).hide();
+				var attr = parent.attr( "data-json" )
+				parent.append( "<div class='json-box'><span class='json-content'>" + attr + ": " + prompt.syntaxHighlight( eval( attr ) ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" ) + "</span></div>" );
+			} else if ( target.text() === "Template" ) {
+				template = gui.queryParams().template.split( "." );
+				var url = "templates/" + ( template[ 1 ] || template[ 0 ] ) + ".html";
+				$( e.target ).text( "Pretty" );
+				parent.find( ".json-box" ).remove();
+				$.ajax( {
+					url: url,
+					success: function( data ) {
+						parent.append( "<div class='json-box'>" + Handlebars.escapeExpression( data ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" ) + "</div>" );
+					}
+				} );
+			} else {
+				parent.find( ".json-box" ).remove();
+				target.text( "JSON" );
+				parent.find( ".pretty-content" ).children().unwrap();
+			}
+		} );
 	}
 }
 

@@ -1,6 +1,14 @@
 window.arschmitz = {
 	aboutMe: {
-		name: "Alexander Schmitz",
+		name: {
+			initials: "AS",
+			first: "Alexander",
+			last: "Schmitz",
+			middle: "Ryan",
+			nick: "Alex"
+		},
+		firstName: "Alexander",
+		lastName: "Schmitz",
 		age: "31",
 		profession: "Developer",
 		title: "Project Lead jQuery Mobile, Co Creator Chassis CSS Framework, Team Member jQuery UI, PEP, jQuery Testing Team, jQuery Infrastructure Team, jQuery Content Team",
@@ -60,6 +68,7 @@ window.arschmitz = {
 			}
 		},
 		contact: {
+			website: "http://arschmitz.me",
 			email: "arschmitz@gmail.com",
 			twitter: "alexrschmitz",
 			github: "arschmitz",
@@ -72,10 +81,145 @@ window.arschmitz = {
 			" Durring this time i came to find that my true passion was not just to write code. It was to write code that could help" +
 			" Others and open make the internet a better and more accessible place"
 	},
+	resume: {
+		moniker: "AS",
+		workHistory: [
+			{
+				name: "jQuery Foundation",
+				title: "Development Lead",
+				role: "Lead jQuery Mobile Project, Co-Creator Chassis CSS Framework, PEP Team Member, jQuery UI Team member.",
+				acheivments: "Improved Code Quality, consistency, and standards. Lead initiative to merge jQuery Mobile and UI Projects. Leading a project and its team of developers distributed across the world. Team member of many similarly distributed teams.",
+				time: "2013-2015"
+			},
+			{
+				name: "Filament Group",
+				title: "Consultant",
+				acheivments: "Worked helping develop a set of small modular JavaScript widgets for use various projects lead by the Filament Group, including the responsive redesigns of Ebay and the Lego Store.",
+				time: "2013-2013"
+			},
+			{
+				name: "Bill Dodge Auto Group",
+				title: "Internet Development Administrator",
+				acheivments: "Handle all internet related needs of the company, including developing custom applications and tools for use throughout the company, maintaining and building servers and websites.",
+				time: "2009-2013"
+			},
+			{
+				name: "Starr Graphics",
+				title: "Web Developer / Graphic Designer",
+				acheivments: "Handle all web development needs of clients. Help with graphics as needed.",
+				time: "2005-2009"
+			},
+			{
+				name: "Freelance",
+				title: "Web Developer / Graphic Designer",
+				time: "1996-2013"
+			}
+		],
+		education: [
+			{
+				name: "University of Southern Maine",
+				major: "Physics",
+				minor: "Math and Chemistry",
+				years: "2002-2006",
+				acheivments: "Noiminated for National Honors"
+			}
+		],
+		communityInvolvment: [
+			{
+				name: "Node School Portland",
+				role: "Mentor"
+			},
+			{
+				name: "Google Summer of Code",
+				role: "Organization Admin / Mentor"
+			},
+			{
+				name: "Portland Web Developers Group",
+				role: "Speaker / Helper / IRC admin / Bugger of people to talk"
+			},
+			{
+				name: "jQuery Boston",
+				role: "Member"
+			}
+		],
+		skills: {
+			frontEnd: [
+				{
+					name: "JavaScript",
+					level: 5
+				},
+				{
+					name: "jQuery",
+					level: 5
+				},
+				{
+					name: "jQuery UI",
+					level: 5
+				},
+				{
+					name: "jQuery Mobile",
+					level: 5
+				},
+				{
+					name: "Sass",
+					level: 4
+				},
+				{
+					name: "CSS3",
+					level: 4
+				},
+				{
+					name: "HTML5",
+					level: 4
+				},
+				{
+					name: "Web Standards",
+					level: 4
+				}
+			],
+			testingAndBuild: [
+				{
+					name: "QUnit",
+					level: 4
+				},
+				{
+					name: "Grunt",
+					level: 4
+				},
+				{
+					name: "Automated Testing",
+					level: 4
+				},
+				{
+					name: "Git",
+					level: 4
+				},
+				{
+					name: "Intern",
+					level: 3
+				},
+				{
+					name: "WebDriver",
+					level: 3
+				}
+			],
+			backend: [
+				{
+					name: "Node.js",
+					level: 4
+				},
+				{
+					name: "PHP",
+					level: 3
+				}
+			]
+		}
+	},
 	talks: {
 		"asia": {
 			key: "asia",
 			eventName: "jQuery Asia",
+			date: "November 2012",
 			video: "TXOFOqsrVuU",
 			website: "https://www.facebook.com/JQueryConferenceAsia",
 			description: "jQuery Mobile makes developing mobile apps and sites easy, semantic and familiar. However those familiar with typical desktop patterns may find themselves banging their heads against the wall when something \"simple\" doesn't work as expected. This session will go through some of the most common problems and pitfalls facing those jumping into jQuery Mobile. Areas covered will include injecting and enhancing dynamic content, working with enhanced form elements, refactoring for pageinit vs $(document).ready(), and the navigation model / page events.",
@@ -85,6 +229,7 @@ window.arschmitz = {
 		"austin": {
 			key: "austin",
 			eventName: "jQuery Austin",
+			date: "September 2013",
 			video: "bZTOV-55ivM",
 			website: "http://events.jquery.org/2013/austin/",
 			description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
@@ -94,6 +239,7 @@ window.arschmitz = {
 		"sandiego": {
 			key: "sandiego",
 			eventName: "jQuery San Diego",
+			date: "February 2014",
 			video: "BNS4u086Lg8",
 			website: "http://events.jquery.org/2014/san-diego/",
 			description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
@@ -103,6 +249,7 @@ window.arschmitz = {
 		"europe": {
 			key: "europe",
 			eventName: "jQuery Europe",
+			date: "March 2014",
 			video: "bZTOV-55ivM",
 			website: "http://www.gentics.com/jquery-eu-2014/page/2014/eu.html",
 			description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
@@ -111,6 +258,7 @@ window.arschmitz = {
 		},
 		"amsterdam": {
 			key: "amsterdam",
+			date: "November 2013",
 			eventName: "Booking.com - Amsterdam",
 			video: "bZTOV-55ivM",
 			website: false,
@@ -122,6 +270,7 @@ window.arschmitz = {
 			key: "chicago",
 			eventName: "jQuery Chicago",
 			video: "2qF7kW9SdJQ",
+			date: "September 2014",
 			website: "http://events.jquery.org/2014/chicago/",
 			description: "jQuery Mobile 1.5 brings lots of new features and a revamped navigation system, more performance optimization possibilities for advanced users and adoption of more widgets from jQuery UI. Lately though, the question I am asked isn't about what's going to be in 1.6, 1.7, and so on, but about the future of jQuery Mobile after the merger with jQuery UI, and what the future is for the jQuery Mobile project. I’ll go into our current road map and details (as many as are available right now) about the future of jQuery Mobile and what it will look like after 2.0",
 			title: "The Path to 2.0",
@@ -131,6 +280,7 @@ window.arschmitz = {
 			key: "pwmWebDevJquery",
 			eventName: "Portland Web Developer Meetup",
 			video: "bZTOV-55ivM",
+			date: "March 2014",
 			website: "http://www.portlandwebworks.com/blog/fun-times-webdev-meeting",
 			description: "In depth talk on the jQuery Foundation, jQuery Mobile, and mobile performance in general",
 			title: "jQuery Foundation overview / Mobile performance",
@@ -140,6 +290,7 @@ window.arschmitz = {
 			key: "pwmWebDevJquery",
 			eventName: "Portland Web Developer Meetup",
 			video: "bZTOV-55ivM",
+			date: "January 2015",
 			website: "http://www.meetup.com/me-webdev/events/219614954/",
 			description: "Using node as a CLI on shared hosting / Nodeception",
 			title: "Node for the masses",
@@ -149,6 +300,7 @@ window.arschmitz = {
 			key: "jssummit2014",
 			eventName: "JavaScript Summit 2014",
 			video: "bZTOV-55ivM",
+			date: "November 2014",
 			website: "http://environmentsforhumans.com/2014/javascript-summit/",
 			description: "It's an exciting time for jQuery UI and Mobile. Big changes are coming to jQuery Mobile and jQuery UI this year as the projects start to merge. But what exactly does this mean? What is the future of the two libraries? Which one is going away? Are either going away? These and many others are the type of questions I have been receiving from many people in the community since we started talking about merging the projects in the spring of 2013. I will address these questions and many more, will give you some history behind the changes we are making as well as give some insight into the direction the projects are taking, and how we’re going to make integration with both projects easier for developers.",
 			title: "The State of jQuery UI & Mobile",
@@ -158,6 +310,7 @@ window.arschmitz = {
 			key: "jssummit2015",
 			eventName: "JavaScript Summit 2015",
 			video: "bZTOV-55ivM",
+			date: "February 2015",
 			website: "http://environmentsforhumans.com/2015/javascript-summit/",
 			description: "Chassis seeks to establish a standard of markup and structure for common components that can be used by both CSS frameworks and JS component libraries to allow for complete interoperability, modularity, and justice, for all. Throughout this process we've been collaborating with a variety of projects and community members including: Topcoat, Zurb Foundation, Cardinal, Famo.us, Yandex, Wordpress, Automattic, 10up, 960grid, Unsemantic, jQuery Mobile, jQuery UI, Intel App Framework, and Cascade CSS, as well as some collaborators from Adobe, Hulu, and Bootstrap.",
 			title: "Chassis: Yet Another CSS Framework",
@@ -165,7 +318,8 @@ window.arschmitz = {
 		},
 		"devAndDesign": {
 			key: "devAndDesign",
-			eventName: "Dev and Design Sept 03 - 04, 2015",
+			eventName: "Dev and Design",
+			date: "September 03 - 04, 2015, Come join me!",
 			video: "0TjxnrWT8Es",
 			website: "http://www.devandesign.me/",
 			description: "To be Announced",
@@ -177,6 +331,26 @@ window.arschmitz = {
 
 	},
 	community: {
+		nodeSchoolPortland: {
+			role: "Mentor",
+			organization: "Node School Portland",
+			website: "http://www.meetup.com/nodeschool-portland-me/",
+			logo: "http://photos1.meetupstatic.com/photos/event/1/c/c/1/global_433507361.jpeg",
+			work: [
+				"Help mentor and teach node to anyone who is interested"
+			]
+		},
+		gsoc: {
+			role: "Organization Admin / Mentor",
+			organization: "Google Summer of Code",
+			website: "https://www.google-melange.com/gsoc/homepage/google/gsoc2015",
+			logo: "https://developers.google.com/open-source/soc/images/gsoc2015-300x270.jpg",
+			work: [
+				"Mentor students",
+				"Administor organization",
+				"Review work and create weekly goals"
+			]
+		},
 		portlandWebDev: {
 			role: "Frequent speaker, helper",
 			organization: "Portland Main Web Developer Group",
@@ -187,15 +361,6 @@ window.arschmitz = {
 				"Help find speakers",
 				"Mentor and give advice to fellow members",
 				"Setup irc support channel"
-			]
-		},
-		nodeSchoolPortland: {
-			role: "Mentor",
-			organization: "Node School Portland",
-			website: "http://www.meetup.com/nodeschool-portland-me/",
-			logo: "http://photos1.meetupstatic.com/photos/event/1/c/c/1/global_433507361.jpeg",
-			work: [
-				"Help mentor and teach node to anyone who is interested"
 			]
 		},
 		jqueryBoston: {
@@ -209,17 +374,6 @@ window.arschmitz = {
 			website: "http://www.meetup.com/boston_JS/",
 			organization: "Boston JS",
 			logo: "http://photos2.meetupstatic.com/photos/event/7/5/d/6/global_431910166.jpeg"
-		},
-		gsoc: {
-			role: "Organization Admin / Mentor",
-			organization: "Google Summer of Code",
-			website: "https://www.google-melange.com/gsoc/homepage/google/gsoc2015",
-			logo: "https://developers.google.com/open-source/soc/images/gsoc2015-300x270.jpg",
-			work: [
-				"Mentor students",
-				"Administor organization",
-				"Review work and create weekly goals"
-			]
 		}
 	},
 	projects: {
@@ -227,14 +381,16 @@ window.arschmitz = {
 			name: "jQuery Mobile",
 			role: "Project Lead",
 			repoName: "[ \"jquery-mobile\" ]",
-			github: "https://github.com/jquery/jquery-mobile",
-			issues: "https://github.com/jquery/jquery-mobile/issues",
-			website: "http://jquerymobile.com",
-			api: "http://api.jquerymobile.com",
-			demos: "http://demos.jquerymobile.com",
+			links: {
+				github: "https://github.com/jquery/jquery-mobile",
+				issues: "https://github.com/jquery/jquery-mobile/issues",
+				website: "http://jquerymobile.com",
+				api: "http://api.jquerymobile.com",
+				irc: "#jqueryui-dev",
+				demos: "http://demos.jquerymobile.com"
+			},
 			dist: "https://code.jquery.com/mobile/git/jquery.mobile-git.js",
 			description: "A unified, HTML5-based user interface system for all popular mobile device platforms, built on the rock-solid jQuery and jQuery UI foundation. Its lightweight code is built with progressive enhancement, and has a flexible, easily themeable design.",
-			irc: "#jqueryui-dev",
 			logo: "images/mobile.svg",
 			currentWork: [
 				"Leading all aspects of the project",
@@ -248,13 +404,15 @@ window.arschmitz = {
 			name: "jQuery UI",
 			repoName: "[ \"jquery-ui\" ]",
 			role: "Team Member",
-			github: "https://github.com/jquery/jquery-ui",
-			issues: "http://bugs.jqueryui.com",
-			website: "http://jqueryui.com",
-			api: "http://api.jqueryui.com",
-			demos: "http://jqueryui.com/demos/",
+			links: {
+				github: "https://github.com/jquery/jquery-ui",
+				issues: "http://bugs.jqueryui.com",
+				website: "http://jqueryui.com",
+				api: "http://api.jqueryui.com",
+				irc: "#jqueryui-dev",
+				demos: "http://jqueryui.com/demos/"
+			},
 			description: "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
-			irc: "#jqueryui-dev",
 			dist: "https://code.jquery.com/ui/jquery-ui-git.js",
 			currentWork: [
 				"Adding new option / feature to all widgets \"classes\" which allows customization of the classes on any element in a widget",
@@ -270,13 +428,15 @@ window.arschmitz = {
 			name: "Chassis",
 			role: "Co-Creator / Team Member",
 			repoName: "[ \"css-chassis\" ]",
-			github: "https://github.com/css-chassis",
-			issues: "https://github.com/css-chassis/issues",
-			website: "http://css-chassis.com",
-			api: "Coming Soon",
-			demos: "http://view.css-chassis.com/master/demos",
+			links: {
+				github: "https://github.com/css-chassis",
+				issues: "https://github.com/css-chassis/issues",
+				website: "http://css-chassis.com",
+				api: "Coming Soon",
+				demos: "http://view.css-chassis.com/master/demos",
+				irc: "#css-chassis",
+			},
 			description: "Chassis is an attempt at creating open standards designed for CSS libraries, JavaScript UI libraries, and web developers in general. This project will define standards for markup and class names for common widgets and patterns, as well as an implementation of those standards.",
-			irc: "#css-chassis",
 			logo: "images/chassis.svg",
 			currentWork: [
 				"Adding and improving automated performance testing for Chassis",
@@ -288,12 +448,14 @@ window.arschmitz = {
 			name: "PEP: PointerEvents Polyfill",
 			role: "Team Member",
 			repoName: ".pep",
-			github: "https://github.com/pep",
-			issues: "https://github.com/pep/issues",
-			demos: "Coming Soon",
-			api: "https://github.com/jquery/pep",
+			links: {
+				github: "https://github.com/pep",
+				issues: "https://github.com/pep/issues",
+				demos: "Coming Soon",
+				api: "https://github.com/jquery/pep",
+				irc: "#pep",
+			},
 			description: "PointerEvents Polyfill: a unified event system for the web platform http://www.w3.org/TR/pointerevents/",
-			irc: "#pep",
 			dist: "http://code.jquery.com/pep/0.3.0/pep.js",
 			logo: "images/pep.png",
 			currentWork: [
@@ -306,13 +468,15 @@ window.arschmitz = {
 			name: "jQuery Infrastructure",
 			repoName: "[ \"jquery-infrastructure\" ]",
 			role: "Team Member",
-			github: "Private",
-			issues: "Private",
-			demos: "none",
-			api: "none",
-			website: "http://jquery.org",
+			links: {
+				github: "Private",
+				issues: "Private",
+				demos: "none",
+				api: "none",
+				website: "http://jquery.org",
+				irc: "#jquery-infrastructure"
+			},
 			description: "Team responsible for all infrastructure of for the jQuery Foundations projects",
-			irc: "#jquery-infrastructure",
 			logo: "images/infrastructure.svg",
 			currentWork: [
 				"Maintaining jQuery UI and Mobile infrastructure",
@@ -324,13 +488,15 @@ window.arschmitz = {
 			name: "jQuery Content",
 			role: "Team Member",
 			repoName: "[ \"jquery-content\" ]",
-			github: "https://github.com/jquery/jquery-content",
-			issues: "https://github.com/jquery/jquery-content/issues",
-			website: "http://jquery.org",
-			demos: "none",
-			api: "none",
+			links: {
+				github: "https://github.com/jquery/jquery-content",
+				issues: "https://github.com/jquery/jquery-content/issues",
+				website: "http://jquery.org",
+				demos: "none",
+				api: "none",
+				irc: "#jquery-content"
+			},
 			description: "Team responsible for all content of for the jQuery Foundations websites",
-			irc: "#jquery-content",
 			logo: "images/content.png",
 			currentWork: [
 				"Adding automated nightly testing of all websites using spider.js",
@@ -341,13 +507,15 @@ window.arschmitz = {
 			name: "Spider.js",
 			role: "Creator",
 			repoName: "[ \"spider.js\" ]",
-			github: "https://github.com/arschmitz/spider.js",
-			issues: "https://github.com/arschmitz/spider.js/issues",
-			api: "https://github.com/arschmitz/spider.js/",
-			demos: "none",
+			links: {
+				github: "https://github.com/arschmitz/spider.js",
+				issues: "https://github.com/arschmitz/spider.js/issues",
+				api: "https://github.com/arschmitz/spider.js/",
+				demos: "none",
+				irc: "Ping me arschmitz "
+			},
 			description: "A node module / CLI based on casper.js for crawling and checking websites for dead links, unnessasarry redirects, resource load errors and script erros",
 			dist: "https://raw.githubusercontent.com/arschmitz/spider.js/master/lib/tests.js",
-			irc: "Ping me arschmitz ",
 			logo: "images/spider-js.svg",
 			currentWork: [
 				"Preparing 1.0 release",
@@ -359,12 +527,14 @@ window.arschmitz = {
 			name: "jQuery UI Bootstrap Adapter",
 			role: "Creator",
 			repoName: "[ \"jqueryui-bootstrap-adapter\" ]",
-			github: "https://github.com/arschmitz/jqueryui-bootstrap-adapter",
-			issues: "https://github.com/arschmitz/jqueryui-bootstrap-adapter/issues",
-			website: "https://rawgit.com/arschmitz/jqueryui-bootstrap-adapter/master/index.html",
-			demos: "https://rawgit.com/arschmitz/jqueryui-bootstrap-adapter/master/index.html",
-			irc: "Ping me arschmitz ",
-			api: "https://rawgit.com/arschmitz/jqueryui-bootstrap-adapter/master/index.html",
+			links: {
+				github: "https://github.com/arschmitz/jqueryui-bootstrap-adapter",
+				issues: "https://github.com/arschmitz/jqueryui-bootstrap-adapter/issues",
+				website: "https://rawgit.com/arschmitz/jqueryui-bootstrap-adapter/master/index.html",
+				demos: "https://rawgit.com/arschmitz/jqueryui-bootstrap-adapter/master/index.html",
+				irc: "Ping me arschmitz ",
+				api: "https://rawgit.com/arschmitz/jqueryui-bootstrap-adapter/master/index.html"
+			},
 			description: "A set of default options and customizations for jQuery UI to use twitter bootstrap css",
 			logo: "images/bootstrapAdapter.svg",
 			currentWork: [
@@ -379,12 +549,14 @@ window.arschmitz = {
 			name: "arschmitz.github.io",
 			role: "Creator",
 			repoName: "[ \"arschmitz.github.io\" ]",
-			github: "https://github.com/arschmitz/arschmitz.github.io",
-			issues: "https://github.com/arschmitz/arschmitz.github.io/issues",
-			website: "http://arschmitz.me",
-			demos: "http://arschmitz.me/?gui&template=effects",
-			irc: "Ping me arschmitz ",
-			api: "http://arschmitz.me/?gui&template=help",
+			links: {
+				github: "https://github.com/arschmitz/arschmitz.github.io",
+				issues: "https://github.com/arschmitz/arschmitz.github.io/issues",
+				website: "http://arschmitz.me",
+				demos: "http://arschmitz.me/?gui&template=effects",
+				irc: "Ping me arschmitz ",
+				api: "http://arschmitz.me/?gui&template=help"
+			},
 			description: "The webiste your currently viewing my little, just something that amuses me",
 			currentWork: [
 				"Meandering"
@@ -394,11 +566,13 @@ window.arschmitz = {
 			name: "Local Menu",
 			role: "Creator",
 			repoName: "[ \"local-menu\" ]",
-			github: "https://github.com/arschmitz/local-menu",
-			website: "https://github.com/arschmitz/local-menu",
-			issues: "https://github.com/arschmitz/local-menu/issues",
-			irc: "Ping me arschmitz ",
-			api: "https://github.com/arschmitz/local-menu",
+			links: {
+				github: "https://github.com/arschmitz/local-menu",
+				website: "https://github.com/arschmitz/local-menu",
+				issues: "https://github.com/arschmitz/local-menu/issues",
+				irc: "Ping me arschmitz ",
+				api: "https://github.com/arschmitz/local-menu"
+			},
 			description: "Creates a menu of all the folders / files in the director compatible with xip.io",
 			currentWork: [
 				"None"
@@ -408,11 +582,13 @@ window.arschmitz = {
 			name: "Grunt Spider",
 			role: "Creator",
 			repoName: "[ \"grunt-spider\" ]",
-			github: "https://github.com/arschmitz/grunt-spider",
-			description: "A grunt task for use with Spider.js",
-			issues: "https://github.com/arschmitz/grunt-spider/issues",
-			irc: "Ping me arschmitz ",
-			api: "https://github.com/arschmitz/grunt-spider",
+			links: {
+				github: "https://github.com/arschmitz/grunt-spider",
+				description: "A grunt task for use with Spider.js",
+				issues: "https://github.com/arschmitz/grunt-spider/issues",
+				irc: "Ping me arschmitz ",
+				api: "https://github.com/arschmitz/grunt-spider"
+			},
 			demos: "none",
 			currentWork: [
 				"Updating api and readme"
@@ -422,12 +598,14 @@ window.arschmitz = {
 			name: "jQuery PR",
 			role: "Creator",
 			repoName: "[ \"jquery-pr\" ]",
-			github: "https://github.com/arschmitz/jquery-pr",
-			website: "https://github.com/arschmitz/jquery-pr",
-			api: "https://github.com/arschmitz/jquery-pr",
-			demos: "none",
-			irc: "Ping me arschmitz ",
-			issues: "https://github.com/arschmitz/jquery-pr/issues",
+			links: {
+				github: "https://github.com/arschmitz/jquery-pr",
+				website: "https://github.com/arschmitz/jquery-pr",
+				api: "https://github.com/arschmitz/jquery-pr",
+				demos: "none",
+				irc: "Ping me arschmitz ",
+				issues: "https://github.com/arschmitz/jquery-pr/issues"
+			},
 			description: "an extension for chrome to check jquery foundation PR's for cla/caa signitures commit message format and line lengths",
 			currentWork: [
 				"Working on version 2",
@@ -441,12 +619,14 @@ window.arschmitz = {
 			name: "Mobile Presenter",
 			role: "Creator",
 			repoName: "[ \"mobile-presenter\" ]",
-			github: "https://github.com/arschmitz/mobile-presenter",
-			issues: "https://github.com/arschmitz/mobile-presenter/issues",
-			website: "http://presentations.arschmitz.me",
-			irc: "Ping me arschmitz ",
-			api: "https://github.com/arschmitz/mobile-presenter",
-			demos: "http://presentations.arschmitz.me",
+			links: {
+				github: "https://github.com/arschmitz/mobile-presenter",
+				issues: "https://github.com/arschmitz/mobile-presenter/issues",
+				website: "http://presentations.arschmitz.me",
+				irc: "Ping me arschmitz ",
+				api: "https://github.com/arschmitz/mobile-presenter",
+				demos: "http://presentations.arschmitz.me"
+			},
 			description: "A slide deck based on codeignighter and jQuery Mobile, includes multi presentation support and follow along function with socket.io, and adaptive / responsive touch remote",
 			currentWork: [
 				"None"
@@ -456,22 +636,26 @@ window.arschmitz = {
 			name: "iOS Iframe Touchevents Fix",
 			role: "Co-Creator",
 			repoName: "[ \"ios-iframe-touchevents-fix\" ]",
-			github: "https://github.com/gseguin/ios-iframe-touchevents-fix",
-			api: "https://github.com/gseguin/ios-iframe-touchevents-fix",
-			website: "https://github.com/gseguin/ios-iframe-touchevents-fix",
-			issues: "https://github.com/gseguin/ios-iframe-touchevents-fix/issues",
-			irc: "Ping arschmitz or gseguin ",
+			links: {
+				github: "https://github.com/gseguin/ios-iframe-touchevents-fix",
+				api: "https://github.com/gseguin/ios-iframe-touchevents-fix",
+				website: "https://github.com/gseguin/ios-iframe-touchevents-fix",
+				issues: "https://github.com/gseguin/ios-iframe-touchevents-fix/issues",
+				irc: "Ping arschmitz or gseguin "
+			},
 			description: "Workaround for iOS' iframes touch events issue"
 		},
 		"jquery-mobile-onpage": {
 			name: "jquery Mobile onPage",
 			role: "creator",
 			repoName: "[ \"jquery-mobile-onpage\" ]",
-			github: "https://github.com/arschmitz/jquery-mobile-onpage",
-			issues: "https://github.com/arschmitz/jquery-mobile-onpage/issues",
-			api: "https://github.com/arschmitz/jquery-mobile-onpage",
-			website: "https://github.com/arschmitz/jquery-mobile-onpage",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/jquery-mobile-onpage",
+				issues: "https://github.com/arschmitz/jquery-mobile-onpage/issues",
+				api: "https://github.com/arschmitz/jquery-mobile-onpage",
+				website: "https://github.com/arschmitz/jquery-mobile-onpage",
+				irc: "Ping me arschmitz "
+			},
 			description: "Provides easy binding for jQuery Mobile page events an reduces the number of bindings needed in a modular project",
 			currentWork: [
 				"Maintaining"
@@ -481,14 +665,15 @@ window.arschmitz = {
 			name: "jQuery mousewheel",
 			repoName: "[ \"jquery-mousewheel\" ]",
 			role: "Team Member",
-			github: "https://github.com/jquery/jquery-mousewheel",
-			issues: "https://github.com/jquery/jquery-mousewheel/issues",
-			website: "https://github.com/jquery/jquery-mousewheel",
-			api: "https://github.com/jquery/jquery-mousewheel",
-			demos: "https://github.com/jquery/jquery-mousewheel",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/jquery/jquery-mousewheel",
+				issues: "https://github.com/jquery/jquery-mousewheel/issues",
+				website: "https://github.com/jquery/jquery-mousewheel",
+				api: "https://github.com/jquery/jquery-mousewheel",
+				demos: "https://github.com/jquery/jquery-mousewheel",
+				irc: "#jqueryui-dev"
+			},
 			description: "A jQuery plugin which adds a normalized mousewheel event",
-			irc: "#jqueryui-dev",
 			currentWork: [
 				"Removing dependency on jQuery core event and alias modules"
 			]
@@ -513,11 +698,13 @@ window.arschmitz = {
 			name: "JSass Vars",
 			role: "Creator",
 			repoName: "[ \"jsass-vars\" ]",
-			github: "https://github.com/arschmitz/JSass-vars",
-			issues: "https://github.com/arschmitz/JSass-vars/issues",
-			api: "https://github.com/arschmitz/JSass-vars",
-			website: "https://github.com/arschmitz/JSass-vars",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/JSass-vars",
+				issues: "https://github.com/arschmitz/JSass-vars/issues",
+				api: "https://github.com/arschmitz/JSass-vars",
+				website: "https://github.com/arschmitz/JSass-vars",
+				irc: "Ping me arschmitz "
+			},
 			description: "A module to compile Javascript modules into valid scss variable files and a coresponding combined javascript file for use in the browser",
 			currentWork: [
 				"Finalizing API",
@@ -528,11 +715,13 @@ window.arschmitz = {
 			name: "QUnit Assert Classes",
 			role: "Creator",
 			repoName: "[ \"qunit-assert-classes\" ]",
-			github: "https://github.com/arschmitz/qunit-assert-classes",
-			issues: "https://github.com/arschmitz/qunit-assert-classes/issues",
-			api: "https://github.com/arschmitz/qunit-assert-classes",
-			website: "https://github.com/arschmitz/qunit-assert-classes",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/qunit-assert-classes",
+				issues: "https://github.com/arschmitz/qunit-assert-classes/issues",
+				api: "https://github.com/arschmitz/qunit-assert-classes",
+				website: "https://github.com/arschmitz/qunit-assert-classes",
+				irc: "Ping me arschmitz "
+			},
 			description: "A set of assertions for checking thats an element has ( or does not have ) any number of classes. The check is order independent and gives a diff of the expected classes.",
 			currentWork: [
 				"None"
@@ -542,11 +731,13 @@ window.arschmitz = {
 			name: "jQuery Mobile Datepicker Wrapper",
 			role: "Creator",
 			repoName: "[ \"qunit-assert-classes\" ]",
-			github: "https://github.com/arschmitz/jquery-mobile-datepicker-wrapper",
-			issues: "https://github.com/arschmitz/jquery-mobile-datepicker-wrapper/issues",
-			api: "https://github.com/arschmitz/jquery-mobile-datepicker-wrapper",
-			website: "https://github.com/arschmitz/jquery-mobile-datepicker-wrapper",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/jquery-mobile-datepicker-wrapper",
+				issues: "https://github.com/arschmitz/jquery-mobile-datepicker-wrapper/issues",
+				api: "https://github.com/arschmitz/jquery-mobile-datepicker-wrapper",
+				website: "https://github.com/arschmitz/jquery-mobile-datepicker-wrapper",
+				irc: "Ping me arschmitz "
+			},
 			description: "Wrapper to turn jquery ui datepicker into a mobile widget.",
 			currentWork: [
 				"Bug Fixes"
@@ -556,11 +747,13 @@ window.arschmitz = {
 			name: "HTML OCD",
 			role: "Creator",
 			repoName: "[ \"html-ocd\" ]",
-			github: "https://github.com/arschmitz/html-ocd",
-			issues: "https://github.com/arschmitz/html-ocd/issues",
-			api: "https://github.com/arschmitz/html-ocd",
-			website: "https://github.com/arschmitz/html-ocd",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/html-ocd",
+				issues: "https://github.com/arschmitz/html-ocd/issues",
+				api: "https://github.com/arschmitz/html-ocd",
+				website: "https://github.com/arschmitz/html-ocd",
+				irc: "Ping me arschmitz "
+			},
 			description: "Verifiys html documents including running jshint and jscs on script tags and csslint and cssComb on style tags, and some basic accessability checks",
 			currentWork: [
 				"Initial Development",
@@ -573,11 +766,13 @@ window.arschmitz = {
 			name: "jQuery Tutorials",
 			role: "Creator",
 			repoName: "[ \"jquery-tutorials\" ]",
-			github: "https://github.com/arschmitz/jquery-tutorials",
-			issues: "https://github.com/arschmitz/jquery-tutorials/issues",
-			api: "https://github.com/arschmitz/jquery-tutorials",
-			website: "https://github.com/arschmitz/jquery-tutorials",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/jquery-tutorials",
+				issues: "https://github.com/arschmitz/jquery-tutorials/issues",
+				api: "https://github.com/arschmitz/jquery-tutorials",
+				website: "https://github.com/arschmitz/jquery-tutorials",
+				irc: "Ping me arschmitz "
+			},
 			description: "A set of interactive tutorials for the jQuery Learning Center http://learn.jquery.com",
 			currentWork: [
 				"Initial Development",
@@ -588,11 +783,13 @@ window.arschmitz = {
 			name: "Bear Bones Beer",
 			role: "Creator",
 			repoName: "[ \"bearbonesbeer.com\" ]",
-			github: "https://github.com/arschmitz/bearbonesbeer.com",
-			issues: "https://github.com/arschmitz/bearbonesbeer.com/issues",
-			api: "none",
-			website: "bearbonesbeer.com",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/bearbonesbeer.com",
+				issues: "https://github.com/arschmitz/bearbonesbeer.com/issues",
+				api: "none",
+				website: "bearbonesbeer.com",
+				irc: "Ping me arschmitz "
+			},
 			description: "Website for the friends brewery Bear Bones Beer",
 			currentWork: [
 				"Initial Development",
@@ -603,11 +800,13 @@ window.arschmitz = {
 			name: "Limesearch",
 			role: "Creator",
 			repoName: ".limesearch",
-			github: "https://github.com/arschmitz/limesearch",
-			issues: "https://github.com/arschmitz/limesearch/issues",
-			api: "https://github.com/arschmitz/limesearch",
-			website: "bearbonesbeer.com",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/limesearch",
+				issues: "https://github.com/arschmitz/limesearch/issues",
+				api: "https://github.com/arschmitz/limesearch",
+				website: "bearbonesbeer.com",
+				irc: "Ping me arschmitz "
+			},
 			description: "A GUI search and view utility for limechat logs",
 			currentWork: [
 				"Initial Development",
@@ -618,12 +817,14 @@ window.arschmitz = {
 			name: "jQuery Phototable",
 			role: "Creator",
 			repoName: "[ \"jquery-phtotable\" ]",
-			github: "https://github.com/arschmitz/jquery-phototable",
-			issues: "https://github.com/arschmitz/jquery-phototable/issues",
-			api: "https://github.com/arschmitz/jquery-phototable",
-			website: "https://rawgit.com/arschmitz/jquery-phototable/master/index.html",
-			demos: "https://rawgit.com/arschmitz/jquery-phototable/master/index.html",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/jquery-phototable",
+				issues: "https://github.com/arschmitz/jquery-phototable/issues",
+				api: "https://github.com/arschmitz/jquery-phototable",
+				website: "https://rawgit.com/arschmitz/jquery-phototable/master/index.html",
+				demos: "https://rawgit.com/arschmitz/jquery-phototable/master/index.html",
+				irc: "Ping me arschmitz "
+			},
 			description: "An advanced drag and drop phototable plugin for jQuery UI and Mobile with facebook integration",
 			currentWork: [
 				"Maitnence"
@@ -633,12 +834,14 @@ window.arschmitz = {
 			name: "jQuery Mobile Event Debugger",
 			role: "Creator",
 			repoName: "[ \"jquery-mobile-event-debugger\" ]",
-			github: "https://github.com/arschmitz/jquery-mobile-event-debugger",
-			issues: "https://github.com/arschmitz/jquery-mobile-event-debugger/issues",
-			api: "https://github.com/arschmitz/jquery-mobile-event-debugger",
-			website: "https://rawgit.com/arschmitz/jquery-mobile-event-debugger/master/index.html",
-			demos: "https://rawgit.com/arschmitz/jquery-mobile-event-debugger/master/index.html",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/jquery-mobile-event-debugger",
+				issues: "https://github.com/arschmitz/jquery-mobile-event-debugger/issues",
+				api: "https://github.com/arschmitz/jquery-mobile-event-debugger",
+				website: "https://rawgit.com/arschmitz/jquery-mobile-event-debugger/master/index.html",
+				demos: "https://rawgit.com/arschmitz/jquery-mobile-event-debugger/master/index.html",
+				irc: "Ping me arschmitz "
+			},
 			description: "A debugging tool for jQuery Mobile Events which ties into the API docs",
 			currentWork: [
 				"Maitnence"
@@ -648,12 +851,14 @@ window.arschmitz = {
 			name: "jQuery Mobile Event Debugger",
 			role: "Creator",
 			repoName: "[ \"simple-panel\" ]",
-			github: "https://github.com/arschmitz/simple-panel",
-			issues: "https://github.com/arschmitz/simple-panel/issues",
-			api: "https://github.com/arschmitz/simple-panel",
-			website: "https://rawgit.com/arschmitz/simple-panel/master/index.html",
-			demos: "https://rawgit.com/arschmitz/simple-panel/master/index.html",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/simple-panel",
+				issues: "https://github.com/arschmitz/simple-panel/issues",
+				api: "https://github.com/arschmitz/simple-panel",
+				website: "https://rawgit.com/arschmitz/simple-panel/master/index.html",
+				demos: "https://rawgit.com/arschmitz/simple-panel/master/index.html",
+				irc: "Ping me arschmitz "
+			},
 			description: "a prototype panel for jquery mobile using ui draggable",
 			currentWork: [
 				"On Hold for jQuery Mobile V1.7"
@@ -663,12 +868,14 @@ window.arschmitz = {
 			name: "jQuery Mobile Nested Lists",
 			role: "Creator",
 			repoName: "[ \"jquery-mobile-nestedlists\" ]",
-			github: "https://github.com/arschmitz/jquery-mobile-nestedlists",
-			issues: "https://github.com/arschmitz/jquery-mobile-nestedlists/issues",
-			api: "https://github.com/arschmitz/jquery-mobile-nestedlists",
-			website: "https://rawgit.com/arschmitz/jquery-mobile-nestedlists/master/index.html",
-			demos: "https://rawgit.com/arschmitz/jquery-mobile-nestedlists/master/index.html",
-			irc: "Ping me arschmitz ",
+			links: {
+				github: "https://github.com/arschmitz/jquery-mobile-nestedlists",
+				issues: "https://github.com/arschmitz/jquery-mobile-nestedlists/issues",
+				api: "https://github.com/arschmitz/jquery-mobile-nestedlists",
+				website: "https://rawgit.com/arschmitz/jquery-mobile-nestedlists/master/index.html",
+				demos: "https://rawgit.com/arschmitz/jquery-mobile-nestedlists/master/index.html",
+				irc: "Ping me arschmitz "
+			},
 			description: "Adds options for nested lists to jQuery mobile",
 			currentWork: [
 				"Maitnence"
@@ -892,3 +1099,7 @@ window.arschmitz = {
 	}
 };
 window.arschmitz.menu = Object.keys( arschmitz );
+window.arschmitz.resume.contact = window.arschmitz.aboutMe.contact;
+window.arschmitz.resume.name = window.arschmitz.aboutMe.name;
+window.arschmitz.resume.talks = window.arschmitz.talks;
+window.arschmitz.menu.splice( window.arschmitz.menu.indexOf( "resume" ), 1 );

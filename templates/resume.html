@@ -1,0 +1,131 @@
+<div class="content resume" data-background="{{dist}}" data-json="arschmitz.resume">
+	{{title "resume"}}
+	<div class="row">
+		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 resume-top float-box project">
+			<div class="initials">{{resume.name.initials}}</div>
+		</div>
+		<div data-json="arschmitz.resume.name" class="col-lg-5 col-md-5 col-sm-8 col-xs-8 name float-box project">
+			<h1 class="first-name">{{resume.name.first}}</h1>
+			<h1 class="last-name">{{resume.name.last}}</h1>
+		</div>
+		<div data-json="arschmitz.resume.contact" class="col-lg-5 col-md-5 col-sm-12 col-xs-12 resume-contact float-box project">
+			{{hlink resume.contact.website "Website" 4}}
+			{{hlink resume.contact.email "Email" 4}}
+			{{hlink resume.contact.github "Github" 4}}
+			{{hlink resume.contact.linkedIn "LinkedIn" 4}}
+			{{hlink resume.contact.twitter "Twitter" 4}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-7 work-history">
+			<div class="row">
+				<div data-json="arschmitz.resume.workHistory" class="col-xs-12 float-box">
+					<h2 class="bold section-heading">Work History</h2>
+					{{#each resume.workHistory}}
+						<div class="resume-job-box row">
+							<div class="col-sm-2">
+								<h5 class="year">{{this.time}}</h5>
+							</div>
+							<div class="col-sm-10">
+								{{h 3 "Title" this.title "title"}}
+								{{h 4 "Company" this.name "company"}}
+								{{#if this.role}}
+									{{h 5 "Role" this.role}}
+								{{/if}}
+								{{#if this.acheivments}}
+									{{h 5 "Acheivments" this.acheivments}}
+								{{/if}}
+							</div>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+			<div class="row">
+				<div data-json="arschmitz.resume.communityInvolvment" class="col-xs-12 float-box">
+					<h2 class="bold section-heading">Community Involvment</h2>
+					{{#each resume.communityInvolvment}}
+						{{h 3 "Organization" this.name}}
+						{{h 4 "Role" this.role}}
+					{{/each}}
+				</div>
+			</div>
+		</div>
+		<div data-json="arschmitz.resume.talks" class="col-md-5 col-xs-12 talks float-box">
+			<h2 class="bold section-heading">Conference Talks</h2>
+			{{#each resume.talks}}
+				<div class="resume-job-box row">
+					<div class="col-sm-3 col-xs-12">
+						<h5 class="year">{{this.date}}</h5>
+					</div>
+					<div class="col-sm-9 col-xs-12">
+						{{h 3 "Event" this.eventName}}
+						{{h 4 "Title" this.title}}
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+	<div class="row">
+		<div data-json="arschmitz.resume.education" class="col-xs-12 float-box">
+			<h2 class="bold section-heading">Education</h2>
+			{{#each resume.education}}
+				{{h 3 "School" this.name}}
+				{{h 3 "Major" this.major}}
+				{{h 3 "Minor" this.minor}}
+				{{h 3 "Acheivments" this.acheivments}}
+			{{/each}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h2 class="bold section-heading">Skills</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div data-json="arschmitz.resume.skills.frontEnd" class="col-xs-12 col-md-6 col-sm-6 float-box">
+			<h2>Front End</h2>
+			{{#each resume.skills.frontEnd}}
+				<div class="row meter">
+					<div class="col-xs-5">
+						<h4>{{this.name}}</h4>
+					</div>
+					<div class="col-xs-7">
+						<h4>{{meter this.level}}</h4>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+		<div class="col-xs-12 col-md-6 col-sm-6">
+			<div class="row">
+				<div data-json="arschmitz.resume.skills.testingAndBuild" class="col-xs-12 float-box">
+				<h2>Testing and build tools</h2>
+					{{#each resume.skills.testingAndBuild}}
+						<div class="row meter">
+							<div class="col-xs-5">
+								<h4>{{this.name}}</h4>
+							</div>
+							<div class="col-xs-7">
+								<h4>{{meter this.level}}</h4>
+							</div>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+			<div class="row">
+				<div data-json="arschmitz.resume.skills.backend" class="col-xs-12 float-box">
+					<h2>Back End</h2>
+					{{#each resume.skills.backend}}
+						<div class="row meter">
+							<div class="col-xs-5">
+								<h4>{{this.name}}</h4>
+							</div>
+							<div class="col-xs-7">
+								<h4>{{meter this.level}}</h4>
+							</div>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

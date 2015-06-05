@@ -1,20 +1,20 @@
-<div class="content" data-background="{{dist}}">
+<div class="content" data-background="{{dist}}" data-json="arschmitz.sideProjects{{repoName}}">
 	{{title "sideProjects" repoName}}
 	<div class="row project">
-		<div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 float-box">
+		<div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 float-box" data-json="arschmitz.sideProjects{{repoName}}.links">
 			<h1 class="project-name"><span class="bold">Name: </span>{{name}}</h1>
-			{{hlink website "Website" "4"}}
-			{{hlink github "Github" "4"}}
-			{{hlink api "API" "4"}}
-			{{hlink issues "Issues" "4"}}
-			{{hlink demos "Demos" "4"}}
+			{{hlink links.website "Website" "4"}}
+			{{hlink links.github "Github" "4"}}
+			{{hlink links.api "API" "4"}}
+			{{hlink links.issues "Issues" "4"}}
+			{{hlink links.demos "Demos" "4"}}
 			<h4 class="project-irc"><span class="bold">IRC: </span>{{irc}} on freenode</h4>
 		</div>
 		<div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 float-box">
 			<h3 class="project-description"><span class="bold">Description: </span>{{description}}</h3>
 			<h3 class="project-role"><span class="bold">My Role: </span>{{role}}</h3>
 			<h2><span class="bold">Current Work: </span></h2>
-			<ul class="project-current-work"><h2>
+			<ul class="project-current-work" data-json="arschmitz.sideProjects{{repoName}}.currentWork">
 				{{#each currentWork}}
 					<li>{{this}}</li>
 				{{/each}}
