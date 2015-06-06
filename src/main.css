@@ -67,6 +67,14 @@ h3 {
   height:100%;
   background: white;
 }
+.scroll-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+}
 #prompt {
   border: none;
   background: none;
@@ -123,21 +131,21 @@ h3 {
   height: 0;
   position: absolute;
   top: 0;
-  width:100%;
+  width: 100%;
   padding: 1em;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 .gui-console {
-  height: 20%;
-  overflow: scroll;
+  height: 180px;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
   position:absolute;
-  top: 80%;
+  top: calc( 100% - 180px );
   border-top: 1px solid #ccc;
 }
 .gui-open {
-  height: 80%;
+  height: calc( 100% - 180px );
 }
 .gui-background {
   width: 100%;
@@ -293,7 +301,7 @@ h3 {
 /* Talks */
 .talks-name {
   position: static;
-  margin-top: 2em;
+  margin-top:;
 }
 .talks-date {
   position: absolute;

@@ -8,7 +8,10 @@ window.gui = {
 		gui.console.resizable( {
 			handles: "n",
 			resize: function( e, ui ) {
-				gui.element.height( $( window ).height() - ui.size.height );
+				var height = ui.size.height / effects.height;
+
+				ui.element.css( "height", ( height * 100 ) + "%" );
+				gui.element.css( "height", ( 100 - ( height * 100 ) ) + "%" );
 			}
 		} );
 

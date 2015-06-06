@@ -257,6 +257,7 @@ $( document ).doubletap( function(){
 $( window ).on( "resize", function(){
 	effects.height = $( window ).height();
 	effects.width = $( window ).width();
+	$( "body" ).height( effects.height );
 });
 
 $( document ).on( "update", function( e ) {

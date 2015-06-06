@@ -24,25 +24,27 @@
 </marquee>
 <div class="gui-wrap scrollable"></div>
 <div class="console-wrap">
-	<div id="output">
-		<div class="output-line">
-			<span class='prompt-start'>< </span>
-			Welcome to arschmitz.me
+	<div class="scroll-wrap">
+		<div id="output">
+			<div class="output-line">
+				<span class='prompt-start'>< </span>
+				Welcome to arschmitz.me
+			</div>
+			<div class="output-line">
+				<span class='prompt-start'>< </span>
+				This is a fully functioning javascript console. Use it to further explore the site.
+				<br/>
+				Hint: start by typing `arschmitz.aboutMe` into the prompt. For Help type in `HELP` or <a href data-call="HELP">Click here for HELP</a>
+				<br/>
+				For a traditional GUI ( Graphical User Interface ) website type in `GUI` or <a href data-call="GUI">Click here for GUI</a>
+			</div>
 		</div>
-		<div class="output-line">
-			<span class='prompt-start'>< </span>
-			This is a fully functioning javascript console. Use it to further explore the site.
-			<br/>
-			Hint: start by typing `arschmitz.aboutMe` into the prompt. For Help type in `HELP` or <a href data-call="HELP">Click here for HELP</a>
-			<br/>
-			For a traditional GUI ( Graphical User Interface ) website type in `GUI` or <a href data-call="GUI">Click here for GUI</a>
-		</div>
-	</div>
-	<div class="prompt-wrap">
-		<div class="prompt-start">></div>
-		<div class="prompt-div">
-			<input type="text" id="prompt" placeholder="arschmitz.me" autofocus>
-			<button id="runPrompt">Run</button>
+		<div class="prompt-wrap">
+			<div class="prompt-start">></div>
+			<div class="prompt-div">
+				<input type="text" id="prompt" placeholder="arschmitz.me" autofocus>
+				<button id="runPrompt">Run</button>
+			</div>
 		</div>
 	</div>
 </div>

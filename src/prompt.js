@@ -65,7 +65,7 @@
 			if ( !gui.isOpen ) {
 				window.scrollTo( 0, $( "body" ).height() );
 			} else {
-				$( ".console-wrap" )[ 0 ].scrollTop = $( ".console-wrap" )[ 0 ].scrollHeight;
+				$( ".console-wrap .scroll-wrap" )[ 0 ].scrollTop = $( ".console-wrap" )[ 0 ].scrollHeight;
 			}
 		},
 		keyup: function( e ) {

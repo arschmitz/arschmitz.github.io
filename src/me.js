@@ -906,7 +906,9 @@ window.arschmitz = {
 			]
 		}
 	},
-	"helpAndAPI": {
+	help:{},
+	aboutTheSite: {},
+	API: {
 		description: "This section describes how to use and navigate through the website, as well as a complete API for the website for use in the prompt",
 		instructions: "This website is designed to be navigated in 2 different ways. The first way is via a JavaScript console. This is what you see when you first come to the" +
 			"website and what is always on the bottom portion of the screen. This works just like the console in the inspector of your browser. All of the websites content is stored" +
@@ -1122,8 +1124,11 @@ window.arschmitz = {
 
 	}
 };
-window.arschmitz.menu = Object.keys( arschmitz );
-window.arschmitz.resume.contact = window.arschmitz.aboutMe.contact;
-window.arschmitz.resume.name = window.arschmitz.aboutMe.name;
-window.arschmitz.resume.talks = window.arschmitz.talks;
-window.arschmitz.menu.splice( window.arschmitz.menu.indexOf( "resume" ), 1 );
+$.extend( arschmitz, {
+	menu: Object.keys( arschmitz )
+} );
+$.extend( arschmitz.resume, {
+	contact: arschmitz.aboutMe.contact,
+	name: arschmitz.aboutMe.name,
+	talks: arschmitz.talks
+});
