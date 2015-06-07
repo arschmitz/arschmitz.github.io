@@ -4,6 +4,14 @@
 	var trigger;
 
 	window.prompt = {
+		close: function() {
+			$( "body" ).addClass( "no-prompt" );
+			history.pushState( {}, "arschmitz.me - GUI", window.location.href + "&prompt=false" );
+		},
+		open: function() {
+			$( "body" ).removeClass( "no-prompt" );
+			history.pushState( {}, "arschmitz.me - GUI", window.location.href.replace( /&prompt=false/g, "" ) );
+		},
 		logError: function( e ) {
 			return "<span class='error'>" + e.__proto__.name + ": " + e.message + "</span>";
 		},
@@ -87,10 +95,21 @@
 		}
 	};
 
+	Object.defineProperty( window, "CLOSE", {
+		get: function() {
+			prompt.close();
+		}
+	} );
+
 	$(function(){
 		$( "body" ).height( $( window ).height() );
 		$( "#prompt" ).on( "change", prompt.runCommand );
 		$( "#runPrompt" ).on( "click", prompt.runCommand );
+		$( document ).on( "click", ".open-console", prompt.open );
+		$( ".prompt-switch input" ).on( "change", function( e ) {
+			console.log( )
+			gui[ $( this ).is( ":checked" ) ? "open" : "close" ]();
+		} );
 		$( "#prompt" ).on( "keyup", prompt.keyup ).on( "blur", function(){
 			if ( ( ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch ) || gui.isOpen ) {
 				return;

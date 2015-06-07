@@ -2,9 +2,11 @@
 (function(){
 window.gui = {
 	open: function( setHistory, renderMain ) {
+		$( "body" ).addClass( "gui" );
 		if ( !gui.isOpen ) {
 			gui.console.addClass( "gui-console", { duration: 1000 } );
 		}
+		$( ".prompt-switch input" ).prop( "checked", true );
 		gui.console.resizable( {
 			handles: "n",
 			resize: function( e, ui ) {
@@ -27,9 +29,11 @@ window.gui = {
 		gui.isOpen = true;
 	},
 	close: function() {
+		$( "body" ).removeClass( "gui" );
 		gui.isOpen = false;
+		history.pushState( {}, "arschmitz.me - GUI", window.location.href.replace( /\?gui/, "" ) );
 		gui.element.removeClass( "gui-open", { duration: 1000 } ).html( "" );
-		gui.console.removeClass( "gui-console", { duration: 1000 } ).resizable( "destroy" );
+		gui.console.removeClass( "gui-console", { duration: 1000, complete: function() { gui.console.attr( "style", "" ); } } ).resizable( "destroy" );
 		gui.marquee.html( "" );
 	},
 	render: function( templateName, item, setHistory ) {
@@ -104,6 +108,9 @@ window.gui = {
 			} else {
 				gui.open( false );
 			}
+			if ( queryParams.prompt === "false" ) {
+				prompt.close();
+			}
 		}
 	},
 	queryParams: function() {
@@ -128,8 +135,15 @@ window.gui = {
 				var attr = parent.attr( "data-json" )
 				parent.append( "<div class='json-box'><span class='json-content'>" + attr + ": " + prompt.syntaxHighlight( eval( attr ) ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" ) + "</span></div>" );
 			} else if ( target.text() === "Template" ) {
-				template = gui.queryParams().template.split( "." );
-				var url = "templates/" + ( template[ 1 ] || template[ 0 ] ) + ".html";
+				var params = gui.queryParams();
+				if( params.template ) {
+					var parts = params.template.split( "." )
+					template = parts[ 1 ] || parts [ 0 ];
+				} else {
+					template = "main";
+				}
+
+				var url = "templates/" + template + ".html";
 				$( e.target ).text( "Pretty" );
 				parent.children( ".json-box" ).remove();
 				$.ajax( {
@@ -150,6 +164,7 @@ window.gui = {
 Object.defineProperty( window, "GUI", {
 	get: function() {
 		gui.open();
+		return "You may now drag the top of the console to resize it."
 	}
 } );
 
