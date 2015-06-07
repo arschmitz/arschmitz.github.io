@@ -1,4 +1,4 @@
-<div class="content project" data-background="{{dist}}" {{json "projects" repoName}}>
+<div class="content project" data-background="{{#if dist}}{{dist}}{{else}}http://code.jquery.com/mobile/git/jquery.mobile-git.js{{/if}}" {{json "projects" repoName}}>
 	{{title "projects" repoName}}
 	<div class="row">
 		<div class="col-lg-6 col-sm-6 col-xs-12 float-box project-top" {{json "projects" repoName ".name"}}>

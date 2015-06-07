@@ -1,4 +1,4 @@
-<div class="content" data-background="{{dist}}" data-json="arschmitz.sideProjects{{repoName}}">
+<div class="content" data-background="{{#if dist}}{{dist}}{{else}}http://code.jquery.com/mobile/git/jquery.mobile-git.js{{/if}}" data-json="arschmitz.sideProjects{{repoName}}">
 	{{title "sideProjects" repoName}}
 	<div class="row project">
 		<div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 float-box" data-json="arschmitz.sideProjects{{repoName}}.links">
