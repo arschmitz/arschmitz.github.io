@@ -4,8 +4,9 @@
 	{{#each rants}}
 		{{call "rants.rant" @key "col-xs-12 float-box project"}}
 			<h1 class="rant-title">{{@key}}</h1>
-			<h2>{{this.word}}</h2>
-			<h3>{{this.shortDefinition}}</h3>
+			<h2>{{this.definition.word}}</h2>
+			<h3>{{this.definition.shortDefinition}}</h3>
+			<h2>{{this.title}}</h2>
 		</a>
 	{{/each}}
 	</div>

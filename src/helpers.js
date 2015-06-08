@@ -60,7 +60,6 @@ Handlebars.registerHelper( "h", function( level, text, content ) {
 Handlebars.registerHelper( "json", function() {
 	delete arguments[ arguments.length -1 ];
 	var prop = Array.prototype.join.call( arguments, "" );
-	console.log( prop );
 	return new Handlebars.SafeString(
 		"data-json=\"arschmitz." + prop + "\""
 	);

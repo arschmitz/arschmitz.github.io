@@ -1,11 +1,16 @@
 <div class="content" data-background="http://code.jquery.com/jquery-git.js" {{json "menu"}}>
 	<h1 class="site-title">> arschmitz.me -  JavaScript is Beautiful</h1>
-	<div class="menu row">
+	<div class="menu row" {{json "menu.items"}}>
 		<div class="col-lg-1 col-md-2 col-sm-3"></div>
 		{{#each menu}}
 			<div class="menu-button-wrap col-lg-2 col-md-4 col-sm-6 col-xs-12">
 				<button data-call="gui.render( '{{this}}' );">{{this}}</button>
 			</div>
 		{{/each}}
+	</div>
+	<div class="main-message">
+		<h2><span class="bold">Open Source: </span></h2>
+		<h4>I believe open source software is the corner stone of the internet.</h4>
+		<p>This website and everything else I work on is open source and available on github with an MIT license.</p>
 	</div>
 </div>

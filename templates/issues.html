@@ -1,9 +1,9 @@
-<ul class="styled-list" {{json type "." name ".currentIssues"}}>
+<ul class="styled-list" {{json type repoName ".currentIssues"}}>
 	{{#if currentIssues.message}}
 		<li class="warning"><h2>{{currentIssues.message}}</h2></li>
 	{{else}}
 		{{#each currentIssues}}
-		<li class="issue-item" {{json "arschmitz." type "." name ".currentIssues['" @key "']"}}>
+		<li class="issue-item" {{json ../type ../repoName ".currentIssues['" @key "']"}}>
 			<a href="{{this.url}}" class="row">
 				<div class="col-xs-2">
 					<img src="{{this.user.avatar_url}}" class="issue-avatar">

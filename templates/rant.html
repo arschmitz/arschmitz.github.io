@@ -1,22 +1,27 @@
-<div class="content" data-background="{{#if dist}}{{dist}}{{else}}http://code.jquery.com/mobile/git/jquery.mobile-git.js{{/if}}">
+<div class="content" data-background="{{#if dist}}{{dist}}{{else}}http://code.jquery.com/mobile/git/jquery.mobile-git.js{{/if}}" {{json "rants" "." name}}>
 	{{title "rants" name}}
 	<div class="rant row">
-		<div class="col-xs-12 float-box project">
-			<h1><span class="bold">Title: </span>{{name}}</h1>
-			<h2><span class="bold">Word: </span>{{word}}</h2>
-			<h3><span class="bold">Pronunciation: </span>{{pronunciation}}</h3>
-			<h3><span class="bold">Part of Speach: </span>{{partOfSpeech}}</h3>
+		<div class="col-xs-12 float-box project" {{json "rants." name ".definition"}}>
+			<h1><span class="bold">Title: </span>{{definition.name}}</h1>
+			<h2><span class="bold">Word: </span>{{definition.word}}</h2>
+			<h3><span class="bold">Pronunciation: </span>{{definition.pronunciation}}</h3>
+			<h3><span class="bold">Part of Speach: </span>{{definition.partOfSpeech}}</h3>
 			<h3><span class="bold">Definition: </span></h3>
 			<h3>
-				<ol>
-				{{#each definition}}
+				<ol {{json "rants." name ".definition.fullDefinition"}}>
+				{{#each definition.fullDefinition}}
 					<li>{{this}}</li>
 				{{/each}}
 				</ol>
 			</h3>
 		</div>
 		<br/>
-		<div class="col-xs-12 float-box project">
+		<div class="col-xs-12 float-box project rant-box">
+		<blockquote {{json "rants." name ".quote"}}>
+			"{{quote.body}}"
+			<br/>
+			<cite>{{quote.sitation}}</cite>
+		</blockquote>
 		{{#each rant}}
 			<p>{{this}}</p>
 		{{/each}}

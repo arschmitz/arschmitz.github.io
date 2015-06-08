@@ -27,6 +27,10 @@ window.arschmitz = {
 				"Work with leads on other projects to create and improve cross-project standards"
 			]
 		},
+		funFacts: [
+			"You can see projects I Lead or work on on ~20% of the top 1 Million Websites",
+			"When open source report card still worked I was in the top 1% of JavaScripters"
+		],
 		pastExperience: {
 			"Filament Group": {
 				title: "Consultant",
@@ -419,7 +423,7 @@ window.arschmitz = {
 		"jquery-mobile": {
 			name: "jQuery Mobile",
 			role: "Project Lead",
-			repoName: "[ \"jquery-mobile\" ]",
+			repoName: "[ 'jquery-mobile' ]",
 			links: {
 				github: "https://github.com/jquery/jquery-mobile",
 				issues: "https://github.com/jquery/jquery-mobile/issues",
@@ -427,6 +431,9 @@ window.arschmitz = {
 				api: "http://api.jquerymobile.com",
 				irc: "#jqueryui-dev",
 				demos: "http://demos.jquerymobile.com"
+			},
+			libScore: {
+				"name": "$.mobile"
 			},
 			builtWith: "true",
 			dist: "https://code.jquery.com/mobile/git/jquery.mobile-git.js",
@@ -442,7 +449,7 @@ window.arschmitz = {
 		},
 		"jquery-ui": {
 			name: "jQuery UI",
-			repoName: "[ \"jquery-ui\" ]",
+			repoName: "[ 'jquery-ui' ]",
 			role: "Team Member",
 			links: {
 				github: "https://github.com/jquery/jquery-ui",
@@ -451,6 +458,9 @@ window.arschmitz = {
 				api: "http://api.jqueryui.com",
 				irc: "#jqueryui-dev",
 				demos: "http://jqueryui.com/demos/"
+			},
+			libScore: {
+				"name": "$.ui"
 			},
 			builtWith: true,
 			description: "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
@@ -467,7 +477,7 @@ window.arschmitz = {
 		},
 		"hammer.js": {
 			name: "Hammer.js",
-			repoName: "[ \"hammer.js\" ]",
+			repoName: "[ 'hammer.js' ]",
 			role: "Project Lead / Organization Owner",
 			links: {
 				github: "https://github.com/hammerjs/hammer.js",
@@ -476,6 +486,9 @@ window.arschmitz = {
 				api: "http://hammerjs.github.io/getting-started/",
 				irc: "Comming Soon",
 				demos: "http://hammerjs.github.io/"
+			},
+			libScore: {
+				"name": "Hammer"
 			},
 			builtWith: true,
 			description: "Hammer is a open-source library that can recognize gestures made by touch, mouse and pointerEvents. It doesn't have any dependencies, and it's small, only 3.96 kB minified + gzipped!",
@@ -492,7 +505,7 @@ window.arschmitz = {
 		"css-chassis": {
 			name: "Chassis",
 			role: "Co-Creator / Team Member",
-			repoName: "[ \"css-chassis\" ]",
+			repoName: "[ 'css-chassis\'' ]",
 			links: {
 				github: "https://github.com/jquery/css-chassis",
 				issues: "https://github.com/jquery/css-chassis/issues",
@@ -531,7 +544,7 @@ window.arschmitz = {
 		},
 		"jquery-infrastructure": {
 			name: "jQuery Infrastructure",
-			repoName: "[ \"jquery-infrastructure\" ]",
+			repoName: "[ 'jquery-infrastructure' ]",
 			role: "Team Member",
 			links: {
 				github: "Private",
@@ -552,7 +565,7 @@ window.arschmitz = {
 		"jquery-content": {
 			name: "jQuery Content",
 			role: "Team Member",
-			repoName: "[ \"jquery-content\" ]",
+			repoName: "[ 'jquery-content' ]",
 			links: {
 				github: "https://github.com/jquery/jquery-content",
 				issues: "https://github.com/jquery/jquery-content/issues",
@@ -571,7 +584,7 @@ window.arschmitz = {
 		"spider.js": {
 			name: "Spider.js",
 			role: "Creator",
-			repoName: "[ \"spider.js\" ]",
+			repoName: "[ 'spider.js' ]",
 			links: {
 				github: "https://github.com/arschmitz/spider.js",
 				issues: "https://github.com/arschmitz/spider.js/issues",
@@ -591,7 +604,7 @@ window.arschmitz = {
 		"jqueryui-bootstrap-adapter": {
 			name: "jQuery UI Bootstrap Adapter",
 			role: "Creator",
-			repoName: "[ \"jqueryui-bootstrap-adapter\" ]",
+			repoName: "[ 'jqueryui-bootstrap-adapter' ]",
 			links: {
 				github: "https://github.com/arschmitz/jqueryui-bootstrap-adapter",
 				issues: "https://github.com/arschmitz/jqueryui-bootstrap-adapter/issues",
@@ -613,7 +626,7 @@ window.arschmitz = {
 		"arschmitz.github.io": {
 			name: "arschmitz.github.io",
 			role: "Creator",
-			repoName: "[ \"arschmitz.github.io\" ]",
+			repoName: "[ 'arschmitz.github.io' ]",
 			links: {
 				github: "https://github.com/arschmitz/arschmitz.github.io",
 				issues: "https://github.com/arschmitz/arschmitz.github.io/issues",
@@ -630,7 +643,7 @@ window.arschmitz = {
 		"local-menu": {
 			name: "Local Menu",
 			role: "Creator",
-			repoName: "[ \"local-menu\" ]",
+			repoName: "[ 'local-menu' ]",
 			links: {
 				github: "https://github.com/arschmitz/local-menu",
 				website: "https://github.com/arschmitz/local-menu",
@@ -1183,14 +1196,21 @@ window.arschmitz = {
 	},
 	rants: {
 		professional: {
-			word: "pro·fes·sion·al",
 			name: "professional",
-			pronunciation: "prəˈfeSH(ə)n(ə)l/",
-			partOfSpeech: "adjective",
-			shortDefinition: "(of a person) engaged in a specified activity as one's main paid occupation rather than as a pastime.",
-			definition: [
-				"(of a person) engaged in a specified activity as one's main paid occupation rather than as a pastime."
-			],
+			title: "When i became a professional developer",
+			definition: {
+				word: "pro·fes·sion·al",
+				pronunciation: "prəˈfeSH(ə)n(ə)l/",
+				partOfSpeech: "adjective",
+				shortDefinition: "(of a person) engaged in a specified activity as one's main paid occupation rather than as a pastime.",
+				definition: [
+					"(of a person) engaged in a specified activity as one's main paid occupation rather than as a pastime."
+				]
+			},
+			quote: {
+				body: "Who is a professional? A professional is someone who has a combination of competence, confidence and belief. A water diviner is a professional. A traditional midwife is a professional. A traditional bone setter is a professional. These are professionals all over the world. You find them in any inaccessible village around the world.",
+				sitation: "Sanjit \"Bunker\" Roy, Founder the Barefoot College"
+			},
 			rant: [
 				"I started making websites very very early on. My mother was a graphic artist and my step father was a network administrator. I learned very young to do graphics arts from my mom. She worked in the packaging industry and worked from home. Because of this i had access to the full suites of professional graphics tools like freehand, illustrator, and photoshop. My earliest ventures into graphics were designing stickers and t-shirts for friends.",
 				"We got the internet as soon as there was service available in the rural area in which we lived. I remember the first time i used the internet it was purely text based in a DOS like prompt on the 386 my step father had just built. It was not long before i was buying books and teaching myself how to write HTML. Meanwhile I had also started to teach myself QBasic with a friend of mine.",
@@ -1204,21 +1224,25 @@ window.arschmitz = {
 			]
 		},
 		accessabile: {
-			word: "ac·ces·si·ble",
-			pronunciation: "ăk-sĕs′ə-bəl",
-			partOfSpeech: "adjective",
+			definition: {
+				word: "ac·ces·si·ble",
+				pronunciation: "ăk-sĕs′ə-bəl",
+				partOfSpeech: "adjective",
+				shortDefinition: "Capable of being used or seen",
+				fullDefinition: [
+					"Providing access",
+					"Capable of being reached",
+					"Capable of being used or seen",
+					"Capable of being understood or appreciated"
+				]
+			},
 			name: "accessabile",
-			shortDefinition: "Capable of being used or seen",
-			definition: [
-				"Providing access",
-				"Capable of being reached",
-				"Capable of being used or seen",
-				"Capable of being understood or appreciated"
-			],
+			title: "A moment when i got to see how my work on accessability helps real people",
+			quote: {
+				body: "\“The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.\”",
+				sitation: "Tim Berners-Lee, W3C Director and inventor of the World Wide Web"
+			},
 			rant: [
-				"\“The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.\”",
-				"Tim Berners-Lee, W3C Director and inventor of the World Wide Web",
-				".",
 				"I became passionate about accessibility early on, believing that everyone deserves equal access to the internet and the wonderful things, and wealth of information which it has to offer. However for me there was a turning point where it went from something i was conscious of to something i preached about.",
 				"I was in washington D.C. for a summit on mobile accessibility representing the jQuery Foundation. After the conference was over I was back at my hotel enjoying the hot tub after swimming some laps, when a couple asked if i minded if they joined me. I said no and they began some small talk about how the husband was there for a banking seminar of some sort, and how she was an accountant and was just along for the trip. I told them about how i was a developer that worked mostly on mobile and i was there for an accessibility conference. This immediately peaked her interest.",
 				"She began to tell me how she started losing  her sight in her 20's. She told me how she still had some vision, so she could walk around and get by fine. She then described her difficulties seeing computer screens, and how she has had needed to learn to use a screen screen reader and rely on the keyboard. She also told me how she was stuck using an old cell phone with physical buttons and no features, because of her sight she needed to be able to memorize the buttons. She then asked me about if i knew any good options for her.",
@@ -1226,10 +1250,50 @@ window.arschmitz = {
 				"I will forever remember the look on her face when she used her husband's iPhone for the first time and realized she could have and use a smartphone too. After this she told me how she could not wait to get home and buy a new phone, and asked if she could have my email address if she had an questions in the future.",
 				"That was 4 years ago, I only ever received one email from her a week later thanking me again for showing her how to use the iPhone and telling me she had already bought her own and could never thank me enough."
 			]
+		},
+		hammer: {
+			definition: {
+				word: "hammer",
+				pronunciation: "[ham-er]",
+				partOfSpeech: "verb",
+				shortDefinition: "To form, construct, or make with or as if with a hammer; build by repeated, vigorous, or strenuous effort (often followed by out or together):",
+				fullDefinition: [
+					"to shape or ornament (metal or a metal object) by controlled and repeated blows of a hammer; beat out",
+					"to form, construct, or make with or as if with a hammer; build by repeated, vigorous, or strenuous effort (often followed by out or together)",
+					"to produce with or by force (often followed by out)",
+					"to pound or hit forcefully"
+				]
+			},
+			quote: {
+				body: "A worker may be the hammer's master, but the hammer still prevails. A tool knows exactly how it is meant to be handled, while the user of the tool can only have an approximate idea.",
+				sitation: "Milan Kundera, Writer"
+			},
+			name: "hammer",
+			title: "Hammering on open source",
+			rant: [
+				"Through my work leading and working on jQuery Mobile as well as jQuery UI I have a big investment in supporting things like touch devices and gestures. As a result of this i have followed the evolutions of the touch and pointer events specs very closely and work closely with several of the members of these working groups giving feedback as well as with browser vendors. It was through all this work by myself and others in the jQuery foundation that we can to adopt the Polymer Pointer Events polyfill and create PEP the new pointer events polyfill from the jQuery Foundation in cooperation with people from Microsoft, Mozillas, and the Dojo Foundation and initial project contribution from google.",
+				"Anyway the point of all of this is that i follow any libraries / developments in this space very closely as a result i have been aware of the Hammer.js library for quite some time. It a great really small library for adding cross browser gesture support to any webpage or hybrid app. During the development process for jQuery Mobile  1.5 we began the process of working on PEP and switching to use just pointer events ( this is not a part of 1.5 to be clear we just started ) as a result i also began thinking about adopting a more robust 3rd party gesture lib to replace jQuery Mobile's limited gesture support. This inevitably brought me to start looking at Hammer.js.",
+				"At this exact same time the creator of Hammer.js got a new job and no longer had any time at all to maintain the project and decided ( completely unaware that i was looking at hammer already ) to reach out to me about the future of Hammer.js and if i would be interested in taking the project over. Due to his limited time we slowly continued these talks over the course of 6 months we worked out a plan to move forward and recently i took over leading the Hammer.js project.",
+				"In taking over the project i am moving this to be a truly community led project and building a team of interested contributors. For open source projects to survive and thrive they need a community of interested contributors to lead the charge. When a project hinges on a single person it can never be viable long term. The nature of open source work and that its is generally done in peoples free time and without compensation. This fact means that when a project hinges on a single person any life change can mean the end of a great project.",
+				"This is exactly what almost happened with Hammer.js when we finally worked out a plan there had not been a commit on the project in 8 months and the community was starting to walk away from a great project they loved and used, because the \"project was dead\”, only the original creator had any access to close issues or land PRs and he was no where to be found. Thankfully for Hammer.js it was not too late and within 24 hours of my posting looking for team members we have had nearly a dozen offers of help! The future is looking very promising for Hammer.js with a new team leading development ( and hope that the original creator will soon have some more time to contribute again as well ).",
+				"To all the creators and leaders of open source projects out there. Its important if you have a growing open source project to make sure that the project will survive in your absence, when you have contributors that hand around talk to them and form a team. It does not need to be anything formal, just a way of ensuring continued development is possible without you. We all have a responsibility to our projects and the wonderful open source community that supports them to make sure they can have a future."
+			]
 		}
 
 	}
 };
+// Add libScore results
+$.each( [ "jquery-ui", "jquery-mobile", "hammer.js" ], function( index, value ) {
+	project = arschmitz.projects[ value ];
+
+	$.ajax( {
+		url: "http://api.libscore.com/v1/libraries/" + arschmitz.projects[ value ].libScore.name,
+		success: function( data ) {
+			arschmitz.projects[ value ].libScore.results = data;
+		}
+	} );
+} );
+
 $.extend( arschmitz, {
 	menu: Object.keys( arschmitz )
 } );

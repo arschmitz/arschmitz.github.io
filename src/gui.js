@@ -1,7 +1,7 @@
 // GUI Functions
 (function(){
 window.gui = {
-	open: function( setHistory, renderMain ) {
+	open: function( pop ) {
 		$( "body" ).addClass( "gui" );
 		if ( !gui.isOpen ) {
 			gui.console.addClass( "gui-console", { duration: 1000 } );
@@ -17,21 +17,19 @@ window.gui = {
 			}
 		} );
 
-		if ( setHistory !== false ) {
-			gui.updateHistory( { gui: true } );
-		}
-		if ( renderMain !== false ) {
-			gui.render( "main", undefined, false );
-		}
 		if ( !gui.isOpen ) {
 			gui.element.addClass( "gui-open", { duration: 1000 } );
 		}
+		gui.updateHistory( { gui: true } );
 		gui.isOpen = true;
+		if ( pop !== false ) {
+			gui.popState();
+		}
 	},
 	close: function() {
 		$( "body" ).removeClass( "gui" );
 		gui.isOpen = false;
-		history.pushState( {}, "arschmitz.me - GUI", window.location.href.replace( /\?gui/, "" ) );
+		gui.updateHistory( { gui: false } );
 		gui.element.removeClass( "gui-open", { duration: 1000 } ).html( "" );
 		gui.console.removeClass( "gui-console", { duration: 1000, complete: function() { gui.console.attr( "style", "" ); } } ).resizable( "destroy" );
 		gui.marquee.html( "" );
@@ -115,14 +113,14 @@ window.gui = {
 		var queryParams = gui.queryParams();
 
 		if ( queryParams.gui ) {
+			queryParams.template = queryParams.template || "main";
+			if ( !gui.isOpen ) {
+				gui.open( false );
+			}
 			if ( queryParams.item ) {
-				gui.open( false, false );
 				gui.render( queryParams.template, queryParams.item, false );
 			} else if ( queryParams.template ) {
-				gui.open( false, false );
 				gui.render( queryParams.template, undefined, false );
-			} else {
-				gui.open( false );
 			}
 			if ( queryParams.prompt === "false" ) {
 				prompt.close();
@@ -140,7 +138,7 @@ window.gui = {
 		return queryParams;
 	},
 	addJSON: function() {
-		$( "[data-json]" ).append( "<a href class='json-link'>JSON</a>" );
+		$( "[data-json]:not( :data(jsonAdded) )" ).append( "<a href class='json-link'>JSON</a>" ).data( "jsonAdded", true );
 		$( ".json-link" ).click( function( e ){
 			e.preventDefault();
 			e.stopPropagation();
@@ -232,6 +230,7 @@ $( function(){
 						success: function( data ){
 							var content = Handlebars.compile( data );
 							$( ".issue-box" ).append( content( project ) );
+							gui.addJSON();
 						}
 					});
 				},
