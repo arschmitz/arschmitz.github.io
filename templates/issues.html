@@ -1,0 +1,19 @@
+<ul class="styled-list" {{json type "." name ".currentIssues"}}>
+	{{#if currentIssues.message}}
+		<li class="warning"><h2>{{currentIssues.message}}</h2></li>
+	{{else}}
+		{{#each currentIssues}}
+		<li class="issue-item" {{json "arschmitz." type "." name ".currentIssues['" @key "']"}}>
+			<a href="{{this.url}}" class="row">
+				<div class="col-xs-2">
+					<img src="{{this.user.avatar_url}}" class="issue-avatar">
+				</div>
+				<div class="col-xs-10">
+					<h3 class="issue-title">{{this.title}}</h3>
+					<h4>#{{this.number}} - Opened at {{this.created_at}} by {{this.user.login}}</h4>
+				</div>
+			</a>
+		</li>
+		{{/each}}
+	{{/if}}
+</ul>

@@ -126,13 +126,17 @@ window.arschmitz = {
 			}
 		],
 		communityInvolvment: [
+		{
+				name: "Google Summer of Code",
+				role: "Organization Admin / Mentor"
+			},
+			{
+				name: "Hammer.JS",
+				role: "Organization Owner / Leader"
+			},
 			{
 				name: "Node School Portland",
 				role: "Mentor"
-			},
-			{
-				name: "Google Summer of Code",
-				role: "Organization Admin / Mentor"
 			},
 			{
 				name: "Portland Web Developers Group",
@@ -355,15 +359,6 @@ window.arschmitz = {
 
 	},
 	community: {
-		nodeSchoolPortland: {
-			role: "Mentor",
-			organization: "Node School Portland",
-			website: "http://www.meetup.com/nodeschool-portland-me/",
-			logo: "http://photos1.meetupstatic.com/photos/event/1/c/c/1/global_433507361.jpeg",
-			work: [
-				"Help mentor and teach node to anyone who is interested"
-			]
-		},
 		gsoc: {
 			role: "Organization Admin / Mentor",
 			organization: "Google Summer of Code",
@@ -373,6 +368,26 @@ window.arschmitz = {
 				"Mentor students",
 				"Administor organization",
 				"Review work and create weekly goals"
+			]
+		},
+		hammer: {
+			role: "Organization Owner / Lead",
+			organization: "Hammer.js",
+			website: "https://github.com/hammerjs",
+			logo: "https://avatars2.githubusercontent.com/u/7997161?v=3&s=200",
+			work: [
+				"Turning project into a community project",
+				"Building a team",
+				"Reaching out to other organizations about collaboration"
+			]
+		},
+		nodeSchoolPortland: {
+			role: "Mentor",
+			organization: "Node School Portland",
+			website: "http://www.meetup.com/nodeschool-portland-me/",
+			logo: "http://photos1.meetupstatic.com/photos/event/1/c/c/1/global_433507361.jpeg",
+			work: [
+				"Help mentor and teach node to anyone who is interested"
 			]
 		},
 		portlandWebDev: {
@@ -413,6 +428,7 @@ window.arschmitz = {
 				irc: "#jqueryui-dev",
 				demos: "http://demos.jquerymobile.com"
 			},
+			builtWith: "true",
 			dist: "https://code.jquery.com/mobile/git/jquery.mobile-git.js",
 			description: "A unified, HTML5-based user interface system for all popular mobile device platforms, built on the rock-solid jQuery and jQuery UI foundation. Its lightweight code is built with progressive enhancement, and has a flexible, easily themeable design.",
 			logo: "images/mobile.svg",
@@ -436,6 +452,7 @@ window.arschmitz = {
 				irc: "#jqueryui-dev",
 				demos: "http://jqueryui.com/demos/"
 			},
+			builtWith: true,
 			description: "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
 			dist: "https://code.jquery.com/ui/jquery-ui-git.js",
 			currentWork: [
@@ -448,13 +465,37 @@ window.arschmitz = {
 			],
 			logo: "images/ui.svg"
 		},
+		"hammer.js": {
+			name: "Hammer.js",
+			repoName: "[ \"hammer.js\" ]",
+			role: "Project Lead / Organization Owner",
+			links: {
+				github: "https://github.com/hammerjs/hammer.js",
+				issues: "https://github.com/hammerjs/hammer.js/issues",
+				website: "http://hammerjs.github.io/",
+				api: "http://hammerjs.github.io/getting-started/",
+				irc: "Comming Soon",
+				demos: "http://hammerjs.github.io/"
+			},
+			builtWith: true,
+			description: "Hammer is a open-source library that can recognize gestures made by touch, mouse and pointerEvents. It doesn't have any dependencies, and it's small, only 3.96 kB minified + gzipped!",
+			dist: "https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.js",
+			currentWork: [
+				"Building Team",
+				"Setting up organization",
+				"Tranisition project from personal project to a community project",
+				"Converting to a modular build",
+				"Triage"
+			],
+			logo: "https://avatars2.githubusercontent.com/u/7997161?v=3&s=200"
+		},
 		"css-chassis": {
 			name: "Chassis",
 			role: "Co-Creator / Team Member",
 			repoName: "[ \"css-chassis\" ]",
 			links: {
-				github: "https://github.com/css-chassis",
-				issues: "https://github.com/css-chassis/issues",
+				github: "https://github.com/jquery/css-chassis",
+				issues: "https://github.com/jquery/css-chassis/issues",
 				website: "http://css-chassis.com",
 				api: "Coming Soon",
 				demos: "http://view.css-chassis.com/master/demos",
@@ -473,8 +514,8 @@ window.arschmitz = {
 			role: "Team Member",
 			repoName: ".pep",
 			links: {
-				github: "https://github.com/pep",
-				issues: "https://github.com/pep/issues",
+				github: "https://github.com/jquery/pep",
+				issues: "https://github.com/jquery/pep/issues",
 				demos: "Coming Soon",
 				api: "https://github.com/jquery/pep",
 				irc: "#pep",
@@ -872,7 +913,7 @@ window.arschmitz = {
 			]
 		},
 		"simple-panel": {
-			name: "jQuery Mobile Event Debugger",
+			name: "Simple Panel",
 			role: "Creator",
 			repoName: "[ \"simple-panel\" ]",
 			links: {
@@ -906,15 +947,80 @@ window.arschmitz = {
 			]
 		}
 	},
-	help:{},
-	aboutTheSite: {},
+	help:{
+		top: [
+			"This website is a little different then typical websites so this section gives some basic usage instructions",
+			"The website is composed of 2 main parts the Console and the GUI"
+		],
+		sections: {
+			console: [
+				"The console provides the basis for the whole site. This is a javascript console just like the one you may have used in the developer tools of your favorite browser",
+				"The console will run any valid javascript you enter in the global context and will log any return values or errors it encounters.",
+				"on larger screens you can have either the console open the GUI open or both.",
+				"On small screen like mobile devices the GUI / Console are responsive and only one can be open at a time",
+				"When the console is closed you will find a small button at the bottom of the screen to re-open it",
+				"The console can be resized by dragging its top border up or down",
+				"For more information on the console and its API see the API section",
+				"For more details on how this interacts and works with the rest of the site see the `aboutTheSite` section"
+			],
+			gui: [
+				"The GUI or Graphical User Interface is what most people think of as a normal website",
+				"The GUI has your typical buttons and links. The GUI on this website does have some unique feature though",
+				"The GUI can be opened at any time by typing `GUI` into the console or by clicking the flips switch at the top which toggles the GUI on and off",
+				"One mobile screens when you open the GUI it will completely hide he console and you will see only the GUI.",
+				"On smaller screens when the GUI is open you will see only the GUI",
+				"For more details on the GUI and its features see the `aboutTheSite` section",
+				"For the full API see the API section"
+			]
+		}
+	},
+	aboutTheSite: {
+		intro: [
+			"This section describes some of the unique aspects of the site and how they work",
+			"The content for this entire website are stored in a single global javascript object `arschmitz`",
+			"Everything you see in the GUI is created by passing parts of this object to a handlebars template and rendering the result"
+		],
+		sections: {
+			json: [
+				"Many of the content blocks on this website have small links in the upper right hand corner that say JSON",
+				"The links mean that this block is created out of a single object that is part of the global `arschmitz` website object",
+				"When you click the link it will show the path to the object and the json object it self which are passed to the handlebars template to create this block"
+			],
+			pageJSONLink: [
+				"Similar to the JSON link mentioned above you will notice each GUI page has a json link at the very top of the page which is fixed to the top of the viewport",
+				"Clicking this link will show the JSON objcet that creates the whole page",
+				"Where this differs from the normal JSON links is after clicking the first time it will say template",
+				"Clicking again will show the Hnadlebars template which renders the page when passed the previous JSON object"
+			],
+			links: [
+				"You may notice any time you click a button or link on the website that there is a command entered into the console and run",
+				"All actions in the gui actually just run the correcponding command in the console."
+			],
+			transitions: [
+				"you may have noticed a subtle fading page transition when switching pages in the GUI",
+				"You may change this to some more dramatic and fun transitions by going to the effects page and changing the default transition"
+			],
+			background: [
+				"The text you see scrolling the background is the source code for different projects which i work on.",
+				"I love javscript and could not thing of any more fitting of a background for my own website :-)"
+			],
+			topTitle: [
+				"The top title you see on each page is the property accessor to the global site object for the current page"
+			]
+		}
+	},
 	API: {
 		description: "This section describes how to use and navigate through the website, as well as a complete API for the website for use in the prompt",
-		instructions: "This website is designed to be navigated in 2 different ways. The first way is via a JavaScript console. This is what you see when you first come to the" +
-			"website and what is always on the bottom portion of the screen. This works just like the console in the inspector of your browser. All of the websites content is stored" +
-			"in an object on the window <code>arschmitz</code> you can explore this object directly within the console as well as run the commands you will find below. The second way you can explore this website" +
-			" is via the GUI interface. This is the more traditional sort of website you are probably familiar with. Where you have friendly links and buttons and can use your mouse ( and no JavaScript required )." +
-			" You will notice however when you click on a link or button it inputs a coresponding command into the prompt and runs it. This way you can see exactly what is happening as you explore the website",
+		instructions: [
+			"This website is designed to be navigated in 2 different ways...",
+			"The first way is via a JavaScript console. This is what you see when you first come to the website, and what is always on the bottom portion of the screen.",
+			"This works just like the console in the inspector of your browser. All of the websites content is stored in a global object named `arschmitz`.",
+			"You can explore this object directly within the console as well as run the commands you will find below.",
+			"The second way you can explore this website, is via the GUI interface.",
+			"This is the more traditional sort of website you are probably familiar with. Where you have friendly links and buttons and can use your mouse ( and no JavaScript required ).",
+			"You will notice however when you click on a link or button it inputs a coresponding command into the prompt and runs it.",
+			"This way you can see exactly what is happening as you explore the website"
+		],
 		globalObjects: {
 			gui: {
 				description: "This object contains methods and properties that control the display of the GUI content of the website",

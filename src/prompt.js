@@ -6,11 +6,11 @@
 	window.prompt = {
 		close: function() {
 			$( "body" ).addClass( "no-prompt" );
-			history.pushState( {}, "arschmitz.me - GUI", window.location.href + "&prompt=false" );
+			gui.updateHistory( { prompt: "false" } );
 		},
 		open: function() {
 			$( "body" ).removeClass( "no-prompt" );
-			history.pushState( {}, "arschmitz.me - GUI", window.location.href.replace( /&prompt=false/g, "" ) );
+			gui.updateHistory( { prompt: false } );
 		},
 		logError: function( e ) {
 			return "<span class='error'>" + e.__proto__.name + ": " + e.message + "</span>";

@@ -1,24 +1,26 @@
-<div class="content" data-background="https://code.jquery.com/ui/jquery-ui-git.js">
+<div class="content" data-background="https://code.jquery.com/ui/jquery-ui-git.js" {{json "API"}}>
 	{{title "API"}}
 	<div class="row">
-		<div class="col-xs-12 float-box project">
+		<div class="col-xs-12 float-box project" {{json "API.description"}}>
 			<h1>{{API.description}}</h1>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-xs-12 float-box project">
-			<h3>{{API.instructions}}</h3>
+		<div class="col-xs-12 float-box project" {{json "APIinstructions"}}>
+			{{#each API.instructions}}
+				<p>{{this}}</p>
+			{{/each}}
 		</div>
 	</div>
-	<div class="row">
+	<div class="row" {{json "API.globalObjects"}}>
 		{{#each API.globalObjects}}
-			<div class="col-xs-12 float-box">
+			<div class="col-xs-12 float-box" {{json "API.globalObjects." @key}}>
 				<div class="api-section">
 					<h2>window.{{@key}}</h2>
 					<h3><span class="bold">Description: </span>{{this.description}}</h3>
 				</div>
 				<h3 class="api-global-section">
-					<div class="row">
+					<div class="row" {{json "API.globalObjects." @key ".methods" }}>
 					{{#if this.methods}}
 						<div class="api-section-heading">
 							<h2>Methods: </h2>
@@ -31,8 +33,8 @@
 						{{/each}}
 					{{/if}}
 					</div>
-					<div class="row">
-					{{#if this.methods}}
+					<div class="row" {{json "API.globalObjects." @key ".properties" }}>
+					{{#if this.properties}}
 						<div class="api-section-heading">
 							<h2>Properties: </h2>
 						</div>

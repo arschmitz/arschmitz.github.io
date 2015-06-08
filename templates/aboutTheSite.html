@@ -1,0 +1,26 @@
+<div class="content" data-background="https://code.jquery.com/ui/jquery-ui-git.js" {{json "aboutTheSite"}}>
+	{{title "aboutTheSite"}}
+	<div class="row">
+		<div class="col-xs-12 float-box project" {{json "aboutTheSite.intro"}}>
+			{{#each aboutTheSite.intro}}
+				<h3>{{this}}</h3>
+			{{/each}}
+		</div>
+	</div>
+	<div class="row" {{json "aboutTheSite.sections"}}>
+		{{#each aboutTheSite.sections}}
+			<div class="col-md-6 col-xs-12 float-box">
+				<div class="api-section">
+					<h2>{{@key}}</h2>
+				</div>
+				<h3 class="api-global-section" {{json "aboutTheSite.sections." @key}}>
+					<div class="row">
+						{{#each this}}
+							<p>{{this}}</p>
+						{{/each}}
+					</div>
+				</h3>
+			</div>
+		{{/each}}
+	</div>
+</div>

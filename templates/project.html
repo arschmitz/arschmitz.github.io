@@ -12,7 +12,7 @@
 		<div class="col-lg-6 col-sm-6 col-xs-12 float-box project-top">
 			<div class="row">
 				<h1 class="col-xs-3"><span class="bold project-logo-label">Logo: </span> </h1>
-				<img class="project-logo col-xs-9" src="{{logo}}"/>
+				<div class="col-xs-9"><img class="project-logo" src="{{logo}}"/></div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 float-box project-second" {{json "projects" repoName ".links"}}>
@@ -34,6 +34,31 @@
 				<li>{{this}}</li>
 			{{/each}}
 		</ul>
+		</div>
+	</div>
+	<div class="row">
+		{{#if builtWith}}
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box">
+			<h2><span class="bold">Sites built with {{name}}:</span></h2>
+			<ul class="styled-list">
+				{{#each builtWith}}
+				<li class="row">
+					<div class="col-xs-8">
+						<h3 class="builtWithDomain"><span class="bold">Domain: </span>{{this.Domain}}</h3>
+						<h4 class="builtWithCompany"><span class="bold">Company: </span>{{this.Company}}</h4>
+					</div>
+					<div class="col-xs-4">
+						<h4><span class="bold">Quantcast: </span>#{{this.Quantcast}}</h4>
+						<h4><span class="bold">Alexa: </span>#{{this.Alexa}}</h4>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		{{/if}}
+		<div class="{{#if builtWith}}col-md-6{{/if}} col-xs-12 float-box issue-box">
+			<h2><span class="bold">Open issues:</span></h2>
+			
 		</div>
 	</div>
 </div>

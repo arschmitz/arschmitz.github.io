@@ -18,7 +18,7 @@ window.gui = {
 		} );
 
 		if ( setHistory !== false ) {
-			history.pushState( {}, "arschmitz.me - GUI", window.location.pathname + "?gui" );
+			gui.updateHistory( { gui: true } );
 		}
 		if ( renderMain !== false ) {
 			gui.render( "main", undefined, false );
@@ -36,6 +36,23 @@ window.gui = {
 		gui.console.removeClass( "gui-console", { duration: 1000, complete: function() { gui.console.attr( "style", "" ); } } ).resizable( "destroy" );
 		gui.marquee.html( "" );
 	},
+	updateHistory: function( update, title, replace ) {
+		params = gui.queryParams();
+		$.each( update, function( key, value ) {
+			if ( value ) {
+				params[ key ] = value;
+			} else {
+				delete params[ key ];
+			}
+		} );
+		var searchString = "",
+			first = "?";
+		$.each( params, function( key, value ) {
+			searchString += first + key + "=" + value;
+			first = "&";
+		} );
+		history[ ( replace || "push" ) + "State" ]( {}, "arschmitz.me - GUI " + title, window.location.pathname + searchString );
+	},
 	render: function( templateName, item, setHistory ) {
 		var parts = templateName.split( "." );
 		var url = "templates/" + ( parts[ 1 ] || parts[ 0 ] ) + ".html"
@@ -50,16 +67,14 @@ window.gui = {
 					if ( setHistory === false ) {
 						return;
 					}
-					history.pushState( {}, "arschmitz.me - GUI - " +
-						templateName, window.location.pathname + "?gui&template=" + templateName );
+					gui.updateHistory( { "template": templateName, item: false }, "- " + templateName );
 				} else {
 					gui.runTransition( content( arschmitz[ parts[ 0 ] ][ item ] ) );
 
 					if ( setHistory === false ) {
 						return;
 					}
-					history.pushState( {}, "arschmitz.me - GUI - " +item, window.location.pathname +
-						"?gui&template=" + templateName + "&item=" + item );
+					gui.updateHistory( { template: templateName, item: item }, "- " + item );
 				}
 			},
 			error: function( jqxhr, status, error ) {
@@ -72,6 +87,7 @@ window.gui = {
 	runTransition: function( content ) {
 		gui.element.hide( gui.transition, gui.duration, function(){
 			gui.element.show( gui.transition, gui.duration, function() {
+				$( ".gui-wrap" )[ 0 ].scrollTop = 0;
 				gui.element.trigger( "update" );
 				gui.startBackground();
 				gui.addJSON();
@@ -117,7 +133,9 @@ window.gui = {
 		var queryParams = {};
 		window.location.search.replace( "?", "" ).split( "&" ).forEach(function( value, index ) {
 			var pair = value.split( "=" );
-			queryParams[ pair[ 0 ] ] = pair[ 1 ] || true;
+			if( pair[ 0 ] !== "" ) {
+				queryParams[ pair[ 0 ] ] = pair[ 1 ] || true;
+			}
 		});
 		return queryParams;
 	},
@@ -199,5 +217,37 @@ $( function(){
 	gui.element = $( ".gui-wrap" );
 	gui.marquee = $( "marquee" );
 	gui.popState();
+	gui.element.on( "update", function(){
+		var params = gui.queryParams();
+		if ( params.template === "projects.project" || gui.queryParams().template === "sideProjects.sideProject" ) {
+			project = arschmitz[ params.template.split( "." )[ 0 ] ][ params.item ];
+			project.type = params.template.split( "." )[ 0 ];
+			$.ajax({
+				url: "https://api.github.com/repos/" + project.links.github.split( ".com/" )[ 1 ] + "/issues",
+				success: function( data ) {
+					arschmitz[ project.type ][ params.item ].currentIssues = data;
+
+					$.ajax({
+						"url": "templates/issues.html",
+						success: function( data ){
+							var content = Handlebars.compile( data );
+							$( ".issue-box" ).append( content( project ) );
+						}
+					});
+				},
+				error: function(){
+					arschmitz[ project.type ][ params.item ].currentIssues = {};
+					arschmitz[ project.type ][ params.item ].currentIssues.message = "API Limit reached please click the issues link in the section above to see current issues";
+					$.ajax({
+						"url": "templates/issues.html",
+						success: function( data ){
+							var content = Handlebars.compile( data );
+							$( ".issue-box" ).append( content( project ) );
+						}
+					});
+				}
+			});
+		}
+	});
 });
 })();

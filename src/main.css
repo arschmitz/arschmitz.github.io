@@ -7,7 +7,6 @@ body, html {
   padding: 0;
   margin: 0;
   overflow-wrap: break-word;
-  *background: black;
   font-family: "Lucida Console", Monaco, monospace;
 }
 body * {
@@ -57,6 +56,16 @@ h4 {
 }
 h3 {
   font-size: .9em;
+}
+
+.styled-list li{
+  background: rgba( 200, 200, 200, .3 );
+  border-top: 1px solid #ccc;
+}
+.styled-list {
+  padding-left: 0;
+  list-style: none;
+  font-size: .6em;
 }
 
 /* Flipswitch */
@@ -208,6 +217,7 @@ html body .show {
 .null { color: magenta; }
 .key { color: red; }
 .error { background:red; color: white; font-weight: bold; }
+.warning { background:yellow; color: #333; font-weight: bold; padding: 1em;}
 
 /* General GUI Stuff */
 .gui-wrap {
@@ -326,11 +336,17 @@ html body .show {
 .projects-link {
   text-align: center;
 }
+.issue-avatar {
+  max-width: 100%;
+  max-height: 100px;
+}
+.issue-item {
+  max-height: 100px;
+}
 
 /* Community */
 .community-logo {
-  width: 90%;
-  margin-left: 33%;
+  width: 100%;
 }
 
 /* Help and API */
@@ -352,6 +368,10 @@ html body .show {
 }
 .api-global-section {
   left: .6em;
+  position: relative;
+}
+
+.api-global-section .row {
   position: relative;
 }
 
@@ -400,11 +420,11 @@ html body .show {
 }
 .talks-date {
   position: absolute;
-  top: 0;
-  right: 1em;
+  top: -1.5em;
+  left: 1em;
 }
 .video-frame {
-  width: 90%;
+  width: 100%;
   height: 320px;
 }
 
