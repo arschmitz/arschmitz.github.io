@@ -339,6 +339,7 @@ html body .show {
 }
 .issue-item {
   max-height: 60px;
+  position: relative;
 }
 .issue-title {
   margin-top: .2em;
