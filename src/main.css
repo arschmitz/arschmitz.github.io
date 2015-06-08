@@ -9,9 +9,6 @@ body, html {
   overflow-wrap: break-word;
   font-family: "Lucida Console", Monaco, monospace;
 }
-body * {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
 a,
 a:hover,
 a:active,
@@ -65,7 +62,7 @@ h3 {
 .styled-list {
   padding-left: 0;
   list-style: none;
-  font-size: .6em;
+  font-size: .75em;
 }
 
 /* Flipswitch */
@@ -337,11 +334,19 @@ html body .show {
   text-align: center;
 }
 .issue-avatar {
-  max-width: 100%;
-  max-height: 100px;
+  max-width: 60px;
+  max-height: 60px;
 }
 .issue-item {
-  max-height: 100px;
+  max-height: 60px;
+}
+.issue-title {
+  margin-top: .2em;
+}
+.issue-info {
+  position: absolute;
+  bottom: 3px;
+  margin: 0;
 }
 
 /* Community */
