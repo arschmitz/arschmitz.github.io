@@ -458,9 +458,13 @@ html body .show {
   font-size: 5em;
   margin-left: -.2em;
   text-align: center;
+  line-height: normal;
   font-weight: bold;
   overflow-wrap: normal;
   text-shadow: 8px 8px 4px #ccc;
+}
+.resume .name {
+  line-height: normal;
 }
 .first-name {
   font-size: 2em;
