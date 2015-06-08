@@ -28,7 +28,9 @@ window.arschmitz = {
 			]
 		},
 		funFacts: [
-			"You can see projects I Lead or work on on ~20% of the top 1 Million Websites",
+			"Projects which i help lead and work on are on ~75% of the top 1 Million websites",
+			"20% of these sites feature 2 or more of these projects",
+			"11% have 3 or more of the projects",
 			"When open source report card still worked I was in the top 1% of JavaScripters"
 		],
 		pastExperience: {
@@ -84,7 +86,8 @@ window.arschmitz = {
 			" My passion is writing elegant and functional javscript code to be used and enjoyed by any one who wants it." +
 			" In my spare time I brew beer, make wine and love to cook. I have been coding and making websites for over 20 years." +
 			" Durring this time i came to find that my true passion was not just to write code. It was to write code that could help" +
-			" Others and open make the internet a better and more accessible place"
+			" Others and open make the internet a better and more accessible place." +
+			" I devote my life and 100% of my working time to the development and fostering of open source projects."
 	},
 	resume: {
 		moniker: "AS",

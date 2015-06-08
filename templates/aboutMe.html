@@ -52,6 +52,18 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12 float-box">
+			<h2><span class="bold">Fun Facts:</span></h2>
+			<ul class="styled-list fun-facts">
+				{{#each aboutMe.funFacts}}
+				<li class="row">
+					<h4><span class="bold">Fact: </span>{{this}}</h4>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 float-box">
 			<h2><span class="bold">Sites built with projects I lead or work on:</span></h2>
 			<ul class="styled-list">
 				{{#each aboutMe.builtWith}}

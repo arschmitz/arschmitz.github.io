@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 body, html {
-  font-size: 1em;
+  font-size: .9em;
+  line-height: 2em;
   padding: 0;
   margin: 0;
   overflow-wrap: break-word;
@@ -63,6 +64,9 @@ h3 {
   padding-left: 0;
   list-style: none;
   font-size: .75em;
+}
+.fun-facts li{
+  padding-left: 1em;
 }
 
 /* Flipswitch */
@@ -141,6 +145,7 @@ h3 {
   width:100%;
   height:100%;
   background: white;
+  font-size: .8em;
 }
 .scroll-wrap {
   position: absolute;
@@ -250,7 +255,7 @@ html body .show {
   background: none;
   margin: 0;
   padding: 0;
-  opacity: .05;
+  opacity: .1;
   z-index: 0;
 }
 .gui-background-code {
