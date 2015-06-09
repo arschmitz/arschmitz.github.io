@@ -137,43 +137,43 @@ window.gui = {
 		});
 		return queryParams;
 	},
+	jsonClick: function( e ) {
+		e.preventDefault();
+		e.stopPropagation();
+		var target = $( this );
+		var parent = target.parent();
+		if( target.text() === "JSON" ) {
+			$( e.target ).text( parent.is( ".content" ) ? "Template" : "Pretty" );
+			parent.children().not( target ).not( ".json-link" ).wrapAll( "<span class='pretty-content'></span>" );
+			parent.find( ".pretty-content" ).hide();
+			var attr = parent.attr( "data-json" )
+			parent.append( "<div class='json-box'><span class='json-content'>" + attr + ": " + prompt.syntaxHighlight( eval( attr ) ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" ) + "</span></div>" );
+		} else if ( target.text() === "Template" ) {
+			var params = gui.queryParams();
+			if( params.template ) {
+				var parts = params.template.split( "." )
+				template = parts[ 1 ] || parts [ 0 ];
+			} else {
+				template = "main";
+			}
+
+			var url = "templates/" + template + ".html";
+			$( e.target ).text( "Pretty" );
+			parent.children( ".json-box" ).remove();
+			$.ajax( {
+				url: url,
+				success: function( data ) {
+					parent.append( "<div class='json-box'>" + Handlebars.escapeExpression( data ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" ) + "</div>" );
+				}
+			} );
+		} else {
+			parent.children( ".json-box" ).remove();
+			target.text( "JSON" );
+			parent.children( ".pretty-content" ).children().unwrap();
+		}
+	},
 	addJSON: function() {
 		$( "[data-json]:not( :data(jsonAdded) )" ).append( "<a href class='json-link'>JSON</a>" ).data( "jsonAdded", true );
-		$( ".json-link" ).click( function( e ){
-			e.preventDefault();
-			e.stopPropagation();
-			var target = $( this );
-			var parent = target.parent();
-			if( target.text() === "JSON" ) {
-				$( e.target ).text( parent.is( ".content" ) ? "Template" : "Pretty" );
-				parent.children().not( target ).not( ".json-link" ).wrapAll( "<span class='pretty-content'></span>" );
-				parent.find( ".pretty-content" ).hide();
-				var attr = parent.attr( "data-json" )
-				parent.append( "<div class='json-box'><span class='json-content'>" + attr + ": " + prompt.syntaxHighlight( eval( attr ) ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" ) + "</span></div>" );
-			} else if ( target.text() === "Template" ) {
-				var params = gui.queryParams();
-				if( params.template ) {
-					var parts = params.template.split( "." )
-					template = parts[ 1 ] || parts [ 0 ];
-				} else {
-					template = "main";
-				}
-
-				var url = "templates/" + template + ".html";
-				$( e.target ).text( "Pretty" );
-				parent.children( ".json-box" ).remove();
-				$.ajax( {
-					url: url,
-					success: function( data ) {
-						parent.append( "<div class='json-box'>" + Handlebars.escapeExpression( data ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" ) + "</div>" );
-					}
-				} );
-			} else {
-				parent.children( ".json-box" ).remove();
-				target.text( "JSON" );
-				parent.children( ".pretty-content" ).children().unwrap();
-			}
-		} );
 	}
 }
 
@@ -215,6 +215,7 @@ $( function(){
 	gui.element = $( ".gui-wrap" );
 	gui.marquee = $( "marquee" );
 	gui.popState();
+	$( document ).on( "click", ".json-link", gui.jsonClick );
 	gui.element.on( "update", function(){
 		var params = gui.queryParams();
 		if ( params.template === "projects.project" || gui.queryParams().template === "sideProjects.sideProject" ) {
