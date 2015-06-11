@@ -64,19 +64,22 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12 float-box">
-			<h2><span class="bold">Sites built with projects I lead or work on:</span></h2>
+			<h2><span class="bold">Sites built with projects I help lead or work on:</span></h2>
 			<ul class="styled-list">
-				{{#each aboutMe.builtWith}}
-				<li class="row">
-					<div class="col-xs-8">
-						<h3 class="builtWithDomain"><span class="bold">Domain: </span>{{this.Domain}}</h3>
-						<h4 class="builtWithCompany"><span class="bold">Company: </span>{{this.Company}}</h4>
-					</div>
-					<div class="col-xs-4">
-						<h4><span class="bold">Quantcast: </span>#{{this.Quantcast}}</h4>
-						<h4><span class="bold">Alexa: </span>#{{this.Alexa}}</h4>
-					</div>
-				</li>
+				{{#each aboutMe.libScore}}
+				<li class="libScore-item">
+		<a href="http://{{this.url}}" class="row">
+			<div class="col-xs-8">
+				<h4><span class="bold">Site: </span>{{this.url}}</h4>
+			</div>
+			<div class="col-xs-2">
+				<h4><span class="bold">Lib: </span>{{#each this.lib}}{{this}}{{/each}}</h4>
+			</div>
+			<div class="col-xs-2">
+				<h4><span class="bold">Rank: </span>{{this.rank}}</h4>
+			</div>
+		</a>
+	</li>
 				{{/each}}
 			</ul>
 		</div>

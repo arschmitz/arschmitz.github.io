@@ -28,7 +28,7 @@ window.arschmitz = {
 			]
 		},
 		funFacts: [
-			"Projects which i help lead and work on are on ~75% of the top 1 Million websites",
+			"Projects which i help lead and work on are on ~65% of the top 1 Million websites",
 			"20% of these sites feature 2 or more of these projects",
 			"11% have 3 or more of the projects",
 			"When open source report card still worked I was in the top 1% of JavaScripters"
@@ -129,7 +129,7 @@ window.arschmitz = {
 				major: "Physics",
 				minor: "Math and Chemistry",
 				years: "2002-2006",
-				acheivments: "Noiminated for National Honors"
+				achievements: "Noiminated for National Honors"
 			}
 		],
 		communityInvolvment: [
@@ -1286,17 +1286,54 @@ window.arschmitz = {
 	}
 };
 // Add libScore results
+var requests = [];
+var jQueryData;
 $.each( [ "jquery-ui", "jquery-mobile", "hammer.js" ], function( index, value ) {
 	project = arschmitz.projects[ value ];
 
-	$.ajax( {
+	requests.push( $.ajax( {
 		url: "http://api.libscore.com/v1/libraries/" + arschmitz.projects[ value ].libScore.name,
 		success: function( data ) {
+			console.log( data )
 			arschmitz.projects[ value ].libScore.results = data;
+			arschmitz.projects[ value ].libScore.short = data.sites.slice( 0, 69 );
 		}
-	} );
+	} ) );
 } );
+requests.push( $.ajax( {
+	url: "http://api.libscore.com/v1/libraries/jQuery",
+	success: function( data ) {
+		console.log( data )
+		jQueryData = data;
+	}
+} ) );
+$.when.apply( this, requests ).then( function(){
+	var temp = [];
+	$.each( jQueryData.sites, function( i, v ) {
+		jQueryData.sites[ i ].lib = jQueryData.sites[ i ].lib || [];
+		jQueryData.sites[ i ].lib.push( "jQuery" );
+	} );
+	temp = temp.concat( jQueryData.sites );
+	$.each( arschmitz.projects, function( index, value ) {
+		if ( value.libScore ) {
+			$.each( value.libScore.results.sites, function( i, v ) {
+				value.libScore.results.sites[ i ].lib = value.libScore.results.sites[ i ].lib || []
+				value.libScore.results.sites[ i ].lib.push( index );
+			} );
+			temp = temp.concat( value.libScore.results.sites );
+		}
+	});
 
+	var sorted = [];
+	var finalSort = [];
+	$.each( temp, function( index, value ) {
+		sorted[ parseInt( value.rank, 10 ) ] = value;
+	});
+	sorted.forEach(function( value ){
+		finalSort.push( value );
+	});
+	arschmitz.aboutMe.libScore = finalSort.slice( 0, 69 );
+});
 $.extend( arschmitz, {
 	menu: Object.keys( arschmitz )
 } );

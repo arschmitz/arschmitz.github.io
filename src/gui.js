@@ -216,11 +216,22 @@ $( function(){
 	gui.marquee = $( "marquee" );
 	gui.popState();
 	$( document ).on( "click", ".json-link", gui.jsonClick );
+
 	gui.element.on( "update", function(){
 		var params = gui.queryParams();
 		if ( params.template === "projects.project" || gui.queryParams().template === "sideProjects.sideProject" ) {
 			project = arschmitz[ params.template.split( "." )[ 0 ] ][ params.item ];
 			project.type = params.template.split( "." )[ 0 ];
+			if ( project.libScore ) {
+				$.ajax({
+					url: "templates/libScore.html",
+					success: function( data ){
+						var content = Handlebars.compile( data );
+						$( ".libscore-box" ).append( content( project ) );
+						gui.addJSON();
+					}
+				});
+			}
 			$.ajax({
 				url: "https://api.github.com/repos/" + project.links.github.split( ".com/" )[ 1 ] + "/issues",
 				success: function( data ) {
