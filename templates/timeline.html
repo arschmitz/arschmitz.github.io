@@ -1,0 +1,75 @@
+<h1>
+	<span class="ss-circle timeline-title-img" style="background-image:url(http://www.notinhalloffame.com/UserFiles/Image/article_images/Worst_Songs/Worst%2072%20%20U%20Cant%20Touch%20This,%20MC%20Hammer.jpg)"></span>
+	<span class="timeline-title">You Can't Touch This:</span>
+</h1>
+<h2 class="ss-subtitle">A sordid 9 year history of touch input on the web</h2>
+<div class="sticky-parent">
+	<div id="ss-links" class="ss-links">
+	{{#each this.timeline}}
+		{{#if this.divider}}
+			<a class="timeline-link" href="#bookmark-{{this.title}}">{{this.title}}</a>
+		{{/if}}
+	{{/each}}
+	</div>
+</div>
+<div id="ss-container" class="ss-container">
+	<div class="ss-row">
+		<div class="ss-left"><h2></h2></div>
+		<div class="ss-right">
+			<h3 class="timeline-salmon">
+			You Can't Touch This
+			A sordid 9 year history of touch input on the web</h3>
+		</div>
+	</div>
+	{{#each this.timeline}}
+		{{#if this.divider}}
+			{{#everyOther @index 2}}
+			<div class="ss-row">
+				<div class="ss-left">
+					<h2 id="bookmark-{{this.title}}">{{this.title}}</h2>
+				</div>
+				<div class="ss-right">
+					<h2>{{this.detail}}</h2>
+				</div>
+			</div>
+			{{else}}
+			<div class="ss-row">
+				<div class="ss-left">
+					<h2>{{this.detail}}</h2>
+				</div>
+				<div class="ss-right">
+					<h2 id="bookmark-{{this.title}}">{{this.title}}</h2>
+				</div>
+			</div>
+			{{/everyOther}}
+		{{else}}
+			{{#everyOther @index 2}}
+			<div class="ss-row ss-{{this.size}}">
+				<div class="ss-left">
+					<a href="{{this.link}}" style="background-image:url({{this.img}})" class="ss-circle">{{this.title}}</a>
+				</div>
+				<div class="ss-right">
+					<h3>
+						<span>{{this.date}}</span>
+						<a href="{{this.link}}">{{this.title}}</a>
+						<span>{{this.detail}}</span>
+					</h3>
+				</div>
+			</div>
+			{{else}}
+			<div class="ss-row ss-{{this.size}}">
+				<div class="ss-left">
+					<h3>
+						<span>{{this.date}}</span>
+						<a href="{{this.link}}">{{this.title}}</a>
+						<span>{{this.detail}}</span>
+					</h3>
+				</div>
+				<div class="ss-right">
+					<a href="{{this.link}}" style="background-image:url({{this.img}})" class="ss-circle">{{this.title}}</a>
+				</div>
+			</div>
+			{{/everyOther}}
+		{{/if}}
+	{{/each}}
+</div>

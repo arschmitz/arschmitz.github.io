@@ -8,7 +8,7 @@ Handlebars.registerHelper( "call", function( template, item, classes ) {
 		"\" data-call=\"gui.render( '" + template + "' " + ( item ? ", '" + item +
 		"'" : "" ) + " )\" " + ( classes ? "class=\"" + classes + "\"" : "" ) + ">"
 	);
-});
+} );
 
 Handlebars.registerHelper( "title", function( template, item ) {
 	template = Handlebars.escapeExpression( template );
@@ -26,8 +26,14 @@ Handlebars.registerHelper( "title", function( template, item ) {
 	link += ";</h1>";
 
 	return new Handlebars.SafeString( link );
-});
+} );
 
+Handlebars.registerHelper("everyOther", function (index, amount, scope) {
+    if ( ++index % amount )
+        return scope.inverse(this);
+    else
+        return scope.fn(this);
+});
 
 Handlebars.registerHelper( "link", function( link, classes ) {
 	link = Handlebars.escapeExpression( link );
@@ -35,7 +41,7 @@ Handlebars.registerHelper( "link", function( link, classes ) {
 	return new Handlebars.SafeString(
 		"<a href=\"" + link + "\" " + ( classes ? "class=\"" + classes + "\"" : "" ) + ">" + link + "</a>"
 	);
-});
+} );
 
 Handlebars.registerHelper( "hlink", function( link, text, level ) {
 	link = Handlebars.escapeExpression( link );
@@ -45,7 +51,7 @@ Handlebars.registerHelper( "hlink", function( link, text, level ) {
 	return new Handlebars.SafeString(
 		"<h" + level + "><span class=\"bold\">" + text + ": </span><a href=\"" + link + "\">" + link + "</a></h" + level + ">"
 	);
-});
+} );
 
 Handlebars.registerHelper( "h", function( level, text, content ) {
 	content = Handlebars.escapeExpression( content );
@@ -55,19 +61,19 @@ Handlebars.registerHelper( "h", function( level, text, content ) {
 	return new Handlebars.SafeString(
 		"<h" + level + "><span class=\"bold\">" + text + ": </span>" + content + "</h" + level + ">"
 	);
-});
+} );
 
 Handlebars.registerHelper( "json", function() {
-	delete arguments[ arguments.length -1 ];
+	delete arguments[ arguments.length - 1 ];
 	var prop = Array.prototype.join.call( arguments, "" );
 	return new Handlebars.SafeString(
 		"data-json=\"arschmitz." + prop + "\""
 	);
-});
+} );
 
 Handlebars.registerHelper( "meter", function( level ) {
 	var ret = "<span class='meter-level'>";
-	for ( var i=0; i < 5; i++ ) {
+	for ( var i = 0; i < 5; i++ ) {
 		ret += i >= level ? "<span class='inactive'>" : "";
 		ret += "▱";
 		ret += i >= level ? "</span>" : "";

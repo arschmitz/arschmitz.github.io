@@ -5,74 +5,74 @@ window.effects = {
 	height: $( window ).height(),
 	width: $( window ).width(),
 	getRandomColor: function() {
-		var letters = '0123456789ABCDEF'.split(''),
+		var letters = '0123456789ABCDEF'.split( '' ),
 			color = '#';
-		for (var i = 0; i < 6; i++ ) {
-			color += letters[Math.floor(Math.random() * 16)];
+		for ( var i = 0; i < 6; i++ ) {
+			color += letters[Math.floor( Math.random() * 16 )];
 		}
 		return color;
 	},
-	partyMode: function(){
+	partyMode: function() {
 		effects.saveStyle();
-		$( "body *, body" ).each(function(){
+		$( "body *, body" ).each( function() {
 			var that = this,
-				interval = setInterval(function(){
+				interval = setInterval( function() {
 					$( that ).animate(
 						{
 							backgroundColor: effects.getRandomColor(),
 							color: effects.getRandomColor()
 						},
 						{
-							duration: Math.floor(Math.random() * 700) + 10,
+							duration: Math.floor( Math.random() * 700 ) + 10,
 							queue: false
 						}
 					);
-				}, Math.floor(Math.random() * 700) + 10 )
+				}, Math.floor( Math.random() * 700 ) + 10 )
 			effects.intervals.partyMode.push( interval );
-		});
+		} );
 	},
-	iHaveTheSpins: function(){
+	iHaveTheSpins: function() {
 		effects.saveStyle();
-		$( "body *" ).each(function(){
+		$( "body *" ).each( function() {
 			var that = this,
-				interval = setInterval( function(){
-					$( that ).animate({
-						rotateZ: Math.floor(Math.random() * 360) - 360 + "deg",
+				interval = setInterval( function() {
+					$( that ).animate( {
+						rotateZ: Math.floor( Math.random() * 360 ) - 360 + "deg",
 					},
 					{
-						duration: Math.floor(Math.random() * 700) + 10,
+						duration: Math.floor( Math.random() * 700 ) + 10,
 						queue: false
 					} );
-				}, Math.floor(Math.random() * 700) + 10 );
+				}, Math.floor( Math.random() * 700 ) + 10 );
 			effects.intervals.iHaveTheSpins.push( interval );
-		});
+		} );
 	},
-	iAmTheSpoon: function(){
+	iAmTheSpoon: function() {
 		effects.saveStyle();
-		$( "body *" ).each(function(){
+		$( "body *" ).each( function() {
 			var that = this,
-				interval = setInterval( function(){
-					$( that ).animate({
-						width: Math.floor(Math.random() * effects.width ),
-						height: Math.floor(Math.random() * effects.height ),
-						"border-radius": Math.floor(Math.random() * 100),
+				interval = setInterval( function() {
+					$( that ).animate( {
+						width: Math.floor( Math.random() * effects.width ),
+						height: Math.floor( Math.random() * effects.height ),
+						"border-radius": Math.floor( Math.random() * 100 ),
 						position: "absolute",
-						top: Math.floor(Math.random() * effects.height ),
-						left: Math.floor(Math.random() * effects.width )
+						top: Math.floor( Math.random() * effects.height ),
+						left: Math.floor( Math.random() * effects.width )
 					},
 					{
-						duration: Math.floor(Math.random() * 700) + 10,
+						duration: Math.floor( Math.random() * 700 ) + 10,
 						queue: false
 					} );
-				}, Math.floor(Math.random() * 700) + 10 );
+				}, Math.floor( Math.random() * 700 ) + 10 );
 			effects.intervals.iAmTheSpoon.push( interval );
-		});
+		} );
 	},
-	flashMob: function( effect, image, duration ){
+	flashMob: function( effect, image, duration ) {
 		effects.saveStyle();
 		var elements = $( "body *" ).not( ":hidden" );
 		var that = this,
-			interval = setInterval( function(){
+			interval = setInterval( function() {
 				if ( image ) {
 					if ( typeof image !== "object" ) {
 						image = [ image ];
@@ -80,9 +80,9 @@ window.effects = {
 					$.each( image, function( i, v ) {
 						var ruleObject = {
 							"position": "fixed",
-							"top": Math.floor(Math.random() * effects.height ) + "px",
-							"left": Math.floor(Math.random() * effects.width ) + "px",
-							"width": ( Math.floor(Math.random() * 240 ) + 50 )  + "px",
+							"top": Math.floor( Math.random() * effects.height ) + "px",
+							"left": Math.floor( Math.random() * effects.width ) + "px",
+							"width": ( Math.floor( Math.random() * 240 ) + 50 )  + "px",
 							"background": "none"
 						},
 						flashMob = $( "<img src='" + effects.images[ v ] + "'>" ).uniqueId(),
@@ -95,7 +95,7 @@ window.effects = {
 					} );
 				}
 				var element = elements.eq( Math.floor( Math.random() * elements.length - 1 ) );
-				if( !image ) {
+				if ( !image ) {
 					effects.runEffect( effect, element );
 				}
 			}, 500 );
@@ -112,26 +112,26 @@ window.effects = {
 		} );
 	},
 	flashMobElements: false,
-	visualize: function(){
+	visualize: function() {
 		effects.saveStyle();
 		effects.iHaveTheSpins( false );
 		effects.partyMode( false );
-		$( "body *" ).each(function(){
-			$( this ).css({
+		$( "body *" ).each( function() {
+			$( this ).css( {
 				height: 20,
 				position: "fixed",
 				top: "0",
 				left: "50%",
 				"margin-left": -( $( this ).width() / 2 ),
 				overflow: "hidden"
-			});
-		});
+			} );
+		} );
 	},
 	generateRule: function( ruleObject, selector ) {
 		var rule = selector + " { ";
 		$.each( ruleObject, function( prop, value ) {
 			rule += prop + " : " + value + ";";
-		});
+		} );
 		rule += " }";
 		effects.stylesheet.append( rule );
 	},
@@ -139,6 +139,7 @@ window.effects = {
 
 		// most effect types need no options passed by default
 		var options = {};
+
 		// some effects have required parameters
 		if ( selectedEffect === "scale" ) {
 			options = { percent: 0 };
@@ -152,7 +153,7 @@ window.effects = {
 
 		// callback function to bring a hidden box back
 		function callback() {
-			setTimeout(function() {
+			setTimeout( function() {
 				$( element ).removeAttr( "style" );
 			}, 1000 );
 		}
@@ -162,16 +163,16 @@ window.effects = {
 	},
 	kill: function( e ) {
 		if ( e.which === $.ui.keyCode.ESCAPE || e === true ) {
-			$.each( effects.intervals, function( i, v ){
-				$.each( v, function( index, value ){
+			$.each( effects.intervals, function( i, v ) {
+				$.each( v, function( index, value ) {
 					clearInterval( value );
-				});
+				} );
 				effects.intervals[ i ] = [];
-			});
+			} );
 			if ( effects.flashMobElements ) {
 				$( "body>*" ).not( effects.flashMobElements ).remove();
 			}
-			setTimeout( function(){
+			setTimeout( function() {
 				effects.restoreStyle();
 			}, 1000 );
 		}
@@ -179,7 +180,7 @@ window.effects = {
 	styleSaved: false,
 	saveStyle: function() {
 		if ( !effects.styleSaved ) {
-			$( "[style]" ).each(function(){
+			$( "[style]" ).each( function() {
 				$.data( this, "savedStyle", $( this ).attr( "style" ) );
 			} );
 			effects.flashMobElements = $( "body>*" );
@@ -187,10 +188,10 @@ window.effects = {
 		}
 	},
 	restoreStyle: function() {
-		$( "[style]" ).each( function(){
+		$( "[style]" ).each( function() {
 			$( this ).removeAttr( "style" );
 		} );
-		$( ":data(savedStyle)" ).each( function(){
+		$( ":data(savedStyle)" ).each( function() {
 			$( this ).attr( "style", $.data( this, "savedStyle" ) );
 		} );
 		effects.styleSaved = false;
@@ -214,56 +215,56 @@ window.effects = {
 		flashMob: [],
 		visualize: []
 	},
-	stylesheet: $( "<style>" ).appendTo( "head")
+	stylesheet: $( "<style>" ).appendTo( "head" )
 };
 
 // Determine if we on iPhone or iPad
 var isiOS = false;
 var agent = navigator.userAgent.toLowerCase();
-if(agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0){
+if ( agent.indexOf( 'iphone' ) >= 0 || agent.indexOf( 'ipad' ) >= 0 ) {
 	isiOS = true;
 }
 
-$.fn.doubletap = function(onDoubleTapCallback, onTapCallback, delay){
+$.fn.doubletap = function( onDoubleTapCallback, onTapCallback, delay ) {
 	var eventName, action;
-	delay = delay == null? 500 : delay;
-	eventName = isiOS == true? 'touchend' : 'click';
-	$(this).on(eventName, function(event){
+	delay = delay == null ? 500 : delay;
+	eventName = isiOS == true ? 'touchend' : 'click';
+	$( this ).on( eventName, function( event ) {
 		var now = new Date().getTime();
-		var lastTouch = $(this).data('lastTouch') || now + 1 /** the first time this will make delta a negative number */;
+		var lastTouch = $( this ).data( 'lastTouch' ) || now + 1 /** the first time this will make delta a negative number */;
 		var delta = now - lastTouch;
-		clearTimeout(action);
-		if(delta<500 && delta>0){
-			if(onDoubleTapCallback != null && typeof onDoubleTapCallback == 'function'){
-				onDoubleTapCallback(event);
+		clearTimeout( action );
+		if ( delta < 500 && delta > 0 ) {
+			if ( onDoubleTapCallback != null && typeof onDoubleTapCallback == 'function' ) {
+				onDoubleTapCallback( event );
 			}
-		}else{
-			$(this).data('lastTouch', now);
-			action = setTimeout(function(evt){
-				if(onTapCallback != null && typeof onTapCallback == 'function'){
-					onTapCallback(evt);
+		}else {
+			$( this ).data( 'lastTouch', now );
+			action = setTimeout( function( evt ) {
+				if ( onTapCallback != null && typeof onTapCallback == 'function' ) {
+					onTapCallback( evt );
 				}
-				clearTimeout(action);   // clear the timeout
-			}, delay, [event]);
+				clearTimeout( action );   // clear the timeout
+			}, delay, [ event ] );
 		}
-		$(this).data('lastTouch', now);
-	});
+		$( this ).data( 'lastTouch', now );
+	} );
 };
 
-$( document ).doubletap( function(){
+$( document ).doubletap( function() {
 	effects.kill( true );
 } );
 
-$( window ).on( "resize", function(){
+$( window ).on( "resize", function() {
 	effects.height = $( window ).height();
 	effects.width = $( window ).width();
 	$( "body" ).height( effects.height );
-});
+} );
 
 $( document ).on( "update", function( e ) {
 	console.log( gui.transition );
 	$( "#transition" ).val( gui.transition );
 	$( "#duration" ).val( gui.duration );
-});
+} );
 
 $( document ).on( "keydown", effects.kill );

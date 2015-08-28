@@ -1285,6 +1285,7 @@ window.arschmitz = {
 
 	}
 };
+
 // Add libScore results
 var requests = [];
 var jQueryData;
@@ -1307,7 +1308,7 @@ requests.push( $.ajax( {
 		jQueryData = data;
 	}
 } ) );
-$.when.apply( this, requests ).then( function(){
+$.when.apply( this, requests ).then( function() {
 	var temp = [];
 	$.each( jQueryData.sites, function( i, v ) {
 		jQueryData.sites[ i ].lib = jQueryData.sites[ i ].lib || [];
@@ -1322,18 +1323,18 @@ $.when.apply( this, requests ).then( function(){
 			} );
 			temp = temp.concat( value.libScore.results.sites );
 		}
-	});
+	} );
 
 	var sorted = [];
 	var finalSort = [];
 	$.each( temp, function( index, value ) {
 		sorted[ parseInt( value.rank, 10 ) ] = value;
-	});
-	sorted.forEach(function( value ){
+	} );
+	sorted.forEach( function( value ) {
 		finalSort.push( value );
-	});
+	} );
 	arschmitz.aboutMe.libScore = finalSort.slice( 0, 69 );
-});
+} );
 $.extend( arschmitz, {
 	menu: Object.keys( arschmitz )
 } );
@@ -1341,4 +1342,4 @@ $.extend( arschmitz.resume, {
 	contact: arschmitz.aboutMe.contact,
 	name: arschmitz.aboutMe.name,
 	talks: arschmitz.talks
-});
+} );

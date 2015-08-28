@@ -1,0 +1,9 @@
+{
+	"name": "minesweeper",
+	"dependencies": {
+		"jquery": ">=1.8",
+		"jquery-ui": "arschmitz/jquery-ui#button-fixup",
+		"handlebars": "3.0.3",
+		"flexboxgrid": "6.2.0"
+	}
+}

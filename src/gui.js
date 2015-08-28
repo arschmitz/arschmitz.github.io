@@ -1,5 +1,5 @@
 // GUI Functions
-(function(){
+( function() {
 window.gui = {
 	open: function( pop ) {
 		$( "body" ).addClass( "gui" );
@@ -53,37 +53,27 @@ window.gui = {
 	},
 	render: function( templateName, item, setHistory ) {
 		var parts = templateName.split( "." );
-		var url = "templates/" + ( parts[ 1 ] || parts[ 0 ] ) + ".html"
-		$.ajax({
-			url: url,
-			success: function( data ) {
-				var content = Handlebars.compile( data );
 
-				if ( !item) {
-					gui.runTransition( content( arschmitz ) );
+		if ( !item ) {
+			gui.runTransition( arschmitz.templates[ parts[ 1 ] || parts[ 0 ] ]( arschmitz ) );
 
-					if ( setHistory === false ) {
-						return;
-					}
-					gui.updateHistory( { "template": templateName, item: false }, "- " + templateName );
-				} else {
-					gui.runTransition( content( arschmitz[ parts[ 0 ] ][ item ] ) );
-
-					if ( setHistory === false ) {
-						return;
-					}
-					gui.updateHistory( { template: templateName, item: item }, "- " + item );
-				}
-			},
-			error: function( jqxhr, status, error ) {
-				$( "#output" ).append( "<div class='output-line'><span class='prompt-start'><</span> <span class='error'>GET " + url + " " + jqxhr.status + " (" + error + ")</span></div>" );
+			if ( setHistory === false ) {
+				return;
 			}
-		});
+			gui.updateHistory( { "template": templateName, item: false }, "- " + templateName );
+		} else {
+			gui.runTransition( arschmitz.templates[ parts[ 1 ] || parts[ 0 ] ]( arschmitz[ parts[ 0 ] ][ item ] ) );
+
+			if ( setHistory === false ) {
+				return;
+			}
+			gui.updateHistory( { template: templateName, item: item }, "- " + item );
+		}
 	},
 	transition: "fade",
 	duration: 500,
 	runTransition: function( content ) {
-		gui.element.hide( gui.transition, gui.duration, function(){
+		gui.element.hide( gui.transition, gui.duration, function() {
 			gui.element.show( gui.transition, gui.duration, function() {
 				$( ".gui-wrap" )[ 0 ].scrollTop = 0;
 				gui.element.trigger( "update" );
@@ -104,6 +94,7 @@ window.gui = {
 					$( ".gui-background-code" ).text( data );
 				},
 				error: function() {
+
 					//alert();
 				}
 			} );
@@ -129,12 +120,12 @@ window.gui = {
 	},
 	queryParams: function() {
 		var queryParams = {};
-		window.location.search.replace( "?", "" ).split( "&" ).forEach(function( value, index ) {
+		window.location.search.replace( "?", "" ).split( "&" ).forEach( function( value, index ) {
 			var pair = value.split( "=" );
-			if( pair[ 0 ] !== "" ) {
+			if ( pair[ 0 ] !== "" ) {
 				queryParams[ pair[ 0 ] ] = pair[ 1 ] || true;
 			}
-		});
+		} );
 		return queryParams;
 	},
 	jsonClick: function( e ) {
@@ -142,7 +133,7 @@ window.gui = {
 		e.stopPropagation();
 		var target = $( this );
 		var parent = target.parent();
-		if( target.text() === "JSON" ) {
+		if ( target.text() === "JSON" ) {
 			$( e.target ).text( parent.is( ".content" ) ? "Template" : "Pretty" );
 			parent.children().not( target ).not( ".json-link" ).wrapAll( "<span class='pretty-content'></span>" );
 			parent.find( ".pretty-content" ).hide();
@@ -150,7 +141,7 @@ window.gui = {
 			parent.append( "<div class='json-box'><span class='json-content'>" + attr + ": " + prompt.syntaxHighlight( eval( attr ) ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" ) + "</span></div>" );
 		} else if ( target.text() === "Template" ) {
 			var params = gui.queryParams();
-			if( params.template ) {
+			if ( params.template ) {
 				var parts = params.template.split( "." )
 				template = parts[ 1 ] || parts [ 0 ];
 			} else {
@@ -204,61 +195,64 @@ $( document ).on( "change", "#duration", function() {
 	gui.duration = parseInt( $( this ).val(), 10 );
 } );
 
-$( document ).on( "click", "[data-call]", function( e ){
+$( document ).on( "click", "[data-call]", function( e ) {
 	e.preventDefault();
 	$( "#prompt" ).val( $( this ).attr( "data-call" ) );
 	prompt.runCommand();
-});
+} );
 
-$( function(){
+$( function() {
 	gui.console = $( ".console-wrap" );
 	gui.element = $( ".gui-wrap" );
 	gui.marquee = $( "marquee" );
 	gui.popState();
 	$( document ).on( "click", ".json-link", gui.jsonClick );
 
-	gui.element.on( "update", function(){
+	gui.element.on( "update", function() {
 		var params = gui.queryParams();
 		if ( params.template === "projects.project" || gui.queryParams().template === "sideProjects.sideProject" ) {
 			project = arschmitz[ params.template.split( "." )[ 0 ] ][ params.item ];
 			project.type = params.template.split( "." )[ 0 ];
 			if ( project.libScore ) {
-				$.ajax({
+				$.ajax( {
 					url: "templates/libScore.html",
-					success: function( data ){
+					success: function( data ) {
 						var content = Handlebars.compile( data );
 						$( ".libscore-box" ).append( content( project ) );
 						gui.addJSON();
 					}
-				});
+				} );
 			}
-			$.ajax({
+			$.ajax( {
 				url: "https://api.github.com/repos/" + project.links.github.split( ".com/" )[ 1 ] + "/issues",
 				success: function( data ) {
 					arschmitz[ project.type ][ params.item ].currentIssues = data;
 
-					$.ajax({
+					$.ajax( {
 						"url": "templates/issues.html",
-						success: function( data ){
+						success: function( data ) {
 							var content = Handlebars.compile( data );
 							$( ".issue-box" ).append( content( project ) );
 							gui.addJSON();
 						}
-					});
+					} );
 				},
-				error: function(){
+				error: function() {
 					arschmitz[ project.type ][ params.item ].currentIssues = {};
 					arschmitz[ project.type ][ params.item ].currentIssues.message = "API Limit reached please click the issues link in the section above to see current issues";
-					$.ajax({
+					$.ajax( {
 						"url": "templates/issues.html",
-						success: function( data ){
+						success: function( data ) {
 							var content = Handlebars.compile( data );
 							$( ".issue-box" ).append( content( project ) );
 						}
-					});
+					} );
 				}
-			});
+			} );
 		}
-	});
-});
-})();
+		if ( params.template = "timeline.timeline" ) {
+			window.sidescroll.init();
+		}
+	} );
+} );
+} )();
