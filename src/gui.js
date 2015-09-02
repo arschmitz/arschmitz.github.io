@@ -202,6 +202,8 @@ $( document ).on( "click", "[data-call]", function( e ) {
 } );
 
 $( function() {
+	// Effects
+	//$.fn.animate = $.fn.velocity;
 	gui.console = $( ".console-wrap" );
 	gui.element = $( ".gui-wrap" );
 	gui.marquee = $( "marquee" );

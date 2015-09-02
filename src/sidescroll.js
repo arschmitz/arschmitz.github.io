@@ -40,8 +40,7 @@ window.sidescroll = (function() {
 				});
 			}
 			// show the pointers for the inviewport rows
-			console.log( $rowsViewport );
-			$rowsViewport.find('a.ss-circle').addClass('ss-circle-deco');
+			$rowsViewport.find('a.ss-circle').parent().addClass('ss-circle-deco');
 			// set positions for each row
 			placeRows();
 			
@@ -65,7 +64,6 @@ window.sidescroll = (function() {
 		},
 		// checks which rows are initially visible 
 		setViewportRows	= function() {
-			console.log( $rows );
 			$rowsViewport 		= $rows.filter(':inviewport');
 			$rowsOutViewport	= $rows.not( $rowsViewport )
 			
@@ -77,9 +75,71 @@ window.sidescroll = (function() {
 			winSize.height	= $win.height();
 		
 		},
+		hammerEvents = function() {
+			var pinchEnd;
+			$( ".ss-circle, .ss-left h3, .ss-right h3" ).each( function( index, ele ) {
+				var ham = new Hammer( ele, {
+					domEvents: true
+				} );
+				ham.get('rotate').set({ enable: true })
+				ham.get('pinch').set({ enable: true });
+			} );
+			$( ".ss-row" ).each( function( index, ele ) {
+				var ham = new Hammer( ele, {
+					domEvents: true,
+					touchAction: "pan-y"
+				} );
+			} );
+
+
+			$( ".ss-circle" ).draggable().on( "rotate", function( e ) {
+				var gesture = e.gesture || e.originalEvent.gesture;
+				$( this ).css( "transform", "rotate( " + gesture.rotation + "deg) scale( " + gesture.scale + ")" );
+			} );
+			$( ".ss-left h3, .ss-right h3, .dialog-wrap" ).on( "pinch", function( e ) {
+				var gesture = e.gesture || e.originalEvent.gesture, ele = $( this );
+				clearTimeout( pinchEnd );
+				if ( $( this ).is( ".dialog-wrap" ) ) {
+					$( this ).addClass( "resizing" );
+					ele = ele.find( ".dialog" );
+					pinchEnd = setTimeout( function(){
+						var gesture = e.gesture || e.originalEvent.gesture;
+
+						ele.closest( ".dialog-wrap" ).removeClass( "dialog-open resizing" );
+						ele.css( "transform", "" );
+						
+					}, 30 );
+				}
+				ele.css( "transform", "scale( " + gesture.scale + ")" );
+			} );
+			$( ".ss-left h3, .ss-right h3" ).on( "pinchend", function( e ) {
+				var gesture = e.gesture || e.originalEvent.gesture;
+				$( this ).css( "transform", "" );
+				if ( gesture.scale > 1 ) {
+					$( this ).closest( ".ss-row" ).find( ".dialog-wrap" ).addClass( "dialog-open" );
+				}
+			});
+			var sorting = false;
+			$( ".ss-row" ).on( "press", function( e ) {
+				if( $( e.target ).is( ".ss-row" ) ) {
+					$( ".ss-row" )[ sorting ? "removeClass" : "addClass" ]( "timeline-row-outline" );
+					$( ".ss-container" ).sortable( sorting ? "destroy" : undefined );
+					sorting = !sorting;
+				}
+			} );
+			$( ".ss-row" ).on( "swipe", function() {
+				$( this ).remove();
+			} );
+			$( ".ss-row h3" ).on( "pointerenter pointerleave", function( e ){
+				$( this )[ e.type === "pointerenter" ? "addClass" : "removeClass"  ]( "timeline-hover" );
+			});
+			$('.hjs code').each(function(i, block) {
+			    hljs.highlightBlock(block);
+			});
+		},
 		// initialize some events
 		initEvents		= function() {
-			
+			hammerEvents();
 			// navigation menu links.
 			// scroll to the respective section.
 
@@ -101,7 +161,7 @@ window.sidescroll = (function() {
 					// redefine which rows are initially visible (:inviewport)
 					setViewportRows();
 					// remove pointers for every row
-					$rows.find('a.ss-circle').removeClass('ss-circle-deco');
+					$rows.find('a.ss-circle').parent().removeClass('ss-circle-deco');
 					// show inviewport rows and respective pointers
 					$rowsViewport.each( function() {
 					
@@ -111,7 +171,7 @@ window.sidescroll = (function() {
 							   .find('div.ss-right')
 							   .css({ right  : '0%' })
 							   .end()
-							   .find('a.ss-circle')
+							   .find('a.ss-circle').parent()
 							   .addClass('ss-circle-deco');
 					
 					});
@@ -119,7 +179,6 @@ window.sidescroll = (function() {
 				},
 				// when scrolling the page change the position of each row	
 				'scroll.Scrolling' : function( event ) {
-					console.log( "scroll" );
 					// set a timeout to avoid that the 
 					// placeRows function gets called on every scroll trigger
 					if( anim ) return false;
@@ -139,7 +198,6 @@ window.sidescroll = (function() {
 		// and this value should be 0% (final position) when the element is on the
 		// center of the window.
 		placeRows		= function() {
-			console.log( "place" );
 			
 				// how much we scrolled so far
 			var winscroll	= $win.scrollTop(),
@@ -197,7 +255,7 @@ window.sidescroll = (function() {
 						if( !$row.data('pointer') ) {
 						
 							$row.data( 'pointer', true );
-							$row.find('.ss-circle').addClass('ss-circle-deco');
+							$row.find('.ss-circle').parent().addClass('ss-circle-deco');
 						
 						}
 					
@@ -208,7 +266,7 @@ window.sidescroll = (function() {
 						if( $row.data('pointer') ) {
 							
 							$row.data( 'pointer', false );
-							$row.find('.ss-circle').removeClass('ss-circle-deco');
+							$row.find('.ss-circle').parent().removeClass('ss-circle-deco');
 						
 						}
 						

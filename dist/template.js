@@ -761,7 +761,7 @@ this["arschmitz"]["templates"]["timeline"] = Handlebars.template({"1":function(d
 },"2":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "			<a class=\"timeline-link\" href=\"#bookmark-"
+  return "				<a class=\"timeline-link\" href=\"#bookmark-"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
@@ -777,73 +777,112 @@ this["arschmitz"]["templates"]["timeline"] = Handlebars.template({"1":function(d
 },"6":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "			<div class=\"ss-row\">\n				<div class=\"ss-left\">\n					<h2 id=\"bookmark-"
+  return "				<div class=\"ss-row\">\n					<div class=\"ss-left\">\n						<h2 id=\"bookmark-"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</h2>\n				</div>\n				<div class=\"ss-right\">\n					<h2>"
+    + "</h2>\n					</div>\n					<div class=\"ss-right\">\n						<h2>"
     + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
-    + "</h2>\n				</div>\n			</div>\n";
+    + "</h2>\n					</div>\n				</div>\n";
 },"8":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "			<div class=\"ss-row\">\n				<div class=\"ss-left\">\n					<h2>"
+  return "				<div class=\"ss-row\">\n					<div class=\"ss-left\">\n						<h2>"
     + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
-    + "</h2>\n				</div>\n				<div class=\"ss-right\">\n					<h2 id=\"bookmark-"
+    + "</h2>\n					</div>\n					<div class=\"ss-right\">\n						<h2 id=\"bookmark-"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</h2>\n				</div>\n			</div>\n";
+    + "</h2>\n					</div>\n				</div>\n";
 },"10":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = (helpers.everyOther || (depth0 && depth0.everyOther) || helpers.helperMissing).call(depth0,(data && data.index),2,{"name":"everyOther","hash":{},"fn":this.program(11, data, 0),"inverse":this.program(13, data, 0),"data":data})) != null ? stack1 : "");
+  return ((stack1 = (helpers.everyOther || (depth0 && depth0.everyOther) || helpers.helperMissing).call(depth0,(data && data.index),2,{"name":"everyOther","hash":{},"fn":this.program(11, data, 0),"inverse":this.program(19, data, 0),"data":data})) != null ? stack1 : "");
 },"11":function(depth0,helpers,partials,data) {
-    var alias1=this.lambda, alias2=this.escapeExpression;
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "			<div class=\"ss-row ss-"
+  return "				<div class=\"ss-row ss-"
     + alias2(alias1((depth0 != null ? depth0.size : depth0), depth0))
-    + "\">\n				<div class=\"ss-left\">\n					<a href=\""
-    + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
-    + "\" style=\"background-image:url("
+    + "\">\n					<div class=\"ss-left\">\n						<span class=\"circle-wrap\"><a style=\"background-image:url("
     + alias2(alias1((depth0 != null ? depth0.img : depth0), depth0))
     + ")\" class=\"ss-circle\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</a>\n				</div>\n				<div class=\"ss-right\">\n					<h3>\n						<span>"
+    + "</a></span>\n					</div>\n					<div class=\"ss-right\">\n						<h3 class=\""
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.color : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\">\n							<span>"
     + alias2(alias1((depth0 != null ? depth0.date : depth0), depth0))
-    + "</span>\n						<a href=\""
+    + "</span>\n							<a href=\""
     + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</a>\n						<span>"
+    + "</a>\n							<span>"
     + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
-    + "</span>\n					</h3>\n				</div>\n			</div>\n";
-},"13":function(depth0,helpers,partials,data) {
-    var alias1=this.lambda, alias2=this.escapeExpression;
+    + "</span>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.codeSample : depth0),{"name":"if","hash":{},"fn":this.program(14, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "						</h3>\n					</div>\n					<div class=\"dialog-wrap\">\n						<div class=\"dialog "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.color : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\">\n						<h4>"
+    + alias2(alias1((depth0 != null ? depth0.date : depth0), depth0))
+    + "<br>"
+    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+    + "</h4>\n						<h5>"
+    + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
+    + "</h5>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.notes : depth0),{"name":"each","hash":{},"fn":this.program(17, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "						</div>\n					</div>\n				</div>\n";
+},"12":function(depth0,helpers,partials,data) {
+    return this.escapeExpression(this.lambda((depth0 != null ? depth0.color : depth0), depth0));
+},"14":function(depth0,helpers,partials,data) {
+    var stack1;
 
-  return "			<div class=\"ss-row ss-"
+  return "							<pre class=\"hjs\"><code class=\"javascript\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.codeSample : depth0),{"name":"each","hash":{},"fn":this.program(15, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "							</code></pre>\n";
+},"15":function(depth0,helpers,partials,data) {
+    return this.escapeExpression(this.lambda(depth0, depth0))
+    + "\n";
+},"17":function(depth0,helpers,partials,data) {
+    return "							<p>"
+    + this.escapeExpression(this.lambda(depth0, depth0))
+    + "</p>\n";
+},"19":function(depth0,helpers,partials,data) {
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "				<div class=\"ss-row ss-"
     + alias2(alias1((depth0 != null ? depth0.size : depth0), depth0))
-    + "\">\n				<div class=\"ss-left\">\n					<h3>\n						<span>"
+    + "\">\n					<div class=\"ss-left\">\n						<h3 class=\""
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.color : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\">\n							<span>"
     + alias2(alias1((depth0 != null ? depth0.date : depth0), depth0))
-    + "</span>\n						<a href=\""
+    + "</span>\n							<a href=\""
     + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</a>\n						<span>"
+    + "</a>\n							<span>"
     + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
-    + "</span>\n					</h3>\n				</div>\n				<div class=\"ss-right\">\n					<a href=\""
-    + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
-    + "\" style=\"background-image:url("
+    + "</span>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.codeSample : depth0),{"name":"if","hash":{},"fn":this.program(14, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "						</h3>\n					</div>\n					<div class=\"ss-right\">\n						<span class=\"circle-wrap\">\n							<a style=\"background-image:url("
     + alias2(alias1((depth0 != null ? depth0.img : depth0), depth0))
     + ")\" class=\"ss-circle\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</a>\n				</div>\n			</div>\n";
+    + "</a>\n						</span>\n					</div>\n					<div class=\"dialog-wrap\">\n						<div class=\"dialog "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.color : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\">\n						<h4>"
+    + alias2(alias1((depth0 != null ? depth0.date : depth0), depth0))
+    + "<br/>"
+    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+    + "</h4>\n						<h5>"
+    + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
+    + "</h5>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.notes : depth0),{"name":"each","hash":{},"fn":this.program(17, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "						</div>\n					</div>\n				</div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<h1>\n	<span class=\"ss-circle timeline-title-img\" style=\"background-image:url(http://www.notinhalloffame.com/UserFiles/Image/article_images/Worst_Songs/Worst%2072%20%20U%20Cant%20Touch%20This,%20MC%20Hammer.jpg)\"></span>\n	<span class=\"timeline-title\">You Can't Touch This:</span>\n</h1>\n<h2 class=\"ss-subtitle\">A sordid 9 year history of touch input on the web</h2>\n<div class=\"sticky-parent\">\n	<div id=\"ss-links\" class=\"ss-links\">\n"
+  return "<div class=\"timeline\">\n	<h1>\n		<span class=\"ss-circle timeline-title-img\" style=\"background-image:url(http://www.notinhalloffame.com/UserFiles/Image/article_images/Worst_Songs/Worst%2072%20%20U%20Cant%20Touch%20This,%20MC%20Hammer.jpg)\"></span>\n		<span class=\"timeline-title\">You Can't Touch This:</span>\n	</h1>\n	<h2 class=\"ss-subtitle\">A sordid 9 year history of touch input on the web</h2>\n	<div class=\"sticky-parent\">\n		<div id=\"ss-links\" class=\"ss-links\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.timeline : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "	</div>\n</div>\n<div id=\"ss-container\" class=\"ss-container\">\n	<div class=\"ss-row\">\n		<div class=\"ss-left\"><h2></h2></div>\n		<div class=\"ss-right\">\n			<h3 class=\"timeline-salmon\">\n			You Can't Touch This\n			A sordid 9 year history of touch input on the web</h3>\n		</div>\n	</div>\n"
+    + "		</div>\n	</div>\n	<div id=\"ss-container\" class=\"ss-container\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.timeline : depth0),{"name":"each","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</div>";
+    + "	</div>\n</div>\n\n";
 },"useData":true});

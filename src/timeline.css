@@ -1,20 +1,23 @@
 .timeline-yellow {
-	background-color: #eac47d;
+	background-color: #eac47d!important;
 }
 .timeline-orange {
-	background-color: #ff6702;
+	background-color: #ff6702!important;
 }
 .timeline-blue {
-	background-color: #a5cccb;
+	background-color: #a5cccb!important;
 }
 .timeline-salmon {
-	background-color: #f66c62;
+	background-color: #f66c62!important;
 }
 .timeline-gray {
-	background-color: #8a857f;
+	background-color: #8a857f!important;
 }
 .timeline-lightgray {
-	background-color: #d1ccc6;
+	background-color: #d1ccc6!important;
+}
+.timeline-green {
+	background-color: #8bc661!important;
 }
 .timeline-title-img.ss-circle {
 	width: 150px;
@@ -24,6 +27,15 @@
 .timeline-title {
 	font-size: 48px;
 	color: #f66c62;
+}
+.timeline {
+	line-height: normal;
+}
+.timeline-row-outline {
+	border: 1px dashed #ccc;
+}
+.timeline-hover {
+	box-shadow: 10px 10px 9px #ccc;
 }
 h2.ss-subtitle{
     padding: 10px 10px 40px;
@@ -61,25 +73,26 @@ h2.ss-subtitle:after{
 	margin-top: -65px;
 }
 .ss-links{
-	position: relative;
-	width: 25%;
+	position: absolute;
 	z-index: 100;
-	margin-top: -65px;
 }
 .stuck {
 	position: fixed;
 	margin-top: 0;
 	top: 0;
-	left: 13px;
+	left: 0px;
 }
 .ss-links a{
 	background: rgba(0,0,0,0.2);
-	font-size: 13px;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	margin: 5px;
+	font-size: 10px;
+	width: 27px;
+	height: 27px;
+	display:block;
 	float: left;
+	clear: both;
+	font-weight: bold;
+	line-height: 27px;
+	margin: 5px;
 	border-radius: 50%;
 	display: block;
 	text-align: center;
@@ -160,16 +173,16 @@ h2.ss-subtitle:after{
 	position: static;
 }
 .ss-small .ss-circle{
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 }
 .ss-medium .ss-circle{
-	width: 200px;
-	height: 200px;
+	width: 110px;
+	height: 110px;
 }
 .ss-large .ss-circle{
-	width: 300px;
-	height: 300px;
+	width: 140px;
+	height: 140px;
 }
 .ss-circle-deco:before{
 	width: 29%;
@@ -210,14 +223,15 @@ h2.ss-subtitle:after{
 }
 .ss-left .ss-circle{
     float: right;
-    margin-right: 30%;
+    margin-right: 18%;
 }
 .ss-right .ss-circle{
     float: left;
-    margin-left: 30%;
+    margin-left: 18%;
 }
 .ss-container h3{
     margin-top: 34px;
+    min-height: 150px;
 	padding: 10px 15px;
 	background: rgba(26, 27, 33, 0.6);
 	text-shadow: 1px 1px 1px rgba(26, 27, 33, 0.8)
@@ -234,7 +248,7 @@ h2.ss-subtitle:after{
 .ss-container .ss-right h3{
 	border-left: 5px solid rgba(164,166,181,0.8);
 }
-.ss-container h3 span{
+.ss-container h3>span{
     color: rgba(255,255,255,0.8);
     font-size: 13px;
     display: block;
@@ -254,6 +268,12 @@ h2.ss-subtitle:after{
 }
 .clr{
     clear: both;
+}
+code.hljs {
+	text-align: left;
+	text-shadow: none;
+	padding: 1em;
+	padding-left: 2em;
 }
 h1{
     font-size: 24px;
@@ -319,14 +339,113 @@ h1{
     -ms-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
-.demos a:hover{
+.demos :hover{
     color: #fff;
     background: #c90047;
 }
-.demos a.current-demo,
-.demos a.current-demo:hover{
+.demos .current-demo,
+.demos .current-demo:hover{
     font-weight: bold;
     background: #c90047;
     color: #fff;
 	cursor: default;
+}
+.gui-wrap {
+	padding: 0;
+}
+.sticky-parent {
+	height: 100px;
+	position: absolute;
+}
+.dialog-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba( 100, 100, 100, .9 );
+	display: none;
+	z-index: 999999;
+}
+.dialog-wrap.resizing {
+	background: none;
+}
+.dialog {
+	width: 80%;
+	left: 50%;
+	margin-left: -40%;
+	top: 1em;
+	font-size: .9em;
+	line-height: 1.5em;
+	box-shadow: 16px 16px 8px #333;
+	background: #fff;
+	color: #333;
+	padding: 2em;
+	position: absolute;
+	max-height: calc( 100% - 2em );
+	overflow: hidden;
+	text-shadow: 1px 1px 1px rgba(26, 27, 33, 0.8);
+	color: white;
+	-webkit-overflow-scrolling: touch;
+}
+.dialog p {
+	text-shadow: none;
+}
+.dialog-wrap.dialog-open {
+	display: block;
+}
+/* sm */
+@media only screen and (min-width: 48em) {
+	.ss-small .ss-circle{
+		width: 100px;
+		height: 100px;
+	}
+	.ss-medium .ss-circle{
+		width: 150px;
+		height: 150px;
+	}
+	.ss-large .ss-circle{
+		width: 200px;
+		height: 200px;
+	}
+}
+
+/* md */
+@media only screen and (min-width: 62em) {
+	.ss-small .ss-circle{
+		width: 100px;
+		height: 100px;
+	}
+	.ss-medium .ss-circle{
+		width: 200px;
+		height: 200px;
+	}
+	.ss-large .ss-circle{
+		width: 300px;
+		height: 300px;
+	}
+	.ss-left .ss-circle{
+	    float: right;
+	    margin-right: 30%;
+	}
+	.ss-right .ss-circle{
+	    float: left;
+	    margin-left: 30%;
+	}
+}
+
+/* lg */
+@media only screen and (min-width: 75em) {
+	.ss-small .ss-circle{
+		width: 100px;
+		height: 100px;
+	}
+	.ss-medium .ss-circle{
+		width: 200px;
+		height: 200px;
+	}
+	.ss-large .ss-circle{
+		width: 300px;
+		height: 300px;
+	}
 }

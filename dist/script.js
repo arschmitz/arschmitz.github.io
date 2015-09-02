@@ -29133,6 +29133,8 @@ $( document ).on( "click", "[data-call]", function( e ) {
 } );
 
 $( function() {
+	// Effects
+	//$.fn.animate = $.fn.velocity;
 	gui.console = $( ".console-wrap" );
 	gui.element = $( ".gui-wrap" );
 	gui.marquee = $( "marquee" );
@@ -29230,8 +29232,7 @@ window.sidescroll = (function() {
 				});
 			}
 			// show the pointers for the inviewport rows
-			console.log( $rowsViewport );
-			$rowsViewport.find('a.ss-circle').addClass('ss-circle-deco');
+			$rowsViewport.find('a.ss-circle').parent().addClass('ss-circle-deco');
 			// set positions for each row
 			placeRows();
 			
@@ -29255,7 +29256,6 @@ window.sidescroll = (function() {
 		},
 		// checks which rows are initially visible 
 		setViewportRows	= function() {
-			console.log( $rows );
 			$rowsViewport 		= $rows.filter(':inviewport');
 			$rowsOutViewport	= $rows.not( $rowsViewport )
 			
@@ -29267,9 +29267,71 @@ window.sidescroll = (function() {
 			winSize.height	= $win.height();
 		
 		},
+		hammerEvents = function() {
+			var pinchEnd;
+			$( ".ss-circle, .ss-left h3, .ss-right h3" ).each( function( index, ele ) {
+				var ham = new Hammer( ele, {
+					domEvents: true
+				} );
+				ham.get('rotate').set({ enable: true })
+				ham.get('pinch').set({ enable: true });
+			} );
+			$( ".ss-row" ).each( function( index, ele ) {
+				var ham = new Hammer( ele, {
+					domEvents: true,
+					touchAction: "pan-y"
+				} );
+			} );
+
+
+			$( ".ss-circle" ).draggable().on( "rotate", function( e ) {
+				var gesture = e.gesture || e.originalEvent.gesture;
+				$( this ).css( "transform", "rotate( " + gesture.rotation + "deg) scale( " + gesture.scale + ")" );
+			} );
+			$( ".ss-left h3, .ss-right h3, .dialog-wrap" ).on( "pinch", function( e ) {
+				var gesture = e.gesture || e.originalEvent.gesture, ele = $( this );
+				clearTimeout( pinchEnd );
+				if ( $( this ).is( ".dialog-wrap" ) ) {
+					$( this ).addClass( "resizing" );
+					ele = ele.find( ".dialog" );
+					pinchEnd = setTimeout( function(){
+						var gesture = e.gesture || e.originalEvent.gesture;
+
+						ele.closest( ".dialog-wrap" ).removeClass( "dialog-open resizing" );
+						ele.css( "transform", "" );
+						
+					}, 30 );
+				}
+				ele.css( "transform", "scale( " + gesture.scale + ")" );
+			} );
+			$( ".ss-left h3, .ss-right h3" ).on( "pinchend", function( e ) {
+				var gesture = e.gesture || e.originalEvent.gesture;
+				$( this ).css( "transform", "" );
+				if ( gesture.scale > 1 ) {
+					$( this ).closest( ".ss-row" ).find( ".dialog-wrap" ).addClass( "dialog-open" );
+				}
+			});
+			var sorting = false;
+			$( ".ss-row" ).on( "press", function( e ) {
+				if( $( e.target ).is( ".ss-row" ) ) {
+					$( ".ss-row" )[ sorting ? "removeClass" : "addClass" ]( "timeline-row-outline" );
+					$( ".ss-container" ).sortable( sorting ? "destroy" : undefined );
+					sorting = !sorting;
+				}
+			} );
+			$( ".ss-row" ).on( "swipe", function() {
+				$( this ).remove();
+			} );
+			$( ".ss-row h3" ).on( "pointerenter pointerleave", function( e ){
+				$( this )[ e.type === "pointerenter" ? "addClass" : "removeClass"  ]( "timeline-hover" );
+			});
+			$('.hjs code').each(function(i, block) {
+			    hljs.highlightBlock(block);
+			});
+		},
 		// initialize some events
 		initEvents		= function() {
-			
+			hammerEvents();
 			// navigation menu links.
 			// scroll to the respective section.
 
@@ -29291,7 +29353,7 @@ window.sidescroll = (function() {
 					// redefine which rows are initially visible (:inviewport)
 					setViewportRows();
 					// remove pointers for every row
-					$rows.find('a.ss-circle').removeClass('ss-circle-deco');
+					$rows.find('a.ss-circle').parent().removeClass('ss-circle-deco');
 					// show inviewport rows and respective pointers
 					$rowsViewport.each( function() {
 					
@@ -29301,7 +29363,7 @@ window.sidescroll = (function() {
 							   .find('div.ss-right')
 							   .css({ right  : '0%' })
 							   .end()
-							   .find('a.ss-circle')
+							   .find('a.ss-circle').parent()
 							   .addClass('ss-circle-deco');
 					
 					});
@@ -29309,7 +29371,6 @@ window.sidescroll = (function() {
 				},
 				// when scrolling the page change the position of each row	
 				'scroll.Scrolling' : function( event ) {
-					console.log( "scroll" );
 					// set a timeout to avoid that the 
 					// placeRows function gets called on every scroll trigger
 					if( anim ) return false;
@@ -29329,7 +29390,6 @@ window.sidescroll = (function() {
 		// and this value should be 0% (final position) when the element is on the
 		// center of the window.
 		placeRows		= function() {
-			console.log( "place" );
 			
 				// how much we scrolled so far
 			var winscroll	= $win.scrollTop(),
@@ -29387,7 +29447,7 @@ window.sidescroll = (function() {
 						if( !$row.data('pointer') ) {
 						
 							$row.data( 'pointer', true );
-							$row.find('.ss-circle').addClass('ss-circle-deco');
+							$row.find('.ss-circle').parent().addClass('ss-circle-deco');
 						
 						}
 					
@@ -29398,7 +29458,7 @@ window.sidescroll = (function() {
 						if( $row.data('pointer') ) {
 							
 							$row.data( 'pointer', false );
-							$row.find('.ss-circle').removeClass('ss-circle-deco');
+							$row.find('.ss-circle').parent().removeClass('ss-circle-deco');
 						
 						}
 						
@@ -30801,49 +30861,67 @@ window.arschmitz.timelines = {
 				title: "About Me",
 				detail: "Alexander Schmitz - Development Lead jQuery Foundation - Head of Web CÜR Music",
 				img: "https://avatars0.githubusercontent.com/u/462993?v=3&s=460",
-				size: "large"
+				size: "large",
+				color: "timeline-blue",
+				notes: [
+					"Hi everyone thank you for coming back for a second talk. Yesterday you heard me talk a lot about the jQuery Foundation. The work i do with the open source community goes beyond just jQuery. I work with and contribute and maintain too many open source projects, in many different areas, I enjoy writing tools for testing and have worked with many testing related projects like QUnit, Intern, Perf Jankie, and aXe and have created tools like spider.js, to help with testing everything from basic unit tests to advanced rendering tests and live site spider. I have written many grunt plugins and node modules for everything from css pre-processing to games. You get the idea…"
+				]
 			},
 			{
 				date: "",
 				title: "Related Projects",
 				detail: "Projects i work on related to touch input",
 				img: "http://nhenze.net/uploads/Hit-It-for-Android.jpg",
-				size: "medium"
+				size: "medium",
+				color: "timeline-salmon",
+				notes: [
+					"Today though i would like to focus on one specific area of the projects i work on which is those projects related to handling and simplifying one of the most fractured areas in browsers today which is input. Not so long ago this used to be a pretty simple thing to deal with. You had two basic type of input. There were mouse events, and keyboard events, and the two played very nicely together.",
+					"These is not the case anymore and has not been for some time now. New input methods are being thought up every day. The biggest change that occurred to change all this was the introduction of touch events in iPhone OS  2 when everything got turned on its head. Now we have not only multiple implementations of the same events but competing standards for how events. Leading to browser fragmentation and the need for multiple code paths to handle the same thing. ",
+					"thank fully for developers there have been a few libraries which have emerged to help overcome these problems. I am fortunate enough to lead or work on a few of these projects."
+				]
 			},
 			{
 				date: "Project Lead",
 				title: "jQuery Mobile",
 				detail: "Handles touch input on all widgets and has basic gesture support",
 				img: "http://blog.jquery.com/wp-content/uploads/2015/07/icn-jquerymobile-logo.png",
-				size: "small"
+				size: "small",
+				color: "timeline-yellow",
+				notes: [
+					" jQuery Mobile is basically where it all started not only for me but for major libraries trying to handle the problem of touch input on the web. I started as a contributor and now lead the jQuery Mobile project and worked to refactor their touch and gesture support in the last 2 versions. jQuery Mobile supports a small subset of gestures and a normalized event model called vmouse"
+				]
 			},
 			{
 				date: "Project Lead",
 				title: "Hammer.js",
 				detail: "Stand alone Library for gesture events support",
 				img: "https://avatars2.githubusercontent.com/u/7997161?v=3&s=200",
-				size: "small"
+				size: "small",
+				color: "timeline-orange"
 			},
 			{
 				date: "Team Member",
 				title: "PEP",
 				detail: "Pointer Events Polyfill",
 				img: "https://cloud.githubusercontent.com/assets/1379244/8460397/3135099c-1fd9-11e5-9ca7-70240d46385b.png",
-				size: "small"
+				size: "small",
+				color: "timeline-green"
 			},
 			{
 				date: "Team Member",
 				title: "jQuery UI",
 				detail: "Supports a variety interactions such as drag and drop",
 				img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSMVx1hWMy2Hl71YWh9Ou9G9tvjPH3Kfb3Dh3h9q_E8n5aSIPcDr63h1rLh",
-				size: "small"
+				size: "small",
+				color: "timeline-yellow"
 			},
 			{
 				date: "Creator",
 				title: "Hammer Time",
 				detail: "Fast click based on polyfilling touch-action css",
 				img: "http://static.comicvine.com/uploads/original/5/54353/3215411-mjolnir+-+hammer+of+thor+prop_color_5x-lrg.jpg",
-				size: "small"
+				size: "small",
+				color: "timeline-salmon"
 			},
 			{
 				title: "2007",
@@ -30885,6 +30963,13 @@ window.arschmitz.timelines = {
 				size: "medium"
 			},
 			{
+				date: "September 23, 2008",
+				title: "First Android phone released",
+				detail: "The first android phone the HTC Dream is released",
+				img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/512px-Android_robot.svg.png",
+				size: "small"
+			},
+			{
 				title: "2009",
 				detail: "Year Three",
 				divider: true
@@ -30895,6 +30980,13 @@ window.arschmitz.timelines = {
 				detail: "Paul Bakus files ticket and PR to support touch events in jQuery UI",
 				img: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/249/2cc/1b6f021.jpg",
 				size: "large"
+			},
+			{
+				date: "Mid 2009",
+				title: "W3C begins pointer discussions",
+				detail: "Discussions are begun about adding a unified pointer event model to the DOM Level 3 Events",
+				img: "http://www.vector-logo.net/logo_preview/eps/m/Microsoft_Internet_Explorer_Mouse_Pointer.png",
+				size: "small"
 			},
 			{
 				date: "December 11, 2009",
@@ -30989,6 +31081,13 @@ window.arschmitz.timelines = {
 				divider: true
 			},
 			{
+				date: "January, 2012",
+				title: "W3C forms patent advisory group",
+				detail: "The W3C web events working group halts efforts and pending formation and results of PAG",
+				img: "http://www.clickminded.com/wp-content/uploads/patent.jpg",
+				size: "medium"
+			},
+			{
 				date: "Mar 2, 2012",
 				title: "First commit of Hammer.js",
 				detail: "First commit is made to hammer.js to attempt to create a gesture library for the web",
@@ -30999,8 +31098,15 @@ window.arschmitz.timelines = {
 				date: "April 10th, 2012",
 				title: "Blog Post on future of touch",
 				detail: "Scott publishes Getting touchy about patents",
-				img: "http://www.clickminded.com/wp-content/uploads/patent.jpg",
+				img: "https://avatars2.githubusercontent.com/u/141167?v=3&s=460",
 				size: "large"
+			},
+			{
+				date: "July 6, 2012",
+				title: "Touch Events PAG concludes",
+				detail: "The Touch Events patent advisory committe concludes there is no infringment",
+				img: "http://spicyip.com/wp-content/uploads/2013/07/denied-721524.png",
+				size: "small"
 			},
 			{
 				date: "September 27, 2012",
@@ -31015,6 +31121,13 @@ window.arschmitz.timelines = {
 				detail: "The W3C forms a working group for pointer events specification",
 				img: "http://www.w3.org/TR/pointerevents/pointer.png",
 				size: "medium"
+			},
+			{
+				date: "November 25, 2012",
+				title: "Chrome opens issue to implment pointer events",
+				detail: "The chrome team opens an issue with the intent to implement pointer events",
+				img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chromium_11_Logo.svg/1000px-Chromium_11_Logo.svg.png",
+				size: "large"
 			},
 			{
 				date: "November 29, 2012",
@@ -31045,7 +31158,7 @@ window.arschmitz.timelines = {
 			{
 				date: "February 20, 2013",
 				title: "Microsoft anounces hand.js",
-				detail: "Microsoft releases their own pointer events polyfill hand.js",
+				detail: "Microsoft announces their own pointer events polyfill hand.js",
 				img: "https://upload.wikimedia.org/wikipedia/en/b/ba/DrawingHands.jpg",
 				size: "medium"
 			},
@@ -31102,6 +31215,13 @@ window.arschmitz.timelines = {
 				title: "2014",
 				detail: "Year Eight",
 				divider: true
+			},
+			{
+				date: "May 20, 2014",
+				title: "Chrome ships touch-action css",
+				detail: "Chrome stable ships touch-action css",
+				img: "https://gigaom.com/wp-content/uploads/sites/1/2013/04/chrome-tablet.jpg?quality=80&strip=all",
+				size: "medium"
 			},
 			{
 				date: "July 11, 2014",
@@ -31194,11 +31314,138 @@ window.arschmitz.timelines = {
 
 			},
 			{
+				date: "June 11, 2015",
+				title: "PEP, Hammer.js, Microsoft collaborate on touch-action",
+				detail: "All three teams decide to work together to try to find a way to support css touch-action",
+				img: "http://i.istockimg.com/file_thumbview_approve/42594676/3/stock-photo-42594676-human-hand-touch-action.jpg",
+				size: "small"
+			},
+			{
 				date: "June 18, 2015",
 				title: "jQuery Mobile decides to adopt Hammer.js",
 				detail: "jQuery Mobile team votes to replace custom gestures",
 				img: "http://demos.jquerymobile.com/1.4.5/_assets/img/devices.png",
 				size: "medium"
+			},
+			{
+				date: "July 30, 2015",
+				title: "Teams settle on touch-action approach",
+				detail: "Through discussion a workable approach and proof of concept are created",
+				img: "http://2011.igem.org/wiki/images/thumb/2/28/Collaboration-hands.jpg/500px-Collaboration-hands.jpg",
+				size: "large"
+			},
+			{
+				date: "August 7th, 2015",
+				title: "Hammer Time released",
+				detail: "First fast click based on touch action css",
+				img: "http://cdn.shopify.com/s/files/1/0263/4245/products/hammertime.jpg?v=1383097227",
+				size: "medium"
+			},
+			{
+				title: "Now",
+				detail: "Where are we",
+				divider: true
+			},
+			{
+				title: "Its a fractured landscape",
+				detail: "Touch events not consistent in different browsers, limited support for touch-action" +
+					"even more limited support for pointer events.",
+				img: "http://img04.deviantart.net/b8f6/i/2009/176/8/9/fractured_ground_texture_by_r3ds0ld13r.jpg",
+				size: "large",
+				color: "timeline-orange"
+			},
+			{
+				title: "Multiple code paths",
+				detail: "Today because of this limited and mixed support we are forced to maintain multiple" +
+					"discreet code paths for worse yet even combinations of multiple paths",
+				img: "http://i.stack.imgur.com/7C2kD.png",
+				size: "medium",
+				color: "timeline-green"
+			},
+			{
+				title: "There has to be a better way?",
+				detail: "There is thanks to the hard work of the open source community today we have options",
+				img: "http://www.youritservices.co.nz/wp-content/uploads/2015/01/Open-Source.jpg",
+				size: "large",
+				color: "timeline-blue"
+			},
+			{
+				title: "Libs",
+				detail: "to the rescue!",
+				divider: true
+			},
+			{
+				date: "Uses: Input normalization",
+				title: "PEP - Pointer Events Polyfill",
+				detail: "Allows you to handle a single set of events regardless of browser",
+				img: "https://cloud.githubusercontent.com/assets/1379244/8460397/3135099c-1fd9-11e5-9ca7-70240d46385b.png",
+				size: "medium",
+				color: "timeline-yellow",
+				codeSample: [
+					'$( ".ss-row h3" ).on( "pointerenter pointerleave", function( e ){',
+					'	$( this )[ e.type === "pointerenter" ? "addClass" : "removeClass"  ]( "timeline-hover" );',
+					'});'
+				]
+			},
+			{
+				date: "Uses: Advanced interactivity",
+				title: "jQuery UI + Touch Punch",
+				detail: "Rock solid tested interactions out of the box. Flexible and extenible widgets for Draggable, droppable, sortable, resizable, and selectable",
+				img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTzP0kZjL2JJRSiW2aq4eULzrVf5XkL4y2uSFJB1Sp9BIQ4bze0UQ",
+				size: "medium",
+				color: "timeline-blue",
+				codeSample: [
+					'// Draggable',
+					'$( ".ss-circle" ).draggable();',
+					'',
+					'// Sortable',
+					'$( ".ss-container" ).sortable();'
+				]
+			},
+			{
+				date: "Uses: Gesture Support",
+				title: "Hammer.js",
+				detail: "Support common gestures like pan, pinch, press, rotate, swipe, and tap across platoforms",
+				img: "https://avatars2.githubusercontent.com/u/7997161?v=3&s=200",
+				size: "medium",
+				color: "timeline-salmon",
+				codeSample: [
+					'// Basic Setup for pan, press, swipe, and tap',
+					'var ham = new Hammer( ele, {',
+					'	domEvents: true',
+					'} );',
+					'',
+					'// Setup addint pinch and rotate',
+					'var ham = new Hammer( ele, {',
+					'	domEvents: true',
+					'} );',
+					'hammer.get( "rotate" ).set({ enable: true });',
+					'ham.get( "pinch" ).set({ enable: true });'
+				]
+			},
+			{
+				date: "Uses: Fast Click",
+				title: "Hammer Time",
+				detail: "New fast click from the hammer.js team based on the touch-action spec",
+				img: "http://cdn.shopify.com/s/files/1/0263/4245/products/hammertime.jpg?v=1383097227",
+				size: "medium",
+				color: "timeline-green",
+				codeSample: [
+					'<div class="target" style="touch-action:none"></div>'
+				]
+			},
+			{
+				date: "Uses: Fast Click",
+				title: "Fast Click",
+				detail: "The best known and most used fast click solution",
+				img: "http://foundation.zurb.com/assets/img/learn/features/fast-click.svg",
+				size: "medium",
+				color: "timeline-salmon",
+				codeSample: [
+					'$(function() {',
+						'FastClick.attach(document.body);',
+					'});'
+				]
 			}
 		]
 	}
@@ -31966,7 +32213,7 @@ this["arschmitz"]["templates"]["timeline"] = Handlebars.template({"1":function(d
 },"2":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "			<a class=\"timeline-link\" href=\"#bookmark-"
+  return "				<a class=\"timeline-link\" href=\"#bookmark-"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
@@ -31982,75 +32229,114 @@ this["arschmitz"]["templates"]["timeline"] = Handlebars.template({"1":function(d
 },"6":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "			<div class=\"ss-row\">\n				<div class=\"ss-left\">\n					<h2 id=\"bookmark-"
+  return "				<div class=\"ss-row\">\n					<div class=\"ss-left\">\n						<h2 id=\"bookmark-"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</h2>\n				</div>\n				<div class=\"ss-right\">\n					<h2>"
+    + "</h2>\n					</div>\n					<div class=\"ss-right\">\n						<h2>"
     + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
-    + "</h2>\n				</div>\n			</div>\n";
+    + "</h2>\n					</div>\n				</div>\n";
 },"8":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "			<div class=\"ss-row\">\n				<div class=\"ss-left\">\n					<h2>"
+  return "				<div class=\"ss-row\">\n					<div class=\"ss-left\">\n						<h2>"
     + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
-    + "</h2>\n				</div>\n				<div class=\"ss-right\">\n					<h2 id=\"bookmark-"
+    + "</h2>\n					</div>\n					<div class=\"ss-right\">\n						<h2 id=\"bookmark-"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</h2>\n				</div>\n			</div>\n";
+    + "</h2>\n					</div>\n				</div>\n";
 },"10":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = (helpers.everyOther || (depth0 && depth0.everyOther) || helpers.helperMissing).call(depth0,(data && data.index),2,{"name":"everyOther","hash":{},"fn":this.program(11, data, 0),"inverse":this.program(13, data, 0),"data":data})) != null ? stack1 : "");
+  return ((stack1 = (helpers.everyOther || (depth0 && depth0.everyOther) || helpers.helperMissing).call(depth0,(data && data.index),2,{"name":"everyOther","hash":{},"fn":this.program(11, data, 0),"inverse":this.program(19, data, 0),"data":data})) != null ? stack1 : "");
 },"11":function(depth0,helpers,partials,data) {
-    var alias1=this.lambda, alias2=this.escapeExpression;
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "			<div class=\"ss-row ss-"
+  return "				<div class=\"ss-row ss-"
     + alias2(alias1((depth0 != null ? depth0.size : depth0), depth0))
-    + "\">\n				<div class=\"ss-left\">\n					<a href=\""
-    + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
-    + "\" style=\"background-image:url("
+    + "\">\n					<div class=\"ss-left\">\n						<span class=\"circle-wrap\"><a style=\"background-image:url("
     + alias2(alias1((depth0 != null ? depth0.img : depth0), depth0))
     + ")\" class=\"ss-circle\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</a>\n				</div>\n				<div class=\"ss-right\">\n					<h3>\n						<span>"
+    + "</a></span>\n					</div>\n					<div class=\"ss-right\">\n						<h3 class=\""
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.color : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\">\n							<span>"
     + alias2(alias1((depth0 != null ? depth0.date : depth0), depth0))
-    + "</span>\n						<a href=\""
+    + "</span>\n							<a href=\""
     + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</a>\n						<span>"
+    + "</a>\n							<span>"
     + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
-    + "</span>\n					</h3>\n				</div>\n			</div>\n";
-},"13":function(depth0,helpers,partials,data) {
-    var alias1=this.lambda, alias2=this.escapeExpression;
+    + "</span>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.codeSample : depth0),{"name":"if","hash":{},"fn":this.program(14, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "						</h3>\n					</div>\n					<div class=\"dialog-wrap\">\n						<div class=\"dialog "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.color : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\">\n						<h4>"
+    + alias2(alias1((depth0 != null ? depth0.date : depth0), depth0))
+    + "<br>"
+    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+    + "</h4>\n						<h5>"
+    + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
+    + "</h5>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.notes : depth0),{"name":"each","hash":{},"fn":this.program(17, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "						</div>\n					</div>\n				</div>\n";
+},"12":function(depth0,helpers,partials,data) {
+    return this.escapeExpression(this.lambda((depth0 != null ? depth0.color : depth0), depth0));
+},"14":function(depth0,helpers,partials,data) {
+    var stack1;
 
-  return "			<div class=\"ss-row ss-"
+  return "							<pre class=\"hjs\"><code class=\"javascript\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.codeSample : depth0),{"name":"each","hash":{},"fn":this.program(15, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "							</code></pre>\n";
+},"15":function(depth0,helpers,partials,data) {
+    return this.escapeExpression(this.lambda(depth0, depth0))
+    + "\n";
+},"17":function(depth0,helpers,partials,data) {
+    return "							<p>"
+    + this.escapeExpression(this.lambda(depth0, depth0))
+    + "</p>\n";
+},"19":function(depth0,helpers,partials,data) {
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "				<div class=\"ss-row ss-"
     + alias2(alias1((depth0 != null ? depth0.size : depth0), depth0))
-    + "\">\n				<div class=\"ss-left\">\n					<h3>\n						<span>"
+    + "\">\n					<div class=\"ss-left\">\n						<h3 class=\""
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.color : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\">\n							<span>"
     + alias2(alias1((depth0 != null ? depth0.date : depth0), depth0))
-    + "</span>\n						<a href=\""
+    + "</span>\n							<a href=\""
     + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</a>\n						<span>"
+    + "</a>\n							<span>"
     + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
-    + "</span>\n					</h3>\n				</div>\n				<div class=\"ss-right\">\n					<a href=\""
-    + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
-    + "\" style=\"background-image:url("
+    + "</span>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.codeSample : depth0),{"name":"if","hash":{},"fn":this.program(14, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "						</h3>\n					</div>\n					<div class=\"ss-right\">\n						<span class=\"circle-wrap\">\n							<a style=\"background-image:url("
     + alias2(alias1((depth0 != null ? depth0.img : depth0), depth0))
     + ")\" class=\"ss-circle\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</a>\n				</div>\n			</div>\n";
+    + "</a>\n						</span>\n					</div>\n					<div class=\"dialog-wrap\">\n						<div class=\"dialog "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.color : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\">\n						<h4>"
+    + alias2(alias1((depth0 != null ? depth0.date : depth0), depth0))
+    + "<br/>"
+    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+    + "</h4>\n						<h5>"
+    + alias2(alias1((depth0 != null ? depth0.detail : depth0), depth0))
+    + "</h5>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.notes : depth0),{"name":"each","hash":{},"fn":this.program(17, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "						</div>\n					</div>\n				</div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<h1>\n	<span class=\"ss-circle timeline-title-img\" style=\"background-image:url(http://www.notinhalloffame.com/UserFiles/Image/article_images/Worst_Songs/Worst%2072%20%20U%20Cant%20Touch%20This,%20MC%20Hammer.jpg)\"></span>\n	<span class=\"timeline-title\">You Can't Touch This:</span>\n</h1>\n<h2 class=\"ss-subtitle\">A sordid 9 year history of touch input on the web</h2>\n<div class=\"sticky-parent\">\n	<div id=\"ss-links\" class=\"ss-links\">\n"
+  return "<div class=\"timeline\">\n	<h1>\n		<span class=\"ss-circle timeline-title-img\" style=\"background-image:url(http://www.notinhalloffame.com/UserFiles/Image/article_images/Worst_Songs/Worst%2072%20%20U%20Cant%20Touch%20This,%20MC%20Hammer.jpg)\"></span>\n		<span class=\"timeline-title\">You Can't Touch This:</span>\n	</h1>\n	<h2 class=\"ss-subtitle\">A sordid 9 year history of touch input on the web</h2>\n	<div class=\"sticky-parent\">\n		<div id=\"ss-links\" class=\"ss-links\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.timeline : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "	</div>\n</div>\n<div id=\"ss-container\" class=\"ss-container\">\n	<div class=\"ss-row\">\n		<div class=\"ss-left\"><h2></h2></div>\n		<div class=\"ss-right\">\n			<h3 class=\"timeline-salmon\">\n			You Can't Touch This\n			A sordid 9 year history of touch input on the web</h3>\n		</div>\n	</div>\n"
+    + "		</div>\n	</div>\n	<div id=\"ss-container\" class=\"ss-container\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.timeline : depth0),{"name":"each","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</div>";
+    + "	</div>\n</div>\n\n";
 },"useData":true});
 (function(){
 var temp = []

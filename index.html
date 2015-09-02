@@ -9,10 +9,18 @@
 	<link href="src/main.css" rel="stylesheet">
 	<link href="src/timeline.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.7/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/highlight.js/8.7/highlight.min.js"></script>
 	<script src="dist/script.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/shortcuts/sticky.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.js"></script>
+	<script src="https://rawgit.com/hammerjs/jquery.hammer.js/master/jquery.hammer.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.js"></script>
+	<script src="http://code.jquery.com/pep/0.3.0/pep.min.js"></script>
+
+
 </head>
 <body>
 <marquee class="gui-background" behavior="scroll" direction="up" scrollamount="2" scrolldelay="60">
@@ -38,7 +46,7 @@
 		<div class="prompt-wrap">
 			<div class="prompt-start">></div>
 			<div class="prompt-div">
-				<input type="text" id="prompt" placeholder="arschmitz.me" autofocus>
+				<input type="text" id="prompt" placeholder="arschmitz.me">
 				<button id="runPrompt">Run</button>
 			</div>
 		</div>
