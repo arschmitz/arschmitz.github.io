@@ -31143,7 +31143,10 @@ window.arschmitz.timelines = {
 				title: "jQuery UI Interaction adbstraction",
 				detail: "jQuery UI begins writing abstraction to support any event type",
 				img: "https://cdn.tutsplus.com/net/authors/jeffreyway/jquery-ui-widget-factory.jpg",
-				size: "small"
+				size: "small",
+				notes:[
+					"Later this same month jQuery UI would begin work on its interactions abstraction. The interactions abstraction was a reaction to touch and other proprietary events systems springing up. It allowed any event type to be mapped to an interaction allowing anything capable of emitting an event within a web browser. One early demonstration of the idea allowed an original xbox controller to be used to control drag and drop within the browser."
+				]
 			},
 			{
 				title: "2012",
@@ -31155,35 +31158,52 @@ window.arschmitz.timelines = {
 				title: "W3C forms patent advisory group",
 				detail: "The W3C web events working group halts efforts and pending formation and results of PAG",
 				img: "http://www.clickminded.com/wp-content/uploads/patent.jpg",
-				size: "medium"
+				size: "medium",
+				notes: [
+					"In march of the next year another tool was born to help us in our adventure to bring touch support into the browser. This one with a little bit different goal. It was one thing just to receive raw events from the browser but what about recognizing complex gestures like native apps were able to on the iPhone and androids. Things like pinch to zoom, rotate, swipe, tap, double tap, pan or others. defining and recognizing these gestures especially multi touch ones is its own complex task, made even more daunting when you are forced to deal with competing event models and implementations.  it was out of this complexity that hammer.js was born a small library with the singular goal of implementing gesture events in the browser."
+				]
 			},
 			{
 				date: "Mar 2, 2012",
 				title: "First commit of Hammer.js",
 				detail: "First commit is made to hammer.js to attempt to create a gesture library for the web",
 				img: "https://avatars1.githubusercontent.com/u/1243901?v=3&s=460",
-				size: "medium"
+				size: "medium",
+				notes: [
+					"A month later my good friend and fellow development lead with the jQuery Foundation published a key blog post about the current state of touch input in the browser. He covered a brief history up until that point and went on to give a critical unbiased comparison of the now competing touch and pointer event models. The murky future of touch events with all of their pending patent issues as well as the fact that it was questionable just what browser vendors would even be willing to implement either model. He concluded with a call to action to both Microsoft and the community. Microsoft he called upon to submit pointer events to the W3C to become a spec. The community he called upon to try building things with both of the the new event models and give their feedback."
+				]
 			},
 			{
 				date: "April 10th, 2012",
 				title: "Blog Post on future of touch",
 				detail: "Scott publishes Getting touchy about patents",
 				img: "https://avatars2.githubusercontent.com/u/141167?v=3&s=460",
-				size: "large"
+				size: "large",
+				notes: [
+					"In July the Patent advisory committee concluded its work finding that of the 8 patents submitted by apple for consideration in relation to the touch events specification. That though none of them were submitted under a royalty free agreement that would have allowed them to be used as part of the specification that 7 of the patents had previously been rejected by the US patent office or were still pending and of the 1 patent that was found to be valid the pending pointer events specification had no relation to so it was concluded that work would be able to continue on the specification"
+				]
 			},
 			{
 				date: "July 6, 2012",
 				title: "Touch Events PAG concludes",
 				detail: "The Touch Events patent advisory committe concludes there is no infringment",
 				img: "http://spicyip.com/wp-content/uploads/2013/07/denied-721524.png",
-				size: "small"
+				size: "small",
+				notes: [
+					"Several months later with the encouragement of both the jQuery Foundation and the community microsoft submitted a proposal for the pointer events specification to the W3C. This essentially revived the work begun in 2009 as the new pointer events specification was very similar to the work begun then. One major advantage of both of these approaches over touch events is that is that they support multiple types of pointer devices and are not touch specific. In fact, tablet running Windows 8, mouse, pen, and fingers are all normalized to Pointer; you can even use the pointerType property to determine which type of pointer is being used. In addition to supporting all current pointer devices, Pointer events are designed in such a way that future devices can easily be added, and existing code will automatically support the new device. Even better, Pointer event objects have the same structure as other events, reducing the learning curve compared to the conglomerate of TouchEvent, TouchList, and Touch.",
+					"Another big difference between Pointer and Touch is that Pointer has support for hovering (over and out events). While most touch devices have a hardware limitation that doesn’t allow for hovering, there are devices which do for example some sony xperia devices have a floating touch technology, and the samsung galaxy note line support hovering with a stylus. As technology continues to evolve this will become more common. This brings up an important issue: Touch Events were designed based on a specific device for a specific type of input. Pointer Events represent a completely different approach to input on the Web. While we’ve already covered how this impacts developers, it’s interesting to consider the impact on hardware manufacturers. In order for Apple to succeed with touch interfaces, they had to create a new event model. Innovation for new form factors and new input methods will either be stifled by the existing standards or will require a new set of APIs, following in Apple’s footsteps with the iPhone and Touch Events. Pointer Events provides a clean solution not only for developers, but for hardware manufacturers as well.",
+					"In his blog post Scott said and i quote “It’s conceivable that in a few years developers could use Pointer Events as the only event model for pointers, leaving Mouse Events as a thing of the past.” This will  be important to remember in a few minutes as we move down our timeline"
+				]
 			},
 			{
 				date: "September 27, 2012",
 				title: "Microsoft submits Pointer Events proposal",
 				detail: "Microsoft submits the Pointer Events proposal to the W3C",
 				img: "http://ragzon.com/wp-content/uploads/2015/08/microsoft-logo-3.jpg",
-				size: "large"
+				size: "large",
+				notes: [
+					"a couple months forward on our journey in November the W3C formed the pointer events working group to pursue the proposal submitted by microsoft. The group includes representation from all of the major browser vendors once again. Well except of course apple…"
+				]
 			},
 			{
 				date: "November 9, 2012",
