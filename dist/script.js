@@ -29183,7 +29183,8 @@ $( function() {
 				}
 			} );
 		}
-		if ( params.template = "timeline.timeline" ) {
+		if ( params.template === "timelines.timeline" ) {
+
 			window.sidescroll.init();
 		}
 	} );
@@ -29210,6 +29211,7 @@ window.sidescroll = (function() {
 		perspective	= hasPerspective && Modernizr.csstransforms3d,
 		// initialize function
 		init = function() {
+			alert();
 			$rows = $('#ss-container > div.ss-row');
 			$links = $('#ss-links > a');
 			var sticky = new Waypoint.Sticky({
@@ -30888,7 +30890,7 @@ window.arschmitz.timelines = {
 				size: "small",
 				color: "timeline-yellow",
 				notes: [
-					" jQuery Mobile is basically where it all started not only for me but for major libraries trying to handle the problem of touch input on the web. I started as a contributor and now lead the jQuery Mobile project and worked to refactor their touch and gesture support in the last 2 versions. jQuery Mobile supports a small subset of gestures and a normalized event model called vmouse"
+					"jQuery Mobile is basically where it all started not only for me but for major libraries trying to handle the problem of touch input on the web. I started as a contributor and now lead the jQuery Mobile project and worked to refactor their touch and gesture support in the last 2 versions. jQuery Mobile supports a small subset of gestures and a normalized event model called vmouse"
 				]
 			},
 			{
@@ -30897,7 +30899,10 @@ window.arschmitz.timelines = {
 				detail: "Stand alone Library for gesture events support",
 				img: "https://avatars2.githubusercontent.com/u/7997161?v=3&s=200",
 				size: "small",
-				color: "timeline-orange"
+				color: "timeline-orange",
+				notes: [
+					"Hammer.js was created by Jorik Tangler in 2012 with some of the goal of making a simple to use gesture event library. It has received 2 major re-writes which have focused in on supporting standardized gestures and improved browser support. Hammer.js has become the standard for gesture support on the internet. Earlier this year after about 6 months of talks and work between Jorik and myself Hammer.js is now a community lead project and independent organization which i currently lead."
+				]
 			},
 			{
 				date: "Team Member",
@@ -30905,7 +30910,10 @@ window.arschmitz.timelines = {
 				detail: "Pointer Events Polyfill",
 				img: "https://cloud.githubusercontent.com/assets/1379244/8460397/3135099c-1fd9-11e5-9ca7-70240d46385b.png",
 				size: "small",
-				color: "timeline-green"
+				color: "timeline-green",
+				notes: [
+					"PEP is a pointer events polyfill. It has one very simple goal which is to polyfill the W3C Pointer events specification in all modern browsers. It started as part of google's Polymer project but is not part of the jQuery Foundation and is lead by Scott Gonzalez with my help. PEP has collaboration from both Microsoft and the Dojo Foundation"
+				]
 			},
 			{
 				date: "Team Member",
@@ -30913,7 +30921,10 @@ window.arschmitz.timelines = {
 				detail: "Supports a variety interactions such as drag and drop",
 				img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSMVx1hWMy2Hl71YWh9Ou9G9tvjPH3Kfb3Dh3h9q_E8n5aSIPcDr63h1rLh",
 				size: "small",
-				color: "timeline-yellow"
+				color: "timeline-yellow",
+				notes: [
+					"jQuery UI is a UI widget library implemented using jQuery but for the purposes of this talk i will be focusing on the jQuery UI Interactions. jQuery UI includes widgets which add support for common interaction patterns like drag and drop, resizing, and dragging to select a range. I am currently the most active contributor to jQuery UI."
+				]
 			},
 			{
 				date: "Creator",
@@ -30921,7 +30932,11 @@ window.arschmitz.timelines = {
 				detail: "Fast click based on polyfilling touch-action css",
 				img: "http://static.comicvine.com/uploads/original/5/54353/3215411-mjolnir+-+hammer+of+thor+prop_color_5x-lrg.jpg",
 				size: "small",
-				color: "timeline-salmon"
+				color: "timeline-salmon",
+				notes: [
+					"Lastly there is Hammer Time the newest project from the hammerjs organization. Hammer time is a fast click solution which works by polyfilling the touch-action css property in non supporting browsers. I created this polyfill as a result POC for the joint efforts between the PEP and Hammer.js teams to find a way to support touch-action css.",
+					"So as you can see supporting touch based input is something i am passionate about and have worked with many projects on. This might bring some of you to ask why do we need so many projects to do something that seems so simple in the apps on my phone. That is a really great question and to answer that i would like to give you an overview of the sordid 9 year history that is touch input on the web. After that i’ll let you know how far the browsers and libraries have come and show you how simple supporting complex touch interactions can be with the use of a few libraries. "
+				]
 			},
 			{
 				title: "2007",
@@ -30933,21 +30948,30 @@ window.arschmitz.timelines = {
 				title: "jQuery UI - First Commit",
 				detail: "On june 17 2007 the first commit was made to jQuery UI, by Paul Bakaus",
 				img: "http://www.hivelocity.co.jp/wp-content/uploads/2014/09/jquery.jpg",
-				size: "small"
+				size: "small",
+				notes: [
+					"This dark tale starts back a long time ago way back in 2007  the web development landscape was very different back then and most of the JavaScript libraries we use and take for granted didn’t exist yet. It was only a year after the first release of jQuery by John Resig and on June 17 Paul Bakaus made the first commit to what would become jQuery UI. Paul intended to build a JavaScript UI library based on the solid jQuery Foundation John had built."
+				]
 			},
 			{
 				date: "June 29, 2007",
 				title: "First generation iPhone",
 				detail: "Only days later the first iPhone is released",
 				img: "http://www.ztechnews.com/wp-content/uploads/2012/12/64.jpg",
-				size: "medium"
+				size: "medium",
+				notes: [
+					"Only 12 days later on June 29 the first iPhone was released to a lot of hype. what many of you may not remember though was that this was not nearly the iPhone many know and love today while it had “a fully functioning browser” it lacked many features including any sort of touch manipulation ability, it however showed the possibility of what a touchscreen phone could be and how it could operate."
+				]
 			},
 			{
 				date: "September 16, 2007",
 				title: "jQuery UI 1.0",
 				detail: "jQuery UI 1.0 is released in September of the same year",
 				img: "http://mikederoche.com/images/logos/components/jqueryui.jpg",
-				size: "large"
+				size: "large",
+				notes: [
+					"a few months later on September 16 jQuery UI 1.0 was released. It was of course written completely around mouse based input and was still at an early stage but showed promise already."
+				]
 			},
 
 			{
@@ -30960,14 +30984,20 @@ window.arschmitz.timelines = {
 				title: "iphone OS 2.0",
 				detail: "Support for touch events added",
 				img: "http://parisworkingforart.files.wordpress.com/2010/05/iphone-3g.jpg",
-				size: "medium"
+				size: "medium",
+				notes: [
+					"This brings us to year 2 in our journey 2008 brought us 2 important milestones in the epic of touch input. The first happened on July 11, 2008 when iPhone OS 2 was released along with the iphone 3g iPhone OS2 will always be remembered for one important milestone in the web. The introduction of touch events to the browser. For the first time there was a “usable” model for events and interaction for touch screens in the context of a browser. There was however a downside to this too. These  new events were not based on any standard, had no developer feedback or buy in and were completely proprietary to apple and the iPhone."
+				]
 			},
 			{
 				date: "September 23, 2008",
 				title: "First Android phone released",
 				detail: "The first android phone the HTC Dream is released",
 				img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/512px-Android_robot.svg.png",
-				size: "small"
+				size: "small",
+				notes: [
+					"Two months later the first android phone was released. The HTC dream introduced google's Android to the global market. This first version of android though it had a fully featured browser lacked support for any sort of touch based input model for the browser. Touch Events had not yet been introduced to the android browser being only months after their first introduction in iPhone OS 2. "
+				]
 			},
 			{
 				title: "2009",
@@ -30979,21 +31009,30 @@ window.arschmitz.timelines = {
 				title: "Ticket Filed to add support for touch",
 				detail: "Paul Bakus files ticket and PR to support touch events in jQuery UI",
 				img: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/249/2cc/1b6f021.jpg",
-				size: "large"
+				size: "large",
+				notes: [
+					"In February of 2009 Paul Bakaus the original creator of jQuery UI filed a ticket to add support for IOS to jQuery UI interactions along with a patch. However after discussions amongst the team it was decided that adding support for a non standard proprietary events system was not a good idea. Instead they would push for standardization and work at creating an abstracted interactions model capable of handling different input types. "
+				]
 			},
 			{
 				date: "Mid 2009",
 				title: "W3C begins pointer discussions",
 				detail: "Discussions are begun about adding a unified pointer event model to the DOM Level 3 Events",
 				img: "http://www.vector-logo.net/logo_preview/eps/m/Microsoft_Internet_Explorer_Mouse_Pointer.png",
-				size: "small"
+				size: "small",
+				notes: [
+					"Also in 2009, the W3C started discussing a unified pointer model for DOM Level 3 Events. The idea was that touch (including multi-touch), pen/stylus, and mouse events would be coalesced into a single model, making it easy to support all pointer types at once. However, this was abandoned because the goal at the time was to keep the spec as small as possible in order to become a recommendation faster."
+				]
 			},
 			{
 				date: "December 11, 2009",
 				title: "Touch events land in WebKit",
 				detail: "Google lands touch events in main WebKit repo",
 				img: "http://www.beevoz.com/wp-content/uploads/2014/12/Google_logo.png",
-				size: "medium"
+				size: "medium",
+				notes: [
+					"It was not until december of 2009 a year and a half after touch events landed in iPhone OS 2 that touch events landed in the main WebKit repository. While this was important for adoption in other browsers it still came with its own downsides. This was not apple's Touch Events. Touch events only landed in the main WebKit repository because google reverse engineered them for use in its android phones. Because of this important difference there would always be small difference between apple and webkit touch events especially across versions."
+				]
 			},
 			{
 				title: "2010",
@@ -31005,21 +31044,30 @@ window.arschmitz.timelines = {
 				title: "Firefox 4 Beta",
 				detail: "Proprietary touch events added",
 				img: "http://www.my-iguru.com/ipad/assets/images/ipad-wallpapers/computers/ipad-wallpaper-firefox.jpg",
-				size: "large"
+				size: "large",
+				notes: [
+					"In July of 2010  the Firefox 4 Beta was released. The firefox 4 beta contained their own proprietary version of touch events with different implementation api and semantics. Having competing implementations of the same event model would prove to be less than ideal for developers which had already begun coding to the apple version of touch events. now instead of 2 code paths 1 for touch and one for mouse we were now facing the possibility of having to worry about Apple Touch events, Firefox touch events plus mouse events."
+				]
 			},
 			{
 				date: "August 13, 2010",
 				title: "jQuery Mobile Announced",
 				detail: "jQuery Mobile is announced with the goal of fully supporting touch devices",
 				img: "http://blog.jquery.com/wp-content/uploads/2015/07/icn-jquerymobile-logo.png",
-				size: "medium"
+				size: "medium",
+				notes: [
+					"A month later jQuery Mobile was announced jQuery Mobile would launch with the goal of being a “A Touch-Optimized Web Framework HTML5-based user interface system designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.” While jQuery UI could not make the jump needed to support mobile. A new Project could jump in and test the mobile waters attempting to support all common touch devices available. It would be the first truly optimized mobile framework and would blaze the way in many areas including touch input and declarative markup and would include a full AJAX navigation frame work complete with page transitions."
+				]
 			},
 			{
 				date: "October 27, 2010",
 				title: "Touch Punch released",
 				detail: "jQuery UI Touch Punch is released adding support for touch events to jquery ui",
 				img: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0ac/33d/170d272.jpg",
-				size: "medium"
+				size: "medium",
+				notes: [
+					"2 months later touch support would come to jQuery UI thanks to a 3rd party add on known as jQuery UI Touch Punch. This worked by duck punching touch events to mouse events for jQuery UI to consume. While not a permanent or perfect solution it proved to work rather well and has since achieved widespread adoption with users of jQuery UI needing to support touch screens."
+				]
 			},
 			{
 				title: "2011",
@@ -31031,42 +31079,64 @@ window.arschmitz.timelines = {
 				title: "W3C Touch Events",
 				detail: "The W3C Begins work on touch events",
 				img: "http://www.designbyfire.com/images/img_w3c_14.gif",
-				size: "small"
+				size: "small",
+				notes: [
+					"This brings us to 2011 and year five in our 9 year journey, we are roughly at the halfway point of our journey chronologically however the drama is just beginning to ramp up. The interesting part of this tale is still yet to come. If the first part of this tale was climbing your local mountain the next stage in our Journey will be like a trek up everest. We will see more competing event models, splits in browser engines Drama in the W3C, Developer developer outrage on social media and the internet in general on a scale previously never seen before. This is about to get a lot bumpier folks so you better hold on.",
+					"at the end of January 2011 the W3C began work on a touch events specification. This work began with cooperation from the jQuery foundation being represented by scott gonzalez and every major browser vendor except apple. It is also worth noting here that all of the other browser vendors which did participate did not do so because they believed in the touch events specification or even that it was the right way forward for the web. This working group was formed with the goal of web compatibility in mind and creating a specification for touch events based on the current model as quickly as possible because they believed after the move without input from developers or any outside party to introduce these new events that it was in the best interest of the community to standardize as quickly as possible."
+				]
 			},
 			{
 				date: "March 22, 2011",
 				title: "Firefox 4",
 				detail: "Firefox 4 adds propriatary touch events with different api in stable chanel",
 				img: "http://media.today.ng/news/wp-content/uploads/2015/08/firefox.jpg",
-				size: "small"
+				size: "small",
+				notes: [
+					"Firefox 4 hits the stable channel completely with the proprietary touch events model introduced in the beta version. This meant the worst fears of many developers had come true. We now had several different browsers all with their own implementations of touch events that were not compatible.",
+					"The Mozilla model is much closer to the mouse event model and the abandoned W3C model in that the event objects are flat; properties such as event.pageX exist and there is no touch list. If you want to track multiple touches, you can do so via the event’s streamId."
+				]
 			},
 			{
 				date: "May 5, 2011",
 				title: "First Draft of touch events spec",
 				detail: "First working draft of the touch events spec is published with the W3C",
 				img: "http://no-thinglikeaustralia.com.au/images/W3C_logo-large.jpg",
-				size: "large"
+				size: "large",
+				notes: [
+					"May 5, 2011 the first draft of the touch events specification is published by the working group at the W3C it includes a basic specification based on the webkit implementation by google. however there are many questions from the working group about touch events that still need to be answered including a murky legality surrounding apple patents."
+				]
 			},
 			{
 				date: "September 13, 2011",
 				title: "IE 10 Developer Preview",
 				detail: "IE 10 Developer preview is released containing pointer events",
 				img: "http://screenshots.nl.sftcdn.net/nl/scrn/318000/318673/internet-explorer-10-14-700x402.jpg",
-				size: "large"
+				size: "large",
+				notes: [
+					"A few months after the publication of the first draft of the touch events specification another milestone would take place in the history of touch input which is the introduction of the IE 10 Developer Preview. This contained something completely new for the web. For better or worse we were about to see a whole new model for handling input in the browser including touch. ",
+					"The IE 10 Developer preview shipped with a new prefixed event type known as pointer events. Pointer events instead of trying to introduce yet another event type and another code path for developers to have to worry about had the goal of normalizing all different types of input into a single model and event type known as a pointer event. "
+				]
 			},
 			{
 				date: "November 11, 2011",
 				title: "jQuery Mobile 1.0",
 				detail: "jQuery Mobile 1.0 is released supporting touch events in all widgets",
 				img: "http://big.info/wp-content/uploads/2013/03/80508321d8ce3ba8aa264380bb7eba33.png",
-				size: "medium"
+				size: "medium",
+				notes: [
+					"Later on November 11, 2011 ( 11 - 11 - 11 ) jQuery Mobile 1.0 was released. jQuery Mobile introduced several important features at the time for supporting touch based input. It included an events abstraction known as Vmouse. vmouse normalized touch and mouse input into a single event model and included a fast click solution known as vclick. At the time it was the only such event abstraction available and was made available as a stand alone module as well. All of the widgets in jQuery Mobile utilized this normalized event model making it possible for them to support all types of input. In addition to the normalized events jQuery Mobile included several new custom gesture based events including tap, tap hold and swipe."
+				]
 			},
 			{
 				date: "November 16, 2011",
 				title: "Apple discloses patents for touch events",
 				detail: "",
 				img: "http://img1.wikia.nocookie.net/__cb20121102224024/logopedia/images/2/26/Apple_2003_logo.png",
-				size: "medium"
+				size: "medium",
+				notes: [
+					"Five days later apple finally disclosed their patents regarding touch events to the W3C so they could be reviewed. to see the potential legal ramification of these patents on the touch events specification which had begun work earlier in the year. This would begin a year and a half delay in the specification due to uncertainties it raised"
+
+				]
 			},
 			{
 				date: "November 23, 2011",

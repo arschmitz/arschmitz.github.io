@@ -18,6 +18,7 @@ window.sidescroll = (function() {
 		perspective	= hasPerspective && Modernizr.csstransforms3d,
 		// initialize function
 		init = function() {
+			alert();
 			$rows = $('#ss-container > div.ss-row');
 			$links = $('#ss-links > a');
 			var sticky = new Waypoint.Sticky({

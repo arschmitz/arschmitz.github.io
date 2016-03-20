@@ -252,7 +252,8 @@ $( function() {
 				}
 			} );
 		}
-		if ( params.template = "timeline.timeline" ) {
+		if ( params.template === "timelines.timeline" ) {
+
 			window.sidescroll.init();
 		}
 	} );
