@@ -15,7 +15,7 @@
 			<h2 class="project-name"><span class="bold">Name: </span>{{aboutMe.basic.name}}</h2>
 			<h4 class="project-website"><span class="bold">Age: </span>{{aboutMe.basic.age}}</h4>
 			<h4 class="project-api"><span class="bold">Profession: </span>{{aboutMe.basic.profession}}</h4>
-			<h4 class="project-issues"><span class="bold">Title: </span>{{aboutMe.basic.title}}</h4>
+			<h4 class="project-issues"><span class="bold">Current Hats 🎩: </span>{{aboutMe.basic.title}}</h4>
 		</div>
 	</div>
 	<div class="row">
@@ -73,7 +73,7 @@
 				<h4><span class="bold">Site: </span>{{this.url}}</h4>
 			</div>
 			<div class="col-xs-2">
-				<h4><span class="bold">Lib: </span>{{#each this.lib}}{{this}}{{/each}}</h4>
+				<h4><span class="bold">Lib: </span>{{#each this.lib}}{{this}},{{/each}}</h4>
 			</div>
 			<div class="col-xs-2">
 				<h4><span class="bold">Rank: </span>{{this.rank}}</h4>

@@ -55,14 +55,14 @@ window.gui = {
 		var parts = templateName.split( "." );
 
 		if ( !item ) {
-			gui.runTransition( arschmitz.templates[ parts[ 1 ] || parts[ 0 ] ]( arschmitz ) );
+			gui.runTransition( templates[ parts[ 1 ] || parts[ 0 ] ]( arschmitz ) );
 
 			if ( setHistory === false ) {
 				return;
 			}
 			gui.updateHistory( { "template": templateName, item: false }, "- " + templateName );
 		} else {
-			gui.runTransition( arschmitz.templates[ parts[ 1 ] || parts[ 0 ] ]( arschmitz[ parts[ 0 ] ][ item ] ) );
+			gui.runTransition( templates[ parts[ 1 ] || parts[ 0 ] ]( arschmitz[ parts[ 0 ] ][ item ] ) );
 
 			if ( setHistory === false ) {
 				return;
@@ -215,29 +215,16 @@ $( function() {
 		if ( params.template === "projects.project" || gui.queryParams().template === "sideProjects.sideProject" ) {
 			project = arschmitz[ params.template.split( "." )[ 0 ] ][ params.item ];
 			project.type = params.template.split( "." )[ 0 ];
-			if ( project.libScore ) {
-				$.ajax( {
-					url: "templates/libScore.html",
-					success: function( data ) {
-						var content = Handlebars.compile( data );
-						$( ".libscore-box" ).append( content( project ) );
-						gui.addJSON();
-					}
-				} );
-			}
+
 			$.ajax( {
 				url: "https://api.github.com/repos/" + project.links.github.split( ".com/" )[ 1 ] + "/issues",
 				success: function( data ) {
 					arschmitz[ project.type ][ params.item ].currentIssues = data;
-
-					$.ajax( {
-						"url": "templates/issues.html",
-						success: function( data ) {
-							var content = Handlebars.compile( data );
-							$( ".issue-box" ).append( content( project ) );
-							gui.addJSON();
-						}
-					} );
+					console.log( data );
+					var content = templates.issues( arschmitz[ project.type ][ params.item ] );
+					console.log( content );
+					$( ".issue-box" ).append( content );
+					gui.addJSON();
 				},
 				error: function() {
 					arschmitz[ project.type ][ params.item ].currentIssues = {};

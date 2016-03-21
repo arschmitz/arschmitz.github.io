@@ -17,7 +17,7 @@ Handlebars.registerHelper( "title", function( template, item ) {
 	var link = "<h1 class=\"site-title\">> <a href=\"/?gui&template=main\" data-call=\"gui.render( 'main' );\">arschmitz</a>.";
 
 	if ( item ) {
-		item = /^\[/.test( item ) ? item : "." + item;
+		item = /^\[/.test( item ) ? item : /^\./.test( item ) ? item: "." + item;
 		link += "<a href=\"/?gui&template=" + template + "\" data-call=\"gui.render( '" + template + "' )\">" + template.split( "." )[ 0 ] + "</a>" + item;
 	} else {
 		link += template.split( "." )[ 0 ];

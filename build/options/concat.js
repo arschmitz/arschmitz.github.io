@@ -2,8 +2,7 @@ module.exports = {
 	js: {
 		src: [
 			"external/handlebars/handlebars.runtime.js",
-			"external/jquery/jquery.js",
-			"external/jquery-ui/jquery-ui.js",
+			"dist/site.js",
 			"src/helpers.js",
 			"src/prompt.js",
 			"src/gui.js",

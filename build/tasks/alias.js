@@ -2,6 +2,7 @@ module.exports = function( grunt ) {
 
 grunt.registerTask( "default", [ "build", "test" ] );
 grunt.registerTask( "build", [
+	"site",
 	"handlebars",
 	"concat",
 	"cssmin",

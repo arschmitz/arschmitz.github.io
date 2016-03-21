@@ -99,7 +99,7 @@ window.arschmitz.timelines = {
 				date: "June 29, 2007",
 				title: "First generation iPhone",
 				detail: "Only days later the first iPhone is released",
-				img: "http://www.ztechnews.com/wp-content/uploads/2012/12/64.jpg",
+				img: "/images/iphone1.jpg",
 				size: "medium",
 				notes: [
 					"Only 12 days later on June 29 the first iPhone was released to a lot of hype. what many of you may not remember though was that this was not nearly the iPhone many know and love today while it had “a fully functioning browser” it lacked many features including any sort of touch manipulation ability, it however showed the possibility of what a touchscreen phone could be and how it could operate."
@@ -185,7 +185,7 @@ window.arschmitz.timelines = {
 				date: "July 6, 2010",
 				title: "Firefox 4 Beta",
 				detail: "Proprietary touch events added",
-				img: "http://www.my-iguru.com/ipad/assets/images/ipad-wallpapers/computers/ipad-wallpaper-firefox.jpg",
+				img: "/images/firefoxbeta.png",
 				size: "large",
 				notes: [
 					"In July of 2010  the Firefox 4 Beta was released. The firefox 4 beta contained their own proprietary version of touch events with different implementation api and semantics. Having competing implementations of the same event model would prove to be less than ideal for developers which had already begun coding to the apple version of touch events. now instead of 2 code paths 1 for touch and one for mouse we were now facing the possibility of having to worry about Apple Touch events, Firefox touch events plus mouse events."
@@ -205,7 +205,7 @@ window.arschmitz.timelines = {
 				date: "October 27, 2010",
 				title: "Touch Punch released",
 				detail: "jQuery UI Touch Punch is released adding support for touch events to jquery ui",
-				img: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0ac/33d/170d272.jpg",
+				img: "https://avatars2.githubusercontent.com/u/35775?v=3&s=460",
 				size: "medium",
 				notes: [
 					"2 months later touch support would come to jQuery UI thanks to a 3rd party add on known as jQuery UI Touch Punch. This worked by duck punching touch events to mouse events for jQuery UI to consume. While not a permanent or perfect solution it proved to work rather well and has since achieved widespread adoption with users of jQuery UI needing to support touch screens."
@@ -231,7 +231,7 @@ window.arschmitz.timelines = {
 				date: "March 22, 2011",
 				title: "Firefox 4",
 				detail: "Firefox 4 adds propriatary touch events with different api in stable chanel",
-				img: "http://media.today.ng/news/wp-content/uploads/2015/08/firefox.jpg",
+				img: "/images/firefoxlogo.jpg",
 				size: "small",
 				notes: [
 					"Firefox 4 hits the stable channel completely with the proprietary touch events model introduced in the beta version. This meant the worst fears of many developers had come true. We now had several different browsers all with their own implementations of touch events that were not compatible.",
@@ -341,7 +341,7 @@ window.arschmitz.timelines = {
 				date: "September 27, 2012",
 				title: "Microsoft submits Pointer Events proposal",
 				detail: "Microsoft submits the Pointer Events proposal to the W3C",
-				img: "http://ragzon.com/wp-content/uploads/2015/08/microsoft-logo-3.jpg",
+				img: "https://www.w3.org/TR/pointerevents/pointer.png",
 				size: "large",
 				notes: [
 					"a couple months forward on our journey in November the W3C formed the pointer events working group to pursue the proposal submitted by microsoft. The group includes representation from all of the major browser vendors once again. Well except of course apple…"
@@ -384,7 +384,7 @@ window.arschmitz.timelines = {
 				date: "January 8, 2013",
 				title: "Firefox removes propriatary events",
 				detail: "Firefox removes propriatary version of touch events",
-				img: "http://images.techhive.com/images/article/2013/02/firefox_logo-100026079-gallery.jpg",
+				img: "/images/firefoxlogo.jpg",
 				size: "small"
 			},
 			{

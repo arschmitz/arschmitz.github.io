@@ -11,9 +11,8 @@
 	"trailing": true,
 	"undef": true,
 	"unused": true,
-
+	"esnext": true,
 	"browser": true,
-	"es3": true,
 	"jquery": true,
 	"node": true,
 

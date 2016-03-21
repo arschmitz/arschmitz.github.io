@@ -9,7 +9,7 @@ module.exports = {
 				var pieces = filePath.split( "/" );
 				return pieces[ pieces.length - 1 ].split( "_" )[ 1 ].split( "." )[ 0 ];
 			},
-			namespace: "arschmitz.templates"
+			namespace: "templates"
 		},
 		files: {
 			"dist/template.js": "templates/*.html"

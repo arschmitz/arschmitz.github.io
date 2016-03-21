@@ -6,13 +6,13 @@
 				<h1 class="col-xs-5">
 					<span class="bold">Name: </span>
 				</h1>
-				<h1 class="col-xs-7">{{name}}</h1>
+				<h1 class="col-xs-6">{{name}}</h1>
 			</div>
 		</div>
 		<div class="col-lg-6 col-sm-6 col-xs-12 float-box project-top">
 			<div class="row">
 				<h1 class="col-xs-3"><span class="bold project-logo-label">Logo: </span> </h1>
-				<div class="col-xs-9"><img class="project-logo" src="{{logo}}"/></div>
+				<div class="col-xs-8"><img class="project-logo" src="{{logo}}"/></div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 float-box project-second" {{json "projects" repoName ".links"}}>
@@ -37,10 +37,23 @@
 		</div>
 	</div>
 	<div class="row">
-		{{#if builtWith}}
+		{{#if libScore}}
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-box libscore-box">
 			<h2><span class="bold">Sites built with {{name}}:</span></h2>
-
+			<ul class="styled-list" {{json type repoName ".libScore.short"}}>
+				{{#each libScore.short}}
+				<li class="libScore-item" {{json ../type ../repoName ".libScore.short['" @key "']"}}>
+					<a href="http://{{this.url}}" class="row">
+						<div class="col-xs-10">
+							<h4><span class="bold">Site: </span>{{this.url}}</h4>
+						</div>
+						<div class="col-xs-2">
+							<h4><span class="bold">Rank: </span>{{this.rank}}</h4>
+						</div>
+					</a>
+				</li>
+				{{/each}}
+			</ul>
 		</div>
 		{{/if}}
 		<div class="{{#if builtWith}}col-md-6{{/if}} col-xs-12 float-box issue-box">
