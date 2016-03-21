@@ -572,7 +572,7 @@ this["templates"]["resume"] = Handlebars.template({"1":function(depth0,helpers,p
     + "</h5>\n					</div>\n					<div class=\"col-sm-9 col-xs-12\">\n						"
     + alias1((helpers.h || (depth0 && depth0.h) || alias2).call(depth0,3,"Event",((stack1 = (depth0 != null ? depth0.basic : depth0)) != null ? stack1.eventName : stack1),{"name":"h","hash":{},"data":data}))
     + "\n						"
-    + alias1((helpers.h || (depth0 && depth0.h) || alias2).call(depth0,4,"Title",((stack1 = (depth0 != null ? depth0.basic : depth0)) != null ? stack1.title : stack1),{"name":"h","hash":{},"data":data}))
+    + alias1((helpers.h || (depth0 && depth0.h) || alias2).call(depth0,4,"Title",((stack1 = (depth0 != null ? depth0.basic : depth0)) != null ? stack1.talkTitle : stack1),{"name":"h","hash":{},"data":data}))
     + "\n					</div>\n				</div>\n";
 },"14":function(depth0,helpers,partials,data) {
     var alias1=helpers.helperMissing, alias2=this.escapeExpression;

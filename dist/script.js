@@ -1578,11 +1578,11 @@ window.arschmitz={
             {
                 "url": "xhamster.com",
                 "rank": 92,
-                "platform": "mobile",
+                "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/xhamster.com",
                 "lib": [
-                    "Hammer",
-                    "jQuery"
+                    "jQuery",
+                    "Hammer"
                 ]
             },
             {
@@ -1615,12 +1615,12 @@ window.arschmitz={
             {
                 "url": "nytimes.com",
                 "rank": 96,
-                "platform": "mobile",
+                "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/nytimes.com",
                 "lib": [
-                    "Hammer",
                     "jQuery",
-                    "$.mobile"
+                    "$.mobile",
+                    "Hammer"
                 ]
             },
             {
@@ -2353,7 +2353,11 @@ window.arschmitz={
                         "url": "epicurious.com",
                         "rank": 1963,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/epicurious.com"
+                        "resource": "http://api.libscore.com/v1/sites/epicurious.com",
+                        "lib": [
+                            "$.mobile",
+                            "Hammer"
+                        ]
                     },
                     {
                         "url": "rimanews.com",
@@ -2497,7 +2501,11 @@ window.arschmitz={
                         "url": "sony.com",
                         "rank": 2644,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sony.com"
+                        "resource": "http://api.libscore.com/v1/sites/sony.com",
+                        "lib": [
+                            "$.mobile",
+                            "Hammer"
+                        ]
                     },
                     {
                         "url": "enjoydressup.com",
@@ -3015,7 +3023,11 @@ window.arschmitz={
                         "url": "epicurious.com",
                         "rank": 1963,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/epicurious.com"
+                        "resource": "http://api.libscore.com/v1/sites/epicurious.com",
+                        "lib": [
+                            "$.mobile",
+                            "Hammer"
+                        ]
                     },
                     {
                         "url": "rimanews.com",
@@ -3547,7 +3559,12 @@ window.arschmitz={
                         "url": "sberbank.ru",
                         "rank": 328,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru"
+                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "Hammer"
+                        ]
                     },
                     {
                         "url": "mashable.com",
@@ -3653,7 +3670,12 @@ window.arschmitz={
                         "url": "hurriyet.com.tr",
                         "rank": 370,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr"
+                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "Hammer"
+                        ]
                     },
                     {
                         "url": "kinogo.co",
@@ -3830,7 +3852,12 @@ window.arschmitz={
                         "url": "playstation.com",
                         "rank": 436,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/playstation.com"
+                        "resource": "http://api.libscore.com/v1/sites/playstation.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "Hammer"
+                        ]
                     },
                     {
                         "url": "infusionsoft.com",
@@ -3876,7 +3903,12 @@ window.arschmitz={
                         "url": "lowes.com",
                         "rank": 453,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/lowes.com"
+                        "resource": "http://api.libscore.com/v1/sites/lowes.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "Hammer"
+                        ]
                     },
                     {
                         "url": "shopclues.com",
@@ -4537,7 +4569,12 @@ window.arschmitz={
                         "url": "sberbank.ru",
                         "rank": 328,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru"
+                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "Hammer"
+                        ]
                     },
                     {
                         "url": "mashable.com",
@@ -4643,7 +4680,12 @@ window.arschmitz={
                         "url": "hurriyet.com.tr",
                         "rank": 370,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr"
+                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "Hammer"
+                        ]
                     },
                     {
                         "url": "kinogo.co",
@@ -4789,22 +4831,13 @@ window.arschmitz={
                         "url": "xhamster.com",
                         "rank": 92,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/xhamster.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/xhamster.com"
                     },
                     {
                         "url": "nytimes.com",
                         "rank": 96,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/nytimes.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/nytimes.com"
                     },
                     {
                         "url": "dailymail.co.uk",
@@ -4819,145 +4852,85 @@ window.arschmitz={
                         "url": "walmart.com",
                         "rank": 144,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/walmart.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/walmart.com"
                     },
                     {
                         "url": "washingtonpost.com",
                         "rank": 182,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/washingtonpost.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/washingtonpost.com"
                     },
                     {
                         "url": "rambler.ru",
                         "rank": 259,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/rambler.ru",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/rambler.ru"
                     },
                     {
                         "url": "capitalone.com",
                         "rank": 269,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/capitalone.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/capitalone.com"
                     },
                     {
                         "url": "homedepot.com",
                         "rank": 270,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/homedepot.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/homedepot.com"
                     },
                     {
                         "url": "sberbank.ru",
                         "rank": 328,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru"
                     },
                     {
                         "url": "hurriyet.com.tr",
                         "rank": 370,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr"
                     },
                     {
                         "url": "buzzlie.com",
                         "rank": 391,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/buzzlie.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/buzzlie.com"
                     },
                     {
                         "url": "expedia.com",
                         "rank": 428,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/expedia.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/expedia.com"
                     },
                     {
                         "url": "playstation.com",
                         "rank": 436,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/playstation.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/playstation.com"
                     },
                     {
                         "url": "lowes.com",
                         "rank": 453,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/lowes.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/lowes.com"
                     },
                     {
                         "url": "repubblica.it",
                         "rank": 481,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/repubblica.it",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/repubblica.it"
                     },
                     {
                         "url": "free.fr",
                         "rank": 487,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/free.fr",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/free.fr"
                     },
                     {
                         "url": "theverge.com",
                         "rank": 510,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/theverge.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/theverge.com"
                     },
                     {
                         "url": "jimdo.com",
@@ -4972,147 +4945,85 @@ window.arschmitz={
                         "url": "independent.co.uk",
                         "rank": 561,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/independent.co.uk",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/independent.co.uk"
                     },
                     {
                         "url": "ensonhaber.com",
                         "rank": 630,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ensonhaber.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/ensonhaber.com"
                     },
                     {
                         "url": "asana.com",
                         "rank": 663,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/asana.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/asana.com"
                     },
                     {
                         "url": "twoo.com",
                         "rank": 686,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/twoo.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/twoo.com"
                     },
                     {
                         "url": "cnbc.com",
                         "rank": 689,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/cnbc.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/cnbc.com"
                     },
                     {
                         "url": "sears.com",
                         "rank": 720,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/sears.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/sears.com"
                     },
                     {
                         "url": "eonline.com",
                         "rank": 731,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/eonline.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/eonline.com"
                     },
                     {
                         "url": "bodybuilding.com",
                         "rank": 735,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bodybuilding.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/bodybuilding.com"
                     },
                     {
                         "url": "wattpad.com",
                         "rank": 767,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/wattpad.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/wattpad.com"
                     },
                     {
                         "url": "webex.com",
                         "rank": 779,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/webex.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/webex.com"
                     },
                     {
                         "url": "thedailybeast.com",
                         "rank": 824,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/thedailybeast.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/thedailybeast.com"
                     },
                     {
                         "url": "wired.com",
                         "rank": 828,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/wired.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/wired.com"
                     },
                     {
                         "url": "vox.com",
                         "rank": 872,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/vox.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/vox.com"
                     },
                     {
                         "url": "whitepages.com",
                         "rank": 876,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/whitepages.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/whitepages.com"
                     },
                     {
                         "url": "android.com",
@@ -5127,96 +5038,55 @@ window.arschmitz={
                         "url": "hilton.com",
                         "rank": 885,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/hilton.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/hilton.com"
                     },
                     {
                         "url": "lefigaro.fr",
                         "rank": 957,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/lefigaro.fr",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/lefigaro.fr"
                     },
                     {
                         "url": "usnews.com",
                         "rank": 1037,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/usnews.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/usnews.com"
                     },
                     {
                         "url": "gumtree.com",
                         "rank": 1039,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/gumtree.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/gumtree.com"
                     },
                     {
                         "url": "lloydsbank.co.uk",
                         "rank": 1119,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/lloydsbank.co.uk",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/lloydsbank.co.uk"
                     },
                     {
                         "url": "jw.org",
                         "rank": 1158,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/jw.org",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/jw.org"
                     },
                     {
                         "url": "samsclub.com",
                         "rank": 1159,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/samsclub.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/samsclub.com"
                     },
                     {
                         "url": "foxsports.com",
                         "rank": 1193,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/foxsports.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/foxsports.com"
                     },
                     {
                         "url": "littlethings.com",
                         "rank": 1201,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/littlethings.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/littlethings.com"
                     },
                     {
                         "url": "mail.com",
@@ -5231,43 +5101,25 @@ window.arschmitz={
                         "url": "postbank.de",
                         "rank": 1362,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/postbank.de",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/postbank.de"
                     },
                     {
                         "url": "msnbc.com",
                         "rank": 1364,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/msnbc.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/msnbc.com"
                     },
                     {
                         "url": "airasia.com",
                         "rank": 1418,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/airasia.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/airasia.com"
                     },
                     {
                         "url": "linternaute.com",
                         "rank": 1420,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/linternaute.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/linternaute.com"
                     },
                     {
                         "url": "lightinthebox.com",
@@ -5354,11 +5206,7 @@ window.arschmitz={
                         "url": "careerbuilder.com",
                         "rank": 1647,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/careerbuilder.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/careerbuilder.com"
                     },
                     {
                         "url": "infobae.com",
@@ -5436,11 +5284,7 @@ window.arschmitz={
                         "url": "easyjet.com",
                         "rank": 1784,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/easyjet.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/easyjet.com"
                     },
                     {
                         "url": "kmart.com",
@@ -5455,11 +5299,7 @@ window.arschmitz={
                         "url": "elconfidencial.com",
                         "rank": 1915,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/elconfidencial.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/elconfidencial.com"
                     },
                     {
                         "url": "rappler.com",
@@ -5492,31 +5332,19 @@ window.arschmitz={
                         "url": "epicurious.com",
                         "rank": 1963,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/epicurious.com",
-                        "lib": [
-                            "Hammer",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/epicurious.com"
                     },
                     {
                         "url": "urbanoutfitters.com",
                         "rank": 2006,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/urbanoutfitters.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/urbanoutfitters.com"
                     },
                     {
                         "url": "zaman.com.tr",
                         "rank": 2023,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/zaman.com.tr",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/zaman.com.tr"
                     },
                     {
                         "url": "sap.com",
@@ -5531,11 +5359,7 @@ window.arschmitz={
                         "url": "journaldesfemmes.com",
                         "rank": 2048,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/journaldesfemmes.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/journaldesfemmes.com"
                     },
                     {
                         "url": "dickssportinggoods.com",
@@ -5577,11 +5401,7 @@ window.arschmitz={
                         "url": "charter.net",
                         "rank": 2172,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/charter.net",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/charter.net"
                     },
                     {
                         "url": "gilt.com",
@@ -5614,11 +5434,7 @@ window.arschmitz={
                         "url": "redbubble.com",
                         "rank": 2238,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/redbubble.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/redbubble.com"
                     },
                     {
                         "url": "vip.com",
@@ -5642,11 +5458,7 @@ window.arschmitz={
                         "url": "deutsche-bank.de",
                         "rank": 2367,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/deutsche-bank.de",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/deutsche-bank.de"
                     },
                     {
                         "url": "sonymobile.com",
@@ -5661,21 +5473,13 @@ window.arschmitz={
                         "url": "extra.com.br",
                         "rank": 2431,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/extra.com.br",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/extra.com.br"
                     },
                     {
                         "url": "letras.mus.br",
                         "rank": 2434,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/letras.mus.br",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/letras.mus.br"
                     },
                     {
                         "url": "polygon.com",
@@ -5699,11 +5503,7 @@ window.arschmitz={
                         "url": "tass.ru",
                         "rank": 2493,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/tass.ru",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/tass.ru"
                     },
                     {
                         "url": "sheknows.com",
@@ -5718,31 +5518,19 @@ window.arschmitz={
                         "url": "allmusic.com",
                         "rank": 2533,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/allmusic.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/allmusic.com"
                     },
                     {
                         "url": "mediamarkt.de",
                         "rank": 2552,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/mediamarkt.de",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/mediamarkt.de"
                     },
                     {
                         "url": "sbrf.ru",
                         "rank": 2583,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sbrf.ru",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/sbrf.ru"
                     },
                     {
                         "url": "boursorama.com",
@@ -5757,11 +5545,7 @@ window.arschmitz={
                         "url": "sony.com",
                         "rank": 2644,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sony.com",
-                        "lib": [
-                            "Hammer",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/sony.com"
                     }
                 ],
                 "short": [
@@ -5769,22 +5553,13 @@ window.arschmitz={
                         "url": "xhamster.com",
                         "rank": 92,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/xhamster.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/xhamster.com"
                     },
                     {
                         "url": "nytimes.com",
                         "rank": 96,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/nytimes.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/nytimes.com"
                     },
                     {
                         "url": "dailymail.co.uk",
@@ -5799,145 +5574,85 @@ window.arschmitz={
                         "url": "walmart.com",
                         "rank": 144,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/walmart.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/walmart.com"
                     },
                     {
                         "url": "washingtonpost.com",
                         "rank": 182,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/washingtonpost.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/washingtonpost.com"
                     },
                     {
                         "url": "rambler.ru",
                         "rank": 259,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/rambler.ru",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/rambler.ru"
                     },
                     {
                         "url": "capitalone.com",
                         "rank": 269,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/capitalone.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/capitalone.com"
                     },
                     {
                         "url": "homedepot.com",
                         "rank": 270,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/homedepot.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/homedepot.com"
                     },
                     {
                         "url": "sberbank.ru",
                         "rank": 328,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru"
                     },
                     {
                         "url": "hurriyet.com.tr",
                         "rank": 370,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr"
                     },
                     {
                         "url": "buzzlie.com",
                         "rank": 391,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/buzzlie.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/buzzlie.com"
                     },
                     {
                         "url": "expedia.com",
                         "rank": 428,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/expedia.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/expedia.com"
                     },
                     {
                         "url": "playstation.com",
                         "rank": 436,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/playstation.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/playstation.com"
                     },
                     {
                         "url": "lowes.com",
                         "rank": 453,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/lowes.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/lowes.com"
                     },
                     {
                         "url": "repubblica.it",
                         "rank": 481,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/repubblica.it",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/repubblica.it"
                     },
                     {
                         "url": "free.fr",
                         "rank": 487,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/free.fr",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/free.fr"
                     },
                     {
                         "url": "theverge.com",
                         "rank": 510,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/theverge.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/theverge.com"
                     },
                     {
                         "url": "jimdo.com",
@@ -5952,147 +5667,85 @@ window.arschmitz={
                         "url": "independent.co.uk",
                         "rank": 561,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/independent.co.uk",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/independent.co.uk"
                     },
                     {
                         "url": "ensonhaber.com",
                         "rank": 630,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ensonhaber.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/ensonhaber.com"
                     },
                     {
                         "url": "asana.com",
                         "rank": 663,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/asana.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/asana.com"
                     },
                     {
                         "url": "twoo.com",
                         "rank": 686,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/twoo.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/twoo.com"
                     },
                     {
                         "url": "cnbc.com",
                         "rank": 689,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/cnbc.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/cnbc.com"
                     },
                     {
                         "url": "sears.com",
                         "rank": 720,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/sears.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/sears.com"
                     },
                     {
                         "url": "eonline.com",
                         "rank": 731,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/eonline.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/eonline.com"
                     },
                     {
                         "url": "bodybuilding.com",
                         "rank": 735,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bodybuilding.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/bodybuilding.com"
                     },
                     {
                         "url": "wattpad.com",
                         "rank": 767,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/wattpad.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/wattpad.com"
                     },
                     {
                         "url": "webex.com",
                         "rank": 779,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/webex.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/webex.com"
                     },
                     {
                         "url": "thedailybeast.com",
                         "rank": 824,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/thedailybeast.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/thedailybeast.com"
                     },
                     {
                         "url": "wired.com",
                         "rank": 828,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/wired.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/wired.com"
                     },
                     {
                         "url": "vox.com",
                         "rank": 872,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/vox.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/vox.com"
                     },
                     {
                         "url": "whitepages.com",
                         "rank": 876,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/whitepages.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/whitepages.com"
                     },
                     {
                         "url": "android.com",
@@ -6107,96 +5760,55 @@ window.arschmitz={
                         "url": "hilton.com",
                         "rank": 885,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/hilton.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/hilton.com"
                     },
                     {
                         "url": "lefigaro.fr",
                         "rank": 957,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/lefigaro.fr",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/lefigaro.fr"
                     },
                     {
                         "url": "usnews.com",
                         "rank": 1037,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/usnews.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/usnews.com"
                     },
                     {
                         "url": "gumtree.com",
                         "rank": 1039,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/gumtree.com",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/gumtree.com"
                     },
                     {
                         "url": "lloydsbank.co.uk",
                         "rank": 1119,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/lloydsbank.co.uk",
-                        "lib": [
-                            "Hammer",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/lloydsbank.co.uk"
                     },
                     {
                         "url": "jw.org",
                         "rank": 1158,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/jw.org",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/jw.org"
                     },
                     {
                         "url": "samsclub.com",
                         "rank": 1159,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/samsclub.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/samsclub.com"
                     },
                     {
                         "url": "foxsports.com",
                         "rank": 1193,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/foxsports.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/foxsports.com"
                     },
                     {
                         "url": "littlethings.com",
                         "rank": 1201,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/littlethings.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/littlethings.com"
                     },
                     {
                         "url": "mail.com",
@@ -6211,43 +5823,25 @@ window.arschmitz={
                         "url": "postbank.de",
                         "rank": 1362,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/postbank.de",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/postbank.de"
                     },
                     {
                         "url": "msnbc.com",
                         "rank": 1364,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/msnbc.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui",
-                            "jQuery"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/msnbc.com"
                     },
                     {
                         "url": "airasia.com",
                         "rank": 1418,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/airasia.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/airasia.com"
                     },
                     {
                         "url": "linternaute.com",
                         "rank": 1420,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/linternaute.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/linternaute.com"
                     },
                     {
                         "url": "lightinthebox.com",
@@ -6334,11 +5928,7 @@ window.arschmitz={
                         "url": "careerbuilder.com",
                         "rank": 1647,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/careerbuilder.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/careerbuilder.com"
                     },
                     {
                         "url": "infobae.com",
@@ -6416,11 +6006,7 @@ window.arschmitz={
                         "url": "easyjet.com",
                         "rank": 1784,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/easyjet.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/easyjet.com"
                     },
                     {
                         "url": "kmart.com",
@@ -6435,11 +6021,7 @@ window.arschmitz={
                         "url": "elconfidencial.com",
                         "rank": 1915,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/elconfidencial.com",
-                        "lib": [
-                            "Hammer",
-                            "$.ui"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/elconfidencial.com"
                     },
                     {
                         "url": "rappler.com",
@@ -6712,6 +6294,42 @@ window.arschmitz={
                 "video": "bZTOV-55ivM",
                 "description": "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times."
             },
+            "deque": {
+                "key": "accessability-summit",
+                "basic": {
+                    "date": "October 2013",
+                    "eventName": "Accessability Summit - Washington D.C.",
+                    "slides": "unavailable",
+                    "website": false,
+                    "talkTitle": "Accessabile mobile sites with jQuery Mobile"
+                },
+                "description": "Making accessible websites and apps is easy with jQuery Mobile, It's all baked in!",
+                "video": "bZTOV-55ivM"
+            },
+            "deque-workshop": {
+                "key": "accessability-workshop",
+                "basic": {
+                    "date": "October 2013",
+                    "eventName": "Accessability Workshop - Washington D.C.",
+                    "slides": "unavailable",
+                    "website": false,
+                    "talkTitle": "jQuery UI Accessability Challenge"
+                },
+                "description": "Work shop with teams competeing to solve accessability problems in jQuery ui.",
+                "video": "bZTOV-55ivM"
+            },
+            "amsterdam": {
+                "key": "amsterdam",
+                "basic": {
+                    "date": "November 2013",
+                    "eventName": "Booking.com - Amsterdam",
+                    "slides": "http://www.slideshare.net/AlexanderSchmitz/austin-26252266",
+                    "website": false,
+                    "talkTitle": "jQuery Mobile: Optimizing Performance"
+                },
+                "description": "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
+                "video": "bZTOV-55ivM"
+            },
             "sandiego": {
                 "key": "sandiego",
                 "basic": {
@@ -6736,16 +6354,28 @@ window.arschmitz={
                 "video": "bZTOV-55ivM",
                 "description": "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times."
             },
-            "amsterdam": {
-                "key": "amsterdam",
+            "pwmWebDevJquery": {
+                "key": "pwmWebDevJquery",
                 "basic": {
-                    "date": "November 2013",
-                    "eventName": "Booking.com - Amsterdam",
-                    "slides": "http://www.slideshare.net/AlexanderSchmitz/austin-26252266",
-                    "website": false,
-                    "talkTitle": "jQuery Mobile: Optimizing Performance"
+                    "eventName": "Portland Web Developer Meetup",
+                    "date": "March 2014",
+                    "website": "http://www.portlandwebworks.com/blog/fun-times-webdev-meeting",
+                    "talkTitle": "jQuery Mobile: Optimizing Performance V2",
+                    "slides": "http://presentations.arschmitz.me/mobile-performance/"
                 },
-                "description": "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
+                "video": "bZTOV-55ivM",
+                "description": "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times."
+            },
+            "pwmWebDevAccessability": {
+                "key": "pwmWebDevJquery",
+                "basic": {
+                    "eventName": "Portland Web Developer Meetup",
+                    "slides": "unavailable",
+                    "date": "May 2014",
+                    "talkTitle": "Accessible Slide Decks with jQuery Mobile",
+                    "website": false
+                },
+                "description": "Making your slide deck with jQuery Mobile is simple and accessible!",
                 "video": "bZTOV-55ivM"
             },
             "chicago": {
@@ -6760,17 +6390,17 @@ window.arschmitz={
                 "description": "jQuery Mobile 1.5 brings lots of new features and a revamped navigation system, more performance optimization possibilities for advanced users and adoption of more widgets from jQuery UI. Lately though, the question I am asked isn't about what's going to be in 1.6, 1.7, and so on, but about the future of jQuery Mobile after the merger with jQuery UI, and what the future is for the jQuery Mobile project. I’ll go into our current road map and details (as many as are available right now) about the future of jQuery Mobile and what it will look like after 2.0",
                 "video": "2qF7kW9SdJQ"
             },
-            "pwmWebDevJquery": {
-                "key": "pwmWebDevJquery",
+            "jssummit2014": {
+                "key": "jssummit2014",
                 "basic": {
-                    "eventName": "Portland Web Developer Meetup",
-                    "date": "March 2014",
-                    "website": "http://www.portlandwebworks.com/blog/fun-times-webdev-meeting",
-                    "talkTitle": "jQuery Foundation overview / Mobile performance",
-                    "slides": "http://presentations.arschmitz.me/jquery-foundation/"
+                    "eventName": "JavaScript Summit 2014",
+                    "talkTitle": "The State of jQuery UI & Mobile",
+                    "slides": "http://presentations.arschmitz.me/path-to-2.0-ee/",
+                    "date": "November 2014",
+                    "website": "http://environmentsforhumans.com/2014/javascript-summit/"
                 },
-                "video": "bZTOV-55ivM",
-                "description": "In depth talk on the jQuery Foundation, jQuery Mobile, and mobile performance in general"
+                "description": "It's an exciting time for jQuery UI and Mobile. Big changes are coming to jQuery Mobile and jQuery UI this year as the projects start to merge. But what exactly does this mean? What is the future of the two libraries? Which one is going away? Are either going away? These and many others are the type of questions I have been receiving from many people in the community since we started talking about merging the projects in the spring of 2013. I will address these questions and many more, will give you some history behind the changes we are making as well as give some insight into the direction the projects are taking, and how we’re going to make integration with both projects easier for developers.",
+                "video": "bZTOV-55ivM"
             },
             "pwmWebDevNodeCLI": {
                 "key": "pwmWebDevJquery",
@@ -6784,16 +6414,16 @@ window.arschmitz={
                 "description": "Using node as a CLI on shared hosting / Nodeception",
                 "video": "bZTOV-55ivM"
             },
-            "jssummit2014": {
-                "key": "jssummit2014",
+            "portlandWebDevChassis": {
+                "key": "Chassis-Portland",
                 "basic": {
-                    "eventName": "JavaScript Summit 2014",
-                    "talkTitle": "The State of jQuery UI & Mobile",
-                    "slides": "http://presentations.arschmitz.me/path-to-2.0-ee/",
-                    "date": "November 2014",
-                    "website": "http://environmentsforhumans.com/2014/javascript-summit/"
+                    "eventName": "Portland Web Developer Meetup",
+                    "date": "February 2015",
+                    "website": false,
+                    "talkTitle": "Chassis: Yet Another CSS Framework",
+                    "slides": "https://docs.google.com/presentation/d/1_15yz1uT-oq17ZNsZTczGgwUh-TP15gGO6DFcz_XTJU/edit"
                 },
-                "description": "It's an exciting time for jQuery UI and Mobile. Big changes are coming to jQuery Mobile and jQuery UI this year as the projects start to merge. But what exactly does this mean? What is the future of the two libraries? Which one is going away? Are either going away? These and many others are the type of questions I have been receiving from many people in the community since we started talking about merging the projects in the spring of 2013. I will address these questions and many more, will give you some history behind the changes we are making as well as give some insight into the direction the projects are taking, and how we’re going to make integration with both projects easier for developers.",
+                "description": "Chassis seeks to establish a standard of markup and structure for common components that can be used by both CSS frameworks and JS component libraries to allow for complete interoperability, modularity, and justice, for all. Throughout this process we've been collaborating with a variety of projects and community members including: Topcoat, Zurb Foundation, Cardinal, Famo.us, Yandex, Wordpress, Automattic, 10up, 960grid, Unsemantic, jQuery Mobile, jQuery UI, Intel App Framework, and Cascade CSS, as well as some collaborators from Adobe, Hulu, and Bootstrap.",
                 "video": "bZTOV-55ivM"
             },
             "jssummit2015": {
@@ -6808,13 +6438,25 @@ window.arschmitz={
                 "description": "Chassis seeks to establish a standard of markup and structure for common components that can be used by both CSS frameworks and JS component libraries to allow for complete interoperability, modularity, and justice, for all. Throughout this process we've been collaborating with a variety of projects and community members including: Topcoat, Zurb Foundation, Cardinal, Famo.us, Yandex, Wordpress, Automattic, 10up, 960grid, Unsemantic, jQuery Mobile, jQuery UI, Intel App Framework, and Cascade CSS, as well as some collaborators from Adobe, Hulu, and Bootstrap.",
                 "video": "bZTOV-55ivM"
             },
-            "devAndDesign": {
+            "devAndDesignDay1": {
                 "key": "devAndDesign",
                 "basic": {
-                    "eventName": "Dev and Design",
-                    "date": "September 03 - 04, 2015",
+                    "eventName": "Dev and Design Day 1",
+                    "date": "September 2015",
                     "website": "http://www.devandesign.me/",
                     "talkTitle": "You Can Touch This!",
+                    "slides": "http://arschmitz.me.10.0.1.53.xip.io/?gui=true&template=timelines.timeline&item=youCantTouchThis"
+                },
+                "description": "A SORDID 9 YEAR HISTORY OF TOUCH INPUT ON THE WEB. A status on where we are today, and some libs to help you out!",
+                "video": "0TjxnrWT8Es"
+            },
+            "devAndDesignDay2": {
+                "key": "devAndDesign",
+                "basic": {
+                    "eventName": "Dev and Design Day 2",
+                    "date": "September 2015",
+                    "website": "http://www.devandesign.me/",
+                    "talkTitle": "Building up the community",
                     "slides": "Coming Soon!"
                 },
                 "description": "Community is the core of the opensource software movment. Lets take some time to explore how this community works together for mutual benefit.",
@@ -6825,16 +6467,16 @@ window.arschmitz={
             {
                 "name": "CÜR Media",
                 "title": "Sr Engineer, Web Lead",
-                "role": "Lead jQuery Mobile Project, Co-Creator Chassis CSS Framework, PEP Team Member, jQuery UI Team member.",
-                "acheivments": "Improved Code Quality, consistency, and standards. Lead initiative to merge jQuery Mobile and UI Projects. Leading a project and its team of developers distributed across the world. Team member of many similarly distributed teams.",
-                "time": "2013-2015"
+                "role": "Lead web team, Sr Engineer.",
+                "acheivments": "Improved Code Quality, consistency, and standards. Reduce bug count from 300+ to zero in under 5 months. Implemented automated tests. Implemented build process.",
+                "time": "2015-Present"
             },
             {
                 "name": "jQuery Foundation",
-                "title": "Development Lead",
-                "role": "Lead jQuery Mobile Project, Co-Creator Chassis CSS Framework, PEP Team Member, jQuery UI Team member.",
+                "title": "Development Lead, W3C Representatice",
+                "role": "W3C Representative, Lead jQuery Mobile Project, Co-Creator Chassis CSS Framework, PEP Team Member, jQuery UI Team member.",
                 "acheivments": "Improved Code Quality, consistency, and standards. Lead initiative to merge jQuery Mobile and UI Projects. Leading a project and its team of developers distributed across the world. Team member of many similarly distributed teams.",
-                "time": "2013-2015"
+                "time": "2012-Present"
             },
             {
                 "name": "Filament Group",
@@ -7330,6 +6972,42 @@ window.arschmitz={
             "video": "bZTOV-55ivM",
             "description": "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times."
         },
+        "deque": {
+            "key": "accessability-summit",
+            "basic": {
+                "date": "October 2013",
+                "eventName": "Accessability Summit - Washington D.C.",
+                "slides": "unavailable",
+                "website": false,
+                "talkTitle": "Accessabile mobile sites with jQuery Mobile"
+            },
+            "description": "Making accessible websites and apps is easy with jQuery Mobile, It's all baked in!",
+            "video": "bZTOV-55ivM"
+        },
+        "deque-workshop": {
+            "key": "accessability-workshop",
+            "basic": {
+                "date": "October 2013",
+                "eventName": "Accessability Workshop - Washington D.C.",
+                "slides": "unavailable",
+                "website": false,
+                "talkTitle": "jQuery UI Accessability Challenge"
+            },
+            "description": "Work shop with teams competeing to solve accessability problems in jQuery ui.",
+            "video": "bZTOV-55ivM"
+        },
+        "amsterdam": {
+            "key": "amsterdam",
+            "basic": {
+                "date": "November 2013",
+                "eventName": "Booking.com - Amsterdam",
+                "slides": "http://www.slideshare.net/AlexanderSchmitz/austin-26252266",
+                "website": false,
+                "talkTitle": "jQuery Mobile: Optimizing Performance"
+            },
+            "description": "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
+            "video": "bZTOV-55ivM"
+        },
         "sandiego": {
             "key": "sandiego",
             "basic": {
@@ -7354,16 +7032,28 @@ window.arschmitz={
             "video": "bZTOV-55ivM",
             "description": "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times."
         },
-        "amsterdam": {
-            "key": "amsterdam",
+        "pwmWebDevJquery": {
+            "key": "pwmWebDevJquery",
             "basic": {
-                "date": "November 2013",
-                "eventName": "Booking.com - Amsterdam",
-                "slides": "http://www.slideshare.net/AlexanderSchmitz/austin-26252266",
-                "website": false,
-                "talkTitle": "jQuery Mobile: Optimizing Performance"
+                "eventName": "Portland Web Developer Meetup",
+                "date": "March 2014",
+                "website": "http://www.portlandwebworks.com/blog/fun-times-webdev-meeting",
+                "talkTitle": "jQuery Mobile: Optimizing Performance V2",
+                "slides": "http://presentations.arschmitz.me/mobile-performance/"
             },
-            "description": "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
+            "video": "bZTOV-55ivM",
+            "description": "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times."
+        },
+        "pwmWebDevAccessability": {
+            "key": "pwmWebDevJquery",
+            "basic": {
+                "eventName": "Portland Web Developer Meetup",
+                "slides": "unavailable",
+                "date": "May 2014",
+                "talkTitle": "Accessible Slide Decks with jQuery Mobile",
+                "website": false
+            },
+            "description": "Making your slide deck with jQuery Mobile is simple and accessible!",
             "video": "bZTOV-55ivM"
         },
         "chicago": {
@@ -7378,17 +7068,17 @@ window.arschmitz={
             "description": "jQuery Mobile 1.5 brings lots of new features and a revamped navigation system, more performance optimization possibilities for advanced users and adoption of more widgets from jQuery UI. Lately though, the question I am asked isn't about what's going to be in 1.6, 1.7, and so on, but about the future of jQuery Mobile after the merger with jQuery UI, and what the future is for the jQuery Mobile project. I’ll go into our current road map and details (as many as are available right now) about the future of jQuery Mobile and what it will look like after 2.0",
             "video": "2qF7kW9SdJQ"
         },
-        "pwmWebDevJquery": {
-            "key": "pwmWebDevJquery",
+        "jssummit2014": {
+            "key": "jssummit2014",
             "basic": {
-                "eventName": "Portland Web Developer Meetup",
-                "date": "March 2014",
-                "website": "http://www.portlandwebworks.com/blog/fun-times-webdev-meeting",
-                "talkTitle": "jQuery Foundation overview / Mobile performance",
-                "slides": "http://presentations.arschmitz.me/jquery-foundation/"
+                "eventName": "JavaScript Summit 2014",
+                "talkTitle": "The State of jQuery UI & Mobile",
+                "slides": "http://presentations.arschmitz.me/path-to-2.0-ee/",
+                "date": "November 2014",
+                "website": "http://environmentsforhumans.com/2014/javascript-summit/"
             },
-            "video": "bZTOV-55ivM",
-            "description": "In depth talk on the jQuery Foundation, jQuery Mobile, and mobile performance in general"
+            "description": "It's an exciting time for jQuery UI and Mobile. Big changes are coming to jQuery Mobile and jQuery UI this year as the projects start to merge. But what exactly does this mean? What is the future of the two libraries? Which one is going away? Are either going away? These and many others are the type of questions I have been receiving from many people in the community since we started talking about merging the projects in the spring of 2013. I will address these questions and many more, will give you some history behind the changes we are making as well as give some insight into the direction the projects are taking, and how we’re going to make integration with both projects easier for developers.",
+            "video": "bZTOV-55ivM"
         },
         "pwmWebDevNodeCLI": {
             "key": "pwmWebDevJquery",
@@ -7402,16 +7092,16 @@ window.arschmitz={
             "description": "Using node as a CLI on shared hosting / Nodeception",
             "video": "bZTOV-55ivM"
         },
-        "jssummit2014": {
-            "key": "jssummit2014",
+        "portlandWebDevChassis": {
+            "key": "Chassis-Portland",
             "basic": {
-                "eventName": "JavaScript Summit 2014",
-                "talkTitle": "The State of jQuery UI & Mobile",
-                "slides": "http://presentations.arschmitz.me/path-to-2.0-ee/",
-                "date": "November 2014",
-                "website": "http://environmentsforhumans.com/2014/javascript-summit/"
+                "eventName": "Portland Web Developer Meetup",
+                "date": "February 2015",
+                "website": false,
+                "talkTitle": "Chassis: Yet Another CSS Framework",
+                "slides": "https://docs.google.com/presentation/d/1_15yz1uT-oq17ZNsZTczGgwUh-TP15gGO6DFcz_XTJU/edit"
             },
-            "description": "It's an exciting time for jQuery UI and Mobile. Big changes are coming to jQuery Mobile and jQuery UI this year as the projects start to merge. But what exactly does this mean? What is the future of the two libraries? Which one is going away? Are either going away? These and many others are the type of questions I have been receiving from many people in the community since we started talking about merging the projects in the spring of 2013. I will address these questions and many more, will give you some history behind the changes we are making as well as give some insight into the direction the projects are taking, and how we’re going to make integration with both projects easier for developers.",
+            "description": "Chassis seeks to establish a standard of markup and structure for common components that can be used by both CSS frameworks and JS component libraries to allow for complete interoperability, modularity, and justice, for all. Throughout this process we've been collaborating with a variety of projects and community members including: Topcoat, Zurb Foundation, Cardinal, Famo.us, Yandex, Wordpress, Automattic, 10up, 960grid, Unsemantic, jQuery Mobile, jQuery UI, Intel App Framework, and Cascade CSS, as well as some collaborators from Adobe, Hulu, and Bootstrap.",
             "video": "bZTOV-55ivM"
         },
         "jssummit2015": {
@@ -7426,13 +7116,25 @@ window.arschmitz={
             "description": "Chassis seeks to establish a standard of markup and structure for common components that can be used by both CSS frameworks and JS component libraries to allow for complete interoperability, modularity, and justice, for all. Throughout this process we've been collaborating with a variety of projects and community members including: Topcoat, Zurb Foundation, Cardinal, Famo.us, Yandex, Wordpress, Automattic, 10up, 960grid, Unsemantic, jQuery Mobile, jQuery UI, Intel App Framework, and Cascade CSS, as well as some collaborators from Adobe, Hulu, and Bootstrap.",
             "video": "bZTOV-55ivM"
         },
-        "devAndDesign": {
+        "devAndDesignDay1": {
             "key": "devAndDesign",
             "basic": {
-                "eventName": "Dev and Design",
-                "date": "September 03 - 04, 2015",
+                "eventName": "Dev and Design Day 1",
+                "date": "September 2015",
                 "website": "http://www.devandesign.me/",
                 "talkTitle": "You Can Touch This!",
+                "slides": "http://arschmitz.me.10.0.1.53.xip.io/?gui=true&template=timelines.timeline&item=youCantTouchThis"
+            },
+            "description": "A SORDID 9 YEAR HISTORY OF TOUCH INPUT ON THE WEB. A status on where we are today, and some libs to help you out!",
+            "video": "0TjxnrWT8Es"
+        },
+        "devAndDesignDay2": {
+            "key": "devAndDesign",
+            "basic": {
+                "eventName": "Dev and Design Day 2",
+                "date": "September 2015",
+                "website": "http://www.devandesign.me/",
+                "talkTitle": "Building up the community",
                 "slides": "Coming Soon!"
             },
             "description": "Community is the core of the opensource software movment. Lets take some time to explore how this community works together for mutual benefit.",
@@ -9502,7 +9204,7 @@ this["templates"]["resume"] = Handlebars.template({"1":function(depth0,helpers,p
     + "</h5>\n					</div>\n					<div class=\"col-sm-9 col-xs-12\">\n						"
     + alias1((helpers.h || (depth0 && depth0.h) || alias2).call(depth0,3,"Event",((stack1 = (depth0 != null ? depth0.basic : depth0)) != null ? stack1.eventName : stack1),{"name":"h","hash":{},"data":data}))
     + "\n						"
-    + alias1((helpers.h || (depth0 && depth0.h) || alias2).call(depth0,4,"Title",((stack1 = (depth0 != null ? depth0.basic : depth0)) != null ? stack1.title : stack1),{"name":"h","hash":{},"data":data}))
+    + alias1((helpers.h || (depth0 && depth0.h) || alias2).call(depth0,4,"Title",((stack1 = (depth0 != null ? depth0.basic : depth0)) != null ? stack1.talkTitle : stack1),{"name":"h","hash":{},"data":data}))
     + "\n					</div>\n				</div>\n";
 },"14":function(depth0,helpers,partials,data) {
     var alias1=helpers.helperMissing, alias2=this.escapeExpression;

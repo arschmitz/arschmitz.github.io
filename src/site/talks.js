@@ -23,6 +23,42 @@ module.exports = {
 		video: "bZTOV-55ivM",
 		description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
 	},
+	"deque": {
+		key: "accessability-summit",
+		basic: {
+			date: "October 2013",
+			eventName: "Accessability Summit - Washington D.C.",
+			slides: "unavailable",
+			website: false,
+			talkTitle: "Accessabile mobile sites with jQuery Mobile"
+		},
+		description: "Making accessible websites and apps is easy with jQuery Mobile, It's all baked in!",
+		video: "bZTOV-55ivM"
+	},
+	"deque-workshop": {
+		key: "accessability-workshop",
+		basic: {
+			date: "October 2013",
+			eventName: "Accessability Workshop - Washington D.C.",
+			slides: "unavailable",
+			website: false,
+			talkTitle: "jQuery UI Accessability Challenge"
+		},
+		description: "Work shop with teams competeing to solve accessability problems in jQuery ui.",
+		video: "bZTOV-55ivM"
+	},
+	"amsterdam": {
+		key: "amsterdam",
+		basic: {
+			date: "November 2013",
+			eventName: "Booking.com - Amsterdam",
+			slides: "http://www.slideshare.net/AlexanderSchmitz/austin-26252266",
+			website: false,
+			talkTitle: "jQuery Mobile: Optimizing Performance"
+		},
+		description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
+		video: "bZTOV-55ivM"
+	},
 	"sandiego": {
 		key: "sandiego",
 		basic: {
@@ -47,16 +83,40 @@ module.exports = {
 		video: "bZTOV-55ivM",
 		description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
 	},
-	"amsterdam": {
-		key: "amsterdam",
+	"pwmWebDevJquery": {
+		key: "pwmWebDevJquery",
 		basic: {
-			date: "November 2013",
-			eventName: "Booking.com - Amsterdam",
-			slides: "http://www.slideshare.net/AlexanderSchmitz/austin-26252266",
-			website: false,
-			talkTitle: "jQuery Mobile: Optimizing Performance"
+			eventName: "Portland Web Developer Meetup",
+			date: "March 2014",
+			website: "http://www.portlandwebworks.com/blog/fun-times-webdev-meeting",
+			talkTitle: "jQuery Foundation overview / jQuery Mobile",
+			slides: "http://presentations.arschmitz.me/jquery-foundation/"
 		},
+		video: "bZTOV-55ivM",
+		description: "Overview of the jQuery Foundation and jQuery Mobile"
+	},
+	"pwmWebDevJquery": {
+		key: "pwmWebDevJquery",
+		basic: {
+			eventName: "Portland Web Developer Meetup",
+			date: "March 2014",
+			website: "http://www.portlandwebworks.com/blog/fun-times-webdev-meeting",
+			talkTitle: "jQuery Mobile: Optimizing Performance V2",
+			slides: "http://presentations.arschmitz.me/mobile-performance/"
+		},
+		video: "bZTOV-55ivM",
 		description: "Performance is a major concern on mobile platforms. jQuery Mobile 1.4 adds a number of performance related options and features to help you speed up your mobile site along with a new theme designed to make your site render as fast as possible. Learn Tips and tricks to make your site as fast as it can. Covered in this talk will be not only framework optimizations but server side tricks to minimize transfer but page initialization times.",
+	},
+	"pwmWebDevAccessability": {
+		key: "pwmWebDevJquery",
+		basic: {
+			eventName: "Portland Web Developer Meetup",
+			slides: "unavailable",
+			date: "May 2014",
+			talkTitle: "Accessible Slide Decks with jQuery Mobile",
+			website: false
+		},
+		description: "Making your slide deck with jQuery Mobile is simple and accessible!",
 		video: "bZTOV-55ivM"
 	},
 	"chicago": {
@@ -71,30 +131,6 @@ module.exports = {
 		description: "jQuery Mobile 1.5 brings lots of new features and a revamped navigation system, more performance optimization possibilities for advanced users and adoption of more widgets from jQuery UI. Lately though, the question I am asked isn't about what's going to be in 1.6, 1.7, and so on, but about the future of jQuery Mobile after the merger with jQuery UI, and what the future is for the jQuery Mobile project. I’ll go into our current road map and details (as many as are available right now) about the future of jQuery Mobile and what it will look like after 2.0",
 		video: "2qF7kW9SdJQ",
 	},
-	"pwmWebDevJquery": {
-		key: "pwmWebDevJquery",
-		basic: {
-			eventName: "Portland Web Developer Meetup",
-			date: "March 2014",
-			website: "http://www.portlandwebworks.com/blog/fun-times-webdev-meeting",
-			talkTitle: "jQuery Foundation overview / Mobile performance",
-			slides: "http://presentations.arschmitz.me/jquery-foundation/"
-		},
-		video: "bZTOV-55ivM",
-		description: "In depth talk on the jQuery Foundation, jQuery Mobile, and mobile performance in general"
-	},
-	"pwmWebDevNodeCLI": {
-		key: "pwmWebDevJquery",
-		basic: {
-			eventName: "Portland Web Developer Meetup",
-			slides: "unavailable",
-			date: "January 2015",
-			talkTitle: "Node for the masses",
-			website: "http://www.meetup.com/me-webdev/events/219614954/"
-		},
-		description: "Using node as a CLI on shared hosting / Nodeception",
-		video: "bZTOV-55ivM"
-	},
 	"jssummit2014": {
 		key: "jssummit2014",
 		basic: {
@@ -108,6 +144,30 @@ module.exports = {
 		video: "bZTOV-55ivM",
 
 	},
+	"pwmWebDevNodeCLI": {
+		key: "pwmWebDevJquery",
+		basic: {
+			eventName: "Portland Web Developer Meetup",
+			slides: "unavailable",
+			date: "January 2015",
+			talkTitle: "Node for the masses",
+			website: "http://www.meetup.com/me-webdev/events/219614954/"
+		},
+		description: "Using node as a CLI on shared hosting / Nodeception",
+		video: "bZTOV-55ivM"
+	},
+	"portlandWebDevChassis": {
+		key: "Chassis-Portland",
+		basic: {
+			eventName: "Portland Web Developer Meetup",
+			date: "February 2015",
+			website: false,
+			talkTitle: "Chassis: Yet Another CSS Framework",
+			slides: "https://docs.google.com/presentation/d/1_15yz1uT-oq17ZNsZTczGgwUh-TP15gGO6DFcz_XTJU/edit"
+		},
+		description: "Chassis seeks to establish a standard of markup and structure for common components that can be used by both CSS frameworks and JS component libraries to allow for complete interoperability, modularity, and justice, for all. Throughout this process we've been collaborating with a variety of projects and community members including: Topcoat, Zurb Foundation, Cardinal, Famo.us, Yandex, Wordpress, Automattic, 10up, 960grid, Unsemantic, jQuery Mobile, jQuery UI, Intel App Framework, and Cascade CSS, as well as some collaborators from Adobe, Hulu, and Bootstrap.",
+		video: "bZTOV-55ivM",
+	},
 	"jssummit2015": {
 		key: "jssummit2015",
 		basic: {
@@ -119,26 +179,25 @@ module.exports = {
 		},
 		description: "Chassis seeks to establish a standard of markup and structure for common components that can be used by both CSS frameworks and JS component libraries to allow for complete interoperability, modularity, and justice, for all. Throughout this process we've been collaborating with a variety of projects and community members including: Topcoat, Zurb Foundation, Cardinal, Famo.us, Yandex, Wordpress, Automattic, 10up, 960grid, Unsemantic, jQuery Mobile, jQuery UI, Intel App Framework, and Cascade CSS, as well as some collaborators from Adobe, Hulu, and Bootstrap.",
 		video: "bZTOV-55ivM",
-	},
-	"devAndDesign": {
+	},	"devAndDesignDay1": {
 		key: "devAndDesign",
 		basic: {
-			eventName: "Dev and Design",
-			date: "September 03 - 04, 2015",
+			eventName: "Dev and Design Day 1",
+			date: "September 2015",
 			website: "http://www.devandesign.me/",
 			talkTitle: "You Can Touch This!",
 			slides: "http://arschmitz.me.10.0.1.53.xip.io/?gui=true&template=timelines.timeline&item=youCantTouchThis"
 		},
-		description: "A sordid history of touch events on the internet. A status on where we are today, and some libs to help you out!",
+		description: "A SORDID 9 YEAR HISTORY OF TOUCH INPUT ON THE WEB. A status on where we are today, and some libs to help you out!",
 		video: "0TjxnrWT8Es"
 	},
-	"devAndDesign": {
+	"devAndDesignDay2": {
 		key: "devAndDesign",
 		basic: {
-			eventName: "Dev and Design",
-			date: "September 03 - 04, 2015",
+			eventName: "Dev and Design Day 2",
+			date: "September 2015",
 			website: "http://www.devandesign.me/",
-			talkTitle: "You Can Touch This!",
+			talkTitle: "Building up the community",
 			slides: "Coming Soon!"
 		},
 		description: "Community is the core of the opensource software movment. Lets take some time to explore how this community works together for mutual benefit.",

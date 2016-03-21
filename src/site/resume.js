@@ -10,16 +10,16 @@ module.exports = {
 		{
 			name: "CÜR Media",
 			title: "Sr Engineer, Web Lead",
-			role: "Lead jQuery Mobile Project, Co-Creator Chassis CSS Framework, PEP Team Member, jQuery UI Team member.",
-			acheivments: "Improved Code Quality, consistency, and standards. Lead initiative to merge jQuery Mobile and UI Projects. Leading a project and its team of developers distributed across the world. Team member of many similarly distributed teams.",
-			time: "2013-2015"
+			role: "Lead web team, Sr Engineer.",
+			acheivments: "Improved Code Quality, consistency, and standards. Reduce bug count from 300+ to zero in under 5 months. Implemented automated tests. Implemented build process.",
+			time: "2015-Present"
 		},
 		{
 			name: "jQuery Foundation",
-			title: "Development Lead",
-			role: "Lead jQuery Mobile Project, Co-Creator Chassis CSS Framework, PEP Team Member, jQuery UI Team member.",
+			title: "Development Lead, W3C Representatice",
+			role: "W3C Representative, Lead jQuery Mobile Project, Co-Creator Chassis CSS Framework, PEP Team Member, jQuery UI Team member.",
 			acheivments: "Improved Code Quality, consistency, and standards. Lead initiative to merge jQuery Mobile and UI Projects. Leading a project and its team of developers distributed across the world. Team member of many similarly distributed teams.",
-			time: "2013-2015"
+			time: "2012-Present"
 		},
 		{
 			name: "Filament Group",
