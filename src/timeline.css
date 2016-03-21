@@ -275,7 +275,7 @@ code.hljs {
 	padding: 1em;
 	padding-left: 2em;
 }
-h1{
+.timeline h1{
     font-size: 24px;
     position:relative;
     font-weight: 400;
@@ -286,7 +286,7 @@ h1{
 	border-bottom: 1px solid rgba(17,17,22,0.1);
 }
 /* Header Style */
-.header{
+.timeline .header{
     font-family:'Arial Narrow', Arial, sans-serif;
     line-height: 24px;
     font-size: 11px;
@@ -299,31 +299,31 @@ h1{
     -webkit-box-shadow: 1px 0px 2px #000;
     box-shadow: 1px 0px 2px #000;
 }
-.header a{
+.timeline .header a{
     padding: 0px 10px;
     letter-spacing: 1px;
     color: #ddd;
     display: block;
     float: left;
 }
-.header a:hover{
+.timeline .header a:hover{
     color: #fff;
 }
-.header span.right{
+.timeline .header span.right{
     float: right;
 }
-.header span.right a{
+.timeline .header span.right a{
     float: none;
     display: inline;
 }
-.demos{
+.timeline .demos{
     position:relative;
     z-index: 1000;
     text-align:center;
 	float: right;
 	padding: 10px;
 }
-.demos a{
+.timeline .demos a{
     display: inline-block;
     padding: 4px 6px;
     background: #000;
@@ -339,25 +339,25 @@ h1{
     -ms-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
-.demos :hover{
+.timeline .demos :hover{
     color: #fff;
     background: #c90047;
 }
-.demos .current-demo,
-.demos .current-demo:hover{
+.timeline .demos .current-demo,
+.timeline .demos .current-demo:hover{
     font-weight: bold;
     background: #c90047;
     color: #fff;
 	cursor: default;
 }
-.gui-wrap {
+.timeline .gui-wrap {
 	padding: 0;
 }
-.sticky-parent {
+.timeline .sticky-parent {
 	height: 100px;
 	position: absolute;
 }
-.dialog-wrap {
+.timeline .dialog-wrap {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -367,10 +367,10 @@ h1{
 	display: none;
 	z-index: 999999;
 }
-.dialog-wrap.resizing {
+.timeline .dialog-wrap.resizing {
 	background: none;
 }
-.dialog {
+.timeline .dialog {
 	width: 80%;
 	left: 50%;
 	margin-left: -40%;
@@ -388,10 +388,10 @@ h1{
 	color: white;
 	-webkit-overflow-scrolling: touch;
 }
-.dialog p {
+.timeline .dialog p {
 	text-shadow: none;
 }
-.dialog-wrap.dialog-open {
+.timeline .dialog-wrap.dialog-open {
 	display: block;
 }
 /* sm */
