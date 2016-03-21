@@ -55,10 +55,20 @@
 				returnValue = "Running Effect " + command.split( ":" )[ 1 ];
 			} else {
 				try {
-				returnValue = window.eval( command );
+					if ( command !== "arschmitz" ) {
+						returnValue = window.eval( command );
+					} else {
+						$.getJSON( "/dist/site.json", function( returnValue ) {
+							outputReturn( returnValue );
+						} );
+						return;
+					}
 				} catch ( e ) {
 					returnValue = prompt.logError( e );
 				}
+			}
+			outputReturn( returnValue );
+			function outputReturn( returnValue ) {
 				if ( typeof returnValue === "object" ) {
 					try {
 						returnValue = prompt.syntaxHighlight( returnValue ).replace( /\n/g, "<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" );
@@ -66,14 +76,14 @@
 						returnValue = prompt.logError( e );
 					}
 				}
-			}
-			$( "#output" ).append( "<div class='output-line'><span class='prompt-start'>></span>" + command + "<br/>" );
-			$( "#output" ).append( "<span class='prompt-start'><</span>" + returnValue + "</div>" );
-			$( "#prompt" ).val( "" );
-			if ( !gui.isOpen ) {
-				window.scrollTo( 0, $( "body" ).height() );
-			} else {
-				$( ".console-wrap .scroll-wrap" )[ 0 ].scrollTop = $( ".console-wrap" )[ 0 ].scrollHeight;
+				$( "#output" ).append( "<div class='output-line'><span class='prompt-start'>></span>" + command + "<br/>" );
+				$( "#output" ).append( "<span class='prompt-start'><</span>" + returnValue + "</div>" );
+				$( "#prompt" ).val( "" );
+				if ( !gui.isOpen ) {
+					window.scrollTo( 0, $( "body" ).height() );
+				} else {
+					$( ".console-wrap .scroll-wrap" )[ 0 ].scrollTop = $( ".console-wrap" )[ 0 ].scrollHeight;
+				}
 			}
 		},
 		keyup: function( e ) {
