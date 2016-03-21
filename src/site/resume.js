@@ -16,7 +16,7 @@ module.exports = {
 		},
 		{
 			name: "jQuery Foundation",
-			title: "Development Lead, W3C Representatice",
+			title: "Development Lead, W3C Representative",
 			role: "W3C Representative, Lead jQuery Mobile Project, Co-Creator Chassis CSS Framework, PEP Team Member, jQuery UI Team member.",
 			acheivments: "Improved Code Quality, consistency, and standards. Lead initiative to merge jQuery Mobile and UI Projects. Leading a project and its team of developers distributed across the world. Team member of many similarly distributed teams.",
 			time: "2012-Present"
