@@ -391,8 +391,8 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/pinterest.com",
                 "lib": [
-                    "jQuery",
-                    "$.ui"
+                    "$.ui",
+                    "jQuery"
                 ]
             },
             {
@@ -419,8 +419,8 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/paypal.com",
                 "lib": [
-                    "jQuery",
-                    "$.ui"
+                    "$.ui",
+                    "jQuery"
                 ]
             },
             {
@@ -456,8 +456,8 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/imgur.com",
                 "lib": [
-                    "jQuery",
-                    "$.ui"
+                    "$.ui",
+                    "jQuery"
                 ]
             },
             {
@@ -493,8 +493,8 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/imdb.com",
                 "lib": [
-                    "jQuery",
-                    "$.ui"
+                    "$.ui",
+                    "jQuery"
                 ]
             },
             {
@@ -539,8 +539,8 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/rakuten.co.jp",
                 "lib": [
-                    "jQuery",
-                    "$.ui"
+                    "$.ui",
+                    "jQuery"
                 ]
             },
             {
@@ -549,8 +549,8 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/pornhub.com",
                 "lib": [
-                    "jQuery",
-                    "$.ui"
+                    "$.ui",
+                    "jQuery"
                 ]
             },
             {
@@ -568,8 +568,8 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/tianya.cn",
                 "lib": [
-                    "jQuery",
                     "$.ui",
+                    "jQuery",
                     "$.mobile"
                 ]
             },
@@ -597,8 +597,8 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/kat.cr",
                 "lib": [
-                    "jQuery",
-                    "$.ui"
+                    "$.ui",
+                    "jQuery"
                 ]
             },
             {
@@ -671,8 +671,8 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/dropbox.com",
                 "lib": [
-                    "jQuery",
-                    "$.ui"
+                    "$.ui",
+                    "jQuery"
                 ]
             },
             {
@@ -690,18 +690,18 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/jd.com",
                 "lib": [
-                    "jQuery",
-                    "$.ui"
+                    "$.ui",
+                    "jQuery"
                 ]
             },
             {
                 "url": "xhamster.com",
                 "rank": 92,
-                "platform": "desktop",
+                "platform": "mobile",
                 "resource": "http://api.libscore.com/v1/sites/xhamster.com",
                 "lib": [
-                    "jQuery",
-                    "Hammer"
+                    "Hammer",
+                    "jQuery"
                 ]
             },
             {
@@ -734,11 +734,11 @@ window.arschmitz={
             {
                 "url": "nytimes.com",
                 "rank": 96,
-                "platform": "desktop",
+                "platform": "mobile",
                 "resource": "http://api.libscore.com/v1/sites/nytimes.com",
                 "lib": [
-                    "jQuery",
                     "Hammer",
+                    "jQuery",
                     "$.mobile"
                 ]
             },
@@ -892,8 +892,8 @@ window.arschmitz={
                 "platform": "desktop",
                 "resource": "http://api.libscore.com/v1/sites/twitch.tv",
                 "lib": [
-                    "jQuery",
-                    "$.ui"
+                    "$.ui",
+                    "jQuery"
                 ]
             },
             {
@@ -2205,175 +2205,292 @@ window.arschmitz={
                         "url": "pinterest.com",
                         "rank": 31,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/pinterest.com"
+                        "resource": "http://api.libscore.com/v1/sites/pinterest.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "paypal.com",
                         "rank": 38,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/paypal.com"
+                        "resource": "http://api.libscore.com/v1/sites/paypal.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "imgur.com",
                         "rank": 47,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/imgur.com"
+                        "resource": "http://api.libscore.com/v1/sites/imgur.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "imdb.com",
                         "rank": 53,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/imdb.com"
+                        "resource": "http://api.libscore.com/v1/sites/imdb.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "rakuten.co.jp",
                         "rank": 64,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/rakuten.co.jp"
+                        "resource": "http://api.libscore.com/v1/sites/rakuten.co.jp",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "pornhub.com",
                         "rank": 65,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/pornhub.com"
+                        "resource": "http://api.libscore.com/v1/sites/pornhub.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "tianya.cn",
                         "rank": 69,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/tianya.cn"
+                        "resource": "http://api.libscore.com/v1/sites/tianya.cn",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "kat.cr",
                         "rank": 76,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/kat.cr"
+                        "resource": "http://api.libscore.com/v1/sites/kat.cr",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "dropbox.com",
                         "rank": 87,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/dropbox.com"
+                        "resource": "http://api.libscore.com/v1/sites/dropbox.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "jd.com",
                         "rank": 90,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/jd.com"
+                        "resource": "http://api.libscore.com/v1/sites/jd.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "twitch.tv",
                         "rank": 121,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/twitch.tv"
+                        "resource": "http://api.libscore.com/v1/sites/twitch.tv",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "bankofamerica.com",
                         "rank": 127,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bankofamerica.com"
+                        "resource": "http://api.libscore.com/v1/sites/bankofamerica.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "adf.ly",
                         "rank": 132,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/adf.ly"
+                        "resource": "http://api.libscore.com/v1/sites/adf.ly",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "huffingtonpost.com",
                         "rank": 134,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/huffingtonpost.com"
+                        "resource": "http://api.libscore.com/v1/sites/huffingtonpost.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "bilibili.com",
                         "rank": 142,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bilibili.com"
+                        "resource": "http://api.libscore.com/v1/sites/bilibili.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "globo.com",
                         "rank": 150,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/globo.com"
+                        "resource": "http://api.libscore.com/v1/sites/globo.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "intuit.com",
                         "rank": 166,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/intuit.com"
+                        "resource": "http://api.libscore.com/v1/sites/intuit.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "naver.jp",
                         "rank": 169,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/naver.jp"
+                        "resource": "http://api.libscore.com/v1/sites/naver.jp",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "snapdeal.com",
                         "rank": 171,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/snapdeal.com"
+                        "resource": "http://api.libscore.com/v1/sites/snapdeal.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "taringa.net",
                         "rank": 172,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/taringa.net"
+                        "resource": "http://api.libscore.com/v1/sites/taringa.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "redtube.com",
                         "rank": 181,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/redtube.com"
+                        "resource": "http://api.libscore.com/v1/sites/redtube.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "hclips.com",
                         "rank": 196,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/hclips.com"
+                        "resource": "http://api.libscore.com/v1/sites/hclips.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "9gag.com",
                         "rank": 201,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/9gag.com"
+                        "resource": "http://api.libscore.com/v1/sites/9gag.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "daum.net",
                         "rank": 205,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/daum.net"
+                        "resource": "http://api.libscore.com/v1/sites/daum.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "target.com",
                         "rank": 206,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/target.com"
+                        "resource": "http://api.libscore.com/v1/sites/target.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "zol.com.cn",
                         "rank": 208,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/zol.com.cn"
+                        "resource": "http://api.libscore.com/v1/sites/zol.com.cn",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "bestbuy.com",
                         "rank": 227,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bestbuy.com"
+                        "resource": "http://api.libscore.com/v1/sites/bestbuy.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "livejournal.com",
                         "rank": 232,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/livejournal.com"
+                        "resource": "http://api.libscore.com/v1/sites/livejournal.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "nametests.com",
                         "rank": 238,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/nametests.com"
+                        "resource": "http://api.libscore.com/v1/sites/nametests.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "deviantart.com",
@@ -2398,25 +2515,42 @@ window.arschmitz={
                         "url": "slickdeals.net",
                         "rank": 267,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/slickdeals.net"
+                        "resource": "http://api.libscore.com/v1/sites/slickdeals.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "weebly.com",
                         "rank": 273,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/weebly.com"
+                        "resource": "http://api.libscore.com/v1/sites/weebly.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "xuite.net",
                         "rank": 275,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/xuite.net"
+                        "resource": "http://api.libscore.com/v1/sites/xuite.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "ruten.com.tw",
                         "rank": 279,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ruten.com.tw"
+                        "resource": "http://api.libscore.com/v1/sites/ruten.com.tw",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "t-online.de",
@@ -2431,61 +2565,102 @@ window.arschmitz={
                         "url": "pandora.com",
                         "rank": 284,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/pandora.com"
+                        "resource": "http://api.libscore.com/v1/sites/pandora.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "popcash.net",
                         "rank": 290,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/popcash.net"
+                        "resource": "http://api.libscore.com/v1/sites/popcash.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "liputan6.com",
                         "rank": 292,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/liputan6.com"
+                        "resource": "http://api.libscore.com/v1/sites/liputan6.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "1905.com",
                         "rank": 297,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/1905.com"
+                        "resource": "http://api.libscore.com/v1/sites/1905.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "kaskus.co.id",
                         "rank": 303,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/kaskus.co.id"
+                        "resource": "http://api.libscore.com/v1/sites/kaskus.co.id",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "ups.com",
                         "rank": 305,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/ups.com"
+                        "resource": "http://api.libscore.com/v1/sites/ups.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "eksisozluk.com",
                         "rank": 309,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/eksisozluk.com"
+                        "resource": "http://api.libscore.com/v1/sites/eksisozluk.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "hp.com",
                         "rank": 313,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/hp.com"
+                        "resource": "http://api.libscore.com/v1/sites/hp.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "telegraph.co.uk",
                         "rank": 318,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/telegraph.co.uk"
+                        "resource": "http://api.libscore.com/v1/sites/telegraph.co.uk",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "sourceforge.net",
                         "rank": 321,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sourceforge.net"
+                        "resource": "http://api.libscore.com/v1/sites/sourceforge.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "sberbank.ru",
@@ -2497,61 +2672,101 @@ window.arschmitz={
                         "url": "mashable.com",
                         "rank": 329,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/mashable.com"
+                        "resource": "http://api.libscore.com/v1/sites/mashable.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "thesaurus.com",
                         "rank": 330,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/thesaurus.com"
+                        "resource": "http://api.libscore.com/v1/sites/thesaurus.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "mercadolivre.com.br",
                         "rank": 335,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/mercadolivre.com.br"
+                        "resource": "http://api.libscore.com/v1/sites/mercadolivre.com.br",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "doublepimp.com",
                         "rank": 341,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/doublepimp.com"
+                        "resource": "http://api.libscore.com/v1/sites/doublepimp.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "ltn.com.tw",
                         "rank": 342,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ltn.com.tw"
+                        "resource": "http://api.libscore.com/v1/sites/ltn.com.tw",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "zendesk.com",
                         "rank": 354,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/zendesk.com"
+                        "resource": "http://api.libscore.com/v1/sites/zendesk.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "att.com",
                         "rank": 357,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/att.com"
+                        "resource": "http://api.libscore.com/v1/sites/att.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "sabah.com.tr",
                         "rank": 359,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sabah.com.tr"
+                        "resource": "http://api.libscore.com/v1/sites/sabah.com.tr",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "livejasmin.com",
                         "rank": 366,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/livejasmin.com"
+                        "resource": "http://api.libscore.com/v1/sites/livejasmin.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "sahibinden.com",
                         "rank": 369,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sahibinden.com"
+                        "resource": "http://api.libscore.com/v1/sites/sahibinden.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "hurriyet.com.tr",
@@ -2563,73 +2778,121 @@ window.arschmitz={
                         "url": "kinogo.co",
                         "rank": 373,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/kinogo.co"
+                        "resource": "http://api.libscore.com/v1/sites/kinogo.co",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "pinimg.com",
                         "rank": 378,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/pinimg.com"
+                        "resource": "http://api.libscore.com/v1/sites/pinimg.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "giphy.com",
                         "rank": 379,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/giphy.com"
+                        "resource": "http://api.libscore.com/v1/sites/giphy.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "irctc.co.in",
                         "rank": 386,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/irctc.co.in"
+                        "resource": "http://api.libscore.com/v1/sites/irctc.co.in",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "macys.com",
                         "rank": 390,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/macys.com"
+                        "resource": "http://api.libscore.com/v1/sites/macys.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "blackboard.com",
                         "rank": 392,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/blackboard.com"
+                        "resource": "http://api.libscore.com/v1/sites/blackboard.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "varzesh3.com",
                         "rank": 397,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/varzesh3.com"
+                        "resource": "http://api.libscore.com/v1/sites/varzesh3.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "kinopoisk.ru",
                         "rank": 401,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/kinopoisk.ru"
+                        "resource": "http://api.libscore.com/v1/sites/kinopoisk.ru",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "oracle.com",
                         "rank": 403,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/oracle.com"
+                        "resource": "http://api.libscore.com/v1/sites/oracle.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "taleo.net",
                         "rank": 408,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/taleo.net"
+                        "resource": "http://api.libscore.com/v1/sites/taleo.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "citi.com",
                         "rank": 410,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/citi.com"
+                        "resource": "http://api.libscore.com/v1/sites/citi.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "reference.com",
                         "rank": 415,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/reference.com"
+                        "resource": "http://api.libscore.com/v1/sites/reference.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "digikala.com",
@@ -2645,25 +2908,42 @@ window.arschmitz={
                         "url": "spiegel.de",
                         "rank": 420,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/spiegel.de"
+                        "resource": "http://api.libscore.com/v1/sites/spiegel.de",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "newegg.com",
                         "rank": 424,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/newegg.com"
+                        "resource": "http://api.libscore.com/v1/sites/newegg.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "quikr.com",
                         "rank": 425,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/quikr.com"
+                        "resource": "http://api.libscore.com/v1/sites/quikr.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "airbnb.com",
                         "rank": 426,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/airbnb.com"
+                        "resource": "http://api.libscore.com/v1/sites/airbnb.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "playstation.com",
@@ -2675,25 +2955,41 @@ window.arschmitz={
                         "url": "infusionsoft.com",
                         "rank": 439,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/infusionsoft.com"
+                        "resource": "http://api.libscore.com/v1/sites/infusionsoft.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "4shared.com",
                         "rank": 443,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/4shared.com"
+                        "resource": "http://api.libscore.com/v1/sites/4shared.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "bhaskar.com",
                         "rank": 450,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bhaskar.com"
+                        "resource": "http://api.libscore.com/v1/sites/bhaskar.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "tabelog.com",
                         "rank": 452,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/tabelog.com"
+                        "resource": "http://api.libscore.com/v1/sites/tabelog.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "lowes.com",
@@ -2705,115 +3001,193 @@ window.arschmitz={
                         "url": "shopclues.com",
                         "rank": 457,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/shopclues.com"
+                        "resource": "http://api.libscore.com/v1/sites/shopclues.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "gearbest.com",
                         "rank": 466,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/gearbest.com"
+                        "resource": "http://api.libscore.com/v1/sites/gearbest.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "meetup.com",
                         "rank": 469,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/meetup.com"
+                        "resource": "http://api.libscore.com/v1/sites/meetup.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "wunderground.com",
                         "rank": 470,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/wunderground.com"
+                        "resource": "http://api.libscore.com/v1/sites/wunderground.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "urdupoint.com",
                         "rank": 474,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/urdupoint.com"
+                        "resource": "http://api.libscore.com/v1/sites/urdupoint.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "bleacherreport.com",
                         "rank": 475,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bleacherreport.com"
+                        "resource": "http://api.libscore.com/v1/sites/bleacherreport.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "ero-advertising.com",
                         "rank": 499,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ero-advertising.com"
+                        "resource": "http://api.libscore.com/v1/sites/ero-advertising.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "freepik.com",
                         "rank": 511,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/freepik.com"
+                        "resource": "http://api.libscore.com/v1/sites/freepik.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "udemy.com",
                         "rank": 512,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/udemy.com"
+                        "resource": "http://api.libscore.com/v1/sites/udemy.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "zippyshare.com",
                         "rank": 515,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/zippyshare.com"
+                        "resource": "http://api.libscore.com/v1/sites/zippyshare.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "discovercard.com",
                         "rank": 516,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/discovercard.com"
+                        "resource": "http://api.libscore.com/v1/sites/discovercard.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "nba.com",
                         "rank": 520,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/nba.com"
+                        "resource": "http://api.libscore.com/v1/sites/nba.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "trulia.com",
                         "rank": 532,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/trulia.com"
+                        "resource": "http://api.libscore.com/v1/sites/trulia.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "xda-developers.com",
                         "rank": 543,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/xda-developers.com"
+                        "resource": "http://api.libscore.com/v1/sites/xda-developers.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "costco.com",
                         "rank": 544,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/costco.com"
+                        "resource": "http://api.libscore.com/v1/sites/costco.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "kickstarter.com",
                         "rank": 545,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/kickstarter.com"
+                        "resource": "http://api.libscore.com/v1/sites/kickstarter.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "seesaa.net",
                         "rank": 546,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/seesaa.net"
+                        "resource": "http://api.libscore.com/v1/sites/seesaa.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "wayfair.com",
                         "rank": 553,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/wayfair.com"
+                        "resource": "http://api.libscore.com/v1/sites/wayfair.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "gamefaqs.com",
                         "rank": 559,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/gamefaqs.com"
+                        "resource": "http://api.libscore.com/v1/sites/gamefaqs.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     }
                 ],
                 "short": [
@@ -2821,175 +3195,292 @@ window.arschmitz={
                         "url": "pinterest.com",
                         "rank": 31,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/pinterest.com"
+                        "resource": "http://api.libscore.com/v1/sites/pinterest.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "paypal.com",
                         "rank": 38,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/paypal.com"
+                        "resource": "http://api.libscore.com/v1/sites/paypal.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "imgur.com",
                         "rank": 47,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/imgur.com"
+                        "resource": "http://api.libscore.com/v1/sites/imgur.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "imdb.com",
                         "rank": 53,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/imdb.com"
+                        "resource": "http://api.libscore.com/v1/sites/imdb.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "rakuten.co.jp",
                         "rank": 64,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/rakuten.co.jp"
+                        "resource": "http://api.libscore.com/v1/sites/rakuten.co.jp",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "pornhub.com",
                         "rank": 65,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/pornhub.com"
+                        "resource": "http://api.libscore.com/v1/sites/pornhub.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "tianya.cn",
                         "rank": 69,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/tianya.cn"
+                        "resource": "http://api.libscore.com/v1/sites/tianya.cn",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "kat.cr",
                         "rank": 76,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/kat.cr"
+                        "resource": "http://api.libscore.com/v1/sites/kat.cr",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "dropbox.com",
                         "rank": 87,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/dropbox.com"
+                        "resource": "http://api.libscore.com/v1/sites/dropbox.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "jd.com",
                         "rank": 90,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/jd.com"
+                        "resource": "http://api.libscore.com/v1/sites/jd.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "twitch.tv",
                         "rank": 121,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/twitch.tv"
+                        "resource": "http://api.libscore.com/v1/sites/twitch.tv",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "bankofamerica.com",
                         "rank": 127,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bankofamerica.com"
+                        "resource": "http://api.libscore.com/v1/sites/bankofamerica.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "adf.ly",
                         "rank": 132,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/adf.ly"
+                        "resource": "http://api.libscore.com/v1/sites/adf.ly",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "huffingtonpost.com",
                         "rank": 134,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/huffingtonpost.com"
+                        "resource": "http://api.libscore.com/v1/sites/huffingtonpost.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "bilibili.com",
                         "rank": 142,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bilibili.com"
+                        "resource": "http://api.libscore.com/v1/sites/bilibili.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "globo.com",
                         "rank": 150,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/globo.com"
+                        "resource": "http://api.libscore.com/v1/sites/globo.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "intuit.com",
                         "rank": 166,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/intuit.com"
+                        "resource": "http://api.libscore.com/v1/sites/intuit.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "naver.jp",
                         "rank": 169,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/naver.jp"
+                        "resource": "http://api.libscore.com/v1/sites/naver.jp",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "snapdeal.com",
                         "rank": 171,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/snapdeal.com"
+                        "resource": "http://api.libscore.com/v1/sites/snapdeal.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "taringa.net",
                         "rank": 172,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/taringa.net"
+                        "resource": "http://api.libscore.com/v1/sites/taringa.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "redtube.com",
                         "rank": 181,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/redtube.com"
+                        "resource": "http://api.libscore.com/v1/sites/redtube.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "hclips.com",
                         "rank": 196,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/hclips.com"
+                        "resource": "http://api.libscore.com/v1/sites/hclips.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "9gag.com",
                         "rank": 201,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/9gag.com"
+                        "resource": "http://api.libscore.com/v1/sites/9gag.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "daum.net",
                         "rank": 205,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/daum.net"
+                        "resource": "http://api.libscore.com/v1/sites/daum.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "target.com",
                         "rank": 206,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/target.com"
+                        "resource": "http://api.libscore.com/v1/sites/target.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "zol.com.cn",
                         "rank": 208,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/zol.com.cn"
+                        "resource": "http://api.libscore.com/v1/sites/zol.com.cn",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "bestbuy.com",
                         "rank": 227,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bestbuy.com"
+                        "resource": "http://api.libscore.com/v1/sites/bestbuy.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "livejournal.com",
                         "rank": 232,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/livejournal.com"
+                        "resource": "http://api.libscore.com/v1/sites/livejournal.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "nametests.com",
                         "rank": 238,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/nametests.com"
+                        "resource": "http://api.libscore.com/v1/sites/nametests.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "deviantart.com",
@@ -3014,25 +3505,42 @@ window.arschmitz={
                         "url": "slickdeals.net",
                         "rank": 267,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/slickdeals.net"
+                        "resource": "http://api.libscore.com/v1/sites/slickdeals.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "weebly.com",
                         "rank": 273,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/weebly.com"
+                        "resource": "http://api.libscore.com/v1/sites/weebly.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "xuite.net",
                         "rank": 275,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/xuite.net"
+                        "resource": "http://api.libscore.com/v1/sites/xuite.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "ruten.com.tw",
                         "rank": 279,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ruten.com.tw"
+                        "resource": "http://api.libscore.com/v1/sites/ruten.com.tw",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "t-online.de",
@@ -3047,61 +3555,102 @@ window.arschmitz={
                         "url": "pandora.com",
                         "rank": 284,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/pandora.com"
+                        "resource": "http://api.libscore.com/v1/sites/pandora.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "popcash.net",
                         "rank": 290,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/popcash.net"
+                        "resource": "http://api.libscore.com/v1/sites/popcash.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "liputan6.com",
                         "rank": 292,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/liputan6.com"
+                        "resource": "http://api.libscore.com/v1/sites/liputan6.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "1905.com",
                         "rank": 297,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/1905.com"
+                        "resource": "http://api.libscore.com/v1/sites/1905.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "kaskus.co.id",
                         "rank": 303,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/kaskus.co.id"
+                        "resource": "http://api.libscore.com/v1/sites/kaskus.co.id",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "ups.com",
                         "rank": 305,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/ups.com"
+                        "resource": "http://api.libscore.com/v1/sites/ups.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "eksisozluk.com",
                         "rank": 309,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/eksisozluk.com"
+                        "resource": "http://api.libscore.com/v1/sites/eksisozluk.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "hp.com",
                         "rank": 313,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/hp.com"
+                        "resource": "http://api.libscore.com/v1/sites/hp.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "telegraph.co.uk",
                         "rank": 318,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/telegraph.co.uk"
+                        "resource": "http://api.libscore.com/v1/sites/telegraph.co.uk",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "sourceforge.net",
                         "rank": 321,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sourceforge.net"
+                        "resource": "http://api.libscore.com/v1/sites/sourceforge.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "sberbank.ru",
@@ -3113,61 +3662,101 @@ window.arschmitz={
                         "url": "mashable.com",
                         "rank": 329,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/mashable.com"
+                        "resource": "http://api.libscore.com/v1/sites/mashable.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "thesaurus.com",
                         "rank": 330,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/thesaurus.com"
+                        "resource": "http://api.libscore.com/v1/sites/thesaurus.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "mercadolivre.com.br",
                         "rank": 335,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/mercadolivre.com.br"
+                        "resource": "http://api.libscore.com/v1/sites/mercadolivre.com.br",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "doublepimp.com",
                         "rank": 341,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/doublepimp.com"
+                        "resource": "http://api.libscore.com/v1/sites/doublepimp.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "ltn.com.tw",
                         "rank": 342,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ltn.com.tw"
+                        "resource": "http://api.libscore.com/v1/sites/ltn.com.tw",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "zendesk.com",
                         "rank": 354,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/zendesk.com"
+                        "resource": "http://api.libscore.com/v1/sites/zendesk.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "att.com",
                         "rank": 357,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/att.com"
+                        "resource": "http://api.libscore.com/v1/sites/att.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "sabah.com.tr",
                         "rank": 359,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sabah.com.tr"
+                        "resource": "http://api.libscore.com/v1/sites/sabah.com.tr",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "livejasmin.com",
                         "rank": 366,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/livejasmin.com"
+                        "resource": "http://api.libscore.com/v1/sites/livejasmin.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "sahibinden.com",
                         "rank": 369,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sahibinden.com"
+                        "resource": "http://api.libscore.com/v1/sites/sahibinden.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "hurriyet.com.tr",
@@ -3179,67 +3768,111 @@ window.arschmitz={
                         "url": "kinogo.co",
                         "rank": 373,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/kinogo.co"
+                        "resource": "http://api.libscore.com/v1/sites/kinogo.co",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "pinimg.com",
                         "rank": 378,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/pinimg.com"
+                        "resource": "http://api.libscore.com/v1/sites/pinimg.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "giphy.com",
                         "rank": 379,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/giphy.com"
+                        "resource": "http://api.libscore.com/v1/sites/giphy.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "irctc.co.in",
                         "rank": 386,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/irctc.co.in"
+                        "resource": "http://api.libscore.com/v1/sites/irctc.co.in",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "macys.com",
                         "rank": 390,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/macys.com"
+                        "resource": "http://api.libscore.com/v1/sites/macys.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "blackboard.com",
                         "rank": 392,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/blackboard.com"
+                        "resource": "http://api.libscore.com/v1/sites/blackboard.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "varzesh3.com",
                         "rank": 397,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/varzesh3.com"
+                        "resource": "http://api.libscore.com/v1/sites/varzesh3.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "kinopoisk.ru",
                         "rank": 401,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/kinopoisk.ru"
+                        "resource": "http://api.libscore.com/v1/sites/kinopoisk.ru",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "oracle.com",
                         "rank": 403,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/oracle.com"
+                        "resource": "http://api.libscore.com/v1/sites/oracle.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "taleo.net",
                         "rank": 408,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/taleo.net"
+                        "resource": "http://api.libscore.com/v1/sites/taleo.net",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "citi.com",
                         "rank": 410,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/citi.com"
+                        "resource": "http://api.libscore.com/v1/sites/citi.com",
+                        "lib": [
+                            "$.ui",
+                            "jQuery"
+                        ]
                     }
                 ]
             },
@@ -3275,13 +3908,22 @@ window.arschmitz={
                         "url": "xhamster.com",
                         "rank": 92,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/xhamster.com"
+                        "resource": "http://api.libscore.com/v1/sites/xhamster.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "nytimes.com",
                         "rank": 96,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/nytimes.com"
+                        "resource": "http://api.libscore.com/v1/sites/nytimes.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "dailymail.co.uk",
@@ -3296,85 +3938,145 @@ window.arschmitz={
                         "url": "walmart.com",
                         "rank": 144,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/walmart.com"
+                        "resource": "http://api.libscore.com/v1/sites/walmart.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "washingtonpost.com",
                         "rank": 182,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/washingtonpost.com"
+                        "resource": "http://api.libscore.com/v1/sites/washingtonpost.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "rambler.ru",
                         "rank": 259,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/rambler.ru"
+                        "resource": "http://api.libscore.com/v1/sites/rambler.ru",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "capitalone.com",
                         "rank": 269,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/capitalone.com"
+                        "resource": "http://api.libscore.com/v1/sites/capitalone.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "homedepot.com",
                         "rank": 270,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/homedepot.com"
+                        "resource": "http://api.libscore.com/v1/sites/homedepot.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "sberbank.ru",
                         "rank": 328,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru"
+                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "hurriyet.com.tr",
                         "rank": 370,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr"
+                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "buzzlie.com",
                         "rank": 391,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/buzzlie.com"
+                        "resource": "http://api.libscore.com/v1/sites/buzzlie.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "expedia.com",
                         "rank": 428,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/expedia.com"
+                        "resource": "http://api.libscore.com/v1/sites/expedia.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "playstation.com",
                         "rank": 436,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/playstation.com"
+                        "resource": "http://api.libscore.com/v1/sites/playstation.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "lowes.com",
                         "rank": 453,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/lowes.com"
+                        "resource": "http://api.libscore.com/v1/sites/lowes.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "repubblica.it",
                         "rank": 481,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/repubblica.it"
+                        "resource": "http://api.libscore.com/v1/sites/repubblica.it",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "free.fr",
                         "rank": 487,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/free.fr"
+                        "resource": "http://api.libscore.com/v1/sites/free.fr",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "theverge.com",
                         "rank": 510,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/theverge.com"
+                        "resource": "http://api.libscore.com/v1/sites/theverge.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "jimdo.com",
@@ -3389,85 +4091,147 @@ window.arschmitz={
                         "url": "independent.co.uk",
                         "rank": 561,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/independent.co.uk"
+                        "resource": "http://api.libscore.com/v1/sites/independent.co.uk",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "ensonhaber.com",
                         "rank": 630,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ensonhaber.com"
+                        "resource": "http://api.libscore.com/v1/sites/ensonhaber.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "asana.com",
                         "rank": 663,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/asana.com"
+                        "resource": "http://api.libscore.com/v1/sites/asana.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "twoo.com",
                         "rank": 686,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/twoo.com"
+                        "resource": "http://api.libscore.com/v1/sites/twoo.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "cnbc.com",
                         "rank": 689,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/cnbc.com"
+                        "resource": "http://api.libscore.com/v1/sites/cnbc.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "sears.com",
                         "rank": 720,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/sears.com"
+                        "resource": "http://api.libscore.com/v1/sites/sears.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "eonline.com",
                         "rank": 731,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/eonline.com"
+                        "resource": "http://api.libscore.com/v1/sites/eonline.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "bodybuilding.com",
                         "rank": 735,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bodybuilding.com"
+                        "resource": "http://api.libscore.com/v1/sites/bodybuilding.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "wattpad.com",
                         "rank": 767,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/wattpad.com"
+                        "resource": "http://api.libscore.com/v1/sites/wattpad.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "webex.com",
                         "rank": 779,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/webex.com"
+                        "resource": "http://api.libscore.com/v1/sites/webex.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "thedailybeast.com",
                         "rank": 824,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/thedailybeast.com"
+                        "resource": "http://api.libscore.com/v1/sites/thedailybeast.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "wired.com",
                         "rank": 828,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/wired.com"
+                        "resource": "http://api.libscore.com/v1/sites/wired.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "vox.com",
                         "rank": 872,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/vox.com"
+                        "resource": "http://api.libscore.com/v1/sites/vox.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "whitepages.com",
                         "rank": 876,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/whitepages.com"
+                        "resource": "http://api.libscore.com/v1/sites/whitepages.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "android.com",
@@ -3482,55 +4246,96 @@ window.arschmitz={
                         "url": "hilton.com",
                         "rank": 885,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/hilton.com"
+                        "resource": "http://api.libscore.com/v1/sites/hilton.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "lefigaro.fr",
                         "rank": 957,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/lefigaro.fr"
+                        "resource": "http://api.libscore.com/v1/sites/lefigaro.fr",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "usnews.com",
                         "rank": 1037,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/usnews.com"
+                        "resource": "http://api.libscore.com/v1/sites/usnews.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "gumtree.com",
                         "rank": 1039,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/gumtree.com"
+                        "resource": "http://api.libscore.com/v1/sites/gumtree.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "lloydsbank.co.uk",
                         "rank": 1119,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/lloydsbank.co.uk"
+                        "resource": "http://api.libscore.com/v1/sites/lloydsbank.co.uk",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "jw.org",
                         "rank": 1158,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/jw.org"
+                        "resource": "http://api.libscore.com/v1/sites/jw.org",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "samsclub.com",
                         "rank": 1159,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/samsclub.com"
+                        "resource": "http://api.libscore.com/v1/sites/samsclub.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "foxsports.com",
                         "rank": 1193,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/foxsports.com"
+                        "resource": "http://api.libscore.com/v1/sites/foxsports.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "littlethings.com",
                         "rank": 1201,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/littlethings.com"
+                        "resource": "http://api.libscore.com/v1/sites/littlethings.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "mail.com",
@@ -3545,25 +4350,43 @@ window.arschmitz={
                         "url": "postbank.de",
                         "rank": 1362,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/postbank.de"
+                        "resource": "http://api.libscore.com/v1/sites/postbank.de",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "msnbc.com",
                         "rank": 1364,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/msnbc.com"
+                        "resource": "http://api.libscore.com/v1/sites/msnbc.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "airasia.com",
                         "rank": 1418,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/airasia.com"
+                        "resource": "http://api.libscore.com/v1/sites/airasia.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "linternaute.com",
                         "rank": 1420,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/linternaute.com"
+                        "resource": "http://api.libscore.com/v1/sites/linternaute.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "lightinthebox.com",
@@ -3650,7 +4473,11 @@ window.arschmitz={
                         "url": "careerbuilder.com",
                         "rank": 1647,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/careerbuilder.com"
+                        "resource": "http://api.libscore.com/v1/sites/careerbuilder.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "infobae.com",
@@ -3728,7 +4555,11 @@ window.arschmitz={
                         "url": "easyjet.com",
                         "rank": 1784,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/easyjet.com"
+                        "resource": "http://api.libscore.com/v1/sites/easyjet.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "kmart.com",
@@ -3743,7 +4574,11 @@ window.arschmitz={
                         "url": "elconfidencial.com",
                         "rank": 1915,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/elconfidencial.com"
+                        "resource": "http://api.libscore.com/v1/sites/elconfidencial.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "rappler.com",
@@ -3786,13 +4621,21 @@ window.arschmitz={
                         "url": "urbanoutfitters.com",
                         "rank": 2006,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/urbanoutfitters.com"
+                        "resource": "http://api.libscore.com/v1/sites/urbanoutfitters.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "zaman.com.tr",
                         "rank": 2023,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/zaman.com.tr"
+                        "resource": "http://api.libscore.com/v1/sites/zaman.com.tr",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "sap.com",
@@ -3807,7 +4650,11 @@ window.arschmitz={
                         "url": "journaldesfemmes.com",
                         "rank": 2048,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/journaldesfemmes.com"
+                        "resource": "http://api.libscore.com/v1/sites/journaldesfemmes.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "dickssportinggoods.com",
@@ -3849,7 +4696,11 @@ window.arschmitz={
                         "url": "charter.net",
                         "rank": 2172,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/charter.net"
+                        "resource": "http://api.libscore.com/v1/sites/charter.net",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "gilt.com",
@@ -3882,7 +4733,11 @@ window.arschmitz={
                         "url": "redbubble.com",
                         "rank": 2238,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/redbubble.com"
+                        "resource": "http://api.libscore.com/v1/sites/redbubble.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "vip.com",
@@ -3906,7 +4761,11 @@ window.arschmitz={
                         "url": "deutsche-bank.de",
                         "rank": 2367,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/deutsche-bank.de"
+                        "resource": "http://api.libscore.com/v1/sites/deutsche-bank.de",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "sonymobile.com",
@@ -3921,13 +4780,21 @@ window.arschmitz={
                         "url": "extra.com.br",
                         "rank": 2431,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/extra.com.br"
+                        "resource": "http://api.libscore.com/v1/sites/extra.com.br",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "letras.mus.br",
                         "rank": 2434,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/letras.mus.br"
+                        "resource": "http://api.libscore.com/v1/sites/letras.mus.br",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "polygon.com",
@@ -3951,7 +4818,11 @@ window.arschmitz={
                         "url": "tass.ru",
                         "rank": 2493,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/tass.ru"
+                        "resource": "http://api.libscore.com/v1/sites/tass.ru",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "sheknows.com",
@@ -3966,19 +4837,31 @@ window.arschmitz={
                         "url": "allmusic.com",
                         "rank": 2533,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/allmusic.com"
+                        "resource": "http://api.libscore.com/v1/sites/allmusic.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "mediamarkt.de",
                         "rank": 2552,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/mediamarkt.de"
+                        "resource": "http://api.libscore.com/v1/sites/mediamarkt.de",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "sbrf.ru",
                         "rank": 2583,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sbrf.ru"
+                        "resource": "http://api.libscore.com/v1/sites/sbrf.ru",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "boursorama.com",
@@ -4005,13 +4888,22 @@ window.arschmitz={
                         "url": "xhamster.com",
                         "rank": 92,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/xhamster.com"
+                        "resource": "http://api.libscore.com/v1/sites/xhamster.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "nytimes.com",
                         "rank": 96,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/nytimes.com"
+                        "resource": "http://api.libscore.com/v1/sites/nytimes.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "dailymail.co.uk",
@@ -4026,85 +4918,145 @@ window.arschmitz={
                         "url": "walmart.com",
                         "rank": 144,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/walmart.com"
+                        "resource": "http://api.libscore.com/v1/sites/walmart.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "washingtonpost.com",
                         "rank": 182,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/washingtonpost.com"
+                        "resource": "http://api.libscore.com/v1/sites/washingtonpost.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "rambler.ru",
                         "rank": 259,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/rambler.ru"
+                        "resource": "http://api.libscore.com/v1/sites/rambler.ru",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "capitalone.com",
                         "rank": 269,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/capitalone.com"
+                        "resource": "http://api.libscore.com/v1/sites/capitalone.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "homedepot.com",
                         "rank": 270,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/homedepot.com"
+                        "resource": "http://api.libscore.com/v1/sites/homedepot.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "sberbank.ru",
                         "rank": 328,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru"
+                        "resource": "http://api.libscore.com/v1/sites/sberbank.ru",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "hurriyet.com.tr",
                         "rank": 370,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr"
+                        "resource": "http://api.libscore.com/v1/sites/hurriyet.com.tr",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "buzzlie.com",
                         "rank": 391,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/buzzlie.com"
+                        "resource": "http://api.libscore.com/v1/sites/buzzlie.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "expedia.com",
                         "rank": 428,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/expedia.com"
+                        "resource": "http://api.libscore.com/v1/sites/expedia.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "playstation.com",
                         "rank": 436,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/playstation.com"
+                        "resource": "http://api.libscore.com/v1/sites/playstation.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "lowes.com",
                         "rank": 453,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/lowes.com"
+                        "resource": "http://api.libscore.com/v1/sites/lowes.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "repubblica.it",
                         "rank": 481,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/repubblica.it"
+                        "resource": "http://api.libscore.com/v1/sites/repubblica.it",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "free.fr",
                         "rank": 487,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/free.fr"
+                        "resource": "http://api.libscore.com/v1/sites/free.fr",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "theverge.com",
                         "rank": 510,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/theverge.com"
+                        "resource": "http://api.libscore.com/v1/sites/theverge.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "jimdo.com",
@@ -4119,85 +5071,147 @@ window.arschmitz={
                         "url": "independent.co.uk",
                         "rank": 561,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/independent.co.uk"
+                        "resource": "http://api.libscore.com/v1/sites/independent.co.uk",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "ensonhaber.com",
                         "rank": 630,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ensonhaber.com"
+                        "resource": "http://api.libscore.com/v1/sites/ensonhaber.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "asana.com",
                         "rank": 663,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/asana.com"
+                        "resource": "http://api.libscore.com/v1/sites/asana.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "twoo.com",
                         "rank": 686,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/twoo.com"
+                        "resource": "http://api.libscore.com/v1/sites/twoo.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "cnbc.com",
                         "rank": 689,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/cnbc.com"
+                        "resource": "http://api.libscore.com/v1/sites/cnbc.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "sears.com",
                         "rank": 720,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/sears.com"
+                        "resource": "http://api.libscore.com/v1/sites/sears.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "eonline.com",
                         "rank": 731,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/eonline.com"
+                        "resource": "http://api.libscore.com/v1/sites/eonline.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery",
+                            "$.mobile"
+                        ]
                     },
                     {
                         "url": "bodybuilding.com",
                         "rank": 735,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bodybuilding.com"
+                        "resource": "http://api.libscore.com/v1/sites/bodybuilding.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "wattpad.com",
                         "rank": 767,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/wattpad.com"
+                        "resource": "http://api.libscore.com/v1/sites/wattpad.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "webex.com",
                         "rank": 779,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/webex.com"
+                        "resource": "http://api.libscore.com/v1/sites/webex.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "thedailybeast.com",
                         "rank": 824,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/thedailybeast.com"
+                        "resource": "http://api.libscore.com/v1/sites/thedailybeast.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "wired.com",
                         "rank": 828,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/wired.com"
+                        "resource": "http://api.libscore.com/v1/sites/wired.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "vox.com",
                         "rank": 872,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/vox.com"
+                        "resource": "http://api.libscore.com/v1/sites/vox.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "whitepages.com",
                         "rank": 876,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/whitepages.com"
+                        "resource": "http://api.libscore.com/v1/sites/whitepages.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "android.com",
@@ -4212,55 +5226,96 @@ window.arschmitz={
                         "url": "hilton.com",
                         "rank": 885,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/hilton.com"
+                        "resource": "http://api.libscore.com/v1/sites/hilton.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "lefigaro.fr",
                         "rank": 957,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/lefigaro.fr"
+                        "resource": "http://api.libscore.com/v1/sites/lefigaro.fr",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "usnews.com",
                         "rank": 1037,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/usnews.com"
+                        "resource": "http://api.libscore.com/v1/sites/usnews.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "gumtree.com",
                         "rank": 1039,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/gumtree.com"
+                        "resource": "http://api.libscore.com/v1/sites/gumtree.com",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "lloydsbank.co.uk",
                         "rank": 1119,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/lloydsbank.co.uk"
+                        "resource": "http://api.libscore.com/v1/sites/lloydsbank.co.uk",
+                        "lib": [
+                            "Hammer",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "jw.org",
                         "rank": 1158,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/jw.org"
+                        "resource": "http://api.libscore.com/v1/sites/jw.org",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "samsclub.com",
                         "rank": 1159,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/samsclub.com"
+                        "resource": "http://api.libscore.com/v1/sites/samsclub.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "foxsports.com",
                         "rank": 1193,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/foxsports.com"
+                        "resource": "http://api.libscore.com/v1/sites/foxsports.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "littlethings.com",
                         "rank": 1201,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/littlethings.com"
+                        "resource": "http://api.libscore.com/v1/sites/littlethings.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "mail.com",
@@ -4275,25 +5330,43 @@ window.arschmitz={
                         "url": "postbank.de",
                         "rank": 1362,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/postbank.de"
+                        "resource": "http://api.libscore.com/v1/sites/postbank.de",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "msnbc.com",
                         "rank": 1364,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/msnbc.com"
+                        "resource": "http://api.libscore.com/v1/sites/msnbc.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui",
+                            "jQuery"
+                        ]
                     },
                     {
                         "url": "airasia.com",
                         "rank": 1418,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/airasia.com"
+                        "resource": "http://api.libscore.com/v1/sites/airasia.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "linternaute.com",
                         "rank": 1420,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/linternaute.com"
+                        "resource": "http://api.libscore.com/v1/sites/linternaute.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "lightinthebox.com",
@@ -4380,7 +5453,11 @@ window.arschmitz={
                         "url": "careerbuilder.com",
                         "rank": 1647,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/careerbuilder.com"
+                        "resource": "http://api.libscore.com/v1/sites/careerbuilder.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "infobae.com",
@@ -4458,7 +5535,11 @@ window.arschmitz={
                         "url": "easyjet.com",
                         "rank": 1784,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/easyjet.com"
+                        "resource": "http://api.libscore.com/v1/sites/easyjet.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "kmart.com",
@@ -4473,7 +5554,11 @@ window.arschmitz={
                         "url": "elconfidencial.com",
                         "rank": 1915,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/elconfidencial.com"
+                        "resource": "http://api.libscore.com/v1/sites/elconfidencial.com",
+                        "lib": [
+                            "Hammer",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "rappler.com",

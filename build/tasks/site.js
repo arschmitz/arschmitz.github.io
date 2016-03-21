@@ -59,7 +59,27 @@ module.exports = function ( grunt ) {
 			site.menu = Object.keys( site );
 			site.menu.push( "effects" );
 			console.log( site.menu );
-			fs.outputFileSync( process.cwd() + "/dist/site.js", "window.arschmitz=" + JSON.stringify( site, undefined, 4 ) );
+			var json = JSON.stringify( site, undefined, 4 );
+			var regEx = /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g;
+			fs.outputFileSync( process.cwd() + "/dist/site.js", "window.arschmitz=" + json );
+			json = json.replace( /&/g, "&amp;" ).replace( /</g, "&lt;" ).replace( />/g, "&gt;" );
+			json = json.replace( regEx, function( match ) {
+				var cls = "number";
+				if ( /^"/.test( match ) ) {
+					if ( /:$/.test( match ) ) {
+						cls = "key";
+					} else {
+						cls = "string";
+					}
+				} else if ( /true|false/.test( match ) ) {
+					cls = "boolean";
+				} else if ( /null/.test( match ) ) {
+					cls = "null";
+				}
+				return "<span class='" + cls + "'>" + match + "</span>";
+			} );
+			json = json.replace( /\n/g, "\n<br/>" ).replace( /\s\s/g, "<div class='tab'></div>" );
+			fs.outputFileSync( process.cwd() + "/dist/site.json.html", json );
 			fs.outputJSONSync( process.cwd() + "/dist/site.json", site );
 			done();
 		} );

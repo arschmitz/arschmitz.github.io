@@ -16,6 +16,11 @@
 			return "<span class='error'>" + e.__proto__.name + ": " + e.message + "</span>";
 		},
 		syntaxRegex: /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
+		getFullSite: function() {
+			$.get( "/dist/site.json.html", function( returnValue ) {
+				window.fullSite = $( "<div class='output-line'><span class='prompt-start'>></span>arschmitz<br/></div><div><span class='prompt-start'><</span>" + returnValue + "</div>" );
+			}, "html" );
+		},
 		syntaxHighlight: function( json ) {
 			if ( typeof json != 'string' ) {
 				json = JSON.stringify( json, undefined, 4 );
@@ -57,10 +62,16 @@
 				try {
 					if ( command !== "arschmitz" ) {
 						returnValue = window.eval( command );
+					} else if ( window.fullSite ) {
+						$( "#output" ).append( window.fullSite );
+						console.log( $( "#output" ).height() );
+						$( ".console-wrap .scroll-wrap" )[ 0 ].scrollTop = $( ".console-wrap .scroll-wrap" )[ 0 ].scrollHeight;
+						return;
 					} else {
-						$.getJSON( "/dist/site.json", function( returnValue ) {
+						$.get( "/dist/site.json.html", function( returnValue ) {
+							console.log( returnValue );
 							outputReturn( returnValue );
-						} );
+						}, "html" );
 						return;
 					}
 				} catch ( e ) {
@@ -76,14 +87,11 @@
 						returnValue = prompt.logError( e );
 					}
 				}
-				$( "#output" ).append( "<div class='output-line'><span class='prompt-start'>></span>" + command + "<br/>" );
-				$( "#output" ).append( "<span class='prompt-start'><</span>" + returnValue + "</div>" );
+				var line = $( "<div class='output-line'><span class='prompt-start'>></span>" + command +
+					"<br/></div><div><span class='prompt-start'><</span>" + returnValue + "</div>" );
+				$( "#output" ).append( line );
 				$( "#prompt" ).val( "" );
-				if ( !gui.isOpen ) {
-					window.scrollTo( 0, $( "body" ).height() );
-				} else {
-					$( ".console-wrap .scroll-wrap" )[ 0 ].scrollTop = $( ".console-wrap" )[ 0 ].scrollHeight;
-				}
+				$( ".console-wrap .scroll-wrap" )[ 0 ].scrollTop = $( ".console-wrap .scroll-wrap" )[ 0 ].scrollHeight;
 			}
 		},
 		keyup: function( e ) {
@@ -110,7 +118,7 @@
 			prompt.close();
 		}
 	} );
-
+	window.prompt.getFullSite();
 	$( function() {
 		$( "body" ).height( $( window ).height() );
 		$( "#prompt" ).on( "change", prompt.runCommand );
