@@ -1451,8 +1451,8 @@ window.arschmitz={
                 "resource": "http://api.libscore.com/v1/sites/tianya.cn",
                 "lib": [
                     "jQuery",
-                    "$.ui",
-                    "$.mobile"
+                    "$.mobile",
+                    "$.ui"
                 ]
             },
             {
@@ -1988,7 +1988,11 @@ window.arschmitz={
                         "url": "businessinsider.com",
                         "rank": 252,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/businessinsider.com"
+                        "resource": "http://api.libscore.com/v1/sites/businessinsider.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "shutterstock.com",
@@ -2012,7 +2016,11 @@ window.arschmitz={
                         "url": "digikala.com",
                         "rank": 417,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/digikala.com"
+                        "resource": "http://api.libscore.com/v1/sites/digikala.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "newegg.com",
@@ -2186,7 +2194,11 @@ window.arschmitz={
                         "url": "teamviewer.com",
                         "rank": 1253,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/teamviewer.com"
+                        "resource": "http://api.libscore.com/v1/sites/teamviewer.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "cdc.gov",
@@ -2222,7 +2234,11 @@ window.arschmitz={
                         "url": "ranker.com",
                         "rank": 1448,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ranker.com"
+                        "resource": "http://api.libscore.com/v1/sites/ranker.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "abc.go.com",
@@ -2246,25 +2262,41 @@ window.arschmitz={
                         "url": "evite.com",
                         "rank": 1578,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/evite.com"
+                        "resource": "http://api.libscore.com/v1/sites/evite.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "earthlink.net",
                         "rank": 1630,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/earthlink.net"
+                        "resource": "http://api.libscore.com/v1/sites/earthlink.net",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "payoneer.com",
                         "rank": 1641,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/payoneer.com"
+                        "resource": "http://api.libscore.com/v1/sites/payoneer.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "emirates.com",
                         "rank": 1691,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/emirates.com"
+                        "resource": "http://api.libscore.com/v1/sites/emirates.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "radikal.com.tr",
@@ -2288,7 +2320,11 @@ window.arschmitz={
                         "url": "acer.com",
                         "rank": 1761,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/acer.com"
+                        "resource": "http://api.libscore.com/v1/sites/acer.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "origin.com",
@@ -2312,7 +2348,11 @@ window.arschmitz={
                         "url": "lotterypost.com",
                         "rank": 1806,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/lotterypost.com"
+                        "resource": "http://api.libscore.com/v1/sites/lotterypost.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "ibtimes.co.uk",
@@ -2327,19 +2367,31 @@ window.arschmitz={
                         "url": "shine.com",
                         "rank": 1851,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/shine.com"
+                        "resource": "http://api.libscore.com/v1/sites/shine.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "zoopla.co.uk",
                         "rank": 1955,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/zoopla.co.uk"
+                        "resource": "http://api.libscore.com/v1/sites/zoopla.co.uk",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "starwoodhotels.com",
                         "rank": 1958,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/starwoodhotels.com"
+                        "resource": "http://api.libscore.com/v1/sites/starwoodhotels.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "kenh14.vn",
@@ -2360,13 +2412,21 @@ window.arschmitz={
                         "url": "rimanews.com",
                         "rank": 1989,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/rimanews.com"
+                        "resource": "http://api.libscore.com/v1/sites/rimanews.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "qiwi.com",
                         "rank": 2063,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/qiwi.com"
+                        "resource": "http://api.libscore.com/v1/sites/qiwi.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "autoblog.com",
@@ -2381,7 +2441,11 @@ window.arschmitz={
                         "url": "llbean.com",
                         "rank": 2148,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/llbean.com"
+                        "resource": "http://api.libscore.com/v1/sites/llbean.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "yalla-shoot.com",
@@ -2396,31 +2460,51 @@ window.arschmitz={
                         "url": "creativemarket.com",
                         "rank": 2203,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/creativemarket.com"
+                        "resource": "http://api.libscore.com/v1/sites/creativemarket.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "ulta.com",
                         "rank": 2252,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ulta.com"
+                        "resource": "http://api.libscore.com/v1/sites/ulta.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "ilsole24ore.com",
                         "rank": 2283,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/ilsole24ore.com"
+                        "resource": "http://api.libscore.com/v1/sites/ilsole24ore.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "kotak.com",
                         "rank": 2289,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/kotak.com"
+                        "resource": "http://api.libscore.com/v1/sites/kotak.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "betfair.com",
                         "rank": 2323,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/betfair.com"
+                        "resource": "http://api.libscore.com/v1/sites/betfair.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "lastampa.it",
@@ -2444,7 +2528,11 @@ window.arschmitz={
                         "url": "yatra.com",
                         "rank": 2478,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/yatra.com"
+                        "resource": "http://api.libscore.com/v1/sites/yatra.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "justjared.com",
@@ -2468,7 +2556,11 @@ window.arschmitz={
                         "url": "siriusxm.com",
                         "rank": 2558,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/siriusxm.com"
+                        "resource": "http://api.libscore.com/v1/sites/siriusxm.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "vz.ru",
@@ -2492,7 +2584,11 @@ window.arschmitz={
                         "url": "natwest.com",
                         "rank": 2615,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/natwest.com"
+                        "resource": "http://api.libscore.com/v1/sites/natwest.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "sony.com",
@@ -2504,19 +2600,31 @@ window.arschmitz={
                         "url": "enjoydressup.com",
                         "rank": 2660,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/enjoydressup.com"
+                        "resource": "http://api.libscore.com/v1/sites/enjoydressup.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "immowelt.de",
                         "rank": 2672,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/immowelt.de"
+                        "resource": "http://api.libscore.com/v1/sites/immowelt.de",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "encuentra24.com",
                         "rank": 2718,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/encuentra24.com"
+                        "resource": "http://api.libscore.com/v1/sites/encuentra24.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "viralands.com",
@@ -2531,25 +2639,41 @@ window.arschmitz={
                         "url": "kariyer.net",
                         "rank": 2743,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/kariyer.net"
+                        "resource": "http://api.libscore.com/v1/sites/kariyer.net",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "bmo.com",
                         "rank": 2766,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/bmo.com"
+                        "resource": "http://api.libscore.com/v1/sites/bmo.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "techinsider.io",
                         "rank": 2790,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/techinsider.io"
+                        "resource": "http://api.libscore.com/v1/sites/techinsider.io",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "telekom.de",
                         "rank": 2931,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/telekom.de"
+                        "resource": "http://api.libscore.com/v1/sites/telekom.de",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "kanald.com.tr",
@@ -2564,19 +2688,31 @@ window.arschmitz={
                         "url": "islamweb.net",
                         "rank": 2988,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/islamweb.net"
+                        "resource": "http://api.libscore.com/v1/sites/islamweb.net",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "pons.com",
                         "rank": 2989,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/pons.com"
+                        "resource": "http://api.libscore.com/v1/sites/pons.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "check24.de",
                         "rank": 2993,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/check24.de"
+                        "resource": "http://api.libscore.com/v1/sites/check24.de",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "carmax.com",
@@ -2591,19 +2727,31 @@ window.arschmitz={
                         "url": "hi5.com",
                         "rank": 3029,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/hi5.com"
+                        "resource": "http://api.libscore.com/v1/sites/hi5.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "monsterindia.com",
                         "rank": 3061,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/monsterindia.com"
+                        "resource": "http://api.libscore.com/v1/sites/monsterindia.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "takealot.com",
                         "rank": 3114,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/takealot.com"
+                        "resource": "http://api.libscore.com/v1/sites/takealot.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     }
                 ],
                 "short": [
@@ -2650,7 +2798,11 @@ window.arschmitz={
                         "url": "businessinsider.com",
                         "rank": 252,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/businessinsider.com"
+                        "resource": "http://api.libscore.com/v1/sites/businessinsider.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "shutterstock.com",
@@ -2674,7 +2826,11 @@ window.arschmitz={
                         "url": "digikala.com",
                         "rank": 417,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/digikala.com"
+                        "resource": "http://api.libscore.com/v1/sites/digikala.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "newegg.com",
@@ -2848,7 +3004,11 @@ window.arschmitz={
                         "url": "teamviewer.com",
                         "rank": 1253,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/teamviewer.com"
+                        "resource": "http://api.libscore.com/v1/sites/teamviewer.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "cdc.gov",
@@ -2884,7 +3044,11 @@ window.arschmitz={
                         "url": "ranker.com",
                         "rank": 1448,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/ranker.com"
+                        "resource": "http://api.libscore.com/v1/sites/ranker.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "abc.go.com",
@@ -2908,25 +3072,41 @@ window.arschmitz={
                         "url": "evite.com",
                         "rank": 1578,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/evite.com"
+                        "resource": "http://api.libscore.com/v1/sites/evite.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "earthlink.net",
                         "rank": 1630,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/earthlink.net"
+                        "resource": "http://api.libscore.com/v1/sites/earthlink.net",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "payoneer.com",
                         "rank": 1641,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/payoneer.com"
+                        "resource": "http://api.libscore.com/v1/sites/payoneer.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "emirates.com",
                         "rank": 1691,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/emirates.com"
+                        "resource": "http://api.libscore.com/v1/sites/emirates.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "radikal.com.tr",
@@ -2950,7 +3130,11 @@ window.arschmitz={
                         "url": "acer.com",
                         "rank": 1761,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/acer.com"
+                        "resource": "http://api.libscore.com/v1/sites/acer.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "origin.com",
@@ -2974,7 +3158,11 @@ window.arschmitz={
                         "url": "lotterypost.com",
                         "rank": 1806,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/lotterypost.com"
+                        "resource": "http://api.libscore.com/v1/sites/lotterypost.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "ibtimes.co.uk",
@@ -2989,19 +3177,31 @@ window.arschmitz={
                         "url": "shine.com",
                         "rank": 1851,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/shine.com"
+                        "resource": "http://api.libscore.com/v1/sites/shine.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "zoopla.co.uk",
                         "rank": 1955,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/zoopla.co.uk"
+                        "resource": "http://api.libscore.com/v1/sites/zoopla.co.uk",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "starwoodhotels.com",
                         "rank": 1958,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/starwoodhotels.com"
+                        "resource": "http://api.libscore.com/v1/sites/starwoodhotels.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "kenh14.vn",
@@ -3022,13 +3222,21 @@ window.arschmitz={
                         "url": "rimanews.com",
                         "rank": 1989,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/rimanews.com"
+                        "resource": "http://api.libscore.com/v1/sites/rimanews.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "qiwi.com",
                         "rank": 2063,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/qiwi.com"
+                        "resource": "http://api.libscore.com/v1/sites/qiwi.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "autoblog.com",
@@ -3043,7 +3251,11 @@ window.arschmitz={
                         "url": "llbean.com",
                         "rank": 2148,
                         "platform": "mobile",
-                        "resource": "http://api.libscore.com/v1/sites/llbean.com"
+                        "resource": "http://api.libscore.com/v1/sites/llbean.com",
+                        "lib": [
+                            "$.mobile",
+                            "$.ui"
+                        ]
                     },
                     {
                         "url": "yalla-shoot.com",
@@ -3270,11 +3482,7 @@ window.arschmitz={
                         "url": "businessinsider.com",
                         "rank": 252,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/businessinsider.com",
-                        "lib": [
-                            "$.ui",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/businessinsider.com"
                     },
                     {
                         "url": "slickdeals.net",
@@ -3517,11 +3725,7 @@ window.arschmitz={
                         "url": "digikala.com",
                         "rank": 417,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/digikala.com",
-                        "lib": [
-                            "$.ui",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/digikala.com"
                     },
                     {
                         "url": "spiegel.de",
@@ -3886,11 +4090,7 @@ window.arschmitz={
                         "url": "businessinsider.com",
                         "rank": 252,
                         "platform": "desktop",
-                        "resource": "http://api.libscore.com/v1/sites/businessinsider.com",
-                        "lib": [
-                            "$.ui",
-                            "$.mobile"
-                        ]
+                        "resource": "http://api.libscore.com/v1/sites/businessinsider.com"
                     },
                     {
                         "url": "slickdeals.net",
