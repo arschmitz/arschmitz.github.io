@@ -1,4 +1,4 @@
-<div class="content" data-background="/src/me.js" data-json="arschmitz.aboutMe">
+<div class="content" data-background="/dist/site.js" data-json="arschmitz.aboutMe">
 	{{title "aboutMe"}}
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 float-box project" {{json "aboutMe.avatar"}}>
@@ -68,18 +68,18 @@
 			<ul class="styled-list">
 				{{#each aboutMe.libScore}}
 				<li class="libScore-item">
-		<a href="http://{{this.url}}" class="row">
-			<div class="col-xs-8">
-				<h4><span class="bold">Site: </span>{{this.url}}</h4>
-			</div>
-			<div class="col-xs-2">
-				<h4><span class="bold">Lib: </span>{{#each this.lib}}{{this}},{{/each}}</h4>
-			</div>
-			<div class="col-xs-2">
-				<h4><span class="bold">Rank: </span>{{this.rank}}</h4>
-			</div>
-		</a>
-	</li>
+					<a href="http://{{this.url}}" class="row">
+						<div class="col-xs-8">
+							<h4><span class="bold">Site: </span>{{this.url}}</h4>
+						</div>
+						<div class="col-xs-2">
+							<h4><span class="bold">Lib: </span>{{#each this.lib}}{{this}},{{/each}}</h4>
+						</div>
+						<div class="col-xs-2">
+							<h4><span class="bold">Rank: </span>{{this.rank}}</h4>
+						</div>
+					</a>
+				</li>
 				{{/each}}
 			</ul>
 		</div>

@@ -10,7 +10,7 @@ module.exports = {
 		name: "Alexander Schmitz",
 		age: "31",
 		profession: "Developer",
-		title: "Project Lead jQuery Mobile, Co Creator Chassis CSS Framework, Team Member jQuery UI, PEP, jQuery Testing Team, jQuery Infrastructure Team, jQuery Content Team",
+		title: "W3C Representative, Project Lead jQuery Mobile, Co Creator Chassis CSS Framework, Team Member jQuery UI, PEP, jQuery Testing Team, jQuery Infrastructure Team, jQuery Content Team",
 	},
 	avatar: "https://avatars0.githubusercontent.com/u/462993?v=3&amp;s=460",
 	currentPosition: {
@@ -44,9 +44,10 @@ module.exports = {
 			]
 		},
 		"jQuery Foundation": {
-			title: "Development Lead / Full-time Consultant",
+			title: "Development Lead, Full-time Consultant, W3C Representative",
 			time: "2012 - Present",
 			responsibilities: [
+				"Representative to W3C for Web Platform and Audio working groups",
 				"Lead development, direction of jQuery Foundation Projects",
 				"Lead the jQuery Mobile project",
 				"Lead a distributed team of developers around the world",

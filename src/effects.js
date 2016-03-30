@@ -1,6 +1,4 @@
 // Effects
-$.fn.animate = $.fn.velocity;
-
 window.effects = {
 	height: $( window ).height(),
 	width: $( window ).width(),

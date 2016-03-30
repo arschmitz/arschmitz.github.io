@@ -6,7 +6,7 @@ module.exports = {
 			"src/helpers.js",
 			"src/prompt.js",
 			"src/gui.js",
-			"src/effects",
+			"src/effects.js",
 			"src/sidescroll.js",
 			"src/scrollintoview.js",
 			"src/me.js",
